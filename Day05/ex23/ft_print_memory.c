@@ -17,7 +17,7 @@ void	print_hex(int value, int length)
 	char	output[sizeof(int) * 2];
 	int		i;
 
-	i = 7;
+	i = sizeof(int) * 2 - 1;
 	while (value != 0)
 	{
 		output[i--] = value % 16 < 10 \

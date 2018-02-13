@@ -12,6 +12,25 @@
 
 void	ft_putchar(char c);
 
+void	print_hex(int value)
+{
+	char	ch[2];
+	int		i;
+
+	i = 1;
+	while (value != 0)
+	{
+		ch[i--] = value % 16 < 10 \
+				? value % 16 + '0' : value % 16 + ('a' - 10);
+		value /= 16;
+	}
+	while (i >= 0)
+		ch[i--] = '0';
+	ft_putchar('\\');
+	ft_putchar(ch[0]);
+	ft_putchar(ch[1]);
+}
+
 int		ft_putstr_non_printable(char *str)
 {
 	int i;
@@ -20,12 +39,9 @@ int		ft_putstr_non_printable(char *str)
 	while (str[i] != '\0')
 	{
 		if (str[i] < ' ' || str[i] > '~')
-		{
-			ft_putchar('\\');
-			ft_putchar(to_hex(str[i] / 16));
-			ft_putchar(to_hex(str[i] % 16));
-			ft_putchar('\n');
-		}
+			print_hex(str[i]);
+		else
+			ft_putchar(str[i]);
 		i++;
 	}
 	return (1);
