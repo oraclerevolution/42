@@ -17,22 +17,16 @@ int	ft_atoi(char *str)
 	int result;
 
 	i = 0;
-	pos = 1;
 	result = 0;
 	while (str[i] == ' ' || str[i] == '\n' || str[i] == '\f' || \
 			str[i] == '\t' || str[i] == '\v' || str[i] == '\r')
 		i++;
-	if (str[i] == '-')
+	if (str[i] == '-' || str[i] == '+')
 	{
-		pos = -1;
+		pos = (str[i] == '-') ? -1 : 1;
 		i++;
 	}
-	if (str[i] == '+')
-		i++;
 	while (str[i] >= '0' && str[i] <= '9')
-	{
-		result = result * 10 + str[i] - '0';
-		i++;
-	}
+		result = result * 10 + str[i++] - '0';
 	return (result * pos);
 }

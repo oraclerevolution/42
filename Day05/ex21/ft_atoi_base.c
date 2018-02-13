@@ -67,7 +67,6 @@ int		ft_atoi_base(char *str, char *base)
 	i = 0;
 	result = 0;
 	length = 0;
-	pos = 1;
 	while (base[length] != '\0')
 		length++;
 	if (length <= 1 || !is_base_correct(base))
