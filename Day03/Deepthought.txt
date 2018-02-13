@@ -1,0 +1,211 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e1r7p14.42.fr
+Darwin 16.7.0 x86_64
+$> date
+Sat Feb 10 07:10:38 CET 2018
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.38)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 9.0.0 (clang-900.0.38)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: intra/2018/activities/piscine_c_day_03/kcausse3
+
+= Git history ==================================================================
+$> git -C /var/folders/vj/m6ggmf4515l3y45sqbvgrtcr0000gq/T/tmpeFQ7Hi/user log --pretty='%H - %an, %ad : %s'
+4f86d2dbd84d54a513fe448ceaf3207056bcd129 - Killian CAUSSE, Sat Feb 10 01:10:06 2018 +0100 : Initial commit
+
+= Collected files ==========================================
+$> ls -lAR /var/folders/vj/m6ggmf4515l3y45sqbvgrtcr0000gq/T/tmpeFQ7Hi/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  791 Feb 10 07:10 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought  102 Feb 10 07:10 ex00
+drwxr-xr-x  3 deepthought  deepthought  102 Feb 10 07:10 ex01
+drwxr-xr-x  3 deepthought  deepthought  102 Feb 10 07:10 ex02
+drwxr-xr-x  3 deepthought  deepthought  102 Feb 10 07:10 ex03
+drwxr-xr-x  3 deepthought  deepthought  102 Feb 10 07:10 ex04
+drwxr-xr-x  3 deepthought  deepthought  102 Feb 10 07:10 ex05
+drwxr-xr-x  3 deepthought  deepthought  102 Feb 10 07:10 ex06
+drwxr-xr-x  3 deepthought  deepthought  102 Feb 10 07:10 ex07
+drwxr-xr-x  3 deepthought  deepthought  102 Feb 10 07:10 ex08
+drwxr-xr-x  3 deepthought  deepthought  102 Feb 10 07:10 ex09
+
+/var/folders/vj/m6ggmf4515l3y45sqbvgrtcr0000gq/T/tmpeFQ7Hi/user/ex00:
+total 8
+-rw-r--r--  1 deepthought  deepthought  929 Feb 10 07:10 ft_ft.c
+
+/var/folders/vj/m6ggmf4515l3y45sqbvgrtcr0000gq/T/tmpeFQ7Hi/user/ex01:
+total 8
+-rw-r--r--  1 deepthought  deepthought  954 Feb 10 07:10 ft_ultimate_ft.c
+
+/var/folders/vj/m6ggmf4515l3y45sqbvgrtcr0000gq/T/tmpeFQ7Hi/user/ex02:
+total 8
+-rw-r--r--  1 deepthought  deepthought  968 Feb 10 07:10 ft_swap.c
+
+/var/folders/vj/m6ggmf4515l3y45sqbvgrtcr0000gq/T/tmpeFQ7Hi/user/ex03:
+total 8
+-rw-r--r--  1 deepthought  deepthought  976 Feb 10 07:10 ft_div_mod.c
+
+/var/folders/vj/m6ggmf4515l3y45sqbvgrtcr0000gq/T/tmpeFQ7Hi/user/ex04:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1018 Feb 10 07:10 ft_ultimate_div_mod.c
+
+/var/folders/vj/m6ggmf4515l3y45sqbvgrtcr0000gq/T/tmpeFQ7Hi/user/ex05:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1008 Feb 10 07:10 ft_putstr.c
+
+/var/folders/vj/m6ggmf4515l3y45sqbvgrtcr0000gq/T/tmpeFQ7Hi/user/ex06:
+total 8
+-rw-r--r--  1 deepthought  deepthought  993 Feb 10 07:10 ft_strlen.c
+
+/var/folders/vj/m6ggmf4515l3y45sqbvgrtcr0000gq/T/tmpeFQ7Hi/user/ex07:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1157 Feb 10 07:10 ft_strrev.c
+
+/var/folders/vj/m6ggmf4515l3y45sqbvgrtcr0000gq/T/tmpeFQ7Hi/user/ex08:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1401 Feb 10 07:10 ft_atoi.c
+
+/var/folders/vj/m6ggmf4515l3y45sqbvgrtcr0000gq/T/tmpeFQ7Hi/user/ex09:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1125 Feb 10 07:10 ft_sort_integer_table.c
+
+= ex00 =========================================================================
+$> /usr/bin/norminette -R CheckForbiddenSourceHeader ft_ft.c | grep -E '^(Error|Warning)'
+
+$> clang -Wextra -Wall -Werror ft_ft.c ft_putchar.c test_ft_ft.c -o user_exe
+
+= Test 1 ===================================================
+$> ./jyf28dubtokkwz030vo5k0mn
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+Grade: 5
+
+= ex01 =========================================================================
+$> /usr/bin/norminette -R CheckForbiddenSourceHeader ft_ultimate_ft.c | grep -E '^(Error|Warning)'
+
+$> clang -Wextra -Wall -Werror ft_ultimate_ft.c ft_putchar.c test_ft_ultimate_ft.c -o user_exe
+
+= Test 1 ===================================================
+$> ./ve8hjyy5n7amtbkj6wixv9js
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+Grade: 5
+
+= ex02 =========================================================================
+$> /usr/bin/norminette -R CheckForbiddenSourceHeader ft_swap.c | grep -E '^(Error|Warning)'
+
+$> clang -Wextra -Wall -Werror ft_swap.c main.c ft_putchar.c -o user_exe
+
+= Test 1 ===================================================
+$> ./jiyw8cttptknicqnabgfe3ub
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+Grade: 5
+
+= ex03 =========================================================================
+$> /usr/bin/norminette -R CheckForbiddenSourceHeader ft_div_mod.c | grep -E '^(Error|Warning)'
+
+$> clang -Wextra -Wall -Werror main.c ft_putchar.c ft_div_mod.c -o user_exe
+
+= Test 1 ===================================================
+$> ./26hg2ag3okp3l2fhezcijs22
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+Grade: 10
+
+= ex04 =========================================================================
+$> /usr/bin/norminette -R CheckForbiddenSourceHeader ft_ultimate_div_mod.c | grep -E '^(Error|Warning)'
+
+$> clang -Wextra -Wall -Werror ft_ultimate_div_mod.c main.c ft_putchar.c -o user_exe
+
+= Test 1 ===================================================
+$> ./lb1s5n7rxbv9h7ikwsj07vaj
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+Grade: 5
+
+= ex05 =========================================================================
+$> /usr/bin/norminette -R CheckForbiddenSourceHeader ft_putstr.c | grep -E '^(Error|Warning)'
+
+$> clang -Wextra -Wall -Werror test_ft_putstr.c ft_putchar.c ft_putstr.c -o user_exe
+
+= Test 1 ===================================================
+$> ./szw3r86hjri957ic66qztjop
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+Grade: 10
+
+= ex06 =========================================================================
+$> /usr/bin/norminette -R CheckForbiddenSourceHeader ft_strlen.c | grep -E '^(Error|Warning)'
+
+$> clang -Wextra -Wall -Werror ft_strlen.c main.c ft_putchar.c -o user_exe
+
+= Test 1 ===================================================
+$> ./r26pq0livqdwf95lmxmjurrn
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+Grade: 10
+
+= ex07 =========================================================================
+$> clang -Wextra -Wall -Werror ft_strrev.c main.c ft_putchar.c -o user_exe
+
+= Test 1 ===================================================
+$> ./fjii60e82wu76o1ltjgpadqa
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+Grade: 15
+
+= ex08 =========================================================================
+$> /usr/bin/norminette -R CheckForbiddenSourceHeader ft_atoi.c | grep -E '^(Error|Warning)'
+
+$> clang -Wextra -Wall -Werror test_ft_atoi.c ft_putchar.c ft_atoi.c -o user_exe
+
+= Test 1 ===================================================
+$> ./3rz2mk3emazsj8jg2xrwnm68
+$> diff -U 3 user_output_test1 test1.output | cat -e
+--- user_output_test1   2018-02-10 07:10:56.000000000 +0100$
++++ test1.output        2018-02-10 07:10:56.000000000 +0100$
+@@ -1,8 +1,8 @@$
+ -2147483648$
+ 21$
+ -21$
+-0$
+-0$
++33$
++99$
+ 1000000$
+ 0$
+ 709551615$
+
+Diff KO :(
+Grade: 0
+
+= ex09 =========================================================================
+$> clang -Wextra -Wall -Werror ft_sort_integer_table.c main.c ft_putchar.c -o user_exe
+
+= Test 1 ===================================================
+$> ./zub5735ayn25o7n6fnut7otg
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+Grade: 20
+
+= Final grade: 65 ==============================================================

@@ -1,0 +1,8 @@
+Credentials cache: API:7A44DAAC-0B45-4500-8C7B-36D88F211167
+        Principal: kcausse@42.FR
+
+  Issued                Expires               Principal
+Feb  8 00:48:11 2018  Feb 15 00:48:11 2018  krbtgt/42.FR@42.FR
+Feb  8 00:48:13 2018  Feb 15 00:48:11 2018  ldap/ldap-proxy.42.fr@42.FR
+Feb  8 00:48:13 2018  Feb 15 00:48:11 2018  HTTP/student-storage-1.42.fr@42.FR
+Feb  8 00:59:16 2018  Feb 15 00:48:11 2018  host/vgs-fn1.42.fr@42.FR

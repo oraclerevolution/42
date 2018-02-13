@@ -1,0 +1,435 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e1r4p4.42.fr
+Darwin 16.7.0 x86_64
+$> date
+Sat Feb 10 02:05:46 CET 2018
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.38)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 9.0.0 (clang-900.0.38)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: intra/2018/activities/piscine_c_day_01/kcausse4
+
+= Git history ==================================================================
+$> git -C /var/folders/_h/dy96dltj4kg_n24q5kzc9cb40000gq/T/tmpSUQcU9/user log --pretty='%H - %an, %ad : %s'
+e7bbf9e6a548de713fdd019a0f358e23c8b51e7b - Killian CAUSSE, Fri Feb 9 23:41:57 2018 +0100 : 1
+
+= Collected files ==========================================
+$> ls -lAR /var/folders/_h/dy96dltj4kg_n24q5kzc9cb40000gq/T/tmpSUQcU9/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  498 Feb 10 02:05 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought  102 Feb 10 02:05 ex01
+drwxr-xr-x  3 deepthought  deepthought  102 Feb 10 02:05 ex02
+drwxr-xr-x  3 deepthought  deepthought  102 Feb 10 02:05 ex03
+drwxr-xr-x  3 deepthought  deepthought  102 Feb 10 02:05 ex04
+drwxr-xr-x  3 deepthought  deepthought  102 Feb 10 02:05 ex05
+drwxr-xr-x  3 deepthought  deepthought  102 Feb 10 02:05 ex06
+drwxr-xr-x  3 deepthought  deepthought  102 Feb 10 02:05 ex07
+drwxr-xr-x  3 deepthought  deepthought  102 Feb 10 02:05 ex08
+drwxr-xr-x  3 deepthought  deepthought  102 Feb 10 02:05 ex09
+
+/var/folders/_h/dy96dltj4kg_n24q5kzc9cb40000gq/T/tmpSUQcU9/user/ex01:
+total 8
+-rw-r--r--  1 deepthought  deepthought  42 Feb 10 02:05 print_groups.sh
+
+/var/folders/_h/dy96dltj4kg_n24q5kzc9cb40000gq/T/tmpSUQcU9/user/ex02:
+total 8
+-rw-r--r--  1 deepthought  deepthought  52 Feb 10 02:05 find_sh.sh
+
+/var/folders/_h/dy96dltj4kg_n24q5kzc9cb40000gq/T/tmpSUQcU9/user/ex03:
+total 8
+-rw-r--r--  1 deepthought  deepthought  55 Feb 10 02:05 count_files.sh
+
+/var/folders/_h/dy96dltj4kg_n24q5kzc9cb40000gq/T/tmpSUQcU9/user/ex04:
+total 8
+-rw-r--r--  1 deepthought  deepthought  41 Feb 10 02:05 MAC.sh
+
+/var/folders/_h/dy96dltj4kg_n24q5kzc9cb40000gq/T/tmpSUQcU9/user/ex05:
+total 8
+-rw-r--r--  1 deepthought  deepthought  2 Feb 10 02:05 "\?$*'KwaMe'*$?\"
+
+/var/folders/_h/dy96dltj4kg_n24q5kzc9cb40000gq/T/tmpSUQcU9/user/ex06:
+total 8
+-rw-r--r--  1 deepthought  deepthought  26 Feb 10 02:05 skip.sh
+
+/var/folders/_h/dy96dltj4kg_n24q5kzc9cb40000gq/T/tmpSUQcU9/user/ex07:
+total 8
+-rw-r--r--  1 deepthought  deepthought  176 Feb 10 02:05 r_dwssap.sh
+
+/var/folders/_h/dy96dltj4kg_n24q5kzc9cb40000gq/T/tmpSUQcU9/user/ex08:
+total 8
+-rw-r--r--  1 deepthought  deepthought  64 Feb 10 02:05 bon.sh
+
+/var/folders/_h/dy96dltj4kg_n24q5kzc9cb40000gq/T/tmpSUQcU9/user/ex09:
+total 8
+-rw-r--r--  1 deepthought  deepthought  206 Feb 10 02:05 add_chelou.sh
+
+= ex01 =========================================================================
+===========
+testing
+nobody,everyone,localaccounts,_lpoperator
+VS
+nobody,everyone,localaccounts,_lpoperator
+===========
+< le notre, > le votre
+groups: noob: no such user
+groups: noob: no such user
+===========
+testing
+
+VS
+
+===========
+< our file, > your file
+ok
+
+Grade: 10
+
+= ex02 =========================================================================
+< our file, > your file
+ok
+
+Grade: 10
+
+= ex03 =========================================================================
+< our file, > your file
+ok
+
+Grade: 10
+
+= ex04 =========================================================================
+===========
+testing
+10:dd:b1:c1:77:6b
+ec:35:86:42:e8:34
+32:00:12:79:c2:e0
+32:00:12:79:c2:e1
+0e:35:86:42:e8:34
+02:6d:92:b5:7e:b9
+32:00:12:79:c2:e0
+
+VS
+10:dd:b1:c1:77:6b
+ec:35:86:42:e8:34
+32:00:12:79:c2:e0
+32:00:12:79:c2:e1
+0e:35:86:42:e8:34
+02:6d:92:b5:7e:b9
+32:00:12:79:c2:e0
+
+===========
+< le notre, > le votre
+ok
+
+Grade: 10
+
+= ex05 =========================================================================
+-rw-r--r--  1 deepthought  deepthought  2 Feb 10 02:05 "\?$*'KwaMe'*$?\"
+OK
+
+Grade: 10
+
+= ex06 =========================================================================
+ok
+
+Grade: 10
+
+= ex07 =========================================================================
+< our file, > your file
+1c1
+< toorsmvc_, toor, tocevod_, svc_, sstq_, sorebrek_brk_, soibten_, sergtsop_, scodved_, rlaxcm_, rgmecived_, revreswodniw_, revressta_, rednopsersndm_.
+\ No newline at end of file
+---
+> toorsmvc_, sorebrek_brk_, dkrowten_, tocevod_, revreswodniw_, namliam_, rgmecived_, sstq_, svc_, revressta_, lqsym_, sergtsop_, nwonknu_, rednopsersndm_.
+KO with 3 and 16
+
+Grade: 0
+
+= ex08 =========================================================================
+SASL/GSSAPI authentication started
+SASL username: qdlinette@42.FR
+SASL SSF: 112
+SASL data security layer installed.
+===========
+testing
+99
+
+VS
+99
+
+===========
+< le notre, > le votre
+ok
+
+Grade: 15
+
+= ex09 =========================================================================
+OK
+
+Grade: 15
+
+= Final grade: 60 ==============================================================
+
+
+deepthought-no-reply@42.fr
+12:37 (Il y a 16 heures)
+À kcausse 
+   Traduire le message
+Désactiver pour : anglais
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e2r11p22.42.fr
+Darwin 16.7.0 x86_64
+$> date
+Sat Feb 10 12:36:49 CET 2018
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.38)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 9.0.0 (clang-900.0.38)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: intra/2018/activities/piscine_c_day_01/kcausse5
+
+= Git history ==================================================================
+$> git -C /var/folders/nm/75cc_w4x4xvcfdzv_nysy7ww0000gq/T/tmpOwvQ0R/user log --pretty='%H - %an, %ad : %s'
+137b3be17481a913156f9227ea9c367a02e7b135 - Killian CAUSSE, Sat Feb 10 08:54:05 2018 +0100 : 1
+
+= Collected files ==========================================
+$> ls -lAR /var/folders/nm/75cc_w4x4xvcfdzv_nysy7ww0000gq/T/tmpOwvQ0R/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  499 Feb 10 12:36 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought  102 Feb 10 12:36 ex01
+drwxr-xr-x  3 deepthought  deepthought  102 Feb 10 12:36 ex02
+drwxr-xr-x  3 deepthought  deepthought  102 Feb 10 12:36 ex03
+drwxr-xr-x  3 deepthought  deepthought  102 Feb 10 12:36 ex04
+drwxr-xr-x  3 deepthought  deepthought  102 Feb 10 12:36 ex05
+drwxr-xr-x  3 deepthought  deepthought  102 Feb 10 12:36 ex06
+drwxr-xr-x  3 deepthought  deepthought  102 Feb 10 12:36 ex07
+drwxr-xr-x  3 deepthought  deepthought  102 Feb 10 12:36 ex08
+drwxr-xr-x  3 deepthought  deepthought  102 Feb 10 12:36 ex09
+
+/var/folders/nm/75cc_w4x4xvcfdzv_nysy7ww0000gq/T/tmpOwvQ0R/user/ex01:
+total 8
+-rw-r--r--  1 deepthought  deepthought  42 Feb 10 12:36 print_groups.sh
+
+/var/folders/nm/75cc_w4x4xvcfdzv_nysy7ww0000gq/T/tmpOwvQ0R/user/ex02:
+total 8
+-rw-r--r--  1 deepthought  deepthought  52 Feb 10 12:36 find_sh.sh
+
+/var/folders/nm/75cc_w4x4xvcfdzv_nysy7ww0000gq/T/tmpOwvQ0R/user/ex03:
+total 8
+-rw-r--r--  1 deepthought  deepthought  55 Feb 10 12:36 count_files.sh
+
+/var/folders/nm/75cc_w4x4xvcfdzv_nysy7ww0000gq/T/tmpOwvQ0R/user/ex04:
+total 8
+-rw-r--r--  1 deepthought  deepthought  41 Feb 10 12:36 MAC.sh
+
+/var/folders/nm/75cc_w4x4xvcfdzv_nysy7ww0000gq/T/tmpOwvQ0R/user/ex05:
+total 8
+-rw-r--r--  1 deepthought  deepthought  2 Feb 10 12:36 "\?$*'KwaMe'*$?\"
+
+/var/folders/nm/75cc_w4x4xvcfdzv_nysy7ww0000gq/T/tmpOwvQ0R/user/ex06:
+total 8
+-rw-r--r--  1 deepthought  deepthought  26 Feb 10 12:36 skip.sh
+
+/var/folders/nm/75cc_w4x4xvcfdzv_nysy7ww0000gq/T/tmpOwvQ0R/user/ex07:
+total 8
+-rw-r--r--  1 deepthought  deepthought  147 Feb 10 12:36 r_dwssap.sh
+
+/var/folders/nm/75cc_w4x4xvcfdzv_nysy7ww0000gq/T/tmpOwvQ0R/user/ex08:
+total 8
+-rw-r--r--  1 deepthought  deepthought  64 Feb 10 12:36 bon.sh
+
+/var/folders/nm/75cc_w4x4xvcfdzv_nysy7ww0000gq/T/tmpOwvQ0R/user/ex09:
+total 8
+-rw-r--r--  1 deepthought  deepthought  206 Feb 10 12:36 add_chelou.sh
+10:dd:b1:a4:29:f3
+ec:35:86:42:f7:d2
+32:00:12:7e:5d:e0
+32:00:12:7e:5d:e1
+32:00:12:7e:5d:e0
+0e:35:86:42:f7:d2
+ba:6b:a1:de:43:5f
+
+VS
+10:dd:b1:a4:29:f3
+ec:35:86:42:f7:d2
+32:00:12:7e:5d:e0
+32:00:12:7e:5d:e1
+32:00:12:7e:5d:e0
+0e:35:86:42:f7:d2
+ba:6b:a1:de:43:5f
+
+===========
+< le notre, > le votre
+ok
+
+Grade: 10
+
+= ex05 =========================================================================
+-rw-r--r--  1 deepthought  deepthought  2 Feb 10 12:36 "\?$*'KwaMe'*$?\"
+
+
+deepthought-no-reply@42.fr
+15:13 (Il y a 13 heures)
+À kcausse 
+   Traduire le message
+Désactiver pour : anglais
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e3r11p7.42.fr
+Darwin 16.7.0 x86_64
+$> date
+Sat Feb 10 15:13:30 CET 2018
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.38)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 9.0.0 (clang-900.0.38)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: intra/2018/activities/piscine_c_day_01/kcausse6
+
+= Git history ==================================================================
+$> git -C /var/folders/dv/j4w62np93ll617jcc357cqlw0000gq/T/tmpRKLg0c/user log --pretty='%H - %an, %ad : %s'
+b900a866b0e8e57fd176a47cd8933a5883c97cc3 - Killian CAUSSE, Sat Feb 10 12:52:15 2018 +0100 : 1
+
+= Collected files ==========================================
+$> ls -lAR /var/folders/dv/j4w62np93ll617jcc357cqlw0000gq/T/tmpRKLg0c/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  500 Feb 10 15:13 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought  102 Feb 10 15:13 ex01
+drwxr-xr-x  3 deepthought  deepthought  102 Feb 10 15:13 ex02
+drwxr-xr-x  3 deepthought  deepthought  102 Feb 10 15:13 ex03
+drwxr-xr-x  3 deepthought  deepthought  102 Feb 10 15:13 ex04
+drwxr-xr-x  3 deepthought  deepthought  102 Feb 10 15:13 ex05
+drwxr-xr-x  3 deepthought  deepthought  102 Feb 10 15:13 ex06
+drwxr-xr-x  3 deepthought  deepthought  102 Feb 10 15:13 ex07
+drwxr-xr-x  3 deepthought  deepthought  102 Feb 10 15:13 ex08
+drwxr-xr-x  3 deepthought  deepthought  102 Feb 10 15:13 ex09
+
+/var/folders/dv/j4w62np93ll617jcc357cqlw0000gq/T/tmpRKLg0c/user/ex01:
+total 8
+-rw-r--r--  1 deepthought  deepthought  42 Feb 10 15:13 print_groups.sh
+
+/var/folders/dv/j4w62np93ll617jcc357cqlw0000gq/T/tmpRKLg0c/user/ex02:
+total 8
+-rw-r--r--  1 deepthought  deepthought  52 Feb 10 15:13 find_sh.sh
+
+/var/folders/dv/j4w62np93ll617jcc357cqlw0000gq/T/tmpRKLg0c/user/ex03:
+total 8
+-rw-r--r--  1 deepthought  deepthought  55 Feb 10 15:13 count_files.sh
+
+/var/folders/dv/j4w62np93ll617jcc357cqlw0000gq/T/tmpRKLg0c/user/ex04:
+total 8
+-rw-r--r--  1 deepthought  deepthought  41 Feb 10 15:13 MAC.sh
+
+/var/folders/dv/j4w62np93ll617jcc357cqlw0000gq/T/tmpRKLg0c/user/ex05:
+total 8
+-rw-r--r--  1 deepthought  deepthought  2 Feb 10 15:13 "\?$*'KwaMe'*$?\"
+
+/var/folders/dv/j4w62np93ll617jcc357cqlw0000gq/T/tmpRKLg0c/user/ex06:
+total 8
+-rw-r--r--  1 deepthought  deepthought  26 Feb 10 15:13 skip.sh
+
+/var/folders/dv/j4w62np93ll617jcc357cqlw0000gq/T/tmpRKLg0c/user/ex07:
+total 8
+-rw-r--r--  1 deepthought  deepthought  160 Feb 10 15:13 r_dwssap.sh
+
+/var/folders/dv/j4w62np93ll617jcc357cqlw0000gq/T/tmpRKLg0c/user/ex08:
+total 8
+-rw-r--r--  1 deepthought  deepthought  64 Feb 10 15:13 bon.sh
+
+/var/folders/dv/j4w62np93ll617jcc357cqlw0000gq/T/tmpRKLg0c/user/ex09:
+total 8
+-rw-r--r--  1 deepthought  deepthought  206 Feb 10 15:13 add_chelou.sh
+10:dd:b1:b4:f5:95
+ec:35:86:39:1b:70
+32:00:10:d8:b4:a0
+32:00:10:d8:b4:a1
+32:00:10:d8:b4:a0
+0e:35:86:39:1b:70
+26:1f:f0:2c:e6:6c
+
+VS
+10:dd:b1:b4:f5:95
+ec:35:86:39:1b:70
+32:00:10:d8:b4:a0
+32:00:10:d8:b4:a1
+32:00:10:d8:b4:a0
+0e:35:86:39:1b:70
+26:1f:f0:2c:e6:6c
+
+===========
+< le notre, > le votre
+ok
+
+Grade: 10
+
+= ex05 =========================================================================
+-rw-r--r--  1 deepthought  deepthought  2 Feb 10 15:13 "\?$*'KwaMe'*$?\"
+OK
+
+Grade: 10
+
+= ex06 =========================================================================
+ok
+
+Grade: 10
+
+= ex07 =========================================================================
+< our file, > your file
+< our file, > your file
+OK
+
+Grade: 10
+
+= ex08 =========================================================================
+SASL/GSSAPI authentication started
+SASL username: qdlinette@42.FR
+SASL SSF: 112
+SASL data security layer installed.
+===========
+testing
+99
+
+VS
+99
+
+===========
+< le notre, > le votre
+ok
+
+Grade: 15
+
+= ex09 =========================================================================
+OK
+
+Grade: 15
+
+= Final grade: 100 =============================================================
