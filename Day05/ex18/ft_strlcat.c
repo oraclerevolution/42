@@ -10,17 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlcat(char *dest, char *src, int nb)
+unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
 	int i;
 	int offset;
 
 	i = 0;
 	offset = 0;
-	src_len = 0;
 	while (dest[offset] != '\0')
 		offset++;
-	while ((i - 1) != nb && src[i] != '\0')
+	while (i != size && src[i] != '\0')
 	{
 		dest[offset + i] = src[i];
 		i++;
