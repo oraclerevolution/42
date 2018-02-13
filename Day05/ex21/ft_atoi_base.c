@@ -47,6 +47,16 @@ int		is_base_correct(char *base)
 	return (1);
 }
 
+int		skip_sign(char c, int *positive)
+{
+	if (c == '-' || c == '+')
+	{
+		*positive = (c == '-') ? -1 : 1;
+		return (1);
+	}
+	return (0);
+}
+
 int		ft_atoi_base(char *str, char *base)
 {
 	int pos;
@@ -65,11 +75,7 @@ int		ft_atoi_base(char *str, char *base)
 	while (str[i] == ' ' || str[i] == '\n' || str[i] == '\f' || \
 			str[i] == '\t' || str[i] == '\v' || str[i] == '\r')
 		i++;
-	if (str[i] == '-')
-	{
-		pos = -1;
-		i++;
-	}
+	i += skip_sign(str[i], &pos);
 	while (get_val_frm_base(str[i], base) != -1)
 		result = (result * length) + get_val_frm_base(str[i++], base);
 	return (result * pos);
