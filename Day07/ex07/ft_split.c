@@ -80,12 +80,11 @@ char		**ft_split(char *str, char *charset)
 	int		last;
 
 	c = 0;
-	i = 0;
+	i = -1;
 	if ((tmp = (char**)malloc(sizeof(char*) * c_w(str, charset) + 1)) == NULL)
 		return (NULL);
-	while (str[i])
-	{
-		if (str[i] != ' ' & str[i] != '\t' & str[i] != '\n')
+	while (str[++i])
+		if (!is_separator(str[i]))
 		{
 			last = i;
 			i += find_next_word(str + i, charset);
@@ -93,8 +92,6 @@ char		**ft_split(char *str, char *charset)
 				return (NULL);
 			cpy_word(tmp[c++], str + last, i - last + 1);
 		}
-		i++;
-	}
 	if ((tmp[c] = (char*)malloc(sizeof(char))) == NULL)
 		return (NULL);
 	tmp[c][0] = 0;
