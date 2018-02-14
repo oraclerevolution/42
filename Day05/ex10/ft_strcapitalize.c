@@ -33,8 +33,13 @@ char	*ft_strcapitalize(char *str)
 	while (str[i] != '\0')
 	{
 		chartype = is_letter(str[i]);
-		if (chartype == 1 && i == 0)
-			str[i] -= 32;
+		if (chartype == 1)
+		{
+			if (i == 0)
+				str[i] -= 32;
+			else if (is_separator(str[i - 1]))
+				str[i] -= 32;
+		}
 		else if (chartype == 2 && i != 0 && !is_separator(str[i - 1]))
 			str[i] += 32;
 		i++;

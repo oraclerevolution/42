@@ -1,50 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_non_printable.c                          :+:      :+:    :+:   */
+/*   ft_strcapitalize.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kcausse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/10 03:26:18 by kcausse           #+#    #+#             */
-/*   Updated: 2018/02/10 03:26:18 by kcausse          ###   ########.fr       */
+/*   Created: 2018/02/09 05:42:20 by kcausse           #+#    #+#             */
+/*   Updated: 2018/02/09 05:42:20 by kcausse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c);
-
-void	print_hex(int value)
+char	is_letter(char c)
 {
-	char	ch[2];
-	int		i;
-
-	i = 1;
-	while (value != 0)
-	{
-		ch[i--] = value % 16 < 10 \
-				? value % 16 + '0' : value % 16 + ('a' - 10);
-		value /= 16;
-	}
-	while (i >= 0)
-		ch[i--] = '0';
-	ft_putchar('\\');
-	ft_putchar(ch[0]);
-	ft_putchar(ch[1]);
+	if (c >= 'a' && c <= 'z')
+		return (1);
+	if (c >= 'A' && c <= 'Z')
+		return (2);
+	return (0);
 }
 
-int		ft_putstr_non_printable(char *str)
+char	is_separator(char c)
+{
+	return (c == ' ' || c == '/' || c == ',' || c == '-' || c == '+');
+}
+
+char	*ft_strcapitalize(char *str)
 {
 	int i;
+	int chartype;
 
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] > ' ' && str[i] <= '~')
-			ft_putchar(str[i]);
-		else
-			print_hex(str[i]);
+		chartype = is_letter(str[i]);
+		if (chartype == 1 && i == 0)
+			str[i] -= 32;
+		else if (chartype == 2 && i != 0 && !is_separator(str[i - 1]))
+			str[i] += 32;
 		i++;
 	}
-	return (1);
+	return (str);
 }
