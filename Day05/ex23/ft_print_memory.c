@@ -10,12 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
+void	ft_putchar(char c);
 
 void	print_hex(int value, int length)
 {
@@ -82,7 +77,9 @@ void	*ft_print_memory(void *addr, unsigned int size)
 		c = 0;
 		while (c < (size > 16 ? 16 : size))
 		{
-			if (curr[c] >= 32 && curr[c] <= 128)
+			if ((unsigned char*)addr == &addr[c])
+				print_hex(size, 2);
+			else if (curr[c] >= 32 && curr[c] <= 128)
 				ft_putchar(curr[c]);
 			else
 				ft_putchar('.');
@@ -93,11 +90,4 @@ void	*ft_print_memory(void *addr, unsigned int size)
 		ft_putchar('\n');
 	}
 	return (addr);
-}
-
-int main()
-{
-	char *str = "sdfdsfdsfsdvd test";
-	ft_print_memory(str, 17);
-	return (0);
 }
