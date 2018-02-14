@@ -41,7 +41,10 @@ int		ft_putstr_non_printable(char *str)
 	while (str[i] != '\0')
 	{
 		if (str[i] < ' ' || str[i] > '~')
-			print_hex(str[i]);
+		{
+			ft_putchar(str[i] / 10);
+			ft_putchar(str[i] % 10);
+		}
 		else
 			ft_putchar(str[i]);
 		i++;
