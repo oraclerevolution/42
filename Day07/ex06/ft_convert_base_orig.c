@@ -13,7 +13,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int		base_valid(char *base)
+int	base_valid(char *base)
 {
 	int i;
 	int i2;
@@ -50,42 +50,41 @@ int		get_val_frm_base(char c, char *base)
 	return (-1);
 }
 
-void	cpy_base(char *output, int nbr, char *base, int *len)
-{
-	output[len[2]] = '\0';
-	while (nbr != 0)
-	{
-		output[--len[2]] = base[nbr % len[1]];
-		nbr /= len[1];
-	}
-}
-
 char	*ft_convert_base(char *nbr, char *base_from, char *base_to)
 {
 	char	*tmp;
-	int		len[3];
-	int		result[2];
+	int		ibase_len;
+	int		obase_len;
+	int		memsize;
+	int		result;
+	int		result2;
 	int		i;
 
-	len[0] = base_valid(base_from);
-	len[1] = base_valid(base_to);
-	if (len[0] <= 1 || len[1] <= 1)
+	ibase_len = base_valid(base_from);
+	obase_len = base_valid(base_to);
+	if (ibase_len <= 1 || obase_len <= 1)
 		return (NULL);
-	result[0] = 0;
+	result = 0;
 	i = -1;
 	while (nbr[++i] != '\0')
 	{
 		if (get_val_frm_base(nbr[i], base_from) == -1)
 			break ;
-		result[0] = result[0] * len[0] + get_val_frm_base(nbr[i], base_from);
+		result = result * ibase_len + get_val_frm_base(nbr[i], base_from);
 	}
-	len[2] = 0;
-	result[1] = result[0];
-	while (result[1] != 0 && ++len[2])
-		result[1] /= len[1];
-	if ((tmp = (char*)malloc(sizeof(char) * (len[2] + 1))) == NULL)
+	i = 0;
+	memsize = 0;
+	result2 = result;
+	while (result2 != 0 && ++memsize)
+		result2 /= obase_len;
+	if ((tmp = (char*)malloc(sizeof(char) * memsize + 1)) == NULL)
 		return (NULL);
-	cpy_base(tmp, result[0], base_to, len);
+	tmp[memsize] = '\0';
+	while (result != 0)
+	{
+		tmp[--memsize] = base_to[result % obase_len];
+		result /= obase_len;
+	}
 	return (tmp);
 }
 
@@ -93,7 +92,7 @@ int		main(void)
 {
 	char *test;
 
-	test = ft_convert_base("101011111", "01", "0123456789abcdef");
+	test = ft_convert_base("10000101011001111001", "01", "0123456789abcdef");
 	printf("%s\n", test);
 	return (0);
 }
