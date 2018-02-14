@@ -21,11 +21,8 @@ int	main(int argc, char **argv)
 	while (arg < argc)
 	{
 		i = 0;
-		while (argv[arg][i] != '\0')
-		{
-			write(1, &argv[arg][i], 1);
-			i++;
-		}
+		while (argv[arg][i])
+			write(1, &argv[arg][i++], 1);
 		write(1, "\n", 1);
 		arg++;
 	}

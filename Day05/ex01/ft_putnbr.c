@@ -20,7 +20,7 @@ void	ft_putnbr(int nb)
 	if (nb < 0)
 	{
 		ft_putchar('-');
-		if (nb == –2147483648)
+		if (nb == -2147483648)
 		{
 			nb = 2147483647;
 			overflow = 1;

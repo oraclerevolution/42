@@ -67,7 +67,7 @@ void	*ft_print_memory(void *addr, unsigned int size)
 {
 	unsigned char	*curr;
 	unsigned char	*end;
-	int				c;
+	unsigned int	c;
 
 	curr = (unsigned char*)addr;
 	end = curr + size;

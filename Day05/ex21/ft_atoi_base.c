@@ -77,5 +77,7 @@ int		ft_atoi_base(char *str, char *base)
 	i += skip_sign(str[i], &pos);
 	while (get_val_frm_base(str[i], base) != -1)
 		result = (result * length) + get_val_frm_base(str[i++], base);
+	if (get_val_frm_base(str[i], base) == -1 && str[i] != '-' && str[i] != '+')
+		return (0);
 	return (result * pos);
 }
