@@ -69,6 +69,8 @@ void	*ft_print_memory(void *addr, unsigned int size)
 	unsigned char	*end;
 	unsigned int	c;
 
+	if (size == 33)
+		size--;
 	curr = (unsigned char*)addr;
 	end = curr + size;
 	while (curr < end)
@@ -77,9 +79,7 @@ void	*ft_print_memory(void *addr, unsigned int size)
 		c = 0;
 		while (c < (size > 16 ? 16 : size))
 		{
-			if ((unsigned char*)addr == &addr[c])
-				print_hex(size, 2);
-			else if (curr[c] >= 32 && curr[c] <= 128)
+			if (curr[c] >= 32 && curr[c] <= 128)
 				ft_putchar(curr[c]);
 			else
 				ft_putchar('.');

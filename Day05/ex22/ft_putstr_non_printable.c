@@ -40,7 +40,7 @@ int		ft_putstr_non_printable(char *str)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] > ' ' && str[i] <= '~')
+		if (str[i] <= ' ' || str[i] > '~')
 			ft_putchar(str[i]);
 		else
 			print_hex(str[i]);

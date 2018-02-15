@@ -54,7 +54,7 @@ int		skip_sign(char c, int *positive)
 		*positive = (c == '-') ? -1 : 1;
 		return (1);
 	}
-	positive = 1;
+	*positive = 1;
 	return (0);
 }
 
