@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <stdio.h>
 #include "ft_ultimator.h"
 
 void	ft_destroy(char ***factory)
@@ -31,31 +30,4 @@ void	ft_destroy(char ***factory)
 		free(factory[a++]);
 	}
 	free(factory);
-}
-
-int		main(void)
-{
-	char	***str;
-	int		i;
-	int		i2;
-	int		size;
-
-	size = 5;
-	i = 0;
-	str = (char***)malloc(sizeof(char*) * size);
-	while (i < size - 1)
-	{
-		str[i] = (char**)malloc(sizeof(char) * size);
-		i2 = 0;
-		while (i2 < size - 1)
-		{
-			str[i][i2] = (char*)malloc(sizeof(char) * size);
-			i2++;
-		}
-		str[i][size - 1] = NULL;
-		i++;
-	}
-	str[size - 1] = NULL;
-	ft_destroy(str);
-	return (0);
 }

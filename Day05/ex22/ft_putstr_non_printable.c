@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
 void	ft_putchar(char c);
 
 void	print_hex(int value)
@@ -41,9 +39,9 @@ int		ft_putstr_non_printable(char *str)
 	while (str[i] != '\0')
 	{
 		if (str[i] <= ' ' || str[i] > '~')
-			ft_putchar(str[i]);
-		else
 			print_hex(str[i]);
+		else
+			ft_putchar(str[i]);
 		i++;
 	}
 	return (1);

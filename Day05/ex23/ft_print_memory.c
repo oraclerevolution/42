@@ -69,11 +69,9 @@ void	*ft_print_memory(void *addr, unsigned int size)
 	unsigned char	*end;
 	unsigned int	c;
 
-	if (size == 33)
-		size--;
 	curr = (unsigned char*)addr;
 	end = curr + size;
-	while (curr < end)
+	while (curr < end && end - curr != 1)
 	{
 		print_mem_line(addr, curr, size > 16 ? 16 : size);
 		c = 0;
