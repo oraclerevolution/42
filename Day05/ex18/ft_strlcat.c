@@ -13,6 +13,7 @@
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
 	unsigned int i;
+	unsigned int i2;
 	unsigned int offset;
 
 	i = 0;
@@ -27,5 +28,10 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	dest[offset + i] = '\0';
 	while (src[i] != '\0' && i < size)
 		i++;
-	return (offset + i);
+	i2 = i;
+	while (src[i2] != '\0')
+		i2++;
+	if (i2 >= size && offset > size)
+		return (i2 + size);
+	return (offset + i2);
 }
