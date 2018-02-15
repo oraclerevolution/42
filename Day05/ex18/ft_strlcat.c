@@ -13,25 +13,23 @@
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
 	unsigned int i;
-	unsigned int i2;
-	unsigned int offset;
+	unsigned int dest_len;
 
 	i = 0;
-	offset = 0;
-	while (dest[offset] != '\0')
-		offset++;
-	while (offset + i < (size - 1) && src[i] != '\0')
+	dest_len = 0;
+	while (dest[dest_len] != '\0')
+		dest_len++;
+	while (dest_len + i < (size - 1) && src[i] != '\0')
 	{
-		dest[offset + i] = src[i];
+		dest[dest_len + i] = src[i];
 		i++;
 	}
-	dest[offset + i] = '\0';
-	while (src[i] != '\0' && i < size)
+	dest[dest_len + i] = '\0';
+	while (src[i] != '\0')
 		i++;
-	i2 = i;
-	while (src[i2] != '\0')
-		i2++;
-	if (i2 >= size && offset > size)
-		return (i2 + size);
-	return (offset + i2);
+	while (src[i] != '\0')
+		i++;
+	if (i >= size && dest_len > size)
+		return (i + size);
+	return (dest_len + i);
 }
