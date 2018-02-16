@@ -12,14 +12,15 @@
 
 #ifndef FT_DOOR_H
 # define FT_DOOR_H
-#define TRUE (1)
-#define OPEN (1)
-#define CLOSE (0)
-#define EXIT_SUCCESS (0)
+# define TRUE (1)
+# define OPEN (1)
+# define CLOSE (0)
+# define EXIT_SUCCESS (0)
 
 typedef int		ft_bool;
-typedef struct 	s_door
+typedef struct	s_door
 {
-	ft_bool state;	
+	ft_bool state;
 }				t_door;
+
 #endif
