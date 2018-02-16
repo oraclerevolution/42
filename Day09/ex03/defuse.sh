@@ -1,1 +1,1 @@
-stat -x bomb.txt | grep "Access:" | cut -c9-
+echo "$(stat -r bomb.txt | cut -d\  -f9 ) - 1" | bc
