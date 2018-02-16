@@ -19,7 +19,7 @@ t_list	*ft_create_elem(void *data)
 
 	if ((tmp = (t_list*)malloc(sizeof(t_list))) == NULL)
 		return (NULL);
-	tmp->next = 0;
+	tmp->next = (NULL);
 	tmp->data = data;
 	return (tmp);
 }

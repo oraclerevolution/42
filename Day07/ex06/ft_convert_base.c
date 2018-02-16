@@ -55,10 +55,8 @@ void	cpy_base(char *output, int nbr, char *base, int *len)
 	int positive;
 
 	positive  = nbr >= 0 ? 0 : 1;
-	printf("%d, %d\n", nbr, positive);
 	if (nbr < 0)
 		nbr = -nbr;
-	printf("%d, %d\n", nbr, positive);
 	output[len[2] + positive] = '\0';
 	while (nbr != 0 + positive)
 	{
