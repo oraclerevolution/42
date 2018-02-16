@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_door.h                                          :+:      :+:    :+:   */
+/*   ft_decrypt.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kcausse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/16 04:56:17 by kcausse           #+#    #+#             */
-/*   Updated: 2018/02/16 04:56:18 by kcausse          ###   ########.fr       */
+/*   Created: 2018/02/16 11:16:58 by kcausse           #+#    #+#             */
+/*   Updated: 2018/02/16 11:16:58 by kcausse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_DOOR_H
-# define FT_DOOR_H
-# define TRUE (1)
-# define OPEN (1)
-# define CLOSE (0)
-# define EXIT_SUCCESS (0)
+#include "ft_perso.h"
 
-typedef int		t_bool;
-typedef struct	s_door
+t_perso **ft_decrypt(char *str)
 {
-	ft_bool state;
-}				t_door;
-
-#endif
+	
+}

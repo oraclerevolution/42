@@ -1,26 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_door.h                                          :+:      :+:    :+:   */
+/*   ft_perso.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kcausse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/16 04:56:17 by kcausse           #+#    #+#             */
-/*   Updated: 2018/02/16 04:56:18 by kcausse          ###   ########.fr       */
+/*   Created: 2018/02/16 11:16:50 by kcausse           #+#    #+#             */
+/*   Updated: 2018/02/16 11:16:50 by kcausse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_DOOR_H
-# define FT_DOOR_H
-# define TRUE (1)
-# define OPEN (1)
-# define CLOSE (0)
-# define EXIT_SUCCESS (0)
+#ifndef FT_PERSO_H
+# define FT_PERSO_H
 
-typedef int		t_bool;
-typedef struct	s_door
+typedef struct	s_perso
 {
-	ft_bool state;
-}				t_door;
-
+	int		age;
+	char	*nom;
+}				t_perso;
 #endif

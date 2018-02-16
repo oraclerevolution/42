@@ -23,27 +23,27 @@ void	ft_putstr(char *str)
 	write(1, str, i);
 }
 
-ft_bool	open_door(t_door *door)
+t_bool	open_door(t_door *door)
 {
 	ft_putstr("Door opening...\n");
 	door->state = OPEN;
 	return (TRUE);
 }
 
-ft_bool	close_door(t_door *door)
+t_bool	close_door(t_door *door)
 {
 	ft_putstr("Door closing...\n");
 	door->state = CLOSE;
 	return (TRUE);
 }
 
-ft_bool	is_door_open(t_door *door)
+t_bool	is_door_open(t_door *door)
 {
 	ft_putstr("Door is open ?\n");
 	return (door->state == OPEN);
 }
 
-ft_bool	is_door_close(t_door *door)
+t_bool	is_door_close(t_door *door)
 {
 	ft_putstr("Door is close ?\n");
 	return (door->state == CLOSE);

@@ -19,7 +19,7 @@ int	ft_compact(char **tab, int length)
 	while (i < length && tab[i] != NULL)
 		i++;
 	lastpos = i;
-	while(++i < length)
+	while (++i < length)
 		if (tab[i] != NULL)
 			tab[lastpos++] = tab[i];
 	return (lastpos);
