@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_antidote(int i, int j, int k)
+int	ft_antidote(int i, int j, int k)
 {
 	return (j);
 }
