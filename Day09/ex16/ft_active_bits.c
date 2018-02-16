@@ -14,11 +14,15 @@ unsigned int	ft_active_bits(int value)
 {
 	int count;
 
+	if (value < 0)
+		value++;
+	else if (value == 0)
+		return (0);
 	count = 0;
 	while (value != 0)
 	{
 		count += value % 2;
 		value /= 2;
 	}
-	return (count >= 0 ? count : -count);
+	return (count > 0 ? count : 32 + count);
 }
