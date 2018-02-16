@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int ft_active_bits(int value)
+unsigned int	ft_active_bits(int value)
 {
 	int count;
 
@@ -20,5 +20,5 @@ unsigned int ft_active_bits(int value)
 		count += value % 2;
 		value /= 2;
 	}
-	return (count);
+	return (count >= 0 ? count : -count);
 }

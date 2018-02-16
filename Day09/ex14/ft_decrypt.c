@@ -12,7 +12,9 @@
 
 #include "ft_perso.h"
 
-t_perso **ft_decrypt(char *str)
+t_perso	**ft_decrypt(char *str)
 {
-	
+	int i;
+
+	i = 0;
 }

@@ -1,26 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_door.h                                          :+:      :+:    :+:   */
+/*   ft_unmatch.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kcausse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/16 04:56:17 by kcausse           #+#    #+#             */
-/*   Updated: 2018/02/16 04:56:18 by kcausse          ###   ########.fr       */
+/*   Created: 2018/02/16 11:55:02 by kcausse           #+#    #+#             */
+/*   Updated: 2018/02/16 11:55:02 by kcausse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_DOOR_H
-# define FT_DOOR_H
-# define TRUE (1)
-# define OPEN (1)
-# define CLOSE (0)
-# define EXIT_SUCCESS (0)
-
-typedef int		t_bool;
-typedef struct	s_door
+int ft_unmatch(int *tab, int length)
 {
-	t_bool state;
-}				t_door;
+	int i;
+	int i2;
 
-#endif
+	i = 0;
+	while (i < length)
+	{
+		i2 = 0;
+		while (i2 < length && tab[i] != tab[i2])
+			i2++;
+		if (i2 == length)
+			return (tab[i]);
+		i++;
+	}
+}
+
+int main(void)
+{
+	int *tab = {};
+}

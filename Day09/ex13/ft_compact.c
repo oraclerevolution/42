@@ -16,11 +16,11 @@ int	ft_compact(char **tab, int length)
 	int i;
 
 	i = 0;
-	while (i < length && tab[i] != NULL)
+	while (i < length && tab[i] != ((void*)0))
 		i++;
 	lastpos = i;
 	while (++i < length)
-		if (tab[i] != NULL)
+		if (tab[i] != ((void*)0))
 			tab[lastpos++] = tab[i];
 	return (lastpos);
 }

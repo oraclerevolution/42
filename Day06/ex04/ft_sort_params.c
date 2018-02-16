@@ -10,18 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
+void	ft_putchar(char c);
 
 void	ft_putstr(char *str)
 {
 	while (*str != '\0')
 		ft_putchar(*str++);
-	write(1, "\n", 1);
+	ft_putchar('\n');
 }
 
 int		ft_strcmp(char *s1, char *s2)
