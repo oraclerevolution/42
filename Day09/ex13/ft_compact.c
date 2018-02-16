@@ -1,20 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_antidote.c                                      :+:      :+:    :+:   */
+/*   ft_compact.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kcausse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/15 23:47:44 by kcausse           #+#    #+#             */
-/*   Updated: 2018/02/15 23:47:44 by kcausse          ###   ########.fr       */
+/*   Created: 2018/02/16 10:37:22 by kcausse           #+#    #+#             */
+/*   Updated: 2018/02/16 10:37:23 by kcausse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_antidote(int i, int j, int k)
+int	ft_compact(char **tab, int length)
 {
-	if ((j < i && j > k) || (j < k && j > i))
-		return (j);
-	if ((k < i && k > j) || (k < j && k > i))
-		return (k);
-	return (i);
+	int lastpos;
+	int i;
+
+	i = 0;
+	while (i < length && tab[i] != NULL)
+		i++;
+	lastpos = i;
+	while(++i < length)
+		if (tab[i] != NULL)
+			tab[lastpos++] = tab[i];
+	return (lastpos);
 }
