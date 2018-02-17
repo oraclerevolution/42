@@ -41,32 +41,24 @@ void ft_list_push_front(t_list **begin_list, char *data)
     }
 }
 
-
-int ft_list_size(t_list *begin_list)
-{
-    int i;
-    t_list *list;
-    
-    if (begin_list->next == NULL)
-        return (1);
-    i = 2;
-    list = begin_list->next;
-    while (list->next != NULL && i++)
-        list = list->next;
-    return (i);
-}
-
 t_list *ft_list_push_params(int ac, char **av)
 {
-	t_list *list;
+    int     i;
+	t_list  *list;
+    t_list  *tmp;
 
 	if (ac == 1)
 		return (NULL);
-	int i;
 
-	i = 1;
+	i = 2;
+    list = ft_create_elem(av[1]);
 	while (i < ac)
-		ft_list_push_front(&list, av[i++]);
+    {
+		tmp = list;
+        list = ft_create_elem(av[i]);
+        list->next = tmp;
+        i++;
+    }
 	return (list);
 }
 
@@ -78,7 +70,7 @@ int main(int argc, char **argv)
 
     while (ozo != NULL && ozo->next != NULL)
     {
-        printf("--%s\n", ozo->data);
+        printf("--%s - %p\n", ozo->data, ozo->next);
         ozo = ozo->next;
     }
     return (0);
