@@ -1,34 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list_push_back.c                                :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kcausse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/14 22:42:04 by kcausse           #+#    #+#             */
-/*   Updated: 2018/02/14 22:42:04 by kcausse          ###   ########.fr       */
+/*   Created: 2018/02/17 10:34:28 by kcausse           #+#    #+#             */
+/*   Updated: 2018/02/17 10:34:28 by kcausse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_list.h"
 #include <stdlib.h>
 
-t_list	*ft_create_elem(void *data)
+char	*ft_itoa(int nbr)
 {
-	t_list *tmp;
+	char	*tmp;
+	int		tmpnbr;
+	int		size;
 
-	if ((tmp = (t_list*)malloc(sizeof(t_list))) == NULL)
-		return (NULL);
-	tmp->next = (NULL);
-	tmp->data = data;
+	tmpnbr = nbr;
+	size =  nbr < 0 || nbr == 0;
+	while (tmpnbr != 0)
+	{
+		tmpnbr /= 10;
+		size++;
+	}
+	tmp = (char*)malloc(sizeof(char) * (size + 1));
+	if (nbr < 0)
+		tmp[0] = '-';
+	tmp[size] = '\0';
+	if (nbr == 0)
+		tmp[0] = '0';
+	while (nbr != 0)
+	{
+		tmp[--size] = '0' + (nbr >= 0 ? nbr % 10 : -nbr % 10);
+		if (tmp[size] == '(')
+			tmp[size] = '8';
+		nbr /= 10;
+	}
 	return (tmp);
-}
-
-
-void ft_list_push_back(t_list **begin_list, void *data)
-{
-	t_list *list;
-
-	list = ft_create_elem(data);
-	list 
 }

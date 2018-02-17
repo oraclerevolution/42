@@ -1,34 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list_push_back.c                                :+:      :+:    :+:   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kcausse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/14 22:42:04 by kcausse           #+#    #+#             */
-/*   Updated: 2018/02/14 22:42:04 by kcausse          ###   ########.fr       */
+/*   Created: 2018/02/17 10:47:58 by kcausse           #+#    #+#             */
+/*   Updated: 2018/02/17 10:47:58 by kcausse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_list.h"
-#include <stdlib.h>
-
-t_list	*ft_create_elem(void *data)
+char	*ft_strrev(char *str)
 {
-	t_list *tmp;
+	int len;
+	int i;
+	char tmp;
 
-	if ((tmp = (t_list*)malloc(sizeof(t_list))) == NULL)
-		return (NULL);
-	tmp->next = (NULL);
-	tmp->data = data;
-	return (tmp);
-}
-
-
-void ft_list_push_back(t_list **begin_list, void *data)
-{
-	t_list *list;
-
-	list = ft_create_elem(data);
-	list 
+	len = 0;
+	while (str[len] != '\0')
+		len++;
+	i = 0;
+	while (i < (len / 2))
+	{
+		tmp = str[i];
+		str[i] = str[len - i - 1];
+		str[len - i - 1] = tmp;
+		i++;
+	}
+	return (str);
 }

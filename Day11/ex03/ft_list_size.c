@@ -12,13 +12,43 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "ft_list.h"
+
+t_list	*ft_create_elem(void *data)
+{
+	t_list *tmp;
+
+	if ((tmp = (t_list*)malloc(sizeof(t_list))) == NULL)
+		return (NULL);
+	tmp->next = (NULL);
+	tmp->data = data;
+	return (tmp);
+}
+
+
+void ft_list_push_front(t_list **begin_list, char *data)
+{
+	if (*begin_list == NULL)
+		*begin_list = ft_create_elem(data);
+	else
+	{
+		t_list *list;
+
+		list = ft_create_elem(data);
+		list->next = *begin_list;
+		*begin_list = list;
+	}
+}
+
 
 int ft_list_size(t_list *begin_list)
 {
 	int i;
 	t_list *list;
 
-	i = 0;
+	if (begin_list->next == NULL)
+		return (0);
+	i = 1;
 	list = begin_list->next;
 	while (list->next != NULL)
 	{
@@ -47,7 +77,7 @@ int main(int argc, char **argv)
 		printf("%s\n", list->data);
 		list = list->next;
 	}
-	printf("%s\n", list->data);
-	printf("%d". ft_list_size(list));
+	printf("%s\n", ozo->data);
+	printf("%d", ft_list_size(ozo));
 	return 0;
 }
