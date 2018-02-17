@@ -14,7 +14,7 @@
 
 void	ft_putchar(char c);
 
-int	main(int argc, char **argv)
+int		main(int argc, char **argv)
 {
 	int i;
 
