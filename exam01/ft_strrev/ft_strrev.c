@@ -12,9 +12,9 @@
 
 char	*ft_strrev(char *str)
 {
-	int len;
-	int i;
-	char tmp;
+	int		len;
+	int		i;
+	char	tmp;
 
 	len = 0;
 	while (str[len] != '\0')

@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
 char	is_separator(char c)
 {
@@ -26,15 +25,12 @@ int		get_word_length(char *str, int start)
 
 	i = start;
 	while (i != -1 && !is_separator(str[i]))
-	{
 		i--;
-	}
 	return (start - i);
 }
 
-int main(int argc, char **argv)
+int		main(int argc, char **argv)
 {
-	int i;
 	int end;
 	int word_length;
 
@@ -48,11 +44,12 @@ int main(int argc, char **argv)
 		end++;
 	while (end != 0)
 	{
-		if (!is_separator(argv[1][end]) && ((word_length = get_word_length(argv[1], end)) > 1))
-			break;
+		if (!is_separator(argv[1][end]) && \
+			((word_length = get_word_length(argv[1], end)) > 1))
+			break ;
 		end--;
 	}
 	write(1, argv[1] + (end - word_length + 1), word_length);
 	write(1, "\n", 1);
-	return 0;
+	return (0);
 }

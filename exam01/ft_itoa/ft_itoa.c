@@ -19,7 +19,7 @@ char	*ft_itoa(int nbr)
 	int		size;
 
 	tmpnbr = nbr;
-	size =  nbr < 0 || nbr == 0;
+	size = nbr < 0 || nbr == 0;
 	while (tmpnbr != 0)
 	{
 		tmpnbr /= 10;
