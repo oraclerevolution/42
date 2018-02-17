@@ -84,7 +84,7 @@ char		**ft_split(char *str, char *charset)
 	if ((tmp = (char**)malloc(sizeof(char*) * c_w(str, charset) + 1)) == NULL)
 		return (NULL);
 	while (str[++i])
-		if (!is_separator(str[i]))
+		if (!is_separator(str[i], charset))
 		{
 			last = i;
 			i += find_next_word(str + i, charset);

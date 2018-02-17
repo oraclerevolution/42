@@ -23,15 +23,9 @@ int	ft_atoi(char *str)
 			str[i] == '\t' || str[i] == '\v' || str[i] == '\r')
 		i++;
 	if (str[i] == '-' || str[i] == '+')
-	{
-		if (str[i] == '-')
+		if (str[i++] == '-')
 			pos = -1;
-		i++;
-	}
 	while (str[i] >= '0' && str[i] <= '9')
-	{
-		result = result * 10 + str[i] - '0';
-		i++;
-	}
+		result = result * 10 + str[i++] - '0';
 	return (result * pos);
 }

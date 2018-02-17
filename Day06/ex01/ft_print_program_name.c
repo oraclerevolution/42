@@ -22,5 +22,6 @@ int		main(int argc, char **argv)
 	while (argv[0][i])
 		ft_putchar(argv[0][i++]);
 	(void)argc;
+	ft_putchar('\n');
 	return (0);
 }
