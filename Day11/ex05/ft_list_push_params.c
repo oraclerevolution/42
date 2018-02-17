@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#include <stdio.h>
 #include <stdlib.h>
 #include "ft_list.h"
 
@@ -24,21 +22,6 @@ t_list    *ft_create_elem(void *data)
     tmp->next = (NULL);
     tmp->data = data;
     return (tmp);
-}
-
-
-void ft_list_push_front(t_list **begin_list, char *data)
-{
-    if (*begin_list == NULL)
-        *begin_list = ft_create_elem(data);
-    else
-    {
-        t_list *list;
-        
-        list = ft_create_elem(data);
-        list->next = *begin_list;
-        *begin_list = list;
-    }
 }
 
 t_list *ft_list_push_params(int ac, char **av)
@@ -61,17 +44,3 @@ t_list *ft_list_push_params(int ac, char **av)
     }
 	return (list);
 }
-
-int main(int argc, char **argv)
-{
-    t_list *ozo;
-    
-    ozo = ft_list_push_params(argc, argv);
-
-    while (ozo != NULL && ozo->next != NULL)
-    {
-        printf("--%s - %p\n", ozo->data, ozo->next);
-        ozo = ozo->next;
-    }
-    return (0);
- }
