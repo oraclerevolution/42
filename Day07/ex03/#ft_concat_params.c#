@@ -18,17 +18,21 @@ int		get_argv_total_length(int argc, char **argv)
 	int n;
 	int i;
 
-	n = 1;
+	n = 0;
+	i = 0;
 	length = 0;
 	while (n < argc)
 	{
 		i = 0;
-		while (argv[n][i++] != '\0')
+		while (argv[n][i] != '\0')
+		{
+			i++;
 			length++;
+		}
 		length++;
 		n++;
 	}
-	return (length - 1);
+	return (length);
 }
 
 char	*ft_concat_params(int argc, char **argv)
@@ -39,8 +43,7 @@ char	*ft_concat_params(int argc, char **argv)
 	int		offset;
 
 	n = get_argv_total_length(argc, argv);
-	if ((tmp = (char*)malloc(sizeof(char) * (n + 1))) == NULL)
-		return (NULL);
+	tmp = (char*)malloc(sizeof(char) * (n + 1));
 	n = 1;
 	offset = 0;
 	while (n < argc)
