@@ -18,13 +18,12 @@ void		ft_print_words_tables(char **tab)
 	int c;
 
 	c = 0;
-	i = 0;
 	while (tab[c][0] != 0)
 	{
 		i = 0;
 		while (tab[c][i] != '\0')
 		{
-			ft_putchar(tab[c][i]);
+			ft_putchar(tab[c][i++]);
 			i++;
 		}
 		ft_putchar('\n');

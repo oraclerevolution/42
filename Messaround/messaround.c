@@ -18,8 +18,17 @@ void ft_putchar(char c)
     write(1, &c, 1);
 }
 
+int		t_strcmp(char *s1, char *s2)
+{
+	if (*s1 == '\0' && *s2 == '\0')
+		return (0);
+	if (*s1 == *s2)
+		return t_strcmp(s1 + 1, s2 + 1);
+	return (*s1 - *s2);
+}
+
 int main(int argc, char **argv)
 {
-	char test = -127;
-    printf("%d", (unsigned char)test);
+    printf("%d\n", t_strcmp("gfhgfhgf", "gfhgfhgf"));
+    printf("%d", strcmp("gfhgfhgf", "gfhgfhgf"));
 }

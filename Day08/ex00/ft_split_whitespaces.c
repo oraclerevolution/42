@@ -64,7 +64,7 @@ char		**ft_split_whitespaces(char *str)
 
 	c = 0;
 	i = 0;
-	if ((tmp = (char**)malloc(sizeof(char*) * count_words(str) + 1)) == NULL)
+	if ((tmp = (char**)malloc(sizeof(char*) * (count_words(str) + 1))) == NULL)
 		return (NULL);
 	while (str[i])
 	{
