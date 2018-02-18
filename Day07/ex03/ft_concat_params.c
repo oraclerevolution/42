@@ -18,7 +18,7 @@ int		get_argv_total_length(int argc, char **argv)
 	int n;
 	int i;
 
-	n = 0;
+	n = 1;
 	i = 0;
 	length = 0;
 	while (n < argc)
@@ -32,7 +32,7 @@ int		get_argv_total_length(int argc, char **argv)
 		length++;
 		n++;
 	}
-	return (length);
+	return (length - 1);
 }
 
 char	*ft_concat_params(int argc, char **argv)
