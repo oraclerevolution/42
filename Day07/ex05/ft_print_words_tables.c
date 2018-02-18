@@ -18,7 +18,7 @@ void		ft_print_words_tables(char **tab)
 	int c;
 
 	c = 0;
-	while (tab[c][0] != 0)
+	while (tab[c] != 0)
 	{
 		i = 0;
 		while (tab[c][i] != '\0')
