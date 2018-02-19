@@ -27,12 +27,11 @@ t_list	*ft_create_elem(void *data)
 t_list	*ft_list_push_params(int ac, char **av)
 {
 	int		i;
-	t_list 	*list;
-    t_list 	*tmp;
+	t_list	*list;
+    t_list	*tmp;
 
 	if (ac == 1)
-	return (NULL);
-
+		return (NULL);
 	i = 2;
 	list = ft_create_elem(av[1]);
 	while (i < ac)
