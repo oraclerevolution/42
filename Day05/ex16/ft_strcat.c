@@ -16,10 +16,9 @@ char	*ft_strcat(char *dest, char *src)
 	int offset;
 
 	i = 0;
-	while (dest[i] != '\0')
-		i++;
-	offset = i;
-	i = 0;
+	offset = 0;
+	while (dest[offset] != '\0')
+		offset++;
 	while (src[i] != '\0')
 	{
 		dest[offset + i] = src[i];
