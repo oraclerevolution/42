@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list_size.c                                     :+:      :+:    :+:   */
+/*   ft_list_foreach_if.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kcausse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/16 16:35:43 by kcausse           #+#    #+#             */
-/*   Updated: 2018/02/16 16:35:43 by kcausse          ###   ########.fr       */
+/*   Created: 2018/02/20 01:15:38 by kcausse           #+#    #+#             */
+/*   Updated: 2018/02/20 01:15:38 by kcausse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_list.h"
 
-int	ft_list_size(t_list *begin_list)
+void	ft_list_foreach_if(t_list *begin_list, void (*f)(void *), \
+		void *data_ref, int (*cmp)())
 {
-	int		i;
-	t_list	*list;
+	t_list *list;
 
-	if (begin_list->next == (void*)0)
-		return (1);
-	i = 2;
 	list = begin_list->next;
-	while (list->next != (void*)0 && i++)
+	while (list != (void*)0)
+	{
+		if ((*cmp)())
+			(*f)(list->data);
 		list = list->next;
-	return (i);
+	}
 }

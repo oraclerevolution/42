@@ -16,9 +16,7 @@ t_list	*ft_list_last(t_list *begin_list)
 {
 	t_list *tmp;
 
-	if (begin_list->next == NULL)
-		return (begin_list);
-	tmp = begin_list->next;
+	tmp = begin_list;
 	while (tmp->next != NULL)
 		tmp = tmp->next;
 	return (tmp);
