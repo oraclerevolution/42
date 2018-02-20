@@ -10,12 +10,30 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
+void print(char *str)
+{
+	int i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	write(1, str, i);
+}
 
 int main(int argc, char **argv)
 {
-	if 
-		
-	return (0);
+	int i;
+	if (argc == 1)
+		while(1)
+			(void)argc;
+	
+	i = 1;
+	while (i < argc)
+	{
+		print("cat: ");
+		print(argv[i]);
+		print(": No such file or directory\n");
+		i++;
+	}
+	return 0;
 }

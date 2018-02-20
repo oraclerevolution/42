@@ -10,8 +10,29 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int main(int argc, char const *argv[])
+#include <unistd.h>
+#include <fcntl.h>
+
+void print(char *str)
 {
-	/* code */
+	int i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	write(1, str, i);
+}
+
+int main(int argc, char **argv)
+{
+	int seeker;
+	if (argc != 2)
+	{
+		print(argc == 1 ? "File name missing.\n" : "Too many arguments.\n");
+		return (0);
+	}
+	
+	seeker = open(argv[1], O_RDONLY);
+
 	return 0;
 }
