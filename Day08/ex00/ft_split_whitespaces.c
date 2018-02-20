@@ -80,6 +80,6 @@ char		**ft_split_whitespaces(char *str)
 	}
 	if ((tmp[c] = (char*)malloc(sizeof(char))) == NULL)
 		return (NULL);
-	tmp[c][0] = 0;
+	tmp[c] = 0;
 	return (tmp);
 }
