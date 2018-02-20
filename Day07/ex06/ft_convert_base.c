@@ -54,7 +54,7 @@ void	cpy_base(char *output, int nbr, char *base, int *len)
 {
 	int positive;
 
-	positive  = nbr >= 0 ? 0 : 1;
+	positive = nbr >= 0 ? 0 : 1;
 	if (nbr < 0)
 		nbr = -nbr;
 	output[len[2] + positive] = '\0';
@@ -63,7 +63,7 @@ void	cpy_base(char *output, int nbr, char *base, int *len)
 		output[--len[2]] = base[nbr % len[1]];
 		nbr /= len[1];
 	}
-	if(positive != 0)
+	if (positive != 0)
 		output[0] = '-';
 }
 
@@ -77,7 +77,7 @@ int		get_val(int *output, char *nbr, char *base_from, int base_len)
 	if (nbr[i] == '-' || nbr[i] == '+')
 	{
 		if (nbr[i] == '-')
-			positive = -1; 
+			positive = -1;
 		i++;
 	}
 	while (nbr[i] != '\0')
@@ -107,7 +107,8 @@ char	*ft_convert_base(char *nbr, char *base_from, char *base_to)
 	len[2] = positive == 1 ? 0 : 1;
 	while (result[1] != 0 && ++len[2])
 		result[1] /= len[1];
-	if ((tmp = (char*)malloc(sizeof(char) * (len[2] + 1 + (positive == 1 ? 0 : 1)))) == NULL)
+	if ((tmp = (char*)malloc(sizeof(char) * (len[2] + 1 + \
+		(positive == 1 ? 0 : 1)))) == NULL)
 		return (NULL);
 	cpy_base(tmp, result[0] * positive, base_to, len);
 	return (tmp);
@@ -119,5 +120,5 @@ int		main(void)
 
 	test = ft_convert_base("-101011111", "01", "0123456789abcdef");
 	printf("%s\n", test);
-	return (0);
+	return (0);	
 }

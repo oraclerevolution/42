@@ -13,26 +13,30 @@
 #include <unistd.h>
 #include <fcntl.h>
 
-void print(char *str)
+void	print(char *str, int max)
 {
 	int i;
 
 	i = 0;
-	while (str[i])
+	while (str[i] && i != max)
 		i++;
 	write(1, str, i);
 }
 
-int main(int argc, char **argv)
+int		main(int argc, char **argv)
 {
-	int seeker;
+	int		file;
+	int		size;
+	char	buffer[4096];
+
 	if (argc != 2)
 	{
-		print(argc == 1 ? "File name missing.\n" : "Too many arguments.\n");
+		print(argc == 1 ? "File name missing.\n" : "Too many arguments.\n", -1);
 		return (0);
 	}
-	
-	seeker = open(argv[1], O_RDONLY);
-
-	return 0;
+	file = open(argv[1], O_RDONLY);
+	while ((size = read(file, buffer, 4096)))
+		print(buffer, size);
+	print("\n", -1);
+	return (0);
 }
