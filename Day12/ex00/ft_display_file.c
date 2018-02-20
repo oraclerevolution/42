@@ -37,6 +37,7 @@ int		main(int argc, char **argv)
 	file = open(argv[1], O_RDONLY);
 	while ((size = read(file, buffer, 4096)))
 		print(buffer, size);
+	close(file);
 	print("\n", -1);
 	return (0);
 }
