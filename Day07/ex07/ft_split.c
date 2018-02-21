@@ -94,6 +94,6 @@ char		**ft_split(char *str, char *charset)
 		}
 	if ((tmp[c] = (char*)malloc(sizeof(char))) == NULL)
 		return (NULL);
-	tmp[c][0] = 0;
+	tmp[c] = 0;
 	return (tmp);
 }
