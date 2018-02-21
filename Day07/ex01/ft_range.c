@@ -18,15 +18,12 @@ int	*ft_range(int min, int max)
 	int i;
 
 	if (min >= max)
-		return (int*)NULL;
+		return (NULL);
 	if (max - min > 1)
 		max--;
-	i = 0;
-	tmp = (int*)malloc(sizeof(int) * (max - min));
-	while (i <= (max - min))
-	{
+	i = -1;
+	tmp = malloc(sizeof(int) * (max - min));
+	while (++i <= (max - min))
 		tmp[i] = i + min;
-		i++;
-	}
 	return (tmp);
 }
