@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <stdlib.h>
 
 int		base_valid(char *base)
@@ -112,13 +111,4 @@ char	*ft_convert_base(char *nbr, char *base_from, char *base_to)
 		return (NULL);
 	cpy_base(tmp, result[0] * positive, base_to, len);
 	return (tmp);
-}
-
-int		main(void)
-{
-	char *test;
-
-	test = ft_convert_base("-101011111", "01", "0123456789abcdef");
-	printf("%s\n", test);
-	return (0);	
 }
