@@ -26,4 +26,5 @@ void	ft_list_clear(t_list **begin_list)
 		list = list->next;
 		free(tmp);
 	}
+	free(*begin_list);
 }

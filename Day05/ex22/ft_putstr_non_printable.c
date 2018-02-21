@@ -31,7 +31,7 @@ void	print_hex(int value)
 	ft_putchar(ch[1]);
 }
 
-void	ft_putstr_non_printable(char *str)
+int		ft_putstr_non_printable(char *str)
 {
 	int i;
 
@@ -44,4 +44,5 @@ void	ft_putstr_non_printable(char *str)
 			ft_putchar(str[i]);
 		i++;
 	}
+	return (0);
 }
