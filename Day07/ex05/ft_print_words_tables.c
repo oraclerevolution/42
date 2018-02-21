@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_words_tables.c                            :+:      :+:    :+:   */
+/*   ft_split_whitespaces.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kcausse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/13 00:29:14 by kcausse           #+#    #+#             */
-/*   Updated: 2018/02/13 00:29:15 by kcausse          ###   ########.fr       */
+/*   Created: 2018/02/12 05:54:26 by kcausse           #+#    #+#             */
+/*   Updated: 2018/02/12 05:54:27 by kcausse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void		ft_putchar(char c);
 char		**ft_split_whitespaces(char *str);
+void		ft_putchar(char c);
 
 void		ft_print_words_tables(char **tab)
 {
@@ -23,10 +23,7 @@ void		ft_print_words_tables(char **tab)
 	{
 		i = 0;
 		while (tab[c][i] != '\0')
-		{
 			ft_putchar(tab[c][i++]);
-			i++;
-		}
 		ft_putchar('\n');
 		c++;
 	}
