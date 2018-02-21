@@ -10,13 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <unistd.h>
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
+void	ft_putchar(char c);
 
 int g_t;
 
@@ -39,19 +35,22 @@ void	print_nbr_array(int *n, int size)
 		ft_putchar('0' + n[i++]);
 }
 
-int		print_max_nein(void)
+int		get_max(int size)
 {
-	char *str;
-
-	str = "012345678, 012345679, 012345689, 012345789, 012346789, 012356789, \
-	012456789, 013456789, 023456789, 123456789";
-	while (*str)
+	int max;
+	int reverse;
+	int n;
+	
+	reverse = 0;
+	n = 9;
+	while (size-- != 0)
+		reverse = reverse * 10 + n--;
+	while (reverse > 0)
 	{
-		if (*str != '\t')
-			ft_putchar(*str);
-		str++;
+		max = max * 10 + reverse % 10;
+		reverse /= 10;
 	}
-	return (1);
+	return (max + 1);
 }
 
 void	ft_print_combn(int n)
@@ -62,12 +61,11 @@ void	ft_print_combn(int n)
 	int i3;
 	int nbrs[n];
 
-	if (n <= 0 || n > 9 || (n == 9 && print_max_nein() == 1))
+	if (n <= 0 || n > 9 )
 		return ;
 	i = n;
 	g_t = 0;
-	while (i-- != 0)
-		max[0] = max[0] * 10 + 9;
+	max[0] = get_max(n);
 	while (++i <= max[0] + 1)
 	{
 		i2 = -1;
@@ -83,10 +81,4 @@ void	ft_print_combn(int n)
 		}
 		print_nbr_array(nbrs, n);
 	}
-}
-
-int		main(void)
-{
-	ft_print_combn(8);
-	return (1);
 }
