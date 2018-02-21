@@ -14,6 +14,20 @@
 
 void	ft_putchar(char c);
 
+int		ft_putstr(void)
+{
+	int		i;
+	char	*str;
+
+	str = "012345678, 012345679, 012345689, 012345789, 012346789, \
+	012356789, 012456789, 013456789, 023456789, 123456789";
+	i = -1;
+	while (str[++i])
+		if (str[i] != '\t')
+			ft_putchar(str[i]);
+	return (-1);
+}
+
 int g_t;
 
 void	print_nbr_array(int *n, int size)
@@ -40,9 +54,13 @@ int		get_max(int size)
 	int max;
 	int reverse;
 	int n;
-	
+
+	if (size == 9)
+		return (ft_putstr());
+	g_t = 0;
 	reverse = 0;
 	n = 9;
+	max = 0;
 	while (size-- != 0)
 		reverse = reverse * 10 + n--;
 	while (reverse > 0)
@@ -61,12 +79,10 @@ void	ft_print_combn(int n)
 	int i3;
 	int nbrs[n];
 
-	if (n <= 0 || n > 9 )
+	if (n <= 0 || n > 9 || (max[0] = get_max(n)) == -1)
 		return ;
-	i = n;
-	g_t = 0;
-	max[0] = get_max(n);
-	while (++i <= max[0] + 1)
+	i = -1;
+	while (++i < max[0])
 	{
 		i2 = -1;
 		while (++i2 < n)
