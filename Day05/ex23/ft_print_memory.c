@@ -87,5 +87,5 @@ void	*ft_print_memory(void *addr, unsigned int size)
 		size -= 16;
 		ft_putchar('\n');
 	}
-	return (addr);
+	return (NULL);
 }
