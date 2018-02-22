@@ -5,17 +5,17 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kcausse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/14 04:35:12 by kcausse           #+#    #+#             */
-/*   Updated: 2018/02/14 04:35:12 by kcausse          ###   ########.fr       */
+/*   Created: 2018/02/22 19:59:04 by kcausse           #+#    #+#             */
+/*   Updated: 2018/02/22 19:59:04 by kcausse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_stock_par.h"
 #include <stdlib.h>
 
-char		**ft_split_whitespaces(char *str);
+char				**ft_split_whitespaces(char *str);
 
-char	*ft_strdup2(char *src, int *length)
+char				*ft_strdup2(char *src, int *length)
 {
 	int		i;
 	char	*tmp;
@@ -34,10 +34,10 @@ char	*ft_strdup2(char *src, int *length)
 	return (tmp);
 }
 
-struct		s_stock_par*ft_param_to_tab(int ac, char **av)
+struct s_stock_par	*ft_param_to_tab(int ac, char **av)
 {
 	t_stock_par *tmp;
-	
+
 	if ((tmp = (t_stock_par*)malloc(sizeof(t_stock_par) * (ac + 1))) == NULL)
 		return (NULL);
 	tmp[ac].str = 0;
