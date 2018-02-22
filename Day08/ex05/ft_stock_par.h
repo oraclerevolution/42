@@ -15,6 +15,9 @@
 
 typedef struct	s_stock_par
 {
-	char **str;
+	int		size_param;
+	char	*str;
+	char	*copy;
+	char	**tab;
 }				t_stock_par;
 #endif

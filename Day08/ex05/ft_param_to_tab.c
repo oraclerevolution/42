@@ -11,20 +11,41 @@
 /* ************************************************************************** */
 
 #include "ft_stock_par.h"
+#include <stdlib.h>
 
-struct		s_stock_par*ft_param_to_tab(int ac, char **av)
+char		**ft_split_whitespaces(char *str);
+
+char	*ft_strdup2(char *src, int *length)
 {
-	t_stock_par * tmp;
+	int		i;
+	char	*tmp;
 
-
-	tmp->str = 
+	i = 0;
+	while (src[i] != '\0')
+		i++;
+	*length = i;
+	if ((tmp = (char*)malloc(sizeof(char) * (i + 1))) == NULL)
+		return (NULL);
+	while (i >= 0)
+	{
+		tmp[i] = src[i];
+		i--;
+	}
 	return (tmp);
 }
 
-int			main(int argc, char **argv)
+struct		s_stock_par*ft_param_to_tab(int ac, char **av)
 {
-	t_stock_par *test;
-
-	test = ft_param_to_tab(argc, argv);
-	return (1);
+	t_stock_par *tmp;
+	
+	if ((tmp = (t_stock_par*)malloc(sizeof(t_stock_par) * (ac + 1))) == NULL)
+		return (NULL);
+	tmp[ac].str = 0;
+	while (--ac >= 0)
+	{
+		tmp[ac].str = av[ac];
+		tmp[ac].copy = ft_strdup2(av[ac], &tmp[ac].size_param);
+		tmp[ac].tab = ft_split_whitespaces(av[ac]);
+	}
+	return (tmp);
 }
