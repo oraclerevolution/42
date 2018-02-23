@@ -14,8 +14,6 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-void				ft_putchar(char c);
-
 void				ft_putstr(char *str)
 {
 	while (*str != '\0')
@@ -42,9 +40,6 @@ void				ft_putnbr(int nb)
 		ft_putnbr(nb / 10);
 	ft_putchar((nb % 10) + '0' + overflow);
 }
-
-char				**ft_split_whitespaces(char *str);
-struct s_stock_par	*ft_param_to_tab(int ac, char **av);
 
 void				ft_show_tab(struct s_stock_par *par)
 {

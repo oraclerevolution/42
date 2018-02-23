@@ -13,8 +13,6 @@
 #include "ft_stock_par.h"
 #include <stdlib.h>
 
-char				**ft_split_whitespaces(char *str);
-
 char				*ft_strdup2(char *src, int *length)
 {
 	int		i;

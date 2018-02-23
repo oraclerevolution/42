@@ -26,10 +26,7 @@ void	print_hex(int value, int length)
 	}
 	while (i >= 0)
 		output[i--] = '0';
-	if (length <= 0)
-		i = 0;
-	else
-		i = (sizeof(int) * 2) - length;
+	i = (length <= 0) ? 0 : (sizeof(int) * 2) - length;
 	while (i < ((int)sizeof(int) * 2))
 	{
 		if (output[i] >= 32 && output[i] <= 126)
