@@ -10,12 +10,12 @@
 #                                                                              #
 #******************************************************************************#
 
-NAME = ex09
+NAME = ex06
 
 all: $(NAME)
 
 $(NAME):
-	gcc -Wall -Wextra -Werror main.c sources/*.c -o ft_advanced_do-op
+	gcc -Wall -Wextra -Werror doop.c utils.c -o do-op
 
 clean:
-	/bin/rm -f ft_advanced_do-op
+	/bin/rm -f do-op
