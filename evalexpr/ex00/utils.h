@@ -14,47 +14,100 @@
 # define UTILS_H
 # include <unistd.h>
 
-int		ft_atoi(char *str);
+int		ft_atoi(char *str, int *end);
 int		is_operator(char c);
-int		count_operators(char *str);
-int		count_nbrs(char *str);
 void	ft_putchar(char c);
 void	ft_putnbr(int nb);
 
-
-int	is_operator(char c)
+char *remove_spaces(char *str)
 {
-	return (c == '+' || c == '-' || c == '%' || c == '/' || c == '*');
-}
-
-int	count_operators(char *str)
-{
-	int count;
 	int i;
+	int w;
+	int count;
 
+	i = 0;
 	count = 0;
 	while (str[i] != '\0')
+	{
+		if (str[i] == ' ')
+		{
+			w = i + 1;
+			while (str[w] != '\0')
+			{
+				str[w - 1] = str[w];
+				w++;
+			}
+		}
+		else
+			count++;
+		i++;
+	}
+	str[count] = '\0';
+	return (str);
+}
+
+char *get_operators(char *str)
+{
+	char	*tmp;
+	int		i;
+	int		count;
+
+	tmp = NULL;
+	i = -1;
+	count = 1;
+	while (str[++i])
 	{
 		if (is_operator(str[i]))
 			count++;
-		i++;
 	}
-	return (count);
+	if ((tmp = (char*)malloc(sizeof(char) * count)) == NULL)
+		return (NULL);
+	i = -1;
+	count = 0;
+	while (str[++i])
+		if (is_operator(str[i]))
+			tmp[count++] = str[i];
+	return (tmp);
 }
 
-int	count_nbrs(char *str)
+int *get_numbers(char *str, int *length)
 {
-	int count;
-	int i;
+	int		*tmp;
+	int		i;
+	int		tabsize;
 
-	count = 0;
+	tmp = NULL;
+	i = 0;
+	tabsize = 1;
 	while (str[i] != '\0')
 	{
-		if (0)
-			count++;
-		i++;
+		while (str[i] >= '0' && str[i] <= '9')
+		{
+			tabsize++;
+			i++;
+		}
+		if (str[i] != '\0')
+			i++;
 	}
-	return (count);
+	tmp = (int*)malloc(sizeof(int) * (tabsize));
+	i = 0;
+	tabsize = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] >= '0' && str[i] <= '9')
+		{
+			tmp[tabsize++] = ft_atoi(str + i, &i);
+		}
+		if (str[i] != '\0')
+			i++;
+	}
+	*length = tabsize;
+	return (tmp);
+}
+
+int	is_operator(char c)
+{
+	return (c == '+' || c == '-' || c == '%' || c == '/' || c == '*' || c == '(' || c == ')');
 }
 
 void	ft_putchar(char c)
@@ -83,7 +136,7 @@ void	ft_putnbr(int nb)
 	ft_putchar((nb % 10) + '0' + overflow);
 }
 
-int	ft_atoi(char *str)
+int	ft_atoi(char *str, int *end)
 {
 	int pos;
 	int i;
@@ -100,6 +153,7 @@ int	ft_atoi(char *str)
 			pos = -1;
 	while (str[i] >= '0' && str[i] <= '9')
 		result = result * 10 + str[i++] - '0';
+	*end += i;
 	return (result * pos);
 }
 

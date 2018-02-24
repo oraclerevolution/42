@@ -1,4 +1,4 @@
-/* ************************************************************************** */
+/* ***********************remove_spaces*************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   eval_expr.c                                        :+:      :+:    :+:   */
@@ -15,22 +15,11 @@
 
 int eval_expr(char *str)
 {
-	int		result;
-	int		i;
-	int		*nbrs;
-	char	*operators;
+	int result;
 
-	if ((operators = (char*)malloc(sizeof(char) * count_operators(str))) == NULL)
-		return (0);
-	if ((nbrs = (int*)malloc(sizeof(int) * count_nbrs(str))) == NULL)
-		return (0);
 	result = 0;
-	i = 0;
-	while (str[i] != '\0')
-	{
-
-		i++;
-	}
+	str = remove_spaces(str);
+	printf("%s\n", str);
 	return (result);
 }
 
