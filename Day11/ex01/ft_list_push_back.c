@@ -11,18 +11,8 @@
 /* ************************************************************************** */
 
 #include "ft_list.h"
-#include <stdlib.h>
 
-t_list	*ft_create_elem(void *data)
-{
-	t_list *tmp;
-
-	if ((tmp = (t_list*)malloc(sizeof(t_list))) == NULL)
-		return (NULL);
-	tmp->next = (NULL);
-	tmp->data = data;
-	return (tmp);
-}
+t_list	*ft_create_elem(void *data);
 
 void	ft_list_push_back(t_list **begin_list, void *data)
 {
