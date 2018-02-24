@@ -39,15 +39,3 @@ void	ft_sort_wordtab(char **tab)
 		i++;
 	}
 }
-
-
-int main(int argc, char **argv)
-{
-	argv[argc] = 0;
-	ft_sort_wordtab(argv);
-	int i = 0;
-
-	while (argv[i] != 0)
-		printf("%s\n", argv[i++]);
-	return 0;
-}
