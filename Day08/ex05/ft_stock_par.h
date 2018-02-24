@@ -20,4 +20,6 @@ typedef struct	s_stock_par
 	char	*copy;
 	char	**tab;
 }				t_stock_par;
+
+char			**ft_split_whitespaces(char *str);
 #endif
