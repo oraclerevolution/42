@@ -1,44 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_opp.c                                           :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kcausse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/24 21:05:25 by kcausse           #+#    #+#             */
-/*   Updated: 2018/02/24 21:05:25 by kcausse          ###   ########.fr       */
+/*   Created: 2018/02/09 01:04:41 by kcausse           #+#    #+#             */
+/*   Updated: 2018/02/09 01:04:41 by kcausse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_opp.h"
-#include "ut.h"
-
-int		ft_add(int nbr, int nbr2)
+int	ft_atoi(char *str)
 {
-	return (nbr + nbr2);
-}
+	int pos;
+	int i;
+	int result;
 
-int		ft_sub(int nbr, int nbr2)
-{
-	return (nbr - nbr2);
-}
-
-int		ft_mul(int nbr, int nbr2)
-{
-	return (nbr * nbr2);
-}
-
-int		ft_div(int nbr, int nbr2)
-{
-	return (nbr / nbr2);
-}
-
-int		ft_mod(int nbr, int nbr2)
-{
-	return (nbr % nbr2);
-}
-
-void	ft_usage()
-{
-	return ;
+	i = 0;
+	result = 0;
+	pos = 1;
+	while (str[i] == ' ' || str[i] == '\n' || str[i] == '\f' || \
+			str[i] == '\t' || str[i] == '\v' || str[i] == '\r')
+		i++;
+	if (str[i] == '-' || str[i] == '+')
+		if (str[i++] == '-')
+			pos = -1;
+	while (str[i] >= '0' && str[i] <= '9')
+		result = result * 10 + str[i++] - '0';
+	return (result * pos);
 }
