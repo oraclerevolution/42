@@ -17,7 +17,7 @@ int	ft_count_if(char **tab, int (*f)(char*))
 
 	i = 0;
 	count = 0;
-	while (tab[i][0] != 0)
+	while (tab[i] != 0)
 		count += (*f)(tab[i++]);
 	return (0);
 }
