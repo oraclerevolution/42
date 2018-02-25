@@ -36,7 +36,7 @@ void	ft_usage(int nbr1, int nbr2)
 			print(" ");
 		i++;
 	}
-	print("] are accepted.");
+	print("] are accepted.\n");
 }
 
 int		ft_strcmp(char *s1, char *s2)
