@@ -153,8 +153,22 @@ int	ft_atoi(char *str, int *end)
 			pos = -1;
 	while (str[i] >= '0' && str[i] <= '9')
 		result = result * 10 + str[i++] - '0';
-	*end += i;
+	if (end != NULL)
+		*end += i;
 	return (result * pos);
+}
+
+int	calc(int nbr, int nbr2, char op)
+{
+	if (op == '+')
+		return (nbr + nbr2);
+	if (op == '-')
+		return (nbr - nbr2);
+	if (op == '*')
+		return (nbr * nbr2);
+	if (op == '/')
+		return (nbr / nbr2);
+	return (0);
 }
 
 #endif

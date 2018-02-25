@@ -16,10 +16,29 @@
 int eval_expr(char *str)
 {
 	int result;
+	int	i;
+	char operator;
 
 	result = 0;
-	str = remove_spaces(str);
-	printf("%s\n", str);
+	i = 0;
+	operator = '\0';
+	remove_spaces(str);
+	while (str[i] != '\0')
+	{
+		if (operator == '\0')
+		{
+			if (is_operator(str[i]))
+				operator = str[i];
+			result += ft_atoi(str + i, &i);
+			continue;
+		}
+		else
+		{
+			result = calc(result, ft_atoi(str + i, &i), str[i]);
+			operator = '\0';
+		}
+		i++;
+	}
 	return (result);
 }
 
