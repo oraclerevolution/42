@@ -53,7 +53,7 @@ void	cpy_base(char *output, int nbr, char *base, int *len)
 {
 	output[len[2]] = '\0';
 	if (nbr == 0)
-		output[0] = '0';
+		output[0] = base[0];
 	while (nbr != 0)
 	{
 		output[--len[2]] = base[nbr % len[1]];

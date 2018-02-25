@@ -19,7 +19,7 @@ int	ft_ultimate_range(int **range, int min, int max)
 
 	*range = NULL;
 	i = -1;
-	if (min >= (max) || (tmp = (int*)malloc(sizeof(int) * (max - min))) == NULL)
+	if (min >= max || (tmp = (int*)malloc(sizeof(int) * (max - min))) == NULL)
 		return (0);
 	while (++i < (max - min))
 		tmp[i] = i + min;
