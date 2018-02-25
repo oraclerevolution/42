@@ -10,7 +10,7 @@
 #                                                                              #
 #******************************************************************************#
 
-NAME = ex01
+NAME = ex00
 
 all: $(NAME)
 
@@ -21,7 +21,7 @@ clean:
 	/bin/rm -f *.o
 
 fclean:	clean
-	/bin/rm -f $(NAME)
+	/bin/rm -f ft_display_file
 
 re: fclean
 	make
