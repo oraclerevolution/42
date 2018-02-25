@@ -19,6 +19,8 @@ void	ft_list_reverse(t_list **begin_list)
 	t_list *next;
 
 	current = *begin_list;
+	if (current == (void*)0 || current->next == (void*)0)
+		return ;
 	previous = (void*)0;
 	while (current->next != (void*)0)
 	{
