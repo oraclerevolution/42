@@ -31,7 +31,7 @@ void	ft_mul(int nbr1, int nbr2)
 void	ft_div(int nbr1, int nbr2)
 {
 	if (nbr1 == 0 || nbr2 == 0)
-		print("Stop : division by zero\n");
+		print("Stop : division by zero");
 	else
 		ft_putnbr(nbr1 / nbr2);
 }
@@ -39,7 +39,7 @@ void	ft_div(int nbr1, int nbr2)
 void	ft_mod(int nbr1, int nbr2)
 {
 	if (nbr1 == 0 || nbr2 == 0)
-		print("Stop : modulo by zero\n");
+		print("Stop : modulo by zero");
 	else
 		ft_putnbr(nbr1 % nbr2);
 }

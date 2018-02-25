@@ -67,6 +67,7 @@ int		main(int argc, char **argv)
 		if (ft_strcmp(g_opptab[i].op, argv[2]) == 0)
 		{
 			g_opptab[i].f(nbr[0], nbr[1]);
+			print("\n");
 			return (0);
 		}
 		i++;
