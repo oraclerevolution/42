@@ -17,7 +17,7 @@ t_list	*ft_list_last(t_list *begin_list)
 	t_list *tmp;
 
 	tmp = begin_list;
-	while (tmp->next != 0)
+	while (tmp->next != (void*)0)
 		tmp = tmp->next;
 	return (tmp);
 }

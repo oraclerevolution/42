@@ -20,7 +20,7 @@ void	ft_list_foreach_if(t_list *begin_list, void (*f)(void *), \
 	list = begin_list->next;
 	while (list != (void*)0)
 	{
-		if ((*cmp)())
+		if ((*cmp)(list->data, data_ref))
 			(*f)(list->data);
 		list = list->next;
 	}

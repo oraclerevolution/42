@@ -19,12 +19,12 @@ t_list	*ft_list_at(t_list *begin_list, unsigned int nbr)
 
 	i = 1;
 	tmp = begin_list;
-	while (i < nbr && tmp != NULL)
+	while (i < nbr && tmp != (void*)0)
 	{
 		tmp = tmp->next;
 		i++;
 	}
 	if (i != nbr)
-		return (NULL);
+		return ((void*)0);
 	return (tmp);
 }
