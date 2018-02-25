@@ -17,7 +17,7 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-int		ft_putnbr(int nb)
+void	ft_putnbr(int nb)
 {
 	int overflow;
 
@@ -36,7 +36,6 @@ int		ft_putnbr(int nb)
 	if (nb >= 10)
 		ft_putnbr(nb / 10);
 	ft_putchar((nb % 10) + '0' + overflow);
-	return (0);
 }
 
 int		ft_atoi(char *str)

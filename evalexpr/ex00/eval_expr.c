@@ -1,4 +1,4 @@
-/* ***********************remove_spaces*************************************************** */
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   eval_expr.c                                        :+:      :+:    :+:   */
@@ -31,12 +31,7 @@ int eval_expr(char *str)
 				operator = str[i];
 			result += ft_atoi(str + i, &i);
 			continue;
-		}
-		else
-		{
-			result = calc(result, ft_atoi(str + i, &i), str[i]);
-			operator = '\0';
-		}
+
 		i++;
 	}
 	return (result);

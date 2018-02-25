@@ -19,7 +19,7 @@ int		is_operator(char c);
 void	ft_putchar(char c);
 void	ft_putnbr(int nb);
 
-char *remove_spaces(char *str)
+char	*remove_spaces(char *str)
 {
 	int i;
 	int w;
@@ -46,7 +46,7 @@ char *remove_spaces(char *str)
 	return (str);
 }
 
-char *get_operators(char *str)
+char	*get_operators(char *str)
 {
 	char	*tmp;
 	int		i;
