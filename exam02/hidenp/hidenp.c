@@ -1,43 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   alpha_mirror.c                                     :+:      :+:    :+:   */
+/*   hidenp.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kcausse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/26 20:48:02 by kcausse           #+#    #+#             */
-/*   Updated: 2018/02/26 20:48:02 by kcausse          ###   ########.fr       */
+/*   Created: 2018/02/26 21:31:58 by kcausse           #+#    #+#             */
+/*   Updated: 2018/02/26 21:31:59 by kcausse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
-char	mirror(char c)
-{
-	if (c >= 'a' && c <= 'z')
-			return ('z' -  (c - 'a'));
-	if (c >= 'A' && c <= 'Z')
-			return ('Z' -  (c - 'A'));
-	return (c);
-}
-
 int main(int argc, char **argv)
 {
 	int i;
+	int i2;
 
-	if (argc != 2)
+	if (argc != 3)
 	{
 		write(1, "\n", 1);
 		return (0);
 	}
 	i = 0;
-	while (argv[1][i])
-		ft_putchar(mirror(argv[1][i++]));
-	write(1, "\n", 1);
-	return 0;
+	i2 = 0;
+	while (argv[2][i] != '\0' && argv[1][i2] != '\0')
+	{
+		if (argv[1][i2] == argv[2][i])
+			i2++;
+		i++;
+	}
+	if (argv[1][i2] == '\0')
+		write(1, "1\n", 2);
+	else 
+		write(1, "0\n", 2);
+	return (0);
 }
