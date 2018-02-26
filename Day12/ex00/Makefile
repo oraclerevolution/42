@@ -15,7 +15,7 @@ NAME = ex00
 all: $(NAME)
 
 $(NAME):
-	gcc -Wall -Wextra -Werror -c ft_display_file.c -o ft_display_file
+	gcc -Wall -Wextra -Werror ft_display_file.c -o ft_display_file
 
 clean:
 	/bin/rm -f *.o

@@ -1,36 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list_push_params.c                              :+:      :+:    :+:   */
+/*   utils.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kcausse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/17 17:32:44 by kcausse           #+#    #+#             */
-/*   Updated: 2018/02/17 17:32:45 by kcausse          ###   ########.fr       */
+/*   Created: 2018/02/23 23:32:09 by kcausse           #+#    #+#             */
+/*   Updated: 2018/02/23 23:32:09 by kcausse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include "ft_list.h"
+#ifndef UTILS_H
+# define UTILS_H
+# include <unistd.h>
 
-t_list	*ft_create_elem(void *data);
-
-t_list	*ft_list_push_params(int ac, char **av)
+char	*remove_spaces(char *str)
 {
-	int		i;
-	t_list	*list;
-	t_list	*tmp;
+	int i;
+	int w;
+	int count;
 
-	if (ac == 1)
-		return (NULL);
-	i = 2;
-	list = ft_create_elem(av[1]);
-	while (i < ac)
+	i = 0;
+	count = 0;
+	while (str[i] != '\0')
 	{
-		tmp = list;
-		list = ft_create_elem(av[i]);
-		list->next = tmp;
+		if (str[i] == ' ')
+		{
+			w = i + 1;
+			while (str[w] != '\0')
+			{
+				str[w - 1] = str[w];
+				w++;
+			}
+		}
+		else
+			count++;
 		i++;
 	}
-	return (list);
+	str[count] = '\0';
+	return (str);
 }

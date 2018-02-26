@@ -12,6 +12,8 @@
 
 #include "ft_list.h"
 
+t_list	*ft_create_elem(void *data);
+
 void	ft_list_push_back(t_list **begin_list, void *data)
 {
 	t_list *list;
@@ -19,7 +21,7 @@ void	ft_list_push_back(t_list **begin_list, void *data)
 
 	list = ft_create_elem(data);
 	tmp = *begin_list;
-	while (tmp->next != NULL)
+	while (tmp->next != (void*)0)
 		tmp = tmp->next;
 	tmp->next = list;
 }

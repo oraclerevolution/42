@@ -15,7 +15,7 @@ NAME = ex01
 all: $(NAME)
 
 $(NAME):
-	gcc -Wall -Wextra -Werror -c ft_cat.c -o ft_cat
+	gcc -Wall -Wextra -Werror ft_cat.c -o ft_cat
 
 clean:
 	/bin/rm -f *.o
