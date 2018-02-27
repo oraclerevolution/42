@@ -41,13 +41,13 @@ void	print_mem_line(void *start, unsigned char *addr, int length)
 {
 	int c;
 
-	print_hex((int)addr - (int)start, 0);
+	print_hex((int)addr - (int)start, -1);
 	ft_putchar(':');
 	ft_putchar(' ');
 	c = 0;
 	while (c < 16)
 	{
-		if (c < length)
+		if (c < length && c < 16)
 			print_hex(addr[c], 2);
 		else
 		{
@@ -70,9 +70,9 @@ void	*ft_print_memory(void *addr, unsigned int size)
 	end = curr + size;
 	while (curr < end && end - curr != 1)
 	{
-		print_mem_line(addr, curr, size > 16 ? 16 : size);
+		print_mem_line(addr, curr, size);
 		c = 0;
-		while (c < (size > 16 ? 16 : size))
+		while (c < size && c < 16)
 		{
 			if (curr[c] >= 32 && curr[c] <= 128)
 				ft_putchar(curr[c]);
