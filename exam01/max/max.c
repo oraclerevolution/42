@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sort_integer_table.c                            :+:      :+:    :+:   */
+/*   max.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kcausse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/07 21:35:59 by kcausse           #+#    #+#             */
-/*   Updated: 2018/02/07 21:35:59 by kcausse          ###   ########.fr       */
+/*   Created: 2018/02/26 20:43:42 by kcausse           #+#    #+#             */
+/*   Updated: 2018/02/26 20:43:43 by kcausse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_sort_integer_table(int *tab, int size)
+int		max(int *tab, unsigned int len)
 {
-	int i;
-	int tmp;
+	int max;
+	unsigned int i;
 
+	if (len == 0)
+		return (0);
+	max = tab[0];
 	i = 0;
-	while (i + 1 < size)
-	{
-		while (tab[i] > tab[i + 1])
-		{
-			tmp = tab[i];
-			tab[i] = tab[i + 1];
-			tab[i + 1] = tmp;
-			i = 0;
-		}
-		i++;
-	}
+	while (++i < len)
+		if (tab[i] > max)
+			max = tab[i];
+	return (max)
 }
