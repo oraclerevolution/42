@@ -13,11 +13,11 @@
 #ifndef FT_LIST_H
 # define FT_LIST_H
 
-t_list	*ft_create_elem(void *data);
-
 typedef	struct	s_list
 {
 	struct s_list	*next;
 	char			*data;
 }				t_list;
+
+t_list	*ft_create_elem(void *data);
 #endif

@@ -18,17 +18,14 @@ char				*ft_strdup2(char *src, int *length)
 	int		i;
 	char	*tmp;
 
-	i = 0;
+	i = 1;
 	while (src[i] != '\0')
 		i++;
 	*length = i;
-	if ((tmp = (char*)malloc(sizeof(char) * (i + 1))) == NULL)
+	if ((tmp = (char*)malloc(sizeof(char) * (i))) == NULL)
 		return (NULL);
-	while (i >= 0)
-	{
+	while (--i >= 0)
 		tmp[i] = src[i];
-		i--;
-	}
 	return (tmp);
 }
 
