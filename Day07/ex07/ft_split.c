@@ -83,7 +83,7 @@ char		**ft_split(char *str, char *charset)
 
 	c = 0;
 	i = -1;
-	if ((tmp = (char**)malloc(sizeof(char*) * c_w(str, charset) + 1)) == NULL)
+	if ((tmp = (char**)malloc(sizeof(char*) * (c_w(str, charset) + 1))) == NULL)
 		return (NULL);
 	while (str[++i])
 		if (!is_separator(str[i], charset))

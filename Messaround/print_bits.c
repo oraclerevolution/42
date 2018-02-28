@@ -11,6 +11,9 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdio.h>
+#include <limits.h>
+
 
 void	dec_to_binary(int nbr)
 {
@@ -25,6 +28,7 @@ void	print_bits(int nbr)
 	char output[8];
 
 	count = 8;
+
 	while (--count >= 0)
 	{
 		output[count] = '0' + nbr % 2;
@@ -33,11 +37,50 @@ void	print_bits(int nbr)
 	write(1, output, 8);
 }
 
+void	set_bit(int *nbr, int bit, char value)
+{
+	*nbr |= (value << bit);
+}
+
+void	toggle_bit(int *nbr, int bit)
+{
+	*nbr ^= (1 << bit);
+}
+
+int	active_bits(int nbr)
+{
+	int result;
+
+	result = 0;
+	while (nbr != 0)
+	{
+		result+= nbr % 2;
+		nbr/=2;
+	}
+	return (result);
+}
+
+int bit_count(int nbr)
+{
+	int result;
+
+	result = 0;
+	while (nbr != 0)
+	{
+		result++;
+		nbr/=2;
+	}
+	return (result);
+}
+
+
 int main(int argc, char **argv)
 {
-	int nbr = 5;
-	dec_to_binary(nbr);
-	printf("\n");
-	print_bits(nbr);
+	int nbr = 0;
+	while (nbr <= INT_MAX)
+	{
+		dec_to_binary(nbr++);
+		printf(" - %d - %d bits active - %d bits total\n", nbr - 1, active_bits(nbr - 1), bit_count(nbr));
+	}
 	return 0;
 }

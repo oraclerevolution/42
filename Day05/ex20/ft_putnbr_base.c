@@ -59,5 +59,5 @@ void	ft_putnbr_base(int nbr, char *base)
 	}
 	if (nbr >= length)
 		ft_putnbr_base(nbr / length, base);
-	ft_putchar(base[nbr % length] + overflow);
+	ft_putchar(base[nbr % length + overflow]);
 }

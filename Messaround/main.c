@@ -1,43 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.h                                            :+:      :+:    :+:   */
+/*   print_bits.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kcausse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/23 23:32:09 by kcausse           #+#    #+#             */
-/*   Updated: 2018/02/23 23:32:09 by kcausse          ###   ########.fr       */
+/*   Created: 2018/02/23 15:34:03 by kcausse           #+#    #+#             */
+/*   Updated: 2018/02/23 15:34:03 by kcausse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef UTILS_H
-# define UTILS_H
-# include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
 
-char	*remove_spaces(char *str)
+int main(int argc, char const *argv[])
 {
+	int result;
 	int i;
-	int w;
-	int count;
 
-	i = 0;
-	count = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] == ' ')
-		{
-			w = i + 1;
-			while (str[w] != '\0')
-			{
-				str[w - 1] = str[w];
-				w++;
-			}
-		}
-		else
-			count++;
-		i++;
-	}
-	str[count] = '\0';
-	return (str);
+	result = 0;
+	if (argc == 1)
+		return (0);
+
+	printf("%d\n", result);
+	return (0);
 }
-#endif
