@@ -30,6 +30,6 @@ int main(int argc, char **argv)
 			i2++;
 		i++;
 	}
-	write(1, argv[1][i2] == '\0' ? "1\n" : "0\n",, 2);
+	write(1, argv[1][i2] == '\0' ? "1\n" : "0\n", 2);
 	return (0);
 }
