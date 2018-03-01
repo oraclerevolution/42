@@ -73,14 +73,44 @@ int bit_count(int nbr)
 	return (result);
 }
 
+int reverse_bits(int nbr)
+{
+	int tmp;
+
+	tmp = 0;
+	while (nbr != 0)
+	{
+		tmp = (tmp << 1) | nbr % 2;
+		nbr >>= 1;
+	}
+	return (tmp);
+}
+
+int swap_bits(int nbr)
+{
+	return (nbr << 4) | (nbr >> 4);
+}
 
 int main(int argc, char **argv)
 {
-	int nbr = 0;
+	int nbr = 15;
+	dec_to_binary(nbr);
+	putchar('\n');
+	nbr = reverse_bits(nbr);
+	dec_to_binary(nbr);
+	putchar('\n');
+	nbr = swap_bits(nbr);
+	dec_to_binary(nbr);
+	putchar('\n');
+	/*int n;
+	int LOL = 50;
 	while (nbr <= INT_MAX)
 	{
-		dec_to_binary(nbr++);
-		printf(" - %d - %d bits active - %d bits total\n", nbr - 1, active_bits(nbr - 1), bit_count(nbr));
-	}
+		dec_to_binary(++nbr);
+		printf(" - %d - %d bits active - %d bits total\n", nbr, active_bits(nbr), bit_count(nbr));
+		n = 0;
+		while (n < LOL)
+			n++;
+	}*/
 	return 0;
 }
