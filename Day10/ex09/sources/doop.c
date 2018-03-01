@@ -62,7 +62,7 @@ int		main(int argc, char **argv)
 	nbr[1] = ft_atoi(argv[3]);
 	i = 0;
 	length = sizeof(g_opptab) / sizeof(*g_opptab);
-	while (i < length)
+	while (i < length - 1)
 	{
 		if (ft_strcmp(g_opptab[i].op, argv[2]) == 0)
 		{
@@ -72,6 +72,6 @@ int		main(int argc, char **argv)
 		}
 		i++;
 	}
-	ft_usage(0, 0);
+	g_opptab[i].f(nbr[0], nbr[1]);
 	return (0);
 }
