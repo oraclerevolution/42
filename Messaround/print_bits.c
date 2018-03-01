@@ -19,7 +19,7 @@ void	dec_to_binary(int nbr)
 {
 	if (nbr >= 2)
 		dec_to_binary(nbr / 2);
-	printf("%d", nbr % 2);
+	putchar('0' + nbr % 2);
 }
 
 void	print_bits(int nbr)
@@ -31,8 +31,8 @@ void	print_bits(int nbr)
 
 	while (--count >= 0)
 	{
-		output[count] = '0' + nbr % 2;
-		nbr /= 2;
+		output[count] = '0' + (nbr & 1);
+		nbr >>= 1;
 	}
 	write(1, output, 8);
 }
@@ -80,7 +80,7 @@ int reverse_bits(int nbr)
 	tmp = 0;
 	while (nbr != 0)
 	{
-		tmp = (tmp << 1) | nbr % 2;
+		tmp = (tmp << 1) | (nbr & 1);
 		nbr >>= 1;
 	}
 	return (tmp);
@@ -91,8 +91,58 @@ int swap_bits(int nbr)
 	return (nbr << 4) | (nbr >> 4);
 }
 
+int	ft_recursive_power(int nb, int power)
+{
+	if (power < 0)
+		return (0);
+	if (power == 0)
+		return (1);
+	return (nb * ft_recursive_power(nb, power - 1));
+}
+
+
+int bin_to_int(long long bin)
+{
+	int result;
+	int power;
+
+	result = 0;
+	power = 0;
+	while (bin != 0)
+	{
+		result += (bin % 10) * ft_recursive_power(2, power);
+		bin /= 10;
+		++power;
+	}
+	return (result);
+}
+
+long long int_to_bin(int nbr)
+{
+	int result;
+	long long rev;
+
+	result = 0;
+	rev = 0;
+	while (nbr != 0)
+	{
+		result = result * 10 + (nbr & 1);
+		nbr >>= 1;
+	}
+	while (result != 0)
+	{
+		rev = rev * 10 + result % 10;
+		result /= 10;
+	}
+	return (rev);
+}
+
 int main(int argc, char **argv)
 {
+	printf("110110101 is %d\n", bin_to_int(110110101));
+	printf("%lu\n", int_to_bin(437));
+	printf("%d", 2 | (2 << 1));
+	return 0;
 	int nbr = 15;
 	dec_to_binary(nbr);
 	putchar('\n');
@@ -102,15 +152,12 @@ int main(int argc, char **argv)
 	nbr = swap_bits(nbr);
 	dec_to_binary(nbr);
 	putchar('\n');
-	/*int n;
-	int LOL = 50;
+
+
 	while (nbr <= INT_MAX)
 	{
 		dec_to_binary(++nbr);
-		printf(" - %d - %d bits active - %d bits total\n", nbr, active_bits(nbr), bit_count(nbr));
-		n = 0;
-		while (n < LOL)
-			n++;
-	}*/
+		printf("\t%d\t%d bits total\n", nbr, bit_count(nbr));
+	}
 	return 0;
 }
