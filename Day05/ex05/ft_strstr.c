@@ -18,14 +18,13 @@ char	*ft_strstr(char *str, char *to_find)
 	i = 0;
 	while (str[i] != 0)
 	{
-		if (str[i] == to_find[0])
-		{
-			n = 1;
-			while (str[i + n] == to_find[n] && to_find[n] != '\0')
-				n++;
-			if (to_find[n] == '\0')
-				return (str + i);
-		}
+		if (str[i] != to_find[0] && i++)
+			continue;
+		n = 1;
+		while (str[i + n] == to_find[n] && to_find[n] != '\0')
+			n++;
+		if (to_find[n] == '\0')
+			return (str + i);
 		i++;
 	}
 	return ((void*)0);
