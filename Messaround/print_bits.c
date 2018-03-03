@@ -137,11 +137,49 @@ long long int_to_bin(int nbr)
 	return (rev);
 }
 
+unsigned int	ft_active_bits(int value)
+{
+	int count;
+
+	if (value < 0)
+		value++;
+	else if (value == 0)
+		return (0);
+	count = 0;
+	while (value != 0)
+	{
+		count += value % 2;
+		value /= 2;
+	}
+	return (count > 0 ? count : 32 + count);
+}
+
+void	print_neg_bits(int value)
+{
+	int count;
+	char output[32];
+	int neg;
+	
+	count = 32;
+	neg = (value < 0);
+	if (neg)
+	{
+		if (value == -1)
+			value = 0;
+		else
+			value++;
+	}
+	while (--count >= 0)
+	{
+		output[count] = (neg) ? ('1' - (-value) % -2) : ('0' + value % 2);
+		value /= 2;
+	}
+	write(1, output, 32);
+}
+
 int main(int argc, char **argv)
 {
-	printf("110110101 is %d\n", bin_to_int(110110101));
-	printf("%lu\n", int_to_bin(437));
-	printf("%d", 2 | (2 << 1));
+	print_neg_bits(-3);
 	return 0;
 	int nbr = 15;
 	dec_to_binary(nbr);
