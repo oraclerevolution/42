@@ -12,7 +12,7 @@
 #undef MAX_PLAYERS
 //On supprime MAX_PLAYERS
 #define MAX_PLAYERS 21
-//On défini MAX_PLAYERS à 21 car c'est le nombre de joueur maximum
+//On dÃ©fini MAX_PLAYERS Ã  21 car c'est le nombre de joueur maximum
 #include <a_mysql>
 #include <streamer>
 #include <kcmd>
@@ -23,7 +23,7 @@
 
 #pragma dynamic 10000
 
-//Define pour la version affichée
+//Define pour la version affichÃ©e
 #define SERVER_VERSION "Version: 1.0"
 #define MAX_MESSAGE_SIZE 145
 #define KickP(%1) SetTimerEx("KickPlayer", 700, false, "i", %1)
@@ -87,7 +87,7 @@
 #define COLOR_LIGHTGREYBLUE 0x4169FFAA
 #define COLOR_SLIME 0x10F441AA
 
-//Define métier
+//Define mÃ©tier
 #define TEAM_VOLEUR 0
 #define TEAM_KIDNAP 1
 #define TEAM_TERRO 2
@@ -399,7 +399,7 @@ new PlayerColors[200] = {
 
 new DeathWeaponName[][32] = {
 	{"de ses poings."}, // 0
-	{"de Poings Américains"}, // 1
+	{"de Poings AmÃ©ricains"}, // 1
 	{"d'un Club de Golf"}, // 2
 	{"d'une Matraque"}, // 3
 	{"d'un Couteau"}, // 4
@@ -415,7 +415,7 @@ new DeathWeaponName[][32] = {
 	{"de Fleurs"}, // 14
 	{"d'une Canne"}, // 15
 	{"d'une Grenade"}, // 16
-	{"d'un Fumigène"}, // 17
+	{"d'un FumigÃ¨ne"}, // 17
 	{"d'un Cocktail Molotov"}, // 18
 	{" "}, // 19
 	{" "}, // 20
@@ -423,8 +423,8 @@ new DeathWeaponName[][32] = {
 	{"d'un Colt 45"}, // 22
 	{"d'un Colt 45 (Silencieux)"}, // 23
 	{"d'un Desert Eagle"}, // 24
-	{"d'un Fusil à pompe"}, // 25
-	{"d'un Fusil à Canon Scié"}, // 26
+	{"d'un Fusil Ã  pompe"}, // 25
+	{"d'un Fusil Ã  Canon SciÃ©"}, // 26
 	{"d'un Fusil de Combat"}, // 27
 	{"d'un Micro Uzi (Mac 10)"}, // 28
 	{"d'un MP5"}, // 29
@@ -434,21 +434,21 @@ new DeathWeaponName[][32] = {
 	{"d'un Fusil de Campagne"}, // 33
 	{"d'un Fusil de Sniper"}, // 34
 	{"d'un Lance-Roquette"}, // 35
-	{"d'un Lance-Roquette Téléguidé"}, // 36
+	{"d'un Lance-Roquette TÃ©lÃ©guidÃ©"}, // 36
 	{"d'un Lance-Flammes"}, // 37
 	{"d'un Minigun"}, // 38
 	{"de Charges de C4"}, // 39
-	{"d'un Détonateur"}, // 40
-	{"d'une Bombe à tag"}, // 41
+	{"d'un DÃ©tonateur"}, // 40
+	{"d'une Bombe Ã  tag"}, // 41
 	{"d'un Extincteur"}, // 42
 	{"d'un Appareil Photo"}, // 43
-	{"de Lunettes à Vision Nocturne"}, // 44
-	{"de Lunettes à Infrarouges"}, // 45
+	{"de Lunettes Ã  Vision Nocturne"}, // 44
+	{"de Lunettes Ã  Infrarouges"}, // 45
 	{"d'un Parachute"}, // 46
 	{"d'un Fake Pistol"}, // 47
 	{"de quelque chose..."}, //48
-	{"d'un Véhicule"}, //49
-	{"de Rotors d'Hélicoptère"}, //50
+	{"d'un VÃ©hicule"}, //49
+	{"de Rotors d'HÃ©licoptÃ¨re"}, //50
 	{"d'une Explosion"}, //51
 	{"de quelque chose..."}, //52
 	{"de de l'eau"}, //53
@@ -587,10 +587,10 @@ new cName[][] =
 	"au Binco de ganton !",
 	"au tatoo's !",
 	"chez le coiffeur de ganton !",
-	"à la Pizzeria de ganton !",
+	"Ã  la Pizzeria de ganton !",
 	"au BombShop !",
 	"CP_PRISON",
-	"à l'Alhambra !",
+	"Ã  l'Alhambra !",
 	"au SubUrban !",
 	"au Roboi's Food Mart !",
 	"au Cluckin' Bell !",
@@ -611,27 +611,27 @@ new cName[][] =
 
 new Successes[][][]=
 {
-	{"Vous avez dit Trévor ?!", "Vous avez comis votre premier meurtre !"},
-	{"L'acrobate", "Votre tout premier vol à la tire !"},
-	{"James Bond 24", "Vous avez tué 24 personnes sans mourir !"},
-	{"Le club des 27", "Vous êtes mors à 27 tués !"},
-	{"Princesse Zelda", "Vous avez délivré quelqu'un de kidnappé pour la première fois!"},
-	{"Super Mario Bros", "Vous avez délivré un total de 20 personnes !"},
-	{"Time Out", "Vous êtes à court de temps."}
+	{"Vous avez dit TrÃ©vor ?!", "Vous avez comis votre premier meurtre !"},
+	{"L'acrobate", "Votre tout premier vol Ã  la tire !"},
+	{"James Bond 24", "Vous avez tuÃ© 24 personnes sans mourir !"},
+	{"Le club des 27", "Vous Ãªtes mors Ã  27 tuÃ©s !"},
+	{"Princesse Zelda", "Vous avez dÃ©livrÃ© quelqu'un de kidnappÃ© pour la premiÃ¨re fois!"},
+	{"Super Mario Bros", "Vous avez dÃ©livrÃ© un total de 20 personnes !"},
+	{"Time Out", "Vous Ãªtes Ã  court de temps."}
 };
 
 new sCompetences[][][]=
 {
-	{"Furtivité", "Être invisible sur la carte en étant accroupi"},
-	{"Chance", "Augmente les taux de réussite de vos actions"},
-	{"Régénération", "Votre vie se régénère automatiquement"}
+	{"FurtivitÃ©", "ÃŠtre invisible sur la carte en Ã©tant accroupi"},
+	{"Chance", "Augmente les taux de rÃ©ussite de vos actions"},
+	{"RÃ©gÃ©nÃ©ration", "Votre vie se rÃ©gÃ©nÃ¨re automatiquement"}
 };
 
 new compInfo[][]=
 {
-	"La compétence furtivité vous permet d'être invisible sur la carte si vous vous accroupissez.\nUne barre de progression vous indique si vous êtes invisible(barre totalement grise) ou pas (barre possèdant du blanc)\nSi vous tirez, la jauge d'invisibilitée se remplit partiellement de blanc (le pourcentage de remplissement dépend de l'arme utilisée) et vous devenez visible jusqu'à que la jauge soit entièrement grise.\n(Si vous utilisez un pistolet avec silencieux, la jauge ne se remplira pas)",
-	"La compétence chance augmente les chances de réussite lors d'une action qui peut être échouée telle que le viol, vol, etc\nElle vous permet donc d'avoir 80 chances sur 100 de réussir à la place de 70 chances sur 100.\nCette compétence vous permet aussi d'augmenter les chances d'écouter le temps d'un vol de lieu et augmente aussi les chances de gagner plus d'argent lors de vols.",
-	"La compétence Régénération vous permet de régénerer votre vie à chaque seconde qui passe, et ce jusqu'à que votre vie atteigne ses 70%.\nPlus le niveau de la compétence est élevé, plus votre vie se régénère vite.\nSi vous avez une MST, la compétence régénération se désactivera jusqu'à que vous ne l'ayez plus.\nSi vous êtes touché par une balle, vous ne vous régènerez plus pendant les 7 prochaines secondes."
+	"La compÃ©tence furtivitÃ© vous permet d'Ãªtre invisible sur la carte si vous vous accroupissez.\nUne barre de progression vous indique si vous Ãªtes invisible(barre totalement grise) ou pas (barre possÃ¨dant du blanc)\nSi vous tirez, la jauge d'invisibilitÃ©e se remplit partiellement de blanc (le pourcentage de remplissement dÃ©pend de l'arme utilisÃ©e) et vous devenez visible jusqu'Ã  que la jauge soit entiÃ¨rement grise.\n(Si vous utilisez un pistolet avec silencieux, la jauge ne se remplira pas)",
+	"La compÃ©tence chance augmente les chances de rÃ©ussite lors d'une action qui peut Ãªtre Ã©chouÃ©e telle que le viol, vol, etc\nElle vous permet donc d'avoir 80 chances sur 100 de rÃ©ussir Ã  la place de 70 chances sur 100.\nCette compÃ©tence vous permet aussi d'augmenter les chances d'Ã©couter le temps d'un vol de lieu et augmente aussi les chances de gagner plus d'argent lors de vols.",
+	"La compÃ©tence RÃ©gÃ©nÃ©ration vous permet de rÃ©gÃ©nerer votre vie Ã  chaque seconde qui passe, et ce jusqu'Ã  que votre vie atteigne ses 70%.\nPlus le niveau de la compÃ©tence est Ã©levÃ©, plus votre vie se rÃ©gÃ©nÃ¨re vite.\nSi vous avez une MST, la compÃ©tence rÃ©gÃ©nÃ©ration se dÃ©sactivera jusqu'Ã  que vous ne l'ayez plus.\nSi vous Ãªtes touchÃ© par une balle, vous ne vous rÃ©gÃ¨nerez plus pendant les 7 prochaines secondes."
 };
 
 new compMaxLvl[]=
@@ -693,23 +693,23 @@ public bankgateexpl(playerid)
 	AddWanted(playerid, 4);
 	AddScore(playerid, 1);
 	new msg[128];
-	format(msg, sizeof(msg), "Le terroriste %s(%d) a explosé la porte du coffre de la banque, interpellez-le vite !", pInfo[playerid][name], playerid);
+	format(msg, sizeof(msg), "Le terroriste %s(%d) a explosÃ© la porte du coffre de la banque, interpellez-le vite !", pInfo[playerid][name], playerid);
 	SendClientMessageToAllCops(COLOR_BLUECOPS, msg);
-	SendClientMessage(playerid, COLOR_RED, "Vous avez explosé la porte du coffre de la banque, la police a été prévenue !");
+	SendClientMessage(playerid, COLOR_RED, "Vous avez explosÃ© la porte du coffre de la banque, la police a Ã©tÃ© prÃ©venue !");
 }
 
 public bankgateclose()
 {
 	MoveDynamicObject(BankGate, 2318.66553, -15.17134, 15.14398, 0.5, 0.00000, 0.00000, 90.00000);
 	BankGateO=false;
-	SendClientMessageToAll(COLOR_LIGHTBLUE, "La porte de la banque a été réparée !");
+	SendClientMessageToAll(COLOR_LIGHTBLUE, "La porte de la banque a Ã©tÃ© rÃ©parÃ©e !");
 }
 
 public gpscheckpointtimer(playerid)
 {
     DisablePlayerRaceCheckpoint(playerid);
     RemovePlayerMapIcon(playerid, 99);
-    SendClientMessage(playerid, COLOR_GREEN, "Le checkpoint de localisation de véhicule a été supprimé !");
+    SendClientMessage(playerid, COLOR_GREEN, "Le checkpoint de localisation de vÃ©hicule a Ã©tÃ© supprimÃ© !");
 }
 
 
@@ -729,7 +729,7 @@ public HideMsg(playerid)
 
 public invtimer(playerid)
 {
-	SendClientMessage(playerid, COLOR_GREEN, "Vous êtes maintenant de nouveau visible sur la map !");
+	SendClientMessage(playerid, COLOR_GREEN, "Vous Ãªtes maintenant de nouveau visible sur la map !");
 	pInfo[playerid][lastinvisible]=gettime()+120;
 	for(new i=0;i<MAX_PLAYERS;i++)
 	    if(i!=playerid&&IsPlayerConnected(i)) ShowPlayerMarkerForPlayer(i, playerid);
@@ -746,7 +746,7 @@ public hackvehcmd(playerid, vehicleid)
  	pInfo[playerid][hackvehp]=true;
  	for(new i=0;i<MAX_PLAYERS;i++)
 		if(GetPlayerVehicleID(i)==vehicleid)
-			SendClientMessage(i, COLOR_ERROR, "Un hacker vient d'immobiliser ce véhicule !");
+			SendClientMessage(i, COLOR_ERROR, "Un hacker vient d'immobiliser ce vÃ©hicule !");
 	vInfo[vehicleid][hacktimer]=SetTimerEx("hackveh", 10000, false, "ii", playerid, vehicleid);
 }
 
@@ -792,7 +792,7 @@ public MoveGate(who)
 {
 	switch(who)
 	{
-	    case 0: { //Armée
+	    case 0: { //ArmÃ©e
 		    if(ArmyGateO[0]) {
 				MoveDynamicObject(ArmyGate[0], 2720.26807, -2504.21460, 12.50000, 5, 0.00000, 0.00000, 90.00000);
 		        ArmyGateO[0]=false;
@@ -803,7 +803,7 @@ public MoveGate(who)
 		    }
 		}
 
-		case 1: { //Armée1
+		case 1: { //ArmÃ©e1
 		    if(ArmyGateO[1]) {
 				MoveDynamicObject(ArmyGate[1], 2720.26807, -2405.68530, 12.50000, 5, 0.00000, 0.00000, 90.00000);
 		        ArmyGateO[1]=false;
@@ -873,7 +873,7 @@ public phackatmtimer(playerid)
 	!PlayerToPoint(10.0,playerid,2108.97729, -1790.71216, 13.19380) &&// ATM4
 	!PlayerToPoint(10.0,playerid,1810.79199, -1876.69238, 13.22270))||
 	pInfo[playerid][hackatmid]==-1){
-		SendClientMessage(playerid, COLOR_ERROR, "Vous êtes sorti du champ de piratage ou vous êtes mort: hacking annulé !");
+		SendClientMessage(playerid, COLOR_ERROR, "Vous Ãªtes sorti du champ de piratage ou vous Ãªtes mort: hacking annulÃ© !");
 		KillTimer(pInfo[playerid][hackatmtimer]);
 		pInfo[playerid][hackatmid]=-1;
 		HidePlayerProgressBar(playerid, HackATMT[playerid]);
@@ -892,13 +892,13 @@ public phackatmtimer(playerid)
 	 		pInv[playerid][BANK_CASH]+=crand;
 	 		AddScore(playerid, 1);
 		    new msg[128];
-		    format(msg, sizeof(msg), "%s(%d) vient de pirater un ATM: %s ont été ajoutés dans son compte en banque.", pInfo[playerid][name], playerid, FormatMoney(crand));
+		    format(msg, sizeof(msg), "%s(%d) vient de pirater un ATM: %s ont Ã©tÃ© ajoutÃ©s dans son compte en banque.", pInfo[playerid][name], playerid, FormatMoney(crand));
 		    SendClientMessageToAll(COLOR_ROYALBLUE, msg);
-		    SendClientMessage(playerid, COLOR_GREEN, "Vos gains ont automatiquement été transférés dans votre compte en banque.");
+		    SendClientMessage(playerid, COLOR_GREEN, "Vos gains ont automatiquement Ã©tÃ© transfÃ©rÃ©s dans votre compte en banque.");
 		    KillTimer(pInfo[playerid][hackatmtimer]);
 		    pInfo[playerid][hackatmid]=0;
 		    HidePlayerProgressBar(playerid, HackATMT[playerid]);
-		 	format(msg,sizeof(msg),"[RADIO DE POLICE] Suspect %s(%d) a piraté un ATM ! Il a volé %s !",pInfo[playerid][name],playerid, FormatMoney(crand));
+		 	format(msg,sizeof(msg),"[RADIO DE POLICE] Suspect %s(%d) a piratÃ© un ATM ! Il a volÃ© %s !",pInfo[playerid][name],playerid, FormatMoney(crand));
 			SendClientMessageToAllCops(COLOR_BLUECOPS, msg);
 		}
 	}
@@ -953,10 +953,10 @@ stock BanPlayer(playerid, reason[]="Aucune", time=-1)
 	mysql_query(query);
 	for(new c = 0; c<=100; c++) SendClientMessage(playerid,COLOR_WHITE,"");
 	SendClientMessage(playerid,COLOR_WHITE,"----------------------------------------------------------------------------------------");
-	SendClientMessage(playerid,COLOR_RED,"Vous avez été bannis du serveur définitivement.");
- 	SendClientMessage(playerid,COLOR_RED,"Vous pouvez faire une demande de débannissement sur notre forum dans la section adéquate.");
-	SendClientMessage(playerid,COLOR_RED,"Merci de prendre un screen de la fenêtre du bannissement (TOUCHE F8).");
-	SendClientMessage(playerid,COLOR_RED,"Nous ne débannissons pas les CHEATERS/HACKERS !");
+	SendClientMessage(playerid,COLOR_RED,"Vous avez Ã©tÃ© bannis du serveur dÃ©finitivement.");
+ 	SendClientMessage(playerid,COLOR_RED,"Vous pouvez faire une demande de dÃ©bannissement sur notre forum dans la section adÃ©quate.");
+	SendClientMessage(playerid,COLOR_RED,"Merci de prendre un screen de la fenÃªtre du bannissement (TOUCHE F8).");
+	SendClientMessage(playerid,COLOR_RED,"Nous ne dÃ©bannissons pas les CHEATERS/HACKERS !");
 	SendClientMessage(playerid,COLOR_WHITE,"----------------------------------------------------------------------------------------");
     ShowBan(playerid);
 	return 1;
@@ -967,7 +967,7 @@ stock Load3DID(playerid)
 	new str[21];
 	for(new i=1;i<=MAX_VEHICLES;i++){
 	    if(IsValidVehicle(i)) {
-			format(str, sizeof(str), "ID du Véhicule: %d", i);
+			format(str, sizeof(str), "ID du VÃ©hicule: %d", i);
 			vlabel[playerid][i-1] = CreatePlayer3DTextLabel(playerid,str,0x008080FF, 0, 0, 0, (!pInv[playerid][amplificator]) ? (30.0) : (47.5), INVALID_PLAYER_ID, i, 1);
 		}
     }
@@ -991,7 +991,7 @@ stock Delete3DID(vehicleid)
 stock Create3DID(vehicleid)
 {
 	new str[21];
-	format(str, sizeof(str), "ID du Véhicule: %d", vehicleid);
+	format(str, sizeof(str), "ID du VÃ©hicule: %d", vehicleid);
 	for(new i=0;i<MAX_PLAYERS;i++)
 		if(pInfo[i][seeid]) vlabel[i][vehicleid-1] = CreatePlayer3DTextLabel(i,str,0x008080FF, 0, 0, 0, (!pInv[i][amplificator]) ? (30.0) : (47.5), INVALID_PLAYER_ID, vehicleid, 1);
 	return 1;
@@ -1022,8 +1022,8 @@ stock ShowBan(playerid)
 	
 	if(Duration<=-1){
 		new string[256];
-		format(string, sizeof(string), "Vous êtes banni définitivement, vous ne pouvez pas vous connecter.\n{FFFFFF}Utilisateur banni : {FF0000}%s \r\n{FFFFFF}Raison du banissement : {FF0000}%s \r\n{FFFFFF}IP bannie : {FF0000}%s \r\n{FFFFFF}Date : {FF0000}%s", pInfo[playerid][name], reason, ip, time);
- 		ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "{FF0000}Banissement définitif", string, "Fermer", "");
+		format(string, sizeof(string), "Vous Ãªtes banni dÃ©finitivement, vous ne pouvez pas vous connecter.\n{FFFFFF}Utilisateur banni : {FF0000}%s \r\n{FFFFFF}Raison du banissement : {FF0000}%s \r\n{FFFFFF}IP bannie : {FF0000}%s \r\n{FFFFFF}Date : {FF0000}%s", pInfo[playerid][name], reason, ip, time);
+ 		ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "{FF0000}Banissement dÃ©finitif", string, "Fermer", "");
         KickP(playerid);
         return 1;
   	}
@@ -1032,7 +1032,7 @@ stock ShowBan(playerid)
 		
 		if(Duration-CurTimestamp>=1) {
 			format(string, sizeof(string),
-			"Vous êtes banni temporairement, vous ne pouvez pas vous connecter pour le moment.\n{FFFFFF}Utilisateur banni : {FF0000}%s \r\n{FFFFFF}Raison du banissement : {FF0000}%s \r\n{FFFFFF}IP bannie : {FF0000}%s \r\n{FFFFFF}Date : {FF0000}%s\r\n{FFFFFF}Temps restant: {FF0000}%f minutes {FFFFFF}ou {FF0000}%f heures {FFFFFF}ou ",
+			"Vous Ãªtes banni temporairement, vous ne pouvez pas vous connecter pour le moment.\n{FFFFFF}Utilisateur banni : {FF0000}%s \r\n{FFFFFF}Raison du banissement : {FF0000}%s \r\n{FFFFFF}IP bannie : {FF0000}%s \r\n{FFFFFF}Date : {FF0000}%s\r\n{FFFFFF}Temps restant: {FF0000}%f minutes {FFFFFF}ou {FF0000}%f heures {FFFFFF}ou ",
 			pInfo[playerid][name], reason, ip, time, floatdiv((Duration-CurTimestamp),60), floatdiv(floatdiv((Duration-CurTimestamp),60), 60));
 			format(string, sizeof(string), "%s{FF0000}%f jours", string, floatdiv(floatdiv(floatdiv((Duration-CurTimestamp),60), 60),24));
 			ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "{FF0000}Banissement temporaire", string, "Fermer", "");
@@ -1055,7 +1055,7 @@ public OnSuccessWin(playerid, successid)
 	fix_Caracter(gtext);
 	GameTextForPlayer(playerid, gtext, 6000, 4);
 	PlayerPlaySound(playerid, 17802,0.0,0.0,0.0);
-	format(gtext, sizeof(gtext), "%s(%d) a gagné le succès \"%s\" !", pInfo[playerid][name], playerid, Successes[successid][0]);
+	format(gtext, sizeof(gtext), "%s(%d) a gagnÃ© le succÃ¨s \"%s\" !", pInfo[playerid][name], playerid, Successes[successid][0]);
 	SendClientMessageToAll(COLOR_BLUE, gtext);
 	return 1;
 }
@@ -1183,10 +1183,10 @@ stock LoadVehiclesFile()
 			vInfo[vid][gps]=false;
 		}
 		fclose(file);
-	    print("Chargement des véhicules effectué !");
+	    print("Chargement des vÃ©hicules effectuÃ© !");
 	    return true;
 	}
-	else print("Chargement des véhicules échoué");
+	else print("Chargement des vÃ©hicules Ã©chouÃ©");
 	return false;
 }
 
@@ -1206,10 +1206,10 @@ stock LoadMappingFile()
 			CreateDynamicObject(model,  pos[0], pos[1], pos[2], pos[3], pos[4], pos[5]);
 		}
 		fclose(file);
-	    print("Chargement du mapping effectué !");
+	    print("Chargement du mapping effectuÃ© !");
 	    return true;
 	}
-	else print("Chargement du mapping échoué");
+	else print("Chargement du mapping Ã©chouÃ©");
 	return false;
 }
 
@@ -1431,7 +1431,7 @@ stock LoadPickupsSQL()
 		mysql_fetch_field_row(tmp, "ID");
 	    id=strval(tmp);
 
-	    //Entrée
+	    //EntrÃ©e
 		mysql_fetch_field_row(tmp, "pickup_entx");
 	    PickupPos[0]=floatstr(tmp);
 		mysql_fetch_field_row(tmp, "pickup_enty");
@@ -1454,7 +1454,7 @@ stock LoadPickupsSQL()
 		mysql_fetch_field_row(tmp, "interior");
 	    PickupInfo[pickup][interior]=strval(tmp);
 
-	    //Spawnpos entrée
+	    //Spawnpos entrÃ©e
 		mysql_fetch_field_row(tmp, "ent_x");
 	    PickupInfo[pickup][entx]=floatstr(tmp);
 		mysql_fetch_field_row(tmp, "ent_y");
@@ -1481,7 +1481,7 @@ stock LoadPickupsSQL()
 	    PickupInfo[pickup][entid]=-1;
 	}
 	mysql_free_result(mysql_connection);
-	print("Pickup chargés!");
+	print("Pickup chargÃ©s!");
 	return true;
 }
 
@@ -1530,29 +1530,29 @@ stock pavert(playerid, reason[])
 	if(pInfo[playerid][avert]>=0&&pInfo[playerid][avert]<2)
 	{
 		pInfo[playerid][avert] ++;
-  		format(string,sizeof(string),"%s(%d) a reçu un avertissement [%d/3]. {FF0000}Raison: {FFFFFF}%s.",pInfo[playerid][name],playerid,pInfo[playerid][avert],reason);
+  		format(string,sizeof(string),"%s(%d) a reÃ§u un avertissement [%d/3]. {FF0000}Raison: {FFFFFF}%s.",pInfo[playerid][name],playerid,pInfo[playerid][avert],reason);
 		SendClientMessageToAll(COLOR_BLUE, string);
 		new Global[1024];
-		format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}Vous avez reçu {FF0000}AVERTISSEMENT{FFFFFF}");
+		format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}Vous avez reÃ§u {FF0000}AVERTISSEMENT{FFFFFF}");
 		format (Global, sizeof Global, "%s\n%s", Global, "Le {FF4D00}DEATHMATCHING {FFFFFF}- {FF4D00}CARKILL {FFFFFF}- {FF4D00}DBF {FFFFFF}- {FF4D00}USEBUG {FFFFFF}sont interdits sur CRFR.");
 		format (Global, sizeof Global, "%s\n%s", Global, "Merci d'utiliser {EBEB00}/regles {FFFFFF}et {EBEB00}/pc{FFFFFF}.\n");
 		format (Global, sizeof Global, "%s\n%s%s", Global, "{FF0000}Raison de l'avertissement{FFFFFF}: ", reason);
-		ShowPlayerDialog (playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "{FF0000}• • AVERTISSEMENT • •", Global, "Fermer", "");
+		ShowPlayerDialog (playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "{FF0000}â€¢ â€¢ AVERTISSEMENT â€¢ â€¢", Global, "Fermer", "");
 		return 1;
 	}
 	if(pInfo[playerid][avert] == 2)
 	{
 		pInfo[playerid][avert]++;
-  		format(string,sizeof(string),"%s(%d) a reçu un avertissement [3/3]. {FF0000}Raison: {FFFFFF}%s.",pInfo[playerid][name],playerid,reason);
+  		format(string,sizeof(string),"%s(%d) a reÃ§u un avertissement [3/3]. {FF0000}Raison: {FFFFFF}%s.",pInfo[playerid][name],playerid,reason);
 		SendClientMessageToAll(COLOR_BLUE, string);
- 		format(string,sizeof(string),"%s(%d) a été kick automatiquement a cause de ses avertissements.",pInfo[playerid][name],playerid);
+ 		format(string,sizeof(string),"%s(%d) a Ã©tÃ© kick automatiquement a cause de ses avertissements.",pInfo[playerid][name],playerid);
 		SendClientMessageToAll(COLOR_BLUE, string);
 		new Global[1024];
-		format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}Vous avez reçu trop d'{FF0000}AVERTISSEMENTS{FFFFFF}.");
+		format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}Vous avez reÃ§u trop d'{FF0000}AVERTISSEMENTS{FFFFFF}.");
 		format (Global, sizeof Global, "%s\n%s", Global, "Le {FF4D00}DEATHMATCHING {FFFFFF}- {FF4D00}CARKILL {FFFFFF}- {FF4D00}DBF {FFFFFF}- {FF4D00}USEBUG {FFFFFF}sont interdits sur CRFR.");
 		format (Global, sizeof Global, "%s\n%s", Global, "Merci d'utiliser {EBEB00}/regles {FFFFFF}et {EBEB00}/pc{FFFFFF}.\n");
 		format (Global, sizeof Global, "%s\n%s%s", Global, "{FF0000}Raison de l'avertissement{FFFFFF}: ", reason);
-		ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "{FF0000}• • AVERTISSEMENT • •", Global, "Fermer", "");
+		ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "{FF0000}â€¢ â€¢ AVERTISSEMENT â€¢ â€¢", Global, "Fermer", "");
 		KickP(playerid);
 		return 1;
 	}
@@ -1616,7 +1616,7 @@ stock PlayerDeathVariables(playerid)
 	pInfo[playerid][noiselvl]=0;
 	if(pInfo[playerid][hit]>0) {
 	    new msg[128];
-		format(msg, sizeof(msg), "%s(%d) est mort sans qu'un mercenaire puisse le tuer, il n'a plus de contrat sur la tête: vous ne pouvez plus le tuer !", pInfo[playerid][name], playerid);
+		format(msg, sizeof(msg), "%s(%d) est mort sans qu'un mercenaire puisse le tuer, il n'a plus de contrat sur la tÃªte: vous ne pouvez plus le tuer !", pInfo[playerid][name], playerid);
 	    for(new i=0;i<MAX_PLAYERS;i++) {
 	        if(pInfo[playerid][TEAM]==TEAM_HITMAN) {
 				SendClientMessage(playerid, COLOR_DARKGREY, msg);
@@ -1873,7 +1873,7 @@ stock LoadVehiclesSQL()
 	    else DestroyVehicle(bcar);
 	}
 	mysql_free_result(mysql_connection);
-	printf("%d véhicule(s) chargé(s) via SQL !", v);
+	printf("%d vÃ©hicule(s) chargÃ©(s) via SQL !", v);
 	return true;
 }
 
@@ -1937,7 +1937,7 @@ stock AddWanted(playerid, value)
 	pInfo[playerid][wanted]+=value;
 	SetPlayerAutoColor(playerid);
 	new pcol =GetPlayerColor(playerid), string[128];
-	format(string,sizeof(string),"|| Votre niveau de recherche est maintenant de %d étoiles ||",pInfo[playerid][wanted]);
+	format(string,sizeof(string),"|| Votre niveau de recherche est maintenant de %d Ã©toiles ||",pInfo[playerid][wanted]);
 	SendClientMessage(playerid,pcol,string);
 	ActualiseWantedTD(playerid);
 	return true;
@@ -1968,9 +1968,9 @@ stock AddScore(playerid, value)
 	    pComp[playerid][comp_points]++;
 		pComp[playerid][comp_nextlvl]=30;
 		new msg[128];
-		format(msg, sizeof(msg), "Vous avez atteint le niveau %d, félicitations !", pComp[playerid][comp_lvl]);
+		format(msg, sizeof(msg), "Vous avez atteint le niveau %d, fÃ©licitations !", pComp[playerid][comp_lvl]);
 		SendClientMessage(playerid, COLOR_GREEN, msg);
-		SendClientMessage(playerid, COLOR_GREEN, "Vous venez de gagner 1 point de compétences, tapez /comp(etences) pour le dépenser.");
+		SendClientMessage(playerid, COLOR_GREEN, "Vous venez de gagner 1 point de compÃ©tences, tapez /comp(etences) pour le dÃ©penser.");
 	}
 	if(value<0&&pComp[playerid][comp_nextlvl]<=0) {
 	    pComp[playerid][comp_lvl]--;
@@ -2028,7 +2028,7 @@ stock MySQL_Register(playerid, passwordstring[])
     format(query, sizeof(query), "INSERT INTO comptes (pseudo, password, score, argent, IP) VALUES('%s', SHA1('%s'), 0, 0, '%s')", pInfo[playerid][name], passwordstring, IP);
     mysql_query(query);
 
-    SendClientMessage(playerid,COLOR_LIGHTBLUE,"Vous vous êtes enregistré avec succès ! Votre compte a été créé.");
+    SendClientMessage(playerid,COLOR_LIGHTBLUE,"Vous vous Ãªtes enregistrÃ© avec succÃ¨s ! Votre compte a Ã©tÃ© crÃ©Ã©.");
     return 1;
 }
 
@@ -2268,17 +2268,17 @@ public SaveStatsTimer()
 	format(query, sizeof(query), "UPDATE `servinfo` SET `Money`=%d,`Score`=%d WHERE `Name`='Groove'",
 	Teams[GROOVE][MONEY], Teams[GROOVE][SCORE]);
 	mysql_query(query);
-	SendClientMessageToAll(COLOR_ROYALBLUE, "Vos statistiques ont été automatiquement sauvegardés !");
+	SendClientMessageToAll(COLOR_ROYALBLUE, "Vos statistiques ont Ã©tÃ© automatiquement sauvegardÃ©s !");
 }
 
 public explcaisset(playerid, vehicleid)
 {
 	if(IsValidVehicle(vehicleid))
 	{
-		SendClientMessage(playerid, COLOR_GREEN, "Le véhicule a explosé, vous gagnez un point de score !");
+		SendClientMessage(playerid, COLOR_GREEN, "Le vÃ©hicule a explosÃ©, vous gagnez un point de score !");
 		if(vInfo[vehicleid][P_UID]!=-1&&pInfo[playerid][UID]!=vInfo[vehicleid][P_UID]) {
 		    AddScore(playerid, -23);
-		    SendClientMessage(playerid, COLOR_RED, "Vous avez explosé un véhicule personnel, vous venez de perdre deux points de score !");
+		    SendClientMessage(playerid, COLOR_RED, "Vous avez explosÃ© un vÃ©hicule personnel, vous venez de perdre deux points de score !");
 		}
 	    new Float:x, Float:y, Float:z;
 	    GetVehiclePos(vehicleid, x, y, z);
@@ -2311,10 +2311,10 @@ public OneTimer()
 		if(pInfo[i][pvtime]>0) {
             pInfo[i][pvtime]--;
             if(pInfo[i][pvtime]<=0) {
-				SendClientMessage(i, COLOR_YELLOW, "Vous n'avez pas payé votre PV, vous gagnez 3 étoiles de recherches, la police a été prévenue.");
+				SendClientMessage(i, COLOR_YELLOW, "Vous n'avez pas payÃ© votre PV, vous gagnez 3 Ã©toiles de recherches, la police a Ã©tÃ© prÃ©venue.");
 				AddWanted(i, 4);
 				new msg[144];
-				format(msg, sizeof(msg), "Le suspect %s(%d) n'a pas payé son PV, il est maintenant recherché: pourchassez-le !", pInfo[i][name], i);
+				format(msg, sizeof(msg), "Le suspect %s(%d) n'a pas payÃ© son PV, il est maintenant recherchÃ©: pourchassez-le !", pInfo[i][name], i);
 				SendClientMessageToAllCops(COLOR_BLUECOPS, msg);
 				pInfo[i][pvtime]=0;
 			}
@@ -2323,7 +2323,7 @@ public OneTimer()
 	    if(pInfo[i][hit]>1) pInfo[i][hit]--;
 	    if(pInfo[i][hit]==1) {
 	        new msg[144];
-	        format(msg, sizeof(msg), "Le contrat sur la tête de %s(%d) a expiré, vous ne pouvez plus le tuer.", pInfo[i][name], i);
+	        format(msg, sizeof(msg), "Le contrat sur la tÃªte de %s(%d) a expirÃ©, vous ne pouvez plus le tuer.", pInfo[i][name], i);
 		    for(new a=0;a<MAX_PLAYERS;a++) {
 		        if(pInfo[a][TEAM]==TEAM_HITMAN) {
 					SendClientMessage(a, COLOR_DARKGREY, msg);
@@ -2334,7 +2334,7 @@ public OneTimer()
  		if(pInfo[i][kidnappedtime]>1)
 		{
 			new string[125];
-		    format(string,sizeof(string),"~h~~w~Vous êtes kidnappé~n~~h~~r~%d ~h~~y~secondes restantes", pInfo[i][kidnappedtime]);
+		    format(string,sizeof(string),"~h~~w~Vous Ãªtes kidnappÃ©~n~~h~~r~%d ~h~~y~secondes restantes", pInfo[i][kidnappedtime]);
 	      	GameTextForPlayer(i, string, 3000, 3);
 			pInfo[i][kidnappedtime]--;
 		}
@@ -2343,7 +2343,7 @@ public OneTimer()
 	    	TogglePlayerControllable(i, 1);
 			pInfo[i][kidnapped] =false;
 			pInfo[i][kidnappedtime]=0;
-			SendClientMessage(i, COLOR_GREEN, "Vos cordes se sont détachées, vous pouvez vous enfuir !");
+			SendClientMessage(i, COLOR_GREEN, "Vos cordes se sont dÃ©tachÃ©es, vous pouvez vous enfuir !");
 	    }
 	    if(pInfo[i][noiselvl]>0) pInfo[i][noiselvl]=floatsub(pInfo[i][noiselvl], 6.5);
 	    if(pInfo[i][invisible]&&pInfo[i][furtiv]) pInfo[i][furtiv]=false;
@@ -2443,12 +2443,12 @@ public OneTimer()
 			if(pInfo[i][robprogress]>=100) {
 			    pInfo[i][roblvl]++;
 			    pInfo[i][robprogress]=0;
-			    format(str, sizeof(str), "Vous avez monté de niveau voleur ! Vous êtes maintenant au niveau %d !", pInfo[i][roblvl]);
+			    format(str, sizeof(str), "Vous avez montÃ© de niveau voleur ! Vous Ãªtes maintenant au niveau %d !", pInfo[i][roblvl]);
 			    SendClientMessage(i, COLOR_GREEN, str);
 			}
 			format(str, sizeof(str), "%s(%d) vient de voler %s dans un ATM !", pInfo[i][name], i, FormatMoney(money));
 			SendClientMessageToAll(COLOR_BLUE, str);
-		    format(str, sizeof(str), "[RADIO] Le suspect %s(%d) a volé %s dans un ATM, interpellez-le !", pInfo[i][name], i, FormatMoney(money));
+		    format(str, sizeof(str), "[RADIO] Le suspect %s(%d) a volÃ© %s dans un ATM, interpellez-le !", pInfo[i][name], i, FormatMoney(money));
 		    SendClientMessageToAllCops(COLOR_BLUECOPS, str);
 		    GivePlayerMoney(i, money);
 	        pInfo[i][robatm]=0;
@@ -2458,14 +2458,14 @@ public OneTimer()
 		    switch(GetPlayerCheckpoint(i)) {
 		        case CP_ATM1, CP_ATM2, CP_ATM3, CP_ATM4, CP_ATM5: {
 					new string[125];
-			        format(string,sizeof(string),"~h~~w~Vol d'ATM en cours~n~~h~~r~%d ~h~~y~secondes~n~~b~La police a žtž pržvenue..."
+			        format(string,sizeof(string),"~h~~w~Vol d'ATM en cours~n~~h~~r~%d ~h~~y~secondes~n~~b~La police a Å¾tÅ¾ prÅ¾venue..."
 					, pInfo[i][robatm]);
 		      		GameTextForPlayer(i, string, 2200, 3);
 				    pInfo[i][robatm]--;
 				}
 				default: {
 					pInfo[i][robatm]=0;
-					SendClientMessage(i, COLOR_ERROR, "Vol échoué, vous êtes sorti du checkpoint avant la fin !");
+					SendClientMessage(i, COLOR_ERROR, "Vol Ã©chouÃ©, vous Ãªtes sorti du checkpoint avant la fin !");
 				}
 			}
 		}
@@ -2542,13 +2542,13 @@ public OneTimer()
 			if(pInfo[i][robprogress]>=100) {
 			    pInfo[i][roblvl]++;
 			    pInfo[i][robprogress]=0;
-			    format(str, sizeof(str), "Vous avez monté de niveau voleur ! Vous êtes maintenant au niveau %d !", pInfo[i][roblvl]);
+			    format(str, sizeof(str), "Vous avez montÃ© de niveau voleur ! Vous Ãªtes maintenant au niveau %d !", pInfo[i][roblvl]);
 			    SendClientMessage(i, COLOR_GREEN, str);
 			}
 		    GivePlayerMoney(i, money);
 			format(str, sizeof(str), "%s(%d) vient de voler %s %s", pInfo[i][name], i, FormatMoney(money), cName[GetPlayerCheckpoint(i)]);
 			SendClientMessageToAll(COLOR_BLUE, str);
-		    format(str, sizeof(str), "[RADIO] Le suspect %s(%d) a volé %s %s, interpellez-le !", pInfo[i][name], i, FormatMoney(money), cName[GetPlayerCheckpoint(i)]);
+		    format(str, sizeof(str), "[RADIO] Le suspect %s(%d) a volÃ© %s %s, interpellez-le !", pInfo[i][name], i, FormatMoney(money), cName[GetPlayerCheckpoint(i)]);
 		    SendClientMessageToAllCops(COLOR_BLUECOPS, str);
 	        pInfo[i][lrob]=0;
 
@@ -2557,11 +2557,11 @@ public OneTimer()
 		{
 		    if(GetPlayerCheckpoint(i)==-1) {
 				pInfo[i][lrob]=0;
-				SendClientMessage(i, COLOR_ERROR, "Vol échoué, vous êtes sorti du checkpoint avant la fin !");
+				SendClientMessage(i, COLOR_ERROR, "Vol Ã©chouÃ©, vous Ãªtes sorti du checkpoint avant la fin !");
 			}
 			else {
 			    new string[125];
-		        format(string,sizeof(string),"~h~~w~Vol en cours~n~~h~~r~%d ~h~~y~secondes~n~~b~L'alarme a žtž activže..."
+		        format(string,sizeof(string),"~h~~w~Vol en cours~n~~h~~r~%d ~h~~y~secondes~n~~b~L'alarme a Å¾tÅ¾ activÅ¾e..."
 				, pInfo[i][lrob]);
 	      		GameTextForPlayer(i, string, 3000, 3);
 			    pInfo[i][lrob]--;
@@ -2570,7 +2570,7 @@ public OneTimer()
 	    if(pInfo[i][mentime] > 1)
 	    {
 	        new string[128];
-	    	format(string,sizeof(string),"~h~~w~Menottž~n~~h~~y~pendant ~h~~r~%d ~h~~y~secondes",pInfo[i][mentime]);
+	    	format(string,sizeof(string),"~h~~w~MenottÅ¾~n~~h~~y~pendant ~h~~r~%d ~h~~y~secondes",pInfo[i][mentime]);
     		GameTextForPlayer(i, string, 3000, 3);
 
 			pInfo[i][mentime] --;
@@ -2578,7 +2578,7 @@ public OneTimer()
 		if(pInfo[i][mentime] == 1)
 		{
 		 	pInfo[i][mentime]=0;
-		    SendClientMessage(i, COLOR_GREEN, "Vous avez été dé-menotté par l'anti-abus !");
+		    SendClientMessage(i, COLOR_GREEN, "Vous avez Ã©tÃ© dÃ©-menottÃ© par l'anti-abus !");
 	    	TogglePlayerControllable(i, 1);
 			pInfo[i][cuffed] =false;
 		 	SetPlayerSpecialAction(i,SPECIAL_ACTION_NONE);
@@ -2597,7 +2597,7 @@ public OneTimer()
 		{
 		    pInfo[i][jailtime]=0;
 	        new string[128];
-			format(string,sizeof(string),"%s(%d) a été libéré de prison.",pInfo[i][name],i);
+			format(string,sizeof(string),"%s(%d) a Ã©tÃ© libÃ©rÃ© de prison.",pInfo[i][name],i);
 			SendClientMessageToAll(COLOR_ORANGE,string);
 			SetPlayerHealth(i,100);
 			SetPlayerArmour(i,0);
@@ -2659,24 +2659,24 @@ cmd:admode(playerid,params[])
 cmd:assurance(playerid, params[])
 {
 	if(!IsPlayerInAnyVehicle(playerid))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous devez être dans un véhicule pour faire ça !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous devez Ãªtre dans un vÃ©hicule pour faire Ã§a !");
 
 	if(vInfo[GetPlayerVehicleID(playerid)][P_UID]!=pInfo[playerid][UID])
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous devez être dans un véhicule vous appartenant pour acheter une assurance !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous devez Ãªtre dans un vÃ©hicule vous appartenant pour acheter une assurance !");
 
 	if(pInv[playerid][BANK_CASH]<15000)
 	    return SendClientMessage(playerid, COLOR_ERROR, "Vous devez avoir de quoi payer l'assurance ($15,000) sur votre compte bancaire !");
 
 	new vehicleid=GetPlayerVehicleID(playerid);
 	if(vInfo[vehicleid][assured])
-	    return SendClientMessage(playerid, COLOR_ERROR, "Votre véhicule est déjà assuré !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Votre vÃ©hicule est dÃ©jÃ  assurÃ© !");
 
 	if(!PlayerToPoint(10.0,playerid,1085.8085,-1368.1053,13.7813))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous devez être sur le pickup d'achat d'assurance de l'Otto's Car pour assurer votre véhicule !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous devez Ãªtre sur le pickup d'achat d'assurance de l'Otto's Car pour assurer votre vÃ©hicule !");
 
 	vInfo[vehicleid][assured]=true;
 	pInv[playerid][BANK_CASH]-=15000;
-	SendClientMessage(playerid, COLOR_GREEN, "Votre véhicule est maintenant assuré ! $15,000 ont été prélevés de votre compte bancaire.");
+	SendClientMessage(playerid, COLOR_GREEN, "Votre vÃ©hicule est maintenant assurÃ© ! $15,000 ont Ã©tÃ© prÃ©levÃ©s de votre compte bancaire.");
 	SaveVehicleStats(vehicleid);
 	//Yup
 	return 1;
@@ -2685,21 +2685,21 @@ cmd:assurance(playerid, params[])
 cmd:achetergps(playerid, params[])
 {
 	if(!IsPlayerInAnyVehicle(playerid))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous devez être dans un véhicule pour faire ça !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous devez Ãªtre dans un vÃ©hicule pour faire Ã§a !");
 
 	if(vInfo[GetPlayerVehicleID(playerid)][P_UID]!=pInfo[playerid][UID])
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous devez être dans un véhicule vous appartenant pour acheter un GPS !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous devez Ãªtre dans un vÃ©hicule vous appartenant pour acheter un GPS !");
 
 	if(pInv[playerid][BANK_CASH]<15000)
 	    return SendClientMessage(playerid, COLOR_ERROR, "Vous devez avoir de quoi payer le GPS ($5,000) sur votre compte bancaire !");
 	new vehicleid=GetPlayerVehicleID(playerid);
 	if(vInfo[vehicleid][gps])
-	    return SendClientMessage(playerid, COLOR_ERROR, "Votre véhicule possède déjà un GPS !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Votre vÃ©hicule possÃ¨de dÃ©jÃ  un GPS !");
 
 	if(!PlayerToPoint(10.0,playerid,1085.8085,-1368.1053,13.7813))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous devez être sur le pickup d'achat de GPS de l'Otto's Car pour assurer votre véhicule !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous devez Ãªtre sur le pickup d'achat de GPS de l'Otto's Car pour assurer votre vÃ©hicule !");
 
-	SendClientMessage(playerid, COLOR_GREEN, "Votre véhicule possède maintenant un GPS ! $5,000 ont été prélevés de votre comtpe bancaire, tapez /gps pour localiser votre véhicule.");
+	SendClientMessage(playerid, COLOR_GREEN, "Votre vÃ©hicule possÃ¨de maintenant un GPS ! $5,000 ont Ã©tÃ© prÃ©levÃ©s de votre comtpe bancaire, tapez /gps pour localiser votre vÃ©hicule.");
 	pInv[playerid][BANK_CASH]-=15000;
 	vInfo[vehicleid][gps]=true;
 	SaveVehicleStats(vehicleid);
@@ -2713,8 +2713,8 @@ cmd:gps(playerid, params[])
 		if(IsValidVehicle(v)&&!vInfo[v][destroyed]&&vInfo[v][gps]&&vInfo[v][P_UID]==pInfo[playerid][UID])
 			format(dialog, sizeof(dialog), "%s\n%s", dialog, VehicleNames[GetVehicleModel(v)-400]);
 
-	if(strlen(dialog)==0) return SendClientMessage(playerid, COLOR_ERROR, "Aucun véhicule ne possèdant un GPS n'a pu être trouvé !");
- 	ShowPlayerDialog(playerid, DIALOG_GPS, DIALOG_STYLE_LIST, "Localisation de vos véhicules", dialog, "Localiser", "Quitter");
+	if(strlen(dialog)==0) return SendClientMessage(playerid, COLOR_ERROR, "Aucun vÃ©hicule ne possÃ¨dant un GPS n'a pu Ãªtre trouvÃ© !");
+ 	ShowPlayerDialog(playerid, DIALOG_GPS, DIALOG_STYLE_LIST, "Localisation de vos vÃ©hicules", dialog, "Localiser", "Quitter");
 	return 1;
 }
 
@@ -2727,9 +2727,9 @@ cmd:question(playerid, params[])
 	new msg[MAX_MESSAGE_SIZE];
 	format(msg, sizeof(msg), "Question de %s(%d): %s", pInfo[playerid][name], playerid, reason);
 	if(SendClientMessageToAllAdmins(COLOR_LIGHTBLUE, msg, 1)!=0)
-	    SendClientMessage(playerid, COLOR_GREEN, "Votre question a bien été envoyée a un des administrateurs en ligne.");
+	    SendClientMessage(playerid, COLOR_GREEN, "Votre question a bien Ã©tÃ© envoyÃ©e a un des administrateurs en ligne.");
 	else
-	    SendClientMessage(playerid, COLOR_RED, "Aucun administrateur n'est en ligne, votre question n'a pas pu être envoyée !");
+	    SendClientMessage(playerid, COLOR_RED, "Aucun administrateur n'est en ligne, votre question n'a pas pu Ãªtre envoyÃ©e !");
 	return 1;
 }
 
@@ -2740,23 +2740,23 @@ cmd:report(playerid, params[])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Usage: /report (Pseudo/ID) (Raison)");
 
 	if(!IsPlayerConnected(ID))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Le joueur n'est pas connecté !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Le joueur n'est pas connectÃ© !");
 
 	new msg[MAX_MESSAGE_SIZE];
 	format(msg, sizeof(msg), "Report de %s(%d) pour %s(%d): %s", pInfo[playerid][name], playerid, pInfo[ID][name], ID, reason);
 	if(SendClientMessageToAllAdmins(COLOR_LIGHTBLUE, msg, 2)!=0)
-	    SendClientMessage(playerid, COLOR_GREEN, "Votre report a bien été envoyé a un des administrateurs en ligne.");
+	    SendClientMessage(playerid, COLOR_GREEN, "Votre report a bien Ã©tÃ© envoyÃ© a un des administrateurs en ligne.");
 	else
-	    SendClientMessage(playerid, COLOR_RED, "Aucun administrateur n'est en ligne, votre report n'a pas pu être envoyé ! Vous pouvez le poster sur le forum dans la section \"Report\".");
+	    SendClientMessage(playerid, COLOR_RED, "Aucun administrateur n'est en ligne, votre report n'a pas pu Ãªtre envoyÃ© ! Vous pouvez le poster sur le forum dans la section \"Report\".");
 
 	if(CanReport(playerid, ID))
-        SendClientMessageToAllAdmins(COLOR_LIGHTBLUE, "Le report est justifié, vous pouvez sanctionner.", 2);
+        SendClientMessageToAllAdmins(COLOR_LIGHTBLUE, "Le report est justifiÃ©, vous pouvez sanctionner.", 2);
 	return 1;
 }
 
 cmd:admin(playerid,params[])
 {
-	SendClientMessage(playerid,COLOR_ERROR,"[ Membres de l'équipe CRFR en ligne ]");
+	SendClientMessage(playerid,COLOR_ERROR,"[ Membres de l'Ã©quipe CRFR en ligne ]");
 	SendClientMessage(playerid,COLOR_WHITE,"-------------------------------------------------------------------");
 	new bool:co=false;
 	for(new i=0; i<MAX_PLAYERS; i++)
@@ -2767,11 +2767,11 @@ cmd:admin(playerid,params[])
 			new str[23], string[144];
 	        switch(pInfo[i][admin])
 	        {
-				case 1:str="Modérateur en test";
-				case 2:str="Modérateur";
-				case 3:str="Super-Modérateur";
+				case 1:str="ModÃ©rateur en test";
+				case 2:str="ModÃ©rateur";
+				case 3:str="Super-ModÃ©rateur";
 				case 4:str="Administrateur";
-				case 5:str="Administrateur Général";
+				case 5:str="Administrateur GÃ©nÃ©ral";
 				case 1337:str="Fondateur";
 	        }
 			format(string,sizeof(string),"%s : %s(%d)", str, pInfo[i][name],i);
@@ -2794,13 +2794,13 @@ cmd:service(playerid, params[])
 	if(pInfo[playerid][admin]<=0) return 0;
 	new lvl;
 	if(sscanf(params, "i", lvl))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Usage: /service (Numéro) = 0(désactivé) - 1(prend les questions) - 2(prend les reports) - 3(prend les questions et les reports)");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Usage: /service (NumÃ©ro) = 0(dÃ©sactivÃ©) - 1(prend les questions) - 2(prend les reports) - 3(prend les questions et les reports)");
 	if(lvl<0||lvl>3)
-		return SendClientMessage(playerid, COLOR_ERROR, "Usage: /service (Numéro = 0(désactivé) - 1(prend les questions) - 2(prend les reports) - 3(prend les questions et les reports).)");
+		return SendClientMessage(playerid, COLOR_ERROR, "Usage: /service (NumÃ©ro = 0(dÃ©sactivÃ©) - 1(prend les questions) - 2(prend les reports) - 3(prend les questions et les reports).)");
 
 	switch(lvl)
 	{
-	    case 0: SendClientMessage(playerid, COLOR_GREEN, "Vous n'êtes plus en service !");
+	    case 0: SendClientMessage(playerid, COLOR_GREEN, "Vous n'Ãªtes plus en service !");
 	    case 1: SendClientMessage(playerid, COLOR_GREEN, "Vous prenez maintenant les questions !");
 	    case 2: SendClientMessage(playerid, COLOR_GREEN, "Vous prenez maintenant les reports !");
 	    case 3: SendClientMessage(playerid, COLOR_GREEN, "Vous prenez maintenant les questions et les reports!");
@@ -2815,7 +2815,7 @@ cmd:compinfo(playerid, params[])
 	new dialog[600];
 	for(new i=0;i<sizeof(sCompetences);i++)
 		 format(dialog, sizeof(dialog), "%s%s - %s\n", dialog, sCompetences[i][0], sCompetences[i][1]);
-	ShowPlayerDialog(playerid, DIALOG_COMPINFO, DIALOG_STYLE_LIST, "Informations sur les Compétences", dialog, "Ok", "Annuler");
+	ShowPlayerDialog(playerid, DIALOG_COMPINFO, DIALOG_STYLE_LIST, "Informations sur les CompÃ©tences", dialog, "Ok", "Annuler");
 	return 1;
 }
 
@@ -2826,7 +2826,7 @@ cmd:competences(playerid, params[])
 	for(new i=0;i<sizeof(sCompetences);i++)
 		format(dialog, sizeof(dialog), "%s%s - %s: niveau %d\n", dialog, sCompetences[i][0], sCompetences[i][1], GetCompetence(playerid, i));
 
-	format(title, sizeof(title), "Compétences - Niveau %d (%d points)", pComp[playerid][comp_lvl], pComp[playerid][comp_points]);
+	format(title, sizeof(title), "CompÃ©tences - Niveau %d (%d points)", pComp[playerid][comp_lvl], pComp[playerid][comp_points]);
 	ShowPlayerDialog(playerid, DIALOG_COMP, DIALOG_STYLE_LIST, title, dialog, "Ok", "Annuler");
 	return 1;
 }
@@ -2837,8 +2837,8 @@ cmd:succes(playerid, params[])
 	for(new i=0;i<sizeof(sCompetences);i++)
 		if(strlen(Successes[i][0])!=0&&GetSuccess(playerid, i))
 			format(dialog, sizeof(dialog), "{29A613}%s%s - %s\n", dialog, Successes[i][0], Successes[i][1]);
-	if(!strlen(dialog)) dialog="Vous n'avez aucun succès !";
-	ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Succès", dialog, "OK", "");
+	if(!strlen(dialog)) dialog="Vous n'avez aucun succÃ¨s !";
+	ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "SuccÃ¨s", dialog, "OK", "");
 	return 1;
 }
 
@@ -2851,11 +2851,11 @@ cmd:admsg(playerid, params[])
  	new str[23], msg[144];
   	switch(pInfo[playerid][admin])
  	{
-		case 1:str="Modérateur en test";
-		case 2:str="Modérateur";
-		case 3:str="Super-Modérateur";
+		case 1:str="ModÃ©rateur en test";
+		case 2:str="ModÃ©rateur";
+		case 3:str="Super-ModÃ©rateur";
 		case 4:str="Administrateur";
-		case 5:str="Administrateur Général";
+		case 5:str="Administrateur GÃ©nÃ©ral";
 		case 1337:str="Fondateur";
 		default:str="Staff";
 	}
@@ -2882,15 +2882,15 @@ cmd:adpm(playerid, params[])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Usage: /adpm (Pseudo/ID) (Message)");
 
 	if(!IsPlayerConnected(ID)||!pInfo[ID][logged])
-	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas connecté !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas connectÃ© !");
 
 	if(playerid==ID)
-		return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas vous envoyer un message privé à vous-même !");
+		return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas vous envoyer un message privÃ© Ã  vous-mÃªme !");
 
 	new msg[128];
-	format(msg, sizeof(msg), "PM STAFF: %s (Répondez en /question)", pmsg);
+	format(msg, sizeof(msg), "PM STAFF: %s (RÃ©pondez en /question)", pmsg);
 	SendClientMessage(ID, COLOR_DARKYELLOW, msg);
-	format(msg, sizeof(msg), "PM STAFF à %s(%d): %s", pInfo[ID][name], ID, pmsg);
+	format(msg, sizeof(msg), "PM STAFF Ã  %s(%d): %s", pInfo[ID][name], ID, pmsg);
 	SendClientMessage(playerid, COLOR_DARKYELLOW, msg);
 	return 1;
 }
@@ -2902,25 +2902,25 @@ cmd:pm(playerid, params[])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Usage: /pm (Pseudo/ID) (Message)");
 
 	if(!IsPlayerConnected(ID)||!pInfo[ID][logged])
-	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas connecté !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas connectÃ© !");
 
 	if(playerid==ID)
-		return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas vous envoyer un message privé à vous-même !");
+		return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas vous envoyer un message privÃ© Ã  vous-mÃªme !");
 
 	if(pInfo[playerid][mutedtime]>gettime()) {
 		new msg[128];
-		format(msg, sizeof(msg), "Vous êtes muté pendant encore %d secondes, vous ne pouvez pas parler !", pInfo[playerid][mutedtime]-gettime());
+		format(msg, sizeof(msg), "Vous Ãªtes mutÃ© pendant encore %d secondes, vous ne pouvez pas parler !", pInfo[playerid][mutedtime]-gettime());
 	    return SendClientMessage(playerid, COLOR_ERROR, msg);
 	}
 	new msg[128];
 	format(msg, sizeof(msg), "PM de %s(%d): %s", pInfo[playerid][name], playerid, pmsg);
 	SendClientMessage(ID, COLOR_DARKYELLOW, msg);
-	format(msg, sizeof(msg), "PM à %s(%d): %s", pInfo[ID][name], ID, pmsg);
+	format(msg, sizeof(msg), "PM Ã  %s(%d): %s", pInfo[ID][name], ID, pmsg);
 	SendClientMessage(playerid, COLOR_DARKYELLOW, msg);
 	pInfo[ID][lastpm]=playerid;
 	pInfo[ID][lastpmtype]=false;
 	new str[128];
-	format(str, sizeof(str), "%s(%d) à %s(%d): %s", pInfo[playerid][name], playerid, pInfo[ID][name], ID, pmsg);
+	format(str, sizeof(str), "%s(%d) Ã  %s(%d): %s", pInfo[playerid][name], playerid, pInfo[ID][name], ID, pmsg);
 	log("PM", str);
 	return 1;
 }
@@ -2938,19 +2938,19 @@ cmd:rpm(playerid, params[])
 cmd:seeid(playerid, params[])
 {
 	if(pInfo[playerid][TEAM]!=TEAM_HACKER)
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous n'êtes pas hacker, vous ne pouvez pas faire ça !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous n'Ãªtes pas hacker, vous ne pouvez pas faire Ã§a !");
 
 	if(!IsCanAction(playerid))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire ça maintenant !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire Ã§a maintenant !");
 
 	if(pInfo[playerid][seeid]) {
 	    pInfo[playerid][seeid]=false;
-		SendClientMessage(playerid, COLOR_GREEN, "Vous ne voyez maintenant plus les ID de véhicule !");
+		SendClientMessage(playerid, COLOR_GREEN, "Vous ne voyez maintenant plus les ID de vÃ©hicule !");
 	    Unload3DID(playerid);
 	}
 	else {
 	    pInfo[playerid][seeid]=true;
-		SendClientMessage(playerid, COLOR_GREEN, "Vous voyez maintenant les ID de véhicule !");
+		SendClientMessage(playerid, COLOR_GREEN, "Vous voyez maintenant les ID de vÃ©hicule !");
 	    Load3DID(playerid);
 	}
 	return 1;
@@ -2959,34 +2959,34 @@ cmd:seeid(playerid, params[])
 cmd:hackveh(playerid, params[])
 {
 	if(pInfo[playerid][TEAM] != TEAM_HACKER)
- 		return SendClientMessage(playerid, COLOR_ERROR, "Vous devez être un hacker pour pirater des véhicules !");
+ 		return SendClientMessage(playerid, COLOR_ERROR, "Vous devez Ãªtre un hacker pour pirater des vÃ©hicules !");
 
     if(!IsCanAction(playerid))
 		return SendClientMessage(playerid,COLOR_ERROR,"Vous ne pouvez pas utiliser cette commande maintenant.");
 
 	new avid;
 	if(sscanf(params, "i", avid))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Usage: /hackveh (ID du Véhicule) (/seeid pour voir les ID de véhicules)");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Usage: /hackveh (ID du VÃ©hicule) (/seeid pour voir les ID de vÃ©hicules)");
 
 	if(pInfo[playerid][lastvhack]>gettime())
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous avez déjà piraté un véhicule récemment ! Veuillez attendre un peu !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous avez dÃ©jÃ  piratÃ© un vÃ©hicule rÃ©cemment ! Veuillez attendre un peu !");
 
 	if(!IsValidVehicle(avid))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Le véhicule n'existe pas, ré-essayez avec un autre !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Le vÃ©hicule n'existe pas, rÃ©-essayez avec un autre !");
 
 	if(vInfo[avid][hacked])
-	    return SendClientMessage(playerid, COLOR_ERROR, "Ce véhicule est déjà immobilisé !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Ce vÃ©hicule est dÃ©jÃ  immobilisÃ© !");
 
 	new Float:pos[3];
 	GetVehiclePos(avid, pos[0], pos[1], pos[2]);
 	if(!PlayerToPoint((!pInv[playerid][amplificator]) ? (30) : (45), playerid, pos[0], pos[1], pos[2]))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Le véhicule est trop loin de vous!");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Le vÃ©hicule est trop loin de vous!");
 
 	pInfo[playerid][lastvhack]=gettime()+30;
 	if(!Chances((GetCompetence(playerid, 1)==1) ? (20) : (30)))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Tentative de hacking de véhicule échouée!");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Tentative de hacking de vÃ©hicule Ã©chouÃ©e!");
 	pInfo[playerid][lastvhack]=gettime()+65;
-	SendClientMessage(playerid, COLOR_YELLOW, "Vous venez de pirater un véhicule!");
+	SendClientMessage(playerid, COLOR_YELLOW, "Vous venez de pirater un vÃ©hicule!");
 	SetPlayerSpecialAction(playerid, SPECIAL_ACTION_USECELLPHONE);
     SetTimerEx("animtimer", 2000, false, "i", playerid);
     SetTimerEx("hackvehcmd", 2575, false, "ii", playerid, avid);
@@ -2998,19 +2998,19 @@ cmd:hackveh(playerid, params[])
 cmd:invisible(playerid, params[])
 {
 	if(pInfo[playerid][TEAM] != TEAM_HACKER)
- 		return SendClientMessage(playerid, COLOR_ERROR, "Vous devez être un hacker pour vous rendre invisible !");
+ 		return SendClientMessage(playerid, COLOR_ERROR, "Vous devez Ãªtre un hacker pour vous rendre invisible !");
 
  	if(pInfo[playerid][lastinvisible]>gettime())
- 	    return SendClientMessage(playerid, COLOR_ERROR, "Vous vous êtes déjà rendu invisible récemment, attendez un petit peu!");
+ 	    return SendClientMessage(playerid, COLOR_ERROR, "Vous vous Ãªtes dÃ©jÃ  rendu invisible rÃ©cemment, attendez un petit peu!");
 
 	if(pInfo[playerid][invisible])
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous êtes déjà invisible !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous Ãªtes dÃ©jÃ  invisible !");
 
 	for(new i=0;i<MAX_PLAYERS;i++)
 	    if(i!=playerid&&IsPlayerConnected(i)) HidePlayerMarkerForPlayer(i, playerid);
 
     pInfo[playerid][invisible]=true;
-	SendClientMessage(playerid, COLOR_GREEN, (!pInv[playerid][amplificator]) ? ("Vous êtes maintenant invisible pour une minute sur la map !") : ("Vous êtes maintenant invisible pour une minute et 30 secondes sur la map !"));
+	SendClientMessage(playerid, COLOR_GREEN, (!pInv[playerid][amplificator]) ? ("Vous Ãªtes maintenant invisible pour une minute sur la map !") : ("Vous Ãªtes maintenant invisible pour une minute et 30 secondes sur la map !"));
 	pInfo[playerid][invisibletimer]=SetTimerEx("invtimer", (!pInv[playerid][amplificator]) ? (60000) : (90000), false, "i", playerid);
 	return 1;
 }
@@ -3018,42 +3018,42 @@ cmd:invisible(playerid, params[])
 cmd:explveh(playerid, params[])
 {
 	if(pInfo[playerid][TEAM]!=TEAM_HACKER)
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous n'êtes pas hacker, vous ne pouvez pas faire ça !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous n'Ãªtes pas hacker, vous ne pouvez pas faire Ã§a !");
 
 	if(!IsCanAction(playerid))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire ça maintenant !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire Ã§a maintenant !");
 
 	new vid;
 	if(sscanf(params, "i", vid))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Usage: /explveh (ID du Véhicule)");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Usage: /explveh (ID du VÃ©hicule)");
 
 	if(!IsValidVehicle(vid))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Ce véhicule n'existe pas !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Ce vÃ©hicule n'existe pas !");
 
 	if(vInfo[vid][gonnaexplode])
-	    return SendClientMessage(playerid, COLOR_ERROR, "Ce véhicule va déjà exploser !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Ce vÃ©hicule va dÃ©jÃ  exploser !");
 
 	new Float:pos[3];
 	GetVehiclePos(vid, pos[0], pos[1], pos[2]);
 	if(!PlayerToPoint((!pInv[playerid][amplificator]) ? (30) : (45), playerid, pos[0], pos[1], pos[2]))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Le véhicule est trop loin de vous !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Le vÃ©hicule est trop loin de vous !");
 
 	if(vInfo[vid][P_UID]!=-1)
-	    return SendClientMessage(playerid, COLOR_ERROR, "Ce véhicule appartient à quelqu'un, vous ne pouvez pas faire ça !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Ce vÃ©hicule appartient Ã  quelqu'un, vous ne pouvez pas faire Ã§a !");
 
     for(new i; i < MAX_PLAYERS; i++)
-		if(GetPlayerVehicleID(i) == vid) return SendClientMessage(playerid, COLOR_ERROR, "Ce véhicule est occupé, vous ne pouvez pas faire ça !");
+		if(GetPlayerVehicleID(i) == vid) return SendClientMessage(playerid, COLOR_ERROR, "Ce vÃ©hicule est occupÃ©, vous ne pouvez pas faire Ã§a !");
 
 	if(pInfo[playerid][lastexpl]>gettime())
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous avez déjà explosé un véhicule récemment, vous ne pouvez pas en exploser un autre !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous avez dÃ©jÃ  explosÃ© un vÃ©hicule rÃ©cemment, vous ne pouvez pas en exploser un autre !");
 
     pInfo[playerid][lastexpl]=gettime()+30;
 
 	if(!Chances((GetCompetence(playerid, 1)==1) ? (20) : (30)))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Tentative échouée, ré-essayez plus tard !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Tentative Ã©chouÃ©e, rÃ©-essayez plus tard !");
 
     SetPlayerSpecialAction(playerid, SPECIAL_ACTION_USECELLPHONE);
-	SendClientMessage(playerid, COLOR_YELLOW, "Le véhicule ciblé va exploser, courrez!");
+	SendClientMessage(playerid, COLOR_YELLOW, "Le vÃ©hicule ciblÃ© va exploser, courrez!");
 	PlayerPlaySound(playerid, 1057, 0, 0, 0);
 	vInfo[vid][gonnaexplode]=true;
     pInfo[playerid][lastexpl]+=45;
@@ -3065,7 +3065,7 @@ cmd:explveh(playerid, params[])
 cmd:hackatm(playerid, params[])
 {
 	if(pInfo[playerid][TEAM]!=TEAM_HACKER)
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous devez être hacker pour hacker un atm !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous devez Ãªtre hacker pour hacker un atm !");
 
     if(!IsCanAction(playerid))
 		return SendClientMessage(playerid,COLOR_ERROR,"Vous ne pouvez pas utiliser cette commande maintenant.");
@@ -3075,48 +3075,48 @@ cmd:hackatm(playerid, params[])
 	!PlayerToPoint(10.0,playerid,1808.50134, -1396.98694, 13.01920) &&// ATM3
 	!PlayerToPoint(10.0,playerid,2108.97729, -1790.71216, 13.19380) &&// ATM4
 	!PlayerToPoint(10.0,playerid,1810.79199, -1876.69238, 13.22270))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous n'êtes pas à proximité d'un ATM !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous n'Ãªtes pas Ã  proximitÃ© d'un ATM !");
 
 	if(pInfo[playerid][lastatmhack]>gettime())
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous avez tenté de hacker/hacké un ATM récemment, vous devez patienter !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous avez tentÃ© de hacker/hackÃ© un ATM rÃ©cemment, vous devez patienter !");
 
     if(PlayerToPoint((!pInv[playerid][amplificator]) ? (10.0) : (20.0),playerid, 1497.00430, -1669.27260, 14.04690)){
         if(SomeoneHackATM[1])
-            return SendClientMessage(playerid, COLOR_ERROR, "Quelqu'un pirate déjà cet ATM!");
+            return SendClientMessage(playerid, COLOR_ERROR, "Quelqu'un pirate dÃ©jÃ  cet ATM!");
         pInfo[playerid][hackatmid]=1;}
 
     if(PlayerToPoint((!pInv[playerid][amplificator]) ? (10.0) : (20.0),playerid, 1472.16138, -1310.49963, 13.25410)){
         if(SomeoneHackATM[2])
-        	return SendClientMessage(playerid, COLOR_ERROR, "Quelqu'un pirate déjà cet ATM!");
+        	return SendClientMessage(playerid, COLOR_ERROR, "Quelqu'un pirate dÃ©jÃ  cet ATM!");
         pInfo[playerid][hackatmid]=2;}
 
     if(PlayerToPoint((!pInv[playerid][amplificator]) ? (10.0) : (20.0),playerid, 1808.50134, -1396.98694, 13.01920)){
         if(SomeoneHackATM[3])
-            return SendClientMessage(playerid, COLOR_ERROR, "Quelqu'un pirate déjà cet ATM!");
+            return SendClientMessage(playerid, COLOR_ERROR, "Quelqu'un pirate dÃ©jÃ  cet ATM!");
         pInfo[playerid][hackatmid]=3;}
 
     if(PlayerToPoint((!pInv[playerid][amplificator]) ? (10.0) : (20.0),playerid, 2108.97729, -1790.71216, 13.19380)){
         if(SomeoneHackATM[4])
-            return SendClientMessage(playerid, COLOR_ERROR, "Quelqu'un pirate déjà cet ATM!");
+            return SendClientMessage(playerid, COLOR_ERROR, "Quelqu'un pirate dÃ©jÃ  cet ATM!");
         pInfo[playerid][hackatmid]=4;}
 
     if(PlayerToPoint((!pInv[playerid][amplificator]) ? (10.0) : (20.0),playerid, 1810.79199, -1876.69238, 13.22270)){
         if(SomeoneHackATM[5])
-            return SendClientMessage(playerid, COLOR_ERROR, "Quelqu'un pirate déjà cet ATM!");
+            return SendClientMessage(playerid, COLOR_ERROR, "Quelqu'un pirate dÃ©jÃ  cet ATM!");
         pInfo[playerid][hackatmid]=5;}
 
 	if(LastAtmHacked[pInfo[playerid][hackatmid]]>gettime())
-	    return SendClientMessage(playerid, COLOR_ERROR, "Cet ATM a déjà été piraté récemment!");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Cet ATM a dÃ©jÃ  Ã©tÃ© piratÃ© rÃ©cemment!");
 
  	pInfo[playerid][lastatmhack]=gettime()+70;
 	if(!Chances(43)){
 	    pInfo[playerid][hackatmid]=-1;
-	    return SendClientMessage(playerid, COLOR_ERROR, "Tentative de piratage échouée!");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Tentative de piratage Ã©chouÃ©e!");
  	}
  	pInfo[playerid][lastatmhack]+=100;
    	LastAtmHacked[pInfo[playerid][hackatmid]]=gettime()+220;
 	SomeoneHackATM[pInfo[playerid][hackatmid]]=true;
-	SendClientMessage(playerid, COLOR_GREEN, "Vous piratez un ATM, restez à proximité jusqu'à la fin du piratage.");
+	SendClientMessage(playerid, COLOR_GREEN, "Vous piratez un ATM, restez Ã  proximitÃ© jusqu'Ã  la fin du piratage.");
 	pInfo[playerid][hackatm]=0.0;
 	pInfo[playerid][hackatmtimer]=SetTimerEx("phackatmtimer", (!pInv[playerid][amplificator]) ? (187) : (162), true, "i", playerid);
 	ShowPlayerProgressBar(playerid, HackATMT[playerid]);
@@ -3128,30 +3128,30 @@ cmd:hackatm(playerid, params[])
 cmd:exploser(playerid, params[])
 {
 	if(!IsCanAction(playerid))
-	    return SendClientMessage(playerid, COLOR_ERROR,"Vous ne pouvez pas faire ça maintenant !");
+	    return SendClientMessage(playerid, COLOR_ERROR,"Vous ne pouvez pas faire Ã§a maintenant !");
 
 	if(pInfo[playerid][TEAM]!=TEAM_TERRO)
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous devez être terroriste pour exploser les lieux !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous devez Ãªtre terroriste pour exploser les lieux !");
 
 	if(pInv[playerid][C4]<=0)
 	    return SendClientMessage(playerid, COLOR_ERROR, "Vous n'avez pas de C4 sur vous !");
 
 	if(pInfo[playerid][lastlxpl]>gettime())
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous avez déjà explosé ou tenté d'exploser un lieu récemment, vous devez attendre !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous avez dÃ©jÃ  explosÃ© ou tentÃ© d'exploser un lieu rÃ©cemment, vous devez attendre !");
 
 	pInfo[playerid][lastlxpl]=gettime()+35;
 
 	if(!Chances((GetCompetence(playerid, 1)==1) ? (20) : (30))) {
 	    AddWanted(playerid, 2);
-	    return SendClientMessage(playerid, COLOR_ERROR, "Tentative d'amorcage échouée, la police a été prévenue !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Tentative d'amorcage Ã©chouÃ©e, la police a Ã©tÃ© prÃ©venue !");
 	}
 	pInfo[playerid][lastlxpl]=gettime()+35;
 
 	if(PlayerToPoint(3.0, playerid, 2318.2739,-16.0869,15.3815)) {
-	    if(BankGateO) return SendClientMessage(playerid, COLOR_ERROR, "Ce lieu est déjà explosé, attendez qu'il soit réparé !");
+	    if(BankGateO) return SendClientMessage(playerid, COLOR_ERROR, "Ce lieu est dÃ©jÃ  explosÃ©, attendez qu'il soit rÃ©parÃ© !");
 		if(pInfo[playerid][terrolvl]<15)
-		    return SendClientMessage(playerid, COLOR_ERROR, "Vous devez être terroriste de niveau 10 minimum pour exploser ce lieu !");
-	    SendClientMessage(playerid, COLOR_RED, "Vous avez posé une bombe, elle explosera dans 5 secondes, éloignez vous !");
+		    return SendClientMessage(playerid, COLOR_ERROR, "Vous devez Ãªtre terroriste de niveau 10 minimum pour exploser ce lieu !");
+	    SendClientMessage(playerid, COLOR_RED, "Vous avez posÃ© une bombe, elle explosera dans 5 secondes, Ã©loignez vous !");
 	    SetTimerEx("bankgateexpl", 5000, false, "i", playerid);
 	    pInv[playerid][C4]--;
 	 	pInfo[playerid][terroprogress]+=20;
@@ -3159,29 +3159,29 @@ cmd:exploser(playerid, params[])
 		    new str[144];
 			pInfo[playerid][terrolvl]++;
 			pInfo[playerid][terroprogress]=0;
-			format(str, sizeof(str), "Vous avez monté de niveau terroriste ! Vous êtes maintenant au niveau %d !", pInfo[playerid][terrolvl]);
+			format(str, sizeof(str), "Vous avez montÃ© de niveau terroriste ! Vous Ãªtes maintenant au niveau %d !", pInfo[playerid][terrolvl]);
 			SendClientMessage(playerid, COLOR_GREEN, str);
 		}
 	    return 1;
 	}
 
-	SendClientMessage(playerid, COLOR_ERROR, "Vous n'êtes pas dans un checkpoint de lieu explosable !");
+	SendClientMessage(playerid, COLOR_ERROR, "Vous n'Ãªtes pas dans un checkpoint de lieu explosable !");
 	return 1;
 }
 
 cmd:explcaisse(playerid, params[])
 {
 	if(!IsCanAction(playerid))
-	    return SendClientMessage(playerid, COLOR_ERROR,"Vous ne pouvez pas faire ça maintenant !");
+	    return SendClientMessage(playerid, COLOR_ERROR,"Vous ne pouvez pas faire Ã§a maintenant !");
 
 	if(pInfo[playerid][TEAM]!=TEAM_TERRO)
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous devez être terroriste pour exploser les véhicules !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous devez Ãªtre terroriste pour exploser les vÃ©hicules !");
 
 	if(!IsPlayerInAnyVehicle(playerid))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous n'êtes pas dans un véhicule !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous n'Ãªtes pas dans un vÃ©hicule !");
 
 	if(pInfo[playerid][lastxpl]>gettime())
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous avez déjà explosé ou tenté d'exploser un véhicule récemment, vous devez attendre un peu !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous avez dÃ©jÃ  explosÃ© ou tentÃ© d'exploser un vÃ©hicule rÃ©cemment, vous devez attendre un peu !");
 
 	if(pInv[playerid][C4]<=0)
 	    return SendClientMessage(playerid, COLOR_ERROR, "Vous n'avez pas assez de C4 sur vous !");
@@ -3189,19 +3189,19 @@ cmd:explcaisse(playerid, params[])
 	pInfo[playerid][lastxpl]=gettime()+35;
 
  	if(!Chances((GetCompetence(playerid, 1)==1) ? (20) : (30)))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Tentative d'explosion de véhicule échouée!");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Tentative d'explosion de vÃ©hicule Ã©chouÃ©e!");
 
 	SetTimerEx("explcaisset", 10000, false, "ii", playerid, GetPlayerVehicleID(playerid));
 	pInv[playerid][C4]--;
 	pInfo[playerid][lastxpl]=gettime()+65;
-	SendClientMessage(playerid, COLOR_GREEN, "Vous avez posé une bombe dans ce véhicule, elle explosera dans 10 secondes !");
+	SendClientMessage(playerid, COLOR_GREEN, "Vous avez posÃ© une bombe dans ce vÃ©hicule, elle explosera dans 10 secondes !");
     AddWanted(playerid, 2);
  	pInfo[playerid][terroprogress]+=20;
 	if(pInfo[playerid][terroprogress]>=100) {
 		new str[144];
 		pInfo[playerid][terrolvl]++;
 		pInfo[playerid][terroprogress]=0;
-		format(str, sizeof(str), "Vous avez monté de niveau terroriste ! Vous êtes maintenant au niveau %d !", pInfo[playerid][terrolvl]);
+		format(str, sizeof(str), "Vous avez montÃ© de niveau terroriste ! Vous Ãªtes maintenant au niveau %d !", pInfo[playerid][terrolvl]);
 		SendClientMessage(playerid, COLOR_GREEN, str);
 	}
 	return 1;
@@ -3214,18 +3214,18 @@ cmd:arme(playerid, params[])
 
 	new cp=GetPlayerCheckpoint(playerid);
 	if(cp==CP_WEAPONPICKG) {
-	    if(!IsPlayerGroove(playerid)) return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas prendre d'arme ici si vous n'êtes pas Groove !");
+	    if(!IsPlayerGroove(playerid)) return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas prendre d'arme ici si vous n'Ãªtes pas Groove !");
 		if(pInfo[playerid][lastweaponpick]>gettime())
-		    return SendClientMessage(playerid, COLOR_ERROR, "Vous avez déjà pris une arme récemment, attendez un peu !");
+		    return SendClientMessage(playerid, COLOR_ERROR, "Vous avez dÃ©jÃ  pris une arme rÃ©cemment, attendez un peu !");
 
 		ShowPlayerDialog(playerid, DIALOG_PICKWEP, DIALOG_STYLE_LIST, "Armes", "9mm Silencieux\nFusil a Pompe\nMP5\nM4", "Prendre", "Quitter");
 		return 1;
 	}
 
 	if(cp==CP_WEAPONPICKB) {
-	    if(!IsPlayerBallas(playerid)) return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas prendre d'arme ici si vous n'êtes pas Ballas !");
+	    if(!IsPlayerBallas(playerid)) return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas prendre d'arme ici si vous n'Ãªtes pas Ballas !");
 		if(pInfo[playerid][lastweaponpick]>gettime())
-		    return SendClientMessage(playerid, COLOR_ERROR, "Vous avez déjà pris une arme récemment, attendez un peu !");
+		    return SendClientMessage(playerid, COLOR_ERROR, "Vous avez dÃ©jÃ  pris une arme rÃ©cemment, attendez un peu !");
 
 		ShowPlayerDialog(playerid, DIALOG_PICKWEP, DIALOG_STYLE_LIST, "Armes", "9mm Silencieux\nFusil a Pompe\nMP5\nM4", "Prendre", "Quitter");
 		return 1;
@@ -3240,44 +3240,44 @@ cmd:coffre(playerid, params[])
 
 	if(PlayerToPoint(3, playerid, 144.9846, 1384.1897, 1088.6672)) {
 		if(!IsPlayerGroove(playerid))
-		    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire ça si vous n'êtes pas un Groove !");
+		    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire Ã§a si vous n'Ãªtes pas un Groove !");
 		ShowPlayerDialog(playerid, DIALOG_COFFREG, DIALOG_STYLE_LIST, "Coffre Groove", "Ajouter de l'argent\nRetirer de l'argent\n{FF0000}Contenu du coffre", "OK", "Annuler");
 		return 1;
 	}
 
 	if(PlayerToPoint(3, playerid, 2337.9810,-1141.6392,1054.3047)) {
 		if(IsPlayerBallas(playerid))
-		    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire ça si vous n'êtes pas un Ballas !");
+		    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire Ã§a si vous n'Ãªtes pas un Ballas !");
 		ShowPlayerDialog(playerid, DIALOG_COFFREB, DIALOG_STYLE_LIST, "Coffre Ballas", "Ajouter de l'argent\nRetirer de l'argent\n{FF0000}Contenu du coffre", "OK", "Annuler");
 		return 1;
 	}
 
-	return SendClientMessage(playerid, COLOR_ERROR, "Vous n'êtes a proximité d'aucun coffre de team !");
+	return SendClientMessage(playerid, COLOR_ERROR, "Vous n'Ãªtes a proximitÃ© d'aucun coffre de team !");
 }
 
 cmd:banque(playerid, params[])
 {
 	if(!IsCanAction(playerid))
-	    return SendClientMessage(playerid, COLOR_ERROR,"Vous ne pouvez pas faire ça maintenant !");
+	    return SendClientMessage(playerid, COLOR_ERROR,"Vous ne pouvez pas faire Ã§a maintenant !");
 
 	if(GetPlayerCheckpoint(playerid)!=CP_BANQUE)
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous devez être dans le checkpoint de la banque !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous devez Ãªtre dans le checkpoint de la banque !");
 
-	ShowPlayerDialog(playerid, DIALOG_BANQUE, DIALOG_STYLE_LIST, "Gestion de votre Compte en Banque", "Déposer de l'argent\nRetirer de l'argent\n{FF0000}Informations du compte", "Choisir", "Annuler");
+	ShowPlayerDialog(playerid, DIALOG_BANQUE, DIALOG_STYLE_LIST, "Gestion de votre Compte en Banque", "DÃ©poser de l'argent\nRetirer de l'argent\n{FF0000}Informations du compte", "Choisir", "Annuler");
 	return 1;
 }
 
 cmd:retrait(playerid, params[])
 {
 	if(!IsCanAction(playerid))
-	    return SendClientMessage(playerid, COLOR_ERROR,"Vous ne pouvez pas faire ça maintenant !");
+	    return SendClientMessage(playerid, COLOR_ERROR,"Vous ne pouvez pas faire Ã§a maintenant !");
 
 	new cp=GetPlayerCheckpoint(playerid);
 	if(cp!=CP_ATM1&&cp!=CP_ATM2&&cp!=CP_ATM3&&cp!=CP_ATM4&&cp!=CP_ATM5)
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous devez être dans un checkpoint d'ATM !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous devez Ãªtre dans un checkpoint d'ATM !");
 
 	new dialog[256];
- 	format(dialog, sizeof(dialog), "Entrez un la quantité d'argent à retirer\nVous avez {FF0000}%s{A9C4E4} en banque.", FormatMoney(pInv[playerid][BANK_CASH]));
+ 	format(dialog, sizeof(dialog), "Entrez un la quantitÃ© d'argent Ã  retirer\nVous avez {FF0000}%s{A9C4E4} en banque.", FormatMoney(pInv[playerid][BANK_CASH]));
 	ShowPlayerDialog(playerid, DIALOG_ATM, DIALOG_STYLE_INPUT, "Retirer de l'argent", dialog, "Retirer", "Annuler");
 	return 1;
 }
@@ -3286,12 +3286,12 @@ cmd:sac(playerid, params[]) return cmd_sacados(playerid, params);
 cmd:sacados(playerid, params[])
 {
 	if(!IsCanAction(playerid))
-	    return SendClientMessage(playerid, COLOR_ERROR,"Vous ne pouvez pas faire ça maintenant !");
+	    return SendClientMessage(playerid, COLOR_ERROR,"Vous ne pouvez pas faire Ã§a maintenant !");
 	new dialog[600];
 	format(dialog, sizeof(dialog),
  	"%sAjouter toute vos cordes\n%sAjouter tout votre C4\n%sPrendre des cordes\n%sPrendre du C4\nAjouter de l'argent\nPrendre de l'argent\n{FF0000}Contenu de l'inventaire",
  	(!IsPlayerCrimi(playerid)) ? ("{6C6C6C}") : (""), (!IsPlayerCrimi(playerid)) ? ("{6C6C6C}") : (""), (!IsPlayerCrimi(playerid)) ? ("{6C6C6C}") : (""), (!IsPlayerCrimi(playerid)) ? ("{6C6C6C}") : (""));
-	ShowPlayerDialog(playerid, DIALOG_SAC, DIALOG_STYLE_LIST, "Sac à dos", dialog, "Ok", "Fermer");
+	ShowPlayerDialog(playerid, DIALOG_SAC, DIALOG_STYLE_LIST, "Sac Ã  dos", dialog, "Ok", "Fermer");
 	return 1;
 }
 
@@ -3299,7 +3299,7 @@ cmd:inventaire(playerid, params[]) return cmd_inv(playerid, params);
 cmd:inv(playerid, params[])
 {
 	if(!IsCanAction(playerid))
-	    return SendClientMessage(playerid, COLOR_ERROR,"Vous ne pouvez pas faire ça maintenant !");
+	    return SendClientMessage(playerid, COLOR_ERROR,"Vous ne pouvez pas faire Ã§a maintenant !");
 
 	new dialog[2042]="Contenu de votre inventaire:";
 	if(IsPlayerCrimi(playerid)) format(dialog, sizeof(dialog), "%s\nNombre de C4 (sur vous): {FF0000}%d{A9C4E4}. Dans votre sac: {FF0000}%d{A9C4E4}.", dialog, pInv[playerid][C4], pInv[playerid][SAC_C4]);
@@ -3313,7 +3313,7 @@ cmd:inv(playerid, params[])
 cmd:acheter(playerid, params[])
 {
 	if(!IsCanAction(playerid))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire ça maintenant !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire Ã§a maintenant !");
 
 	new cp=GetPlayerCheckpoint(playerid);
 
@@ -3322,7 +3322,7 @@ cmd:acheter(playerid, params[])
 		case CP_24/7, CP_ROBOIS:
 			return ShowPlayerDialog(playerid, DIALOG_24/7, DIALOG_STYLE_LIST, "MAGASIN 24/7", "Cordes (1x = $750)\nCiseaux ($1,200)\nSaucisses (1x = $500)\nAmplificateur ($22,500)", "Acheter", "Quitter");
 		case CP_BUYVEH:
-		    return ShowPlayerDialog(playerid, DIALOG_BUYVEH, DIALOG_STYLE_LIST, "Acheter un véhicule",
+		    return ShowPlayerDialog(playerid, DIALOG_BUYVEH, DIALOG_STYLE_LIST, "Acheter un vÃ©hicule",
 			"Infernus ($250,000)\nTurismo ($225,000)\nSuper GT ($230,000)\nBullet (225,000)\nHotring Racer ($400,000)\nBuffalo ($200,000)\nStretch ($125,000)\nCheetah ($175,000)\nBanshee ($175,000)\nZR-350 ($175,000)\nComet ($150,000)"
 			, "Acheter", "Annuler");
 		case CP_HOPITAL: {
@@ -3330,11 +3330,11 @@ cmd:acheter(playerid, params[])
 			    return SendClientMessage(playerid, COLOR_ERROR, "Vous n'avez pas assez d'argent !");
 			GetPlayerHealth(playerid, pInfo[playerid][hp]);
 			if(pInfo[playerid][hp]>=100&&!pInfo[playerid][MST])
-			    return SendClientMessage(playerid, COLOR_ERROR, "Vous êtes en parfaite santé, ne gâchez pas votre argent !");
+			    return SendClientMessage(playerid, COLOR_ERROR, "Vous Ãªtes en parfaite santÃ©, ne gÃ¢chez pas votre argent !");
 			GivePlayerMoney(playerid, -5000);
 			SetPlayerHealth(playerid, 100);
 			pInfo[playerid][MST]=false;
-			return SendClientMessage(playerid, COLOR_ERROR, "Vous avez été soigné de toute maladies et blessure au prix de $5,000 !");
+			return SendClientMessage(playerid, COLOR_ERROR, "Vous avez Ã©tÃ© soignÃ© de toute maladies et blessure au prix de $5,000 !");
 		}
 		case CP_BOMBSHOP:{
 		    if(IsPlayerCrimi(playerid))
@@ -3344,15 +3344,15 @@ cmd:acheter(playerid, params[])
 		}
 	}
 	if(PlayerToPoint(3, playerid, 295.4040,-37.5995,1001.5156))
-		return ShowPlayerDialog(playerid, DIALOG_WEPD, DIALOG_STYLE_LIST, "Catégories", "Arme de Mélées\nPistolets\nMitraillettes\nFusils\nGilet pare-balle ($1,000)", "Continuer", "Annuler");
+		return ShowPlayerDialog(playerid, DIALOG_WEPD, DIALOG_STYLE_LIST, "CatÃ©gories", "Arme de MÃ©lÃ©es\nPistolets\nMitraillettes\nFusils\nGilet pare-balle ($1,000)", "Continuer", "Annuler");
 
-	return SendClientMessage(playerid, COLOR_ERROR, "Vous n'êtes pas dans un checkpoint où vous pourriez acheter quelque chose !");
+	return SendClientMessage(playerid, COLOR_ERROR, "Vous n'Ãªtes pas dans un checkpoint oÃ¹ vous pourriez acheter quelque chose !");
 }
 
 cmd:men(playerid, params[])
 {
 	if(!IsPlayerCops(playerid))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas menotter si vous n'êtes pas policier !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas menotter si vous n'Ãªtes pas policier !");
 
 	new ID;
 	if(sscanf(params, "u", ID))
@@ -3362,25 +3362,25 @@ cmd:men(playerid, params[])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas menotter un policier !");
 
 	if(!IsPlayerConnected(ID))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Le joueur n'est pas connecté.");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Le joueur n'est pas connectÃ©.");
 
 	if(pInfo[ID][cuffed])
-	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur est déjà menotté, vous ne pouvez pas le menotter !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur est dÃ©jÃ  menottÃ©, vous ne pouvez pas le menotter !");
 
 	if(!IsCanAction(playerid))
 	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action maintenant !");
 
 	if(IsPlayerInAnyVehicle(playerid))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action dans un véhicule!");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action dans un vÃ©hicule!");
 
 	if(!IsCanAction(ID))
 	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action sur ce joueur maintenant !");
 
 	if(IsPlayerInAnyVehicle(ID))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action sur un joueur dans un véhicule!");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action sur un joueur dans un vÃ©hicule!");
 
 	if(!Chances()&&pInfo[ID][wanted]>=4)
-	    return SendClientMessage(playerid, COLOR_ERROR, "Tentative de menottage échoué!");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Tentative de menottage Ã©chouÃ©!");
 	if(GetDistanceBetweenPlayers(playerid, ID) > 4)
 	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur est trop loin !");
 	pInfo[ID][cuffed]=true;
@@ -3396,13 +3396,13 @@ cmd:men(playerid, params[])
 		format(msg, sizeof(msg),  "Vous devez lui donner un pv avec /pv et vous pouvez le fouiller avec /fouiller!", pInfo[ID][name], ID);
 	}
 	else if(pInfo[ID][wanted]<20)
-		format(msg, sizeof(msg),"Vous venez de menotter %s(%d). Il est {E09405}recherché{33CCFF}, vous devez l'arrêter avec /ar !", pInfo[ID][name], ID);
+		format(msg, sizeof(msg),"Vous venez de menotter %s(%d). Il est {E09405}recherchÃ©{33CCFF}, vous devez l'arrÃªter avec /ar !", pInfo[ID][name], ID);
 
 	else if(pInfo[ID][wanted]<100)
-		format(msg, sizeof(msg),"Vous venez de menotter %s(%d). Il est {D75906}hautement recherché{33CCFF}, vous devez l'arrêter avec /ar !", pInfo[ID][name], ID);
+		format(msg, sizeof(msg),"Vous venez de menotter %s(%d). Il est {D75906}hautement recherchÃ©{33CCFF}, vous devez l'arrÃªter avec /ar !", pInfo[ID][name], ID);
 
 	else if(pInfo[ID][wanted]>=100)
-		format(msg, sizeof(msg),"Vous venez de menotter %s(%d). Il est {C60000}êxtremement recherché{33CCFF}, vous devez l'arrêter avec /ar !", pInfo[ID][name], ID);
+		format(msg, sizeof(msg),"Vous venez de menotter %s(%d). Il est {C60000}Ãªxtremement recherchÃ©{33CCFF}, vous devez l'arrÃªter avec /ar !", pInfo[ID][name], ID);
 
 	SendClientMessage(playerid, COLOR_LIGHTBLUE, msg);
 	TogglePlayerControllable(ID,0);
@@ -3418,36 +3418,36 @@ cmd:pv(playerid, params[])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action maintenant !");
 
 	if(!IsPlayerCops(playerid))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire ça si vous n'êtes pas policier !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire Ã§a si vous n'Ãªtes pas policier !");
 
 	new ID;
 	if(sscanf(params, "u", ID))
 	    return SendClientMessage(playerid, COLOR_ERROR, "Usage: /pv (Pseudo/ID)");
 
 	if(!IsPlayerConnected(ID))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas connecté !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas connectÃ© !");
 
 	if(IsPlayerInAnyVehicle(playerid))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action depuis un véhicule!");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action depuis un vÃ©hicule!");
 
 	if(IsPlayerInAnyVehicle(ID))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action sur un joueur dans un véhicule!");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action sur un joueur dans un vÃ©hicule!");
 
 	if(pInfo[ID][wanted]==0||pInfo[ID][wanted]>=4)
-	    return SendClientMessage(playerid, COLOR_ERROR, "Le joueur doit être jaune (niveau de recherche 1~3) pour que vous puissiez lui donner un PV !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Le joueur doit Ãªtre jaune (niveau de recherche 1~3) pour que vous puissiez lui donner un PV !");
 
 	if(pInfo[ID][pvtime]>0)
-	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur a déjà un PV !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur a dÃ©jÃ  un PV !");
 
  	if(GetDistanceBetweenPlayers(playerid, ID) > 4)
 	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur est trop loin !");
 
 	new msg[144];
-	format(msg, sizeof(msg), "Vous venez de donner un PV à %s(%d), il  a une minute pour le payer.", pInfo[ID][name], ID);
+	format(msg, sizeof(msg), "Vous venez de donner un PV Ã  %s(%d), il  a une minute pour le payer.", pInfo[ID][name], ID);
 	SendClientMessage(playerid, COLOR_LIGHTBLUE, msg);
-	format(msg, sizeof(msg), "Le policier %s(%d) vient de vous donner un PV, vous avez une minute pour le payer ou vous serez encore plus recherché ! ", pInfo[playerid][name], playerid);
+	format(msg, sizeof(msg), "Le policier %s(%d) vient de vous donner un PV, vous avez une minute pour le payer ou vous serez encore plus recherchÃ© ! ", pInfo[playerid][name], playerid);
 	SendClientMessage(ID, COLOR_LIGHTBLUE, msg);
-	SendClientMessage(ID, COLOR_LIGHTBLUE, "Tapez /paypv pour payer votre PV. Un PV coûte $1,000");
+	SendClientMessage(ID, COLOR_LIGHTBLUE, "Tapez /paypv pour payer votre PV. Un PV coÃ»te $1,000");
 	pInfo[ID][pvtime]=60;
 	return 1;
 }
@@ -3455,7 +3455,7 @@ cmd:pv(playerid, params[])
 cmd:paypv(playerid, params[])
 {
 	if(pInfo[playerid][pvtime]<=0)
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous n'avez aucun PV à payer !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous n'avez aucun PV Ã  payer !");
 
 	if(GetPlayerMoney(playerid)<1000)
 	    return SendClientMessage(playerid, COLOR_ERROR, "Vous n'avez pas assez d'argent ($1,000) pour payer le PV !");
@@ -3473,14 +3473,14 @@ cmd:suspect(playerid, params[])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action maintenant !");
 
 	if(!IsPlayerCops(playerid))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire ça si vous n'êtes pas policier !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire Ã§a si vous n'Ãªtes pas policier !");
 
 	new ID, reason[128];
 	if(sscanf(params, "us[128]", ID, reason))
 	    return SendClientMessage(playerid, COLOR_ERROR, "Usage: /suspect (Pseudo/ID) (Raison)");
 
 	if(!IsPlayerConnected(ID))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas connecté !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas connectÃ© !");
 
 	if(!IsPlayerCrimi(ID))
 	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas suspecter un civil/policier !");
@@ -3489,7 +3489,7 @@ cmd:suspect(playerid, params[])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action sur ce joueur maintenant !");
 
 	if(pInfo[ID][lastsuspect]>gettime())
-	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur a déjà été suspecté par quelqu'un récemment !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur a dÃ©jÃ  Ã©tÃ© suspectÃ© par quelqu'un rÃ©cemment !");
 
 	if(GetDistanceBetweenPlayers(playerid, ID) > 7)
 	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur est trop loin !");
@@ -3507,19 +3507,19 @@ cmd:suspect(playerid, params[])
 cmd:cassmen(playerid, params[])
 {
 	if(pInfo[playerid][lastcassmen]>gettime())
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous avez déjà tenté de casser vos menottez récemment, attendez un peu !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous avez dÃ©jÃ  tentÃ© de casser vos menottez rÃ©cemment, attendez un peu !");
 
 	if(!pInfo[playerid][cuffed])
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous n'êtes pas menotté, vous ne pouvez pas faire ça !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous n'Ãªtes pas menottÃ©, vous ne pouvez pas faire Ã§a !");
 
 	if(IsPlayerInAnyVehicle(playerid))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous êtes détenu, vous ne pouvez pas faire ça !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous Ãªtes dÃ©tenu, vous ne pouvez pas faire Ã§a !");
 
     pInfo[playerid][lastcassmen]=gettime()+30;
     new msg[144];
     if(!pChances(playerid, 27)) {
         AddWanted(playerid, 2);
-        SendClientMessage(playerid, COLOR_ERROR, "Tentative de cassage de menotte échouée, vous gagnez deux étoiles de recherche !");
+        SendClientMessage(playerid, COLOR_ERROR, "Tentative de cassage de menotte Ã©chouÃ©e, vous gagnez deux Ã©toiles de recherche !");
 		format(msg, sizeof(msg), "Le suspect %s(%d) vient de tenter de casser ses menottes !", pInfo[playerid][name], playerid);
 		SendClientMessageToAllCops(COLOR_BLUECOPS, msg);
 	}
@@ -3530,8 +3530,8 @@ cmd:cassmen(playerid, params[])
 	RemovePlayerAttachedObject(playerid,0);
  	StopLoopingAnim(playerid);
 	AddWanted(playerid, 3);
-	SendClientMessage(playerid, COLOR_GREEN, "Vous avez réussi a casser vos menottes, courrez !");
-	format(msg, sizeof(msg), "Le suspect %s(%d) a réussi a casser ses menottes, arrêtez-le !");
+	SendClientMessage(playerid, COLOR_GREEN, "Vous avez rÃ©ussi a casser vos menottes, courrez !");
+	format(msg, sizeof(msg), "Le suspect %s(%d) a rÃ©ussi a casser ses menottes, arrÃªtez-le !");
 	SendClientMessageToAllCops(COLOR_BLUECOPS, msg);
 	return 1;
 }
@@ -3542,23 +3542,23 @@ cmd:fouiller(playerid, params[])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action maintenant !");
 
 	if(!IsPlayerCops(playerid))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire ça si vous n'êtes pas policier !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire Ã§a si vous n'Ãªtes pas policier !");
 
 	new ID;
 	if(sscanf(params, "u", ID))
 	    return SendClientMessage(playerid, COLOR_ERROR, "Usage: /fouiller (Pseudo/ID)");
 
 	if(!IsPlayerConnected(ID))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas connecté !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas connectÃ© !");
 
 	if(!pInfo[ID][cuffed])
-	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas menotté, vous ne pouvez pas lui donner de PV !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas menottÃ©, vous ne pouvez pas lui donner de PV !");
 
 	if(IsPlayerInAnyVehicle(playerid))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action depuis un véhicule!");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action depuis un vÃ©hicule!");
 
 	if(IsPlayerInAnyVehicle(ID))
-		return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action sur un joueur dans un véhicule!");
+		return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action sur un joueur dans un vÃ©hicule!");
 
 	if(GetDistanceBetweenPlayers(playerid, ID) > 4)
 	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur est trop loin !");
@@ -3569,15 +3569,15 @@ cmd:fouiller(playerid, params[])
 		AddWanted(ID, 3);
 	}
 	if(a) {
-		format(msg, sizeof(msg), "Vous venez de trouver de l'héroïne et de la weed sur %s(%d), %s !", pInfo[ID][name], ID, (pInfo[ID][wanted]>=4) ? ("envoyez-le en prison !") : ("donnez lui un PV via /pv ."));
+		format(msg, sizeof(msg), "Vous venez de trouver de l'hÃ©roÃ¯ne et de la weed sur %s(%d), %s !", pInfo[ID][name], ID, (pInfo[ID][wanted]>=4) ? ("envoyez-le en prison !") : ("donnez lui un PV via /pv ."));
 		SendClientMessage(playerid, COLOR_LIGHTBLUE, msg);
-		format(msg, sizeof(msg), "Le policier %s(%d) vient de trouver des sachets d'héroïne et de la weed sur vous !", pInfo[playerid][name], playerid);
+		format(msg, sizeof(msg), "Le policier %s(%d) vient de trouver des sachets d'hÃ©roÃ¯ne et de la weed sur vous !", pInfo[playerid][name], playerid);
 		SendClientMessage(ID, COLOR_LIGHTBLUE, msg);
 	}
 	else {
-		format(msg, sizeof(msg), "Vous avez fouillé %s(%d) et vous n'avez rien trouvé sur lui.", pInfo[ID][name], ID, (pInfo[ID][wanted]>=4) ? ("envoyez-le en prison !") : ("donnez lui un PV via /pv ."));
+		format(msg, sizeof(msg), "Vous avez fouillÃ© %s(%d) et vous n'avez rien trouvÃ© sur lui.", pInfo[ID][name], ID, (pInfo[ID][wanted]>=4) ? ("envoyez-le en prison !") : ("donnez lui un PV via /pv ."));
 		SendClientMessage(playerid, COLOR_LIGHTBLUE, msg);
-		format(msg, sizeof(msg), "Le policier %s(%d) vient de vous fouiller et n'a rien trouvé sur vous.", pInfo[playerid][name], playerid);
+		format(msg, sizeof(msg), "Le policier %s(%d) vient de vous fouiller et n'a rien trouvÃ© sur vous.", pInfo[playerid][name], playerid);
 		SendClientMessage(ID, COLOR_LIGHTBLUE, msg);
 	}
 	return 1;
@@ -3586,20 +3586,20 @@ cmd:fouiller(playerid, params[])
 cmd:eject(playerid, params[])
 {
 	if(!IsCanAction(playerid))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer ça maintenant !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer Ã§a maintenant !");
 
 	new vid=GetPlayerVehicleID(playerid);
 	if(vid==INVALID_VEHICLE_ID)
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas éjecter les joueurs si vous n'êtes pas dans un véhicule !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas Ã©jecter les joueurs si vous n'Ãªtes pas dans un vÃ©hicule !");
 
 	if(GetPlayerVehicleSeat(playerid)!=0)
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas éjecter les joueurs si vous n'êtes pas conducteur !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas Ã©jecter les joueurs si vous n'Ãªtes pas conducteur !");
 
 	for(new i=0;i<MAX_PLAYERS;i++)
 	{
 	    if(GetPlayerVehicleID(i)==vid&&i!=playerid) {
 			RemovePlayerFromVehicle(i);
-	      	GameTextForPlayer(i, "~b~Vous vous êtes fait žjectž !", 3000, 3);
+	      	GameTextForPlayer(i, "~b~Vous vous Ãªtes fait Å¾jectÅ¾ !", 3000, 3);
 	    }
 	}
 	return 1;
@@ -3608,41 +3608,41 @@ cmd:eject(playerid, params[])
 cmd:detenir(playerid, params[])
 {
 	if(!IsPlayerCops(playerid))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas arrêter un joueur si vous n'êtes pas policier !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas arrÃªter un joueur si vous n'Ãªtes pas policier !");
 
 	new ID;
 	if(sscanf(params, "u", ID))
 	    return SendClientMessage(playerid, COLOR_ERROR, "Usage: /detenir (Pseudo/ID)");
 
 	if(!IsPlayerConnected(ID))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Le joueur n'est pas connecté.");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Le joueur n'est pas connectÃ©.");
 
 	if(!pInfo[ID][cuffed])
-	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas menotté, vous ne pouvez pas le détenir !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas menottÃ©, vous ne pouvez pas le dÃ©tenir !");
 
 	if(!IsCanAction(playerid))
 	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action maintenant !");
 
 	if(IsPlayerInAnyVehicle(playerid))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action depuis un véhicule !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action depuis un vÃ©hicule !");
 
 	if(IsPlayerInAnyVehicle(ID))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action si le joueur est un véhicule ! /eject pour l'éjecter !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action si le joueur est un vÃ©hicule ! /eject pour l'Ã©jecter !");
 
 	if(pInfo[ID][wanted]<4)
-	    return SendClientMessage(playerid, COLOR_ERROR, "Le joueur n'est pas assez recherché pour que vous puissiez faire ça !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Le joueur n'est pas assez recherchÃ© pour que vous puissiez faire Ã§a !");
 
 	if(!IsValidVehicle(pInfo[ID][last_vehicle]))
-		return SendClientMessage(playerid, COLOR_ERROR, "Vous devez être entré dans un véhicule pour pouvoir détenir !");
+		return SendClientMessage(playerid, COLOR_ERROR, "Vous devez Ãªtre entrÃ© dans un vÃ©hicule pour pouvoir dÃ©tenir !");
 
 	if(GetDistanceBetweenPlayers(playerid, ID) > 4)
 	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur est trop loin !");
 
 	new msg[128];
-  	format(msg, sizeof(msg), "L'officier de police %s(%d) vient de vous détenir dans son véhicule !", pInfo[playerid][name], playerid);
+  	format(msg, sizeof(msg), "L'officier de police %s(%d) vient de vous dÃ©tenir dans son vÃ©hicule !", pInfo[playerid][name], playerid);
 	SendClientMessage(ID, COLOR_YELLOW, msg);
 	pInfo[ID][mentime]=160;
-	format(msg, sizeof(msg), "Vous avez mit le criminel %s(%d) dans votre véhicule, amenez le en prison !", pInfo[ID][name], ID);
+	format(msg, sizeof(msg), "Vous avez mit le criminel %s(%d) dans votre vÃ©hicule, amenez le en prison !", pInfo[ID][name], ID);
 	SendClientMessage(playerid, COLOR_LIGHTBLUE, msg);
 	PutPlayerInVehicle(ID, pInfo[playerid][last_vehicle], 1);
 	return 1;
@@ -3651,32 +3651,32 @@ cmd:detenir(playerid, params[])
 cmd:livrer(playerid, params[])
 {
 	if(!IsPlayerCops(playerid))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas livrer un joueur si vous n'êtes pas policier !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas livrer un joueur si vous n'Ãªtes pas policier !");
 
 	new ID;
 	if(sscanf(params, "u", ID))
 	    return SendClientMessage(playerid, COLOR_ERROR, "Usage: /livrer (Pseudo/ID)");
 
 	if(!IsPlayerConnected(ID))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Le joueur n'est pas connecté.");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Le joueur n'est pas connectÃ©.");
 
 	if(!pInfo[ID][cuffed])
-	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas détenu, vous ne pouvez pas le livrer !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas dÃ©tenu, vous ne pouvez pas le livrer !");
 
 	if(!IsPlayerInAnyVehicle(ID))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas dans un véhicule, utilisez /ar pour l'arrêter !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas dans un vÃ©hicule, utilisez /ar pour l'arrÃªter !");
 
 	if(!IsCanAction(playerid))
 	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action maintenant !");
 
 	if(GetPlayerVehicleID(playerid)!=GetPlayerVehicleID(ID))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous n'êtes pas dans le même véhicule que le joueur !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous n'Ãªtes pas dans le mÃªme vÃ©hicule que le joueur !");
 
 	if(pInfo[ID][wanted]<4)
-	    return SendClientMessage(playerid, COLOR_ERROR, "Le joueur n'est pas assez recherché pour que vous puissiez faire ça !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Le joueur n'est pas assez recherchÃ© pour que vous puissiez faire Ã§a !");
 
 	if(GetPlayerCheckpoint(playerid, 3.5)!=CP_PRISON)
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous devez être dans le checkpoint de la prison pour faire ça !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous devez Ãªtre dans le checkpoint de la prison pour faire Ã§a !");
 
 	new msg[128];
     pInfo[ID][cuffed]=false;
@@ -3684,7 +3684,7 @@ cmd:livrer(playerid, params[])
 	RemovePlayerAttachedObject(ID,0);
  	StopLoopingAnim(ID);
     TogglePlayerControllable(ID, 1);
-  	format(msg, sizeof(msg), "L'officier de police %s(%d) vient de vous livrer en prison ! Tous vos C4 et toute vos armes ont été confisquées !", pInfo[playerid][name], playerid);
+  	format(msg, sizeof(msg), "L'officier de police %s(%d) vient de vous livrer en prison ! Tous vos C4 et toute vos armes ont Ã©tÃ© confisquÃ©es !", pInfo[playerid][name], playerid);
 	SendClientMessage(ID, COLOR_YELLOW, msg);
 	new money=random(pInfo[ID][wanted]*375);
 	format(msg, sizeof(msg), "Vous avez mit le criminel %s(%d) en prison, vous venez de gagner %s !", pInfo[ID][name], ID, FormatMoney(money));
@@ -3705,7 +3705,7 @@ cmd:livrer(playerid, params[])
 		new str[144];
 		pInfo[playerid][policelvl]++;
 		pInfo[playerid][policeprogress]=0;
-		format(str, sizeof(str), "Vous avez monté de niveau policier ! Vous êtes maintenant au niveau %d !", pInfo[playerid][policelvl]);
+		format(str, sizeof(str), "Vous avez montÃ© de niveau policier ! Vous Ãªtes maintenant au niveau %d !", pInfo[playerid][policelvl]);
 		SendClientMessage(playerid, COLOR_GREEN, str);
 	}
 	return 1;
@@ -3714,32 +3714,32 @@ cmd:livrer(playerid, params[])
 cmd:ar(playerid, params[])
 {
 	if(!IsPlayerCops(playerid))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas arrêter un joueur si vous n'êtes pas policier !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas arrÃªter un joueur si vous n'Ãªtes pas policier !");
 
 	new ID;
 	if(sscanf(params, "u", ID))
 	    return SendClientMessage(playerid, COLOR_ERROR, "Usage: /ar (Pseudo/ID)");
 
 	if(!IsPlayerConnected(ID))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Le joueur n'est pas connecté.");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Le joueur n'est pas connectÃ©.");
 
 	if(!pInfo[ID][cuffed])
-	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas menotté, vous ne pouvez pas l'arrêter !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas menottÃ©, vous ne pouvez pas l'arrÃªter !");
 
 	if(!IsCanAction(playerid))
 	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action maintenant !");
 
 	if(IsPlayerInAnyVehicle(playerid))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action depuis un véhicule !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action depuis un vÃ©hicule !");
 
 	if(IsPlayerInAnyVehicle(ID))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action si le joueur est un véhicule ! /eject pour l'éjecter !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action si le joueur est un vÃ©hicule ! /eject pour l'Ã©jecter !");
 
 	if(GetDistanceBetweenPlayers(playerid, ID) > 4)
 	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur est trop loin !");
 
 	if(pInfo[ID][wanted]<4)
-	    return SendClientMessage(playerid, COLOR_ERROR, "Le joueur n'est pas assez recherché pour que vous puissiez faire ça !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Le joueur n'est pas assez recherchÃ© pour que vous puissiez faire Ã§a !");
 
 	new msg[128];
     pInfo[ID][cuffed]=false;
@@ -3747,7 +3747,7 @@ cmd:ar(playerid, params[])
 	RemovePlayerAttachedObject(ID,0);
  	StopLoopingAnim(ID);
     TogglePlayerControllable(ID, 1);
-  	format(msg, sizeof(msg), "L'officier de police %s(%d) vient de vous mettre en prison ! Tous vos C4 et cordes ont été confisqués !", pInfo[playerid][name], playerid);
+  	format(msg, sizeof(msg), "L'officier de police %s(%d) vient de vous mettre en prison ! Tous vos C4 et cordes ont Ã©tÃ© confisquÃ©s !", pInfo[playerid][name], playerid);
 	SendClientMessage(ID, COLOR_YELLOW, msg);
 	new money=random(pInfo[ID][wanted]*275);
 	format(msg, sizeof(msg), "Vous avez mit le criminel %s(%d) en prison, vous venez de gagner %s !", pInfo[ID][name], ID, FormatMoney(money));
@@ -3767,7 +3767,7 @@ cmd:ar(playerid, params[])
 		new str[144];
 		pInfo[playerid][policelvl]++;
 		pInfo[playerid][policeprogress]=0;
-		format(str, sizeof(str), "Vous avez monté de niveau policier ! Vous êtes maintenant au niveau %d !", pInfo[playerid][policelvl]);
+		format(str, sizeof(str), "Vous avez montÃ© de niveau policier ! Vous Ãªtes maintenant au niveau %d !", pInfo[playerid][policelvl]);
 		SendClientMessage(playerid, COLOR_GREEN, str);
 	}
 	return 1;
@@ -3776,35 +3776,35 @@ cmd:ar(playerid, params[])
 cmd:demen(playerid, params[])
 {
 	if(!IsPlayerCops(playerid))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas dé-menotter si vous n'êtes pas policier !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas dÃ©-menotter si vous n'Ãªtes pas policier !");
 
 	new ID;
 	if(sscanf(params, "u", ID))
 	    return SendClientMessage(playerid, COLOR_ERROR, "Usage: /men (Pseudo/ID)");
 
 	if(!IsPlayerConnected(ID))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Le joueur n'est pas connecté.");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Le joueur n'est pas connectÃ©.");
 
 	if(!pInfo[ID][cuffed])
-	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas menotté !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas menottÃ© !");
 
 	if(!IsCanAction(playerid))
 	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action maintenant !");
 
 	if(IsPlayerInAnyVehicle(playerid))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action dans un véhicule!");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action dans un vÃ©hicule!");
 
 	if(IsPlayerInAnyVehicle(ID))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action sur un joueur dans un véhicule!");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action sur un joueur dans un vÃ©hicule!");
 
 
 	if(GetDistanceBetweenPlayers(playerid, ID) > 4)
 	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur est trop loin !");
 
 	new msg[128];
-	format(msg, sizeof(msg), "L'officier de police %s(%d) vient de vous dé-menotter, vous êtes libre !", pInfo[playerid][name], playerid);
+	format(msg, sizeof(msg), "L'officier de police %s(%d) vient de vous dÃ©-menotter, vous Ãªtes libre !", pInfo[playerid][name], playerid);
 	SendClientMessage(ID, COLOR_LIGHTBLUE, msg);
-	format(msg, sizeof(msg), "Vous venez de dé-menotter %s(%d), il est maintenant libre!", pInfo[ID][name], ID);
+	format(msg, sizeof(msg), "Vous venez de dÃ©-menotter %s(%d), il est maintenant libre!", pInfo[ID][name], ID);
 	SendClientMessage(playerid, COLOR_LIGHTBLUE, msg);
 	TogglePlayerControllable(ID, 1);
 	pInfo[ID][cuffed] =false;
@@ -3818,72 +3818,72 @@ cmd:demen(playerid, params[])
 cmd:violer(playerid, params[])
 {
 	if(!IsPlayerCrimi(playerid))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire ça si vous n'êtes pas criminel !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire Ã§a si vous n'Ãªtes pas criminel !");
 	new ID;
 	if(sscanf(params, "u", ID))
 	    return SendClientMessage(playerid, COLOR_ERROR, "Usage: /violer (Pseudo/ID)");
 
 	if(!IsPlayerConnected(ID))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Le joueur n'est pas connecté.");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Le joueur n'est pas connectÃ©.");
 
 	if(GetDistanceBetweenPlayers(playerid, ID) > 4)
 	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur est trop loin !");
 
 	if(playerid == ID)
-		return SendClientMessage(playerid,COLOR_ERROR,"C'est idiot, vous ne pouvez pas vous violer vous-même !");
+		return SendClientMessage(playerid,COLOR_ERROR,"C'est idiot, vous ne pouvez pas vous violer vous-mÃªme !");
 
 	if(!IsCanAction(playerid))
 	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action maintenant !");
 
 	if(IsPlayerInAnyVehicle(playerid))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action dans un véhicule!");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action dans un vÃ©hicule!");
 
 	if(!IsCanAction(ID))
 	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action sur ce joueur maintenant !");
 
 	if(IsPlayerInAnyVehicle(ID))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action sur un joueur dans un véhicule!");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action sur un joueur dans un vÃ©hicule!");
 
 	if(pInfo[playerid][lastviol]>gettime())
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous avez déjà violé/tenté de violer quelqu'un récemment, attendez un peu!");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous avez dÃ©jÃ  violÃ©/tentÃ© de violer quelqu'un rÃ©cemment, attendez un peu!");
 
 	if(pInfo[ID][lastvioled]>gettime())
-	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur a déjà été violé récemment, attendez un peu!");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur a dÃ©jÃ  Ã©tÃ© violÃ© rÃ©cemment, attendez un peu!");
 
     pInfo[playerid][lastviol]=gettime()+120;
  	if(!Chances((GetCompetence(playerid, 1)==1) ? (20) : (30))) {
 	    AddWanted(playerid, 2);
-	    return SendClientMessage(playerid, COLOR_ERROR, "Viol échoué !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Viol Ã©chouÃ© !");
 	}
 
 	new string[128];
-	format(string,sizeof(string),"Vous avez attrapé %s(%d) est vous l'avez violé!", pInfo[ID][name], ID);
+	format(string,sizeof(string),"Vous avez attrapÃ© %s(%d) est vous l'avez violÃ©!", pInfo[ID][name], ID);
 	SendClientMessage(playerid,COLOR_LIGHTBLUE,string);
-	format(string,sizeof(string),"Vous avez été violé par %s(%d), vengez-vous et tuez-le !", pInfo[playerid][name], playerid);
+	format(string,sizeof(string),"Vous avez Ã©tÃ© violÃ© par %s(%d), vengez-vous et tuez-le !", pInfo[playerid][name], playerid);
 	SendClientMessage(ID,COLOR_LIGHTBLUE,string);
 	SetDM(ID, playerid, true);
 	AddScore(playerid, 1);
 	if(IsPlayerCops(ID)) {
-		SendClientMessage(playerid, COLOR_YELLOW, "Vous avez violé un policier, vous venez de gagner deux étoiles de recherche de plus que la normale !");
+		SendClientMessage(playerid, COLOR_YELLOW, "Vous avez violÃ© un policier, vous venez de gagner deux Ã©toiles de recherche de plus que la normale !");
 		AddWanted(playerid, 6);
 		AddScore(playerid, 1);
 	}
 	else AddWanted(playerid, 4);
 	if(pInfo[playerid][MST]) {
 		pInfo[ID][MST]=true;
-		SendClientMessage(ID, COLOR_RED, "Vous avez attrapé une mst, allez vite vous soigner !");
+		SendClientMessage(ID, COLOR_RED, "Vous avez attrapÃ© une mst, allez vite vous soigner !");
 		AddScore(playerid, 1);
 	}
 	else if(!pChances(ID, 30)) {
 		pInfo[ID][MST]=true;
-		SendClientMessage(ID, COLOR_RED, "Vous avez attrapé une mst, allez vite vous soigner !");
+		SendClientMessage(ID, COLOR_RED, "Vous avez attrapÃ© une mst, allez vite vous soigner !");
 		AddScore(playerid, 1);
 	}
- 	format(string, sizeof(string), "~h~~g~Vous avez violž ~h~~y~%s ~n~~w~ ~h~~w~", pInfo[ID][name],ID);
+ 	format(string, sizeof(string), "~h~~g~Vous avez violÅ¾ ~h~~y~%s ~n~~w~ ~h~~w~", pInfo[ID][name],ID);
 	GameTextForPlayer(playerid, string, 3000, 3);
- 	format(string,sizeof(string), "~h~~y~%s ~h~~w~vous a violž ~n~~h~~g~", pInfo[playerid][name]);
+ 	format(string,sizeof(string), "~h~~y~%s ~h~~w~vous a violÅ¾ ~n~~h~~g~", pInfo[playerid][name]);
 	GameTextForPlayer(ID, string, 3000, 3);
-    format(string, sizeof(string), "[RADIO] Le suspect %s(%d) a violé %s(%d), interpellez-le !", pInfo[playerid][name], playerid, pInfo[ID][name], ID);
+    format(string, sizeof(string), "[RADIO] Le suspect %s(%d) a violÃ© %s(%d), interpellez-le !", pInfo[playerid][name], playerid, pInfo[ID][name], ID);
     SendClientMessageToAllCops(COLOR_BLUECOPS, string);
 	return 1;
 }
@@ -3891,47 +3891,47 @@ cmd:violer(playerid, params[])
 cmd:kidnap(playerid, params[])
 {
 	if(pInfo[playerid][TEAM]!=TEAM_KIDNAP)
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous devez être kidnappeur pour kidnapper les joueurs!");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous devez Ãªtre kidnappeur pour kidnapper les joueurs!");
 
 	new ID;
 	if(sscanf(params, "u", ID))
 	    return SendClientMessage(playerid, COLOR_ERROR, "Usage: /kidnap (Pseudo/ID)");
 
 	if(!IsPlayerConnected(ID))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Le joueur n'est pas connecté.");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Le joueur n'est pas connectÃ©.");
 
 	if(GetDistanceBetweenPlayers(playerid, ID) > 4)
 	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur est trop loin !");
 
 	if(pInfo[ID][kidnapped])
-	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur est déjà kidnappé!");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur est dÃ©jÃ  kidnappÃ©!");
 
 	if(pInfo[ID][cuffed])
-	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur est menotté, vous ne pouvez pas le kidnapper!");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur est menottÃ©, vous ne pouvez pas le kidnapper!");
 
 	if(playerid == ID)
-		return SendClientMessage(playerid,COLOR_ERROR,"C'est idiot, vous ne pouvez pas vous kidnapper vous-même !");
+		return SendClientMessage(playerid,COLOR_ERROR,"C'est idiot, vous ne pouvez pas vous kidnapper vous-mÃªme !");
 
 	if(!IsCanAction(playerid))
 	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action maintenant !");
 
 	if(IsPlayerInAnyVehicle(playerid))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action dans un véhicule!");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action dans un vÃ©hicule!");
 
 	if(!IsCanAction(ID))
 	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action sur ce joueur maintenant !");
 
 	if(IsPlayerInAnyVehicle(ID))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action sur un joueur dans un véhicule!");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action sur un joueur dans un vÃ©hicule!");
 
 	if(pInfo[playerid][lastkidnap]>gettime())
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous avez déjà kidnappé/tenté de kidnapper quelqu'un récemment, attendez un peu!");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous avez dÃ©jÃ  kidnappÃ©/tentÃ© de kidnapper quelqu'un rÃ©cemment, attendez un peu!");
 
 	if(pInfo[ID][lastkidnapped]>gettime())
-	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur a déjà été kidnappé récemment, attendez un peu!");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur a dÃ©jÃ  Ã©tÃ© kidnappÃ© rÃ©cemment, attendez un peu!");
 
 	if(!IsValidVehicle(pInfo[playerid][last_vehicle]))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous devez être entré dans un véhicule avant de kidnapper quelqu'un!");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous devez Ãªtre entrÃ© dans un vÃ©hicule avant de kidnapper quelqu'un!");
 
 	if(pInv[playerid][ROPES]<=0)
 	    return SendClientMessage(playerid, COLOR_ERROR, "Vous n'avez aucune cordes pour kidnapper sur vous !");
@@ -3939,7 +3939,7 @@ cmd:kidnap(playerid, params[])
     pInfo[playerid][lastkidnap]=gettime()+120;
  	if(!pChances(playerid, 30)) {
 	    AddWanted(playerid, 2);
-	    return SendClientMessage(playerid, COLOR_ERROR, "Tentative de kidnapping échouée!");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Tentative de kidnapping Ã©chouÃ©e!");
 	}
 
 	SetPlayerInterior(ID, 0);
@@ -3952,16 +3952,16 @@ cmd:kidnap(playerid, params[])
 	TogglePlayerControllable(ID, 0);
 
 	new string[128];
- 	format(string, sizeof(string), "~h~~g~Vous avez kidnappž ~h~~y~%s ~n~~w~ ~h~~w~", pInfo[ID][name],ID);
+ 	format(string, sizeof(string), "~h~~g~Vous avez kidnappÅ¾ ~h~~y~%s ~n~~w~ ~h~~w~", pInfo[ID][name],ID);
 	GameTextForPlayer(playerid, string, 3000, 3);
- 	format(string,sizeof(string), "~h~~y~%s ~h~~w~vous a kidnappž ~n~~h~~g~", pInfo[playerid][name]);
+ 	format(string,sizeof(string), "~h~~y~%s ~h~~w~vous a kidnappÅ¾ ~n~~h~~g~", pInfo[playerid][name]);
 	GameTextForPlayer(ID, string, 3000, 3);
-	format(string, sizeof(string), "%s(%d) vous a kidnappé ! Si vous avez une paire de ciseaux, faites /coupercorde !", pInfo[playerid][name], playerid);
+	format(string, sizeof(string), "%s(%d) vous a kidnappÃ© ! Si vous avez une paire de ciseaux, faites /coupercorde !", pInfo[playerid][name], playerid);
 	SendClientMessage(ID, COLOR_YELLOW, string);
-	format(string, sizeof(string), "Vous avez kidnappé %s(%d)  !", pInfo[ID][name], ID);
+	format(string, sizeof(string), "Vous avez kidnappÃ© %s(%d)  !", pInfo[ID][name], ID);
 	SendClientMessage(playerid, COLOR_YELLOW, string);
 	if(IsPlayerCops(ID)) {
-		SendClientMessage(playerid, COLOR_YELLOW, "Vous avez kidnappé un policier, vous venez de gagner deux étoiles de recherche de plus que la normale !");
+		SendClientMessage(playerid, COLOR_YELLOW, "Vous avez kidnappÃ© un policier, vous venez de gagner deux Ã©toiles de recherche de plus que la normale !");
 		AddScore(playerid, 1);
 		AddWanted(playerid, 6);
 	}
@@ -3969,7 +3969,7 @@ cmd:kidnap(playerid, params[])
 
 	AddScore(playerid, 1);
 	pInv[playerid][ROPES]--;
-    format(string, sizeof(string), "[RADIO] Le suspect %s(%d) a kidnappé %s(%d), interpellez-le !", pInfo[playerid][name], playerid);
+    format(string, sizeof(string), "[RADIO] Le suspect %s(%d) a kidnappÃ© %s(%d), interpellez-le !", pInfo[playerid][name], playerid);
     SendClientMessageToAllCops(COLOR_BLUECOPS, string);
 	return 1;
 }
@@ -3980,7 +3980,7 @@ cmd:suicide(playerid, params[])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas vous suicider maintenant !");
 
 	if(pInfo[playerid][wanted]>=4)
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous êtes trop recherché pour faire ça !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous Ãªtes trop recherchÃ© pour faire Ã§a !");
 
 	if(pInfo[playerid][wanted]==0) {
 	    AddScore(playerid, -1);
@@ -3989,9 +3989,9 @@ cmd:suicide(playerid, params[])
 	else if(pInfo[playerid][wanted]<4) {
 	    AddScore(playerid, -pInfo[playerid][wanted]);
 	    SetPlayerHealth(playerid, 0);
-	    SendClientMessage(playerid, COLOR_PINK, "Vous avez perdu autant de score que d'étoiles de recherche que vous aviez !");
+	    SendClientMessage(playerid, COLOR_PINK, "Vous avez perdu autant de score que d'Ã©toiles de recherche que vous aviez !");
 	}
-	else SendClientMessage(playerid, COLOR_ERROR, "Vous êtes trop recherché pour faire ça !");
+	else SendClientMessage(playerid, COLOR_ERROR, "Vous Ãªtes trop recherchÃ© pour faire Ã§a !");
 	return 1;
 }
 
@@ -4002,16 +4002,16 @@ cmd:detach(playerid, params[])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Usage: /detach (Pseudo/ID)");
 
 	if(!IsPlayerConnected(ID))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Le joueur n'est pas connecté.");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Le joueur n'est pas connectÃ©.");
 
 	if(GetDistanceBetweenPlayers(playerid, ID) > 4)
 	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur est trop loin !");
 
 	if(!pInfo[ID][kidnapped])
-	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas kidnappé!");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas kidnappÃ©!");
 
 	if(playerid == ID)
-		return SendClientMessage(playerid,COLOR_ERROR,"C'est idiot, vous ne pouvez pas vous détacher vous-même !");
+		return SendClientMessage(playerid,COLOR_ERROR,"C'est idiot, vous ne pouvez pas vous dÃ©tacher vous-mÃªme !");
 
 	if(!IsCanAction(playerid))
 	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action maintenant !");
@@ -4019,9 +4019,9 @@ cmd:detach(playerid, params[])
 	TogglePlayerControllable(ID, 1);
  	pInfo[ID][kidnappedtime]=0;
 	new msg[128];
-	format(msg, sizeof(msg), "Vous avez été détaché par %s(%d), fuyez !", pInfo[playerid][name], playerid);
+	format(msg, sizeof(msg), "Vous avez Ã©tÃ© dÃ©tachÃ© par %s(%d), fuyez !", pInfo[playerid][name], playerid);
 	SendClientMessage(ID, COLOR_GREEN, msg);
-	format(msg, sizeof(msg), "Vous avez détaché %s(%d), il est libre !", pInfo[ID][name], ID);
+	format(msg, sizeof(msg), "Vous avez dÃ©tachÃ© %s(%d), il est libre !", pInfo[ID][name], ID);
 	SendClientMessage(playerid, COLOR_GREEN, msg);
 	if(!GetSuccess(playerid, 4)) SetSuccess(playerid, 4, true);
 	else pInfo[playerid][totaldetach]++;
@@ -4054,12 +4054,12 @@ cmd:coupercorde(playerid, params[])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Vous n'avez pas de ciseaux, vous pouvez en acheter au 24/7 !");
 
 	if(!pInfo[playerid][kidnapped])
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous n'êtes pas kidnappé!");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous n'Ãªtes pas kidnappÃ©!");
 
 	TogglePlayerControllable(playerid, 1);
  	pInfo[playerid][kidnappedtime]=0;
  	pInv[playerid][scissors]=false;
-	SendClientMessage(playerid, COLOR_GREEN, "Vous avez coupé votre corde, vous pouvez fuir !");
+	SendClientMessage(playerid, COLOR_GREEN, "Vous avez coupÃ© votre corde, vous pouvez fuir !");
 	return 1;
 }
 
@@ -4074,16 +4074,16 @@ stock GetPriceWithModel(modelid)
 cmd:vendrev(playerid, params[])
 {
 	if(pInfo[playerid][TEAM]!=TEAM_VOLEUR)
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire ça si vous n'êtes pas voleur !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire Ã§a si vous n'Ãªtes pas voleur !");
 
 	if(GetPlayerCheckpoint(playerid, 5)!=CP_VENDREV)
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire ça si vous n'êtes pas dans le checkpoint pour vendre un véhicule !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire Ã§a si vous n'Ãªtes pas dans le checkpoint pour vendre un vÃ©hicule !");
 
 	if(!IsPlayerInAnyVehicle(playerid))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous n'êtes pas dans un véhicule !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous n'Ãªtes pas dans un vÃ©hicule !");
 
 	if(!vInfo[GetPlayerVehicleID(playerid)][stolen])
-	    return SendClientMessage(playerid, COLOR_ERROR, "Ce véhicule n'est pas volé, vous ne pouvez pas le vendre !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Ce vÃ©hicule n'est pas volÃ©, vous ne pouvez pas le vendre !");
 
 	new vehicleid=GetPlayerVehicleID(playerid);
 	new msg[128], model=GetVehicleModel(vehicleid);
@@ -4103,28 +4103,28 @@ cmd:vendrev(playerid, params[])
 cmd:voleratm(playerid, params[])
 {
 	if(pInfo[playerid][TEAM]!=TEAM_VOLEUR)
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire ça si vous n'êtes pas voleur !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire Ã§a si vous n'Ãªtes pas voleur !");
 
 	new cp=GetPlayerCheckpoint(playerid);
 	if(cp!=CP_ATM1&&cp!=CP_ATM2&&cp!=CP_ATM3&&cp!=CP_ATM4&&cp!=CP_ATM5)
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous n'êtes pas dans un checkpoint d'ATM !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous n'Ãªtes pas dans un checkpoint d'ATM !");
 
 	if(pInfo[playerid][lastrobatm]>gettime())
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous avez déjà volé un ATM récemment, attendez un tout petit peu !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous avez dÃ©jÃ  volÃ© un ATM rÃ©cemment, attendez un tout petit peu !");
 
 	if(!IsCanAction(playerid))
 	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action maintenant !");
 
 	if(IsPlayerInAnyVehicle(playerid))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action dans un véhicule!");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action dans un vÃ©hicule!");
 
 	if(cLastRob[cp]>gettime())
-	    return SendClientMessage(playerid, COLOR_ERROR, "Cet ATM a déjà été volé récemment !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Cet ATM a dÃ©jÃ  Ã©tÃ© volÃ© rÃ©cemment !");
 
     pInfo[playerid][lastrobatm]=gettime()+45;
 	if(!pChances(30)) {
 	    AddWanted(playerid, 2);
-	    return SendClientMessage(playerid, COLOR_ERROR, "Tentative de vol échouée, la police a été prévenue !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Tentative de vol Ã©chouÃ©e, la police a Ã©tÃ© prÃ©venue !");
 	}
     pInfo[playerid][lastrobatm]+=45;
     cLastRob[cp]=gettime()+160;
@@ -4133,7 +4133,7 @@ cmd:voleratm(playerid, params[])
 	else while(rand < 25) rand=random(35);
 	pInfo[playerid][robatm]=rand;
 	new string[128];
-    format(string, sizeof(string), "[RADIO] Le suspect %s(%d) a commencé un vol dans un ATM, interpellez-le !", pInfo[playerid][name], playerid);
+    format(string, sizeof(string), "[RADIO] Le suspect %s(%d) a commencÃ© un vol dans un ATM, interpellez-le !", pInfo[playerid][name], playerid);
     SendClientMessageToAllCops(COLOR_BLUECOPS, string);
 	return 1;
 }
@@ -4141,42 +4141,42 @@ cmd:voleratm(playerid, params[])
 cmd:volerlieu(playerid, params[])
 {
 	if(!IsPlayerCrimi(playerid))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire ça si vous n'êtes pas criminel !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire Ã§a si vous n'Ãªtes pas criminel !");
 
 	new cp=GetPlayerCheckpoint(playerid);
 	if(cp==-1)
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous n'êtes pas dans un checkpoint de lieu volable !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous n'Ãªtes pas dans un checkpoint de lieu volable !");
 
 	if(!CanBeRobbed(cp))
 	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas voler cet endroit !");
 
 	if(pInfo[playerid][lastlrob]>gettime())
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous avez déjà volé un lieu récemment, attendez un tout petit peu !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous avez dÃ©jÃ  volÃ© un lieu rÃ©cemment, attendez un tout petit peu !");
 
 	if(!IsCanAction(playerid))
 	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action maintenant !");
 
 	if(IsPlayerInAnyVehicle(playerid))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action dans un véhicule!");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action dans un vÃ©hicule!");
 
 	if(cLastRob[cp]>gettime())
-	    return SendClientMessage(playerid, COLOR_ERROR, "Ce lieu a déjà été volé récemment !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Ce lieu a dÃ©jÃ  Ã©tÃ© volÃ© rÃ©cemment !");
 
 	switch(cp)
 	{
 	    case CP_BOMBSHOP, CP_AMMUNATION: if(pInfo[playerid][roblvl]<10)
-	        return SendClientMessage(playerid, COLOR_ERROR, "Vous devez être au minimum un voleur de niveau 10 pour pouvoir voler ce lieu !");
+	        return SendClientMessage(playerid, COLOR_ERROR, "Vous devez Ãªtre au minimum un voleur de niveau 10 pour pouvoir voler ce lieu !");
 	    case CP_VOLERBANQUE: if(pInfo[playerid][roblvl]<20)
-	        return SendClientMessage(playerid, COLOR_ERROR, "Vous devez être au minimum un voleur de niveau 20 pour pouvoir voler ce lieu !");
+	        return SendClientMessage(playerid, COLOR_ERROR, "Vous devez Ãªtre au minimum un voleur de niveau 20 pour pouvoir voler ce lieu !");
 		case CP_BUYVEH:if(pInfo[playerid][roblvl]<5)
-	        return SendClientMessage(playerid, COLOR_ERROR, "Vous devez être au minimum un voleur de niveau 5 pour pouvoir voler ce lieu !");
+	        return SendClientMessage(playerid, COLOR_ERROR, "Vous devez Ãªtre au minimum un voleur de niveau 5 pour pouvoir voler ce lieu !");
 	}
 
 	pInfo[playerid][lastlrob]=gettime()+35;
 
  	if(!pChances(30)) {
 	    AddWanted(playerid, 2);
-	    return SendClientMessage(playerid, COLOR_ERROR, "Tentative de vol échouée, la police a été prévenue !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Tentative de vol Ã©chouÃ©e, la police a Ã©tÃ© prÃ©venue !");
 	}
 
 	pInfo[playerid][lastlrob]+=55;
@@ -4187,11 +4187,11 @@ cmd:volerlieu(playerid, params[])
 		cLastRob[GetPlayerCheckpoint(playerid)]=gettime()+132;
 	else cLastRob[cp]=gettime()+300;
     pInfo[playerid][lrob]=(cp!=CP_VOLERBANQUE) ? (rand) : (rand+15);
-    SendClientMessage(playerid, COLOR_GREEN, "Vol commencé, la police a été prévenue!");
+    SendClientMessage(playerid, COLOR_GREEN, "Vol commencÃ©, la police a Ã©tÃ© prÃ©venue!");
 	AddScore(playerid, 1);
 	AddWanted(playerid, 3);
 	new string[128];
-    format(string, sizeof(string), "[RADIO] Le suspect %s(%d) a commencé un vol %s, interpellez-le !", pInfo[playerid][name], playerid, cName[GetPlayerCheckpoint(playerid)]);
+    format(string, sizeof(string), "[RADIO] Le suspect %s(%d) a commencÃ© un vol %s, interpellez-le !", pInfo[playerid][name], playerid, cName[GetPlayerCheckpoint(playerid)]);
     SendClientMessageToAllCops(COLOR_BLUECOPS, string);
 	return 1;
 }
@@ -4201,7 +4201,7 @@ cmd:stats(playerid, params[])
 	new dialog[1024], pid=playerid;
 	if(sscanf(params, "u", pid)) pid=playerid;
 	if(!IsPlayerConnected(pid))
-		return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas connecté !");
+		return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas connectÃ© !");
 	format(dialog, sizeof(dialog),
 	"Niveau voleur: {FFFFFF}%d - {A9C4E4}Niveau terroriste: {FFFFFF}%d\nNiveau policier: {FFFFFF}%d\n{A9C4E4}Argent: {FFFFFF}%s{A9C4E4} - En banque:{FFFFFF} %s\n{A9C4E4}Total de kills: {FFFFFF}%d {A9C4E4}- Dans cette partie: {FFFFFF}%d\n{A9C4E4}Total de morts: {FFFFFF}%d {A9C4E4}- Dans cette partie: {FFFFFF}%d",
 	pInfo[pid][roblvl], pInfo[pid][terrolvl], pInfo[pid][policelvl], FormatMoney(GetPlayerMoney(pid)), FormatMoney(pInv[pid][BANK_CASH]),
@@ -4213,14 +4213,14 @@ cmd:stats(playerid, params[])
 cmd:voler(playerid, params[])
 {
 	if(pInfo[playerid][TEAM]!=TEAM_VOLEUR)
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous devez être voleur pour voler les joueurs!");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous devez Ãªtre voleur pour voler les joueurs!");
 
 	new ID;
 	if(sscanf(params, "u", ID))
 	    return SendClientMessage(playerid, COLOR_ERROR, "Usage: /voler (Pseudo/ID)");
 
 	if(!IsPlayerConnected(ID))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Le joueur n'est pas connecté.");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Le joueur n'est pas connectÃ©.");
 
 	if(GetDistanceBetweenPlayers(playerid, ID) > 4)
 	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur est trop loin !");
@@ -4229,32 +4229,32 @@ cmd:voler(playerid, params[])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'a pas d'argent sur lui!");
 
 	if(playerid == ID)
-		return SendClientMessage(playerid,COLOR_ERROR,"C'est idiot, vous ne pouvez pas vous voler vous-même, mais bien éssayé !");
+		return SendClientMessage(playerid,COLOR_ERROR,"C'est idiot, vous ne pouvez pas vous voler vous-mÃªme, mais bien Ã©ssayÃ© !");
 
 	if(!IsCanAction(playerid))
 	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action maintenant !");
 
 	if(IsPlayerInAnyVehicle(playerid))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action dans un véhicule!");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action dans un vÃ©hicule!");
 
 	if(!IsCanAction(ID))
 	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action sur ce joueur maintenant !");
 
 	if(IsPlayerInAnyVehicle(ID))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action sur un joueur dans un véhicule!");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas effectuer cette action sur un joueur dans un vÃ©hicule!");
 
 	if(pInfo[playerid][lastrob]>gettime())
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous avez déjà volé/tenté de voler quelqu'un récemment, attendez un peu!");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous avez dÃ©jÃ  volÃ©/tentÃ© de voler quelqu'un rÃ©cemment, attendez un peu!");
 
 	if(pInfo[ID][lastrobbed]>gettime())
-	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur a déjà été volé récemment, attendez un peu!");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur a dÃ©jÃ  Ã©tÃ© volÃ© rÃ©cemment, attendez un peu!");
 
  	pInfo[playerid][lastrob]=gettime()+120;
     AddWanted(playerid, 2);
 
  	if(!Chances(30)) {
 	    AddWanted(playerid, 2);
-	    return SendClientMessage(playerid, COLOR_ERROR, "Tentative de vol échouée!");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Tentative de vol Ã©chouÃ©e!");
 	}
 	new rand=random(4), money=0;
 	new Float:maxvalue=GetPlayerMoney(ID);
@@ -4275,31 +4275,31 @@ cmd:voler(playerid, params[])
 	GivePlayerMoney(ID, -money);
 	GivePlayerMoney(playerid, money);
 	new string[128];
- 	format(string, sizeof(string), "~h~~g~Vous avez volž ~h~~y~%s ~n~~w~€ ~h~~w~%s", FormatMoney(money), pInfo[ID][name],ID);
+ 	format(string, sizeof(string), "~h~~g~Vous avez volÅ¾ ~h~~y~%s ~n~~w~â‚¬ ~h~~w~%s", FormatMoney(money), pInfo[ID][name],ID);
 	GameTextForPlayer(playerid, string, 3000, 3);
- 	format(string,sizeof(string), "~h~~y~%s ~h~~w~vous a volž ~n~~h~~g~%s", pInfo[playerid][name], FormatMoney(money));
+ 	format(string,sizeof(string), "~h~~y~%s ~h~~w~vous a volÅ¾ ~n~~h~~g~%s", pInfo[playerid][name], FormatMoney(money));
 	GameTextForPlayer(ID, string, 3000, 3);
-	format(string,sizeof(string),"Vous venez de voler %s à %s(%d). ", FormatMoney(money),pInfo[ID][name], ID);
+	format(string,sizeof(string),"Vous venez de voler %s Ã  %s(%d). ", FormatMoney(money),pInfo[ID][name], ID);
  	SendClientMessage(playerid,COLOR_GREEN,string);
 	format(string,sizeof(string),"Vous venez de vous faire voler %s par %s(%d). ", FormatMoney(money),pInfo[playerid][name],playerid);
  	SendClientMessage(ID,COLOR_RED,string);
   	pInfo[ID][lastrobbed]=gettime()+160;
     SetDM(ID, playerid, true);
 	if(IsPlayerCops(ID)) {
-		SendClientMessage(playerid, COLOR_YELLOW, "Vous avez volé un policier, vous venez de gagner deux étoiles de recherche de plus que la normale !");
+		SendClientMessage(playerid, COLOR_YELLOW, "Vous avez volÃ© un policier, vous venez de gagner deux Ã©toiles de recherche de plus que la normale !");
 		AddWanted(playerid, 6);
 		AddScore(playerid, 1);
 	}
 	else AddWanted(playerid, 4);
     AddScore(playerid, 1);
     if(!GetSuccess(playerid, 1)) SetSuccess(playerid, 1, true);
-    format(string, sizeof(string), "[RADIO] Le suspect %s(%d) a volé %s à %s(%d), interpellez-le !", pInfo[playerid][name], playerid, FormatMoney(money), pInfo[ID][name], ID);
+    format(string, sizeof(string), "[RADIO] Le suspect %s(%d) a volÃ© %s Ã  %s(%d), interpellez-le !", pInfo[playerid][name], playerid, FormatMoney(money), pInfo[ID][name], ID);
     SendClientMessageToAllCops(COLOR_BLUECOPS, string);
  	pInfo[playerid][robprogress]+=15;
 	if(pInfo[playerid][robprogress]>=100) {
 		pInfo[playerid][roblvl]++;
 		pInfo[playerid][robprogress]=0;
-		format(string, sizeof(string), "Vous avez monté de niveau voleur ! Vous êtes maintenant au niveau %d !", pInfo[playerid][roblvl]);
+		format(string, sizeof(string), "Vous avez montÃ© de niveau voleur ! Vous Ãªtes maintenant au niveau %d !", pInfo[playerid][roblvl]);
 		SendClientMessage(playerid, COLOR_GREEN, string);
 	}
 	return 1;
@@ -4308,7 +4308,7 @@ cmd:voler(playerid, params[])
 cmd:cmds(playerid,params[])
 {
 	if(!pInfo[playerid][spawned])
- 		return SendClientMessage(playerid,COLOR_ERROR,"Vous devez être Spawn pour utiliser cette commande");
+ 		return SendClientMessage(playerid,COLOR_ERROR,"Vous devez Ãªtre Spawn pour utiliser cette commande");
 
 	new dialog[1024], title[120]="COMMANDES";
 	switch(pInfo[playerid][TEAM])
@@ -4316,7 +4316,7 @@ cmd:cmds(playerid,params[])
 	    case TEAM_VOLEUR:
 	    {
 	        strcat(title, "- VOLEUR / CARJACKEUR");
-	        format(dialog, sizeof(dialog), "{FF0000}/voler{A9C4E4} - Voler un joueur.\n{FF0000}/voleratm{A9C4E4} - Voler un ATM.\n{FF0000}/vendrev{A9C4E4} - Vendre un véhicule volé");
+	        format(dialog, sizeof(dialog), "{FF0000}/voler{A9C4E4} - Voler un joueur.\n{FF0000}/voleratm{A9C4E4} - Voler un ATM.\n{FF0000}/vendrev{A9C4E4} - Vendre un vÃ©hicule volÃ©");
 	    }
 	    case TEAM_KIDNAP:
 	    {
@@ -4326,7 +4326,7 @@ cmd:cmds(playerid,params[])
 	    case TEAM_TERRO:
 	    {
 	        strcat(title, "- TERRORISTE");
-	        format(dialog, sizeof(dialog), "{FF0000}/explcaisse{A9C4E4} - Exploser un véhicule.\n{FF0000}/exploser{A9C4E4} - Exploser un lieu");
+	        format(dialog, sizeof(dialog), "{FF0000}/explcaisse{A9C4E4} - Exploser un vÃ©hicule.\n{FF0000}/exploser{A9C4E4} - Exploser un lieu");
 	    }
 	    case TEAM_VIOLEUR:
 	    {
@@ -4341,7 +4341,7 @@ cmd:cmds(playerid,params[])
 	    case TEAM_HACKER:
 		{
 	        strcat(title, "- HACKER");
-	        format(dialog, sizeof(dialog), "{FF0000}/seeid{A9C4E4} - Voir les ID de véhicules (activé par défaut)\n{FF0000}/explveh{A9C4E4} - Exploser un véhicule à distance\n{FF0000}/hackatm{A9C4E4} - Pirater un ATM\n{FF0000}/hackveh{A9C4E4} - Pirater (immobiliser) un véhicule");
+	        format(dialog, sizeof(dialog), "{FF0000}/seeid{A9C4E4} - Voir les ID de vÃ©hicules (activÃ© par dÃ©faut)\n{FF0000}/explveh{A9C4E4} - Exploser un vÃ©hicule Ã  distance\n{FF0000}/hackatm{A9C4E4} - Pirater un ATM\n{FF0000}/hackveh{A9C4E4} - Pirater (immobiliser) un vÃ©hicule");
 	    }
 	    case TEAM_COPS:
 	    {
@@ -4362,7 +4362,7 @@ cmd:cmds(playerid,params[])
 		if(pInfo[playerid][TEAM]==TEAM_SWAT) color="{1560DB}";
 		if(IsPlayerBac(playerid)) color="{09E3BD}";
 		format(dialog, sizeof(dialog),
-		"%s/men{A9C4E4} - Menotter un joueur.\n%s/demen{A9C4E4} - Dé-menotter un joueur.\n%s/ar{A9C4E4} - Arrêter un joueur.\n%s/detenir{A9C4E4} - Détenir un joueur dans son véhicule.\n%s/livrer{A9C4E4} - Livrer un joueur détenu.\n%s/pv{A9C4E4} - Donner un PV a un joueur.\n%s/fouiller{A9C4E4} - Fouiller un joueur.",
+		"%s/men{A9C4E4} - Menotter un joueur.\n%s/demen{A9C4E4} - DÃ©-menotter un joueur.\n%s/ar{A9C4E4} - ArrÃªter un joueur.\n%s/detenir{A9C4E4} - DÃ©tenir un joueur dans son vÃ©hicule.\n%s/livrer{A9C4E4} - Livrer un joueur dÃ©tenu.\n%s/pv{A9C4E4} - Donner un PV a un joueur.\n%s/fouiller{A9C4E4} - Fouiller un joueur.",
 		color, color, color, color, color, color, color);
 	}
 	if(IsPlayerBac(playerid)) {
@@ -4376,56 +4376,56 @@ cmd:cmds(playerid,params[])
 cmd:gcmds(playerid, params[])
 {
 	new dialog[2042];
-	format(dialog, sizeof(dialog), "{10F441}/cmds{A9C4E4} - Voir les commandes accessible pour votre métier.");
+	format(dialog, sizeof(dialog), "{10F441}/cmds{A9C4E4} - Voir les commandes accessible pour votre mÃ©tier.");
 	format(dialog, sizeof(dialog), "%s\n{10F441}/regles{A9C4E4} - Voir les regles", dialog);
-	format(dialog, sizeof(dialog), "%s\n{10F441}/pc{A9C4E4} - Voir les règles en ce qui concerne les Deathmatching", dialog);
+	format(dialog, sizeof(dialog), "%s\n{10F441}/pc{A9C4E4} - Voir les rÃ¨gles en ce qui concerne les Deathmatching", dialog);
 	format(dialog, sizeof(dialog), "%s\n{10F441}/admin{A9C4E4} - Voir les administrateurs en service", dialog);
 	if(IsPlayerCrimi(playerid)) format(dialog, sizeof(dialog), "%s\n{10F441}/violer{A9C4E4} - Violer un joueur", dialog);
 	if(IsPlayerCrimi(playerid)) format(dialog, sizeof(dialog), "%s\n{10F441}/violerlieu{A9C4E4} - Voler un lieu", dialog);
-	format(dialog, sizeof(dialog), "%s\n{10F441}/coupercorde{A9C4E4} - Couper une corde (lorsque vous êtes kidnappé et avez un ciseaux)", dialog);
-	format(dialog, sizeof(dialog), "%s\n{10F441}/detach{A9C4E4} - Détacher un joueur kidnappé", dialog);
+	format(dialog, sizeof(dialog), "%s\n{10F441}/coupercorde{A9C4E4} - Couper une corde (lorsque vous Ãªtes kidnappÃ© et avez un ciseaux)", dialog);
+	format(dialog, sizeof(dialog), "%s\n{10F441}/detach{A9C4E4} - DÃ©tacher un joueur kidnappÃ©", dialog);
 	format(dialog, sizeof(dialog), "%s\n{10F441}/acheter{A9C4E4} - Acheter quelque chose au 24/7", dialog);
-	format(dialog, sizeof(dialog), "%s\n{10F441}/sac(ados){A9C4E4} - Accèder à votre sac à dos", dialog);
-	format(dialog, sizeof(dialog), "%s\n{10F441}/inv(entaire){A9C4E4} - Accèder à votre inventaire", dialog);
+	format(dialog, sizeof(dialog), "%s\n{10F441}/sac(ados){A9C4E4} - AccÃ¨der Ã  votre sac Ã  dos", dialog);
+	format(dialog, sizeof(dialog), "%s\n{10F441}/inv(entaire){A9C4E4} - AccÃ¨der Ã  votre inventaire", dialog);
 	format(dialog, sizeof(dialog), "%s\n{10F441}/suicide{A9C4E4} - Permet de vous suicider", dialog);
-	if(IsPlayerCrimi(playerid)) format(dialog, sizeof(dialog), "%s\n{10F441}/placehit{A9C4E4} - Poser un contrat sur la tête d'une personne", dialog);
+	if(IsPlayerCrimi(playerid)) format(dialog, sizeof(dialog), "%s\n{10F441}/placehit{A9C4E4} - Poser un contrat sur la tÃªte d'une personne", dialog);
 	format(dialog, sizeof(dialog), "%s\n{10F441}/saucisse{A9C4E4} - Mange de saucisses (vous redonne de la vie)", dialog);
-	format(dialog, sizeof(dialog), "%s\n{10F441}/comp(etence){A9C4E4} - Vous permet de gérer vos compétences", dialog);
-	format(dialog, sizeof(dialog), "%s\n{10F441}/compinfo{A9C4E4} - Vous permet d'accèder aux informations quant aux compétences", dialog);
-	format(dialog, sizeof(dialog), "%s\n{10F441}/succes{A9C4E4} - Affiche la liste des succès que vous avez gagné", dialog);
-	format(dialog, sizeof(dialog), "%s\n{10F441}/pm{A9C4E4} - Envoie un PM (Private Message / Message privé) à un joueur", dialog);
-	format(dialog, sizeof(dialog), "%s\n{10F441}/rpm{A9C4E4} - Répondre au dernier PM reçu (pas besoin de spécifier le Pseudo/l'ID du joueur)", dialog);
-	format(dialog, sizeof(dialog), "%s\n{10F441}/gc{A9C4E4} - Donner de votre argent à un joueur", dialog);
-	format(dialog, sizeof(dialog), "%s\n{10F441}/eject{A9C4E4} - Ejecter tous les joueurs (sauf vous) de votre véhicule.", dialog);
-	format(dialog, sizeof(dialog), "%s\n{10F441}/gps{A9C4E4} - Localiser vos véhicules qui possèdent un GPS.", dialog);
+	format(dialog, sizeof(dialog), "%s\n{10F441}/comp(etence){A9C4E4} - Vous permet de gÃ©rer vos compÃ©tences", dialog);
+	format(dialog, sizeof(dialog), "%s\n{10F441}/compinfo{A9C4E4} - Vous permet d'accÃ¨der aux informations quant aux compÃ©tences", dialog);
+	format(dialog, sizeof(dialog), "%s\n{10F441}/succes{A9C4E4} - Affiche la liste des succÃ¨s que vous avez gagnÃ©", dialog);
+	format(dialog, sizeof(dialog), "%s\n{10F441}/pm{A9C4E4} - Envoie un PM (Private Message / Message privÃ©) Ã  un joueur", dialog);
+	format(dialog, sizeof(dialog), "%s\n{10F441}/rpm{A9C4E4} - RÃ©pondre au dernier PM reÃ§u (pas besoin de spÃ©cifier le Pseudo/l'ID du joueur)", dialog);
+	format(dialog, sizeof(dialog), "%s\n{10F441}/gc{A9C4E4} - Donner de votre argent Ã  un joueur", dialog);
+	format(dialog, sizeof(dialog), "%s\n{10F441}/eject{A9C4E4} - Ejecter tous les joueurs (sauf vous) de votre vÃ©hicule.", dialog);
+	format(dialog, sizeof(dialog), "%s\n{10F441}/gps{A9C4E4} - Localiser vos vÃ©hicules qui possÃ¨dent un GPS.", dialog);
 	format(dialog, sizeof(dialog), "%s\n{10F441}/question{A9C4E4} - Poser une question aux administrateurs en ligne.", dialog);
-	format(dialog, sizeof(dialog), "%s\n{10F441}/report{A9C4E4} - Reporter (dénoncer) un joueur pour une entorse aux règles.", dialog);
+	format(dialog, sizeof(dialog), "%s\n{10F441}/report{A9C4E4} - Reporter (dÃ©noncer) un joueur pour une entorse aux rÃ¨gles.", dialog);
 	if(pInfo[playerid][VIP]) format(dialog, sizeof(dialog), "%s\n{10F441}/afk{A9C4E4} - Entrer/Sortir du mode AFK.", dialog);
 	if(IsPlayerCrimi(playerid)) format(dialog, sizeof(dialog), "%s\n{10F441}/paypv{A9C4E4} - Payer un PV.", dialog);
 	if(IsPlayerCrimi(playerid)) format(dialog, sizeof(dialog), "%s\n{10F441}/cassmen{A9C4E4} - Tenter de casser vos menottes.", dialog);
 	format(dialog, sizeof(dialog), "%s\n{10F441}/stats{A9C4E4} (Pseudo/ID = optionnel) - Voir vos stats/les statistiquess d'un joueur", dialog);
 
-	ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "{10F441}COMMANDES GÉNÉRALES", dialog, "OK", "");
+	ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "{10F441}COMMANDES GÃ‰NÃ‰RALES", dialog, "OK", "");
 	return 1;
 }
 
 cmd:afk(playerid, params[])
 {
 	if(!IsCanAction(playerid))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire ça maintenant !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire Ã§a maintenant !");
 
 	if(!pInfo[playerid][VIP])
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous n'êtes pas VIP, vous ne pouvez pas vous mettre AFK !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous n'Ãªtes pas VIP, vous ne pouvez pas vous mettre AFK !");
 
 	if(pInfo[playerid][afk])
 	{
-		SendClientMessage(playerid, COLOR_LIGHTBLUE, "Vous êtes maintenant AFK !");
+		SendClientMessage(playerid, COLOR_LIGHTBLUE, "Vous Ãªtes maintenant AFK !");
         TogglePlayerControllable(playerid, 1);
 	    pInfo[playerid][afk]=false;
 	}
 	else
 	{
-		SendClientMessage(playerid, COLOR_LIGHTBLUE, "Vous n'êtes maintenant plus AFK !");
+		SendClientMessage(playerid, COLOR_LIGHTBLUE, "Vous n'Ãªtes maintenant plus AFK !");
         TogglePlayerControllable(playerid, 0);
         pInfo[playerid][afk]=true;
 	}
@@ -4434,14 +4434,14 @@ cmd:afk(playerid, params[])
 
 cmd:regles(playerid,params[])
 {
- 	ShowPlayerDialog(playerid, DIALOG_REGLESMENU, DIALOG_STYLE_LIST, "{FF0000}Règles de CRFR","Règles des classes\nRègles Forces de l'ordre\nRègles des Gangs\nInformations - Système de compétences","Choisir","Fermer");
+ 	ShowPlayerDialog(playerid, DIALOG_REGLESMENU, DIALOG_STYLE_LIST, "{FF0000}RÃ¨gles de CRFR","RÃ¨gles des classes\nRÃ¨gles Forces de l'ordre\nRÃ¨gles des Gangs\nInformations - SystÃ¨me de compÃ©tences","Choisir","Fermer");
 	return 1;
 }
 
 cmd:pc(playerid,params[])
 {
-	ShowPlayerDialog(playerid,DIALOG_ALL,DIALOG_STYLE_MSGBOX,"{FF0000}Légende",
-	"{1585DF}Cette couleur est pour la police\n{FFFFFF}Cette couleur est pour les innocents/civils\n{D0CB04}Cette couleur est pour les suspects\n{E09405}Cette couleur est pour les joueurs recherchés\n{D75906}Cette couleur est pour les joueurs très recherchés\n{C60000}Cette couleur est pour les joueurs extrêmement recherchés","Fermer","");
+	ShowPlayerDialog(playerid,DIALOG_ALL,DIALOG_STYLE_MSGBOX,"{FF0000}LÃ©gende",
+	"{1585DF}Cette couleur est pour la police\n{FFFFFF}Cette couleur est pour les innocents/civils\n{D0CB04}Cette couleur est pour les suspects\n{E09405}Cette couleur est pour les joueurs recherchÃ©s\n{D75906}Cette couleur est pour les joueurs trÃ¨s recherchÃ©s\n{C60000}Cette couleur est pour les joueurs extrÃªmement recherchÃ©s","Fermer","");
 	return 1;
 }
 
@@ -4449,10 +4449,10 @@ cmd:hitlist(playerid, params[]) return cmd_listhit(playerid, params);
 cmd:listhit(playerid, params[])
 {
 	if(pInfo[playerid][TEAM]!=TEAM_HITMAN)
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire ça si vous n'êtes pas mercenaire !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire Ã§a si vous n'Ãªtes pas mercenaire !");
 
 	if(!IsCanAction(playerid))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire ça maintenant !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire Ã§a maintenant !");
 
 	new msg[128]="";
 	SendClientMessage(playerid, COLOR_DARKGREY, "[ LISTE DE CONTRATS ]");
@@ -4462,23 +4462,23 @@ cmd:listhit(playerid, params[])
 			SendClientMessage(playerid, COLOR_LIGHTGREY, msg);
 		}
 	}
-	if(strlen(msg)==0) SendClientMessage(playerid, COLOR_LIGHTGREY, "Personne n'a de contrat sur sa tête !");
+	if(strlen(msg)==0) SendClientMessage(playerid, COLOR_LIGHTGREY, "Personne n'a de contrat sur sa tÃªte !");
 	return 1;
 }
 
 cmd:placehit(playerid, params[])
 {
 	if(IsPlayerCops(playerid))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas poser de contrat en étant policier !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas poser de contrat en Ã©tant policier !");
 
 	if(pInfo[playerid][TEAM]==TEAM_HITMAN)
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas poser de contrat en étant mercenaire !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas poser de contrat en Ã©tant mercenaire !");
 
 	if(!IsCanAction(playerid))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire ça maintenant !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire Ã§a maintenant !");
 
 	if(pInfo[playerid][hit]>0)
-	    return SendClientMessage(playerid, COLOR_ERROR, "Cette personne a déjà un contrat sur la tête, vous ne pouvez pas lui en poser !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Cette personne a dÃ©jÃ  un contrat sur la tÃªte, vous ne pouvez pas lui en poser !");
 
 	new amount=0, ID;
 	if(sscanf(params, "ii", ID, amount))
@@ -4488,20 +4488,20 @@ cmd:placehit(playerid, params[])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas poser de contrat sur une personne morte !");
 
 	if(playerid==ID)
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas poser de contrat sur vous-même !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas poser de contrat sur vous-mÃªme !");
 
 	if(!IsPlayerConnected(ID))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas connecté !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas connectÃ© !");
 
 	if(amount<1000)
-	    return SendClientMessage(playerid, COLOR_ERROR, "Le montant doit être plus grand ou égal à 1000 !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Le montant doit Ãªtre plus grand ou Ã©gal Ã  1000 !");
 
 	pInfo[playerid][hit]=1200;
 	pInfo[playerid][hitamount]=amount;
 	new msg[128];
-	format(msg, sizeof(msg), "%s(%d) a posé un contrat sur %s(%d) du montant de %s !", pInfo[playerid][name], playerid, pInfo[ID][name], ID, FormatMoney(amount));
+	format(msg, sizeof(msg), "%s(%d) a posÃ© un contrat sur %s(%d) du montant de %s !", pInfo[playerid][name], playerid, pInfo[ID][name], ID, FormatMoney(amount));
 	SendClientMessageToAll(COLOR_BLUE, msg);
-	format(msg, sizeof(msg), "Vous avez posé un contrat de %s sur %s(%d)", FormatMoney(amount), pInfo[ID][name], ID);
+	format(msg, sizeof(msg), "Vous avez posÃ© un contrat de %s sur %s(%d)", FormatMoney(amount), pInfo[ID][name], ID);
 	SendClientMessage(playerid, COLOR_GREEN, msg);
 	return 1;
 }
@@ -4514,38 +4514,38 @@ cmd:adcmds(playerid, paramas[])
 	format(dialog, sizeof(dialog), "{10F441}/service{A9C4E4} - Se mettre en service");
 	if(pInfo[playerid][admin]>=2) {
 	    format(dialog, sizeof(dialog), "%s\n{10F441}/adwanted{A9C4E4} - Modifie le niveau de recherche d'un joueur", dialog);
-	    format(dialog, sizeof(dialog), "%s\n{10F441}/(ad)goto{A9C4E4} - Se téléporte à un joueur", dialog);
-	    format(dialog, sizeof(dialog), "%s\n{10F441}/(ad)bring{A9C4E4} - Téléporte un joueur à vous", dialog);
+	    format(dialog, sizeof(dialog), "%s\n{10F441}/(ad)goto{A9C4E4} - Se tÃ©lÃ©porte Ã  un joueur", dialog);
+	    format(dialog, sizeof(dialog), "%s\n{10F441}/(ad)bring{A9C4E4} - TÃ©lÃ©porte un joueur Ã  vous", dialog);
 	    format(dialog, sizeof(dialog), "%s\n{10F441}/admute{A9C4E4} - Fait taire un joueur pendant un certain temps", dialog);
-	    format(dialog, sizeof(dialog), "%s\n{10F441}/addemute{A9C4E4} - Ré-autorise un joueur a parler", dialog);
+	    format(dialog, sizeof(dialog), "%s\n{10F441}/addemute{A9C4E4} - RÃ©-autorise un joueur a parler", dialog);
 	    format(dialog, sizeof(dialog), "%s\n{10F441}/adfreeze{A9C4E4} - Freeze (immobilise) un joueur", dialog);
-	    format(dialog, sizeof(dialog), "%s\n{10F441}/addefreeze{A9C4E4} - Dé-freeze un joueur", dialog);
+	    format(dialog, sizeof(dialog), "%s\n{10F441}/addefreeze{A9C4E4} - DÃ©-freeze un joueur", dialog);
 	}
 	if(pInfo[playerid][admin]>=3) {
-	    format(dialog, sizeof(dialog), "%s\n{10F441}/v{A9C4E4} - Faire apparaître un véhicule.", dialog);
-	    format(dialog, sizeof(dialog), "%s\n{10F441}/admode{A9C4E4} - Active/Désactive le mode admin", dialog);
-	    format(dialog, sizeof(dialog), "%s\n{10F441}/advie{A9C4E4} - Met la vie d'un joueur à un certain niveau", dialog);
-	    format(dialog, sizeof(dialog), "%s\n{10F441}/adarmure{A9C4E4} - Met l'armure d'un joueur à un certain niveau", dialog);
+	    format(dialog, sizeof(dialog), "%s\n{10F441}/v{A9C4E4} - Faire apparaÃ®tre un vÃ©hicule.", dialog);
+	    format(dialog, sizeof(dialog), "%s\n{10F441}/admode{A9C4E4} - Active/DÃ©sactive le mode admin", dialog);
+	    format(dialog, sizeof(dialog), "%s\n{10F441}/advie{A9C4E4} - Met la vie d'un joueur Ã  un certain niveau", dialog);
+	    format(dialog, sizeof(dialog), "%s\n{10F441}/adarmure{A9C4E4} - Met l'armure d'un joueur Ã  un certain niveau", dialog);
 	    format(dialog, sizeof(dialog), "%s\n{10F441}/adkick{A9C4E4} - Exclus un joueur du serveur", dialog);
-	    format(dialog, sizeof(dialog), "%s\n{10F441}/adgc{A9C4E4} - Donne de l'argent à un joueur", dialog);
-	    format(dialog, sizeof(dialog), "%s\n{10F441}/adscore{A9C4E4} - Donne des points de score à un joueur", dialog);
+	    format(dialog, sizeof(dialog), "%s\n{10F441}/adgc{A9C4E4} - Donne de l'argent Ã  un joueur", dialog);
+	    format(dialog, sizeof(dialog), "%s\n{10F441}/adscore{A9C4E4} - Donne des points de score Ã  un joueur", dialog);
 	    format(dialog, sizeof(dialog), "%s\n{10F441}/adjail{A9C4E4} - Mettre quelqu'un en prison/Ajouter du temps de jail a un joueur", dialog);
 	    format(dialog, sizeof(dialog), "%s\n{10F441}/addejail{A9C4E4} - Sortir un joueur de prison", dialog);
-	    format(dialog, sizeof(dialog), "%s\n\n{10F441}/advip{A9C4E4} - Donne le statut de VIP à un joueur", dialog);
-	    format(dialog, sizeof(dialog), "%s\n{10F441}/addevip{A9C4E4} - Enlève le statut de VIP à un joueur", dialog);
-	    format(dialog, sizeof(dialog), "%s\n{10F441}/admili{A9C4E4} - Donne le statut de militaire à un joueur", dialog);
-	    format(dialog, sizeof(dialog), "%s\n{10F441}/addemili{A9C4E4} - Enlève le statut de militaire à un joueur", dialog);
-	    format(dialog, sizeof(dialog), "%s\n{10F441}/adgroove{A9C4E4} - Donne le statut de Groove à un joueur", dialog);
-	    format(dialog, sizeof(dialog), "%s\n{10F441}/addegroove{A9C4E4} - Enlève le statut de Groove à un joueur", dialog);
-	    format(dialog, sizeof(dialog), "%s\n{10F441}/adlgroove{A9C4E4} - Donne le statut de Leader Groove à un joueur", dialog);
-	    format(dialog, sizeof(dialog), "%s\n{10F441}/addelgroove{A9C4E4} - Enlève le statut de Leader Groove à un joueur", dialog);
-	    format(dialog, sizeof(dialog), "%s\n{10F441}/adballas{A9C4E4} - Donne le statut de Ballas à un joueur", dialog);
-	    format(dialog, sizeof(dialog), "%s\n{10F441}/addeballas{A9C4E4} - Enlève le statut de Ballas à un joueur", dialog);
-	    format(dialog, sizeof(dialog), "%s\n{10F441}/adlballas{A9C4E4} - Donne le statut de Leader Ballas à un joueur", dialog);
-	    format(dialog, sizeof(dialog), "%s\n{10F441}/addelballas{A9C4E4} - Enlève le statut de Leader Ballas à un joueur", dialog);
+	    format(dialog, sizeof(dialog), "%s\n\n{10F441}/advip{A9C4E4} - Donne le statut de VIP Ã  un joueur", dialog);
+	    format(dialog, sizeof(dialog), "%s\n{10F441}/addevip{A9C4E4} - EnlÃ¨ve le statut de VIP Ã  un joueur", dialog);
+	    format(dialog, sizeof(dialog), "%s\n{10F441}/admili{A9C4E4} - Donne le statut de militaire Ã  un joueur", dialog);
+	    format(dialog, sizeof(dialog), "%s\n{10F441}/addemili{A9C4E4} - EnlÃ¨ve le statut de militaire Ã  un joueur", dialog);
+	    format(dialog, sizeof(dialog), "%s\n{10F441}/adgroove{A9C4E4} - Donne le statut de Groove Ã  un joueur", dialog);
+	    format(dialog, sizeof(dialog), "%s\n{10F441}/addegroove{A9C4E4} - EnlÃ¨ve le statut de Groove Ã  un joueur", dialog);
+	    format(dialog, sizeof(dialog), "%s\n{10F441}/adlgroove{A9C4E4} - Donne le statut de Leader Groove Ã  un joueur", dialog);
+	    format(dialog, sizeof(dialog), "%s\n{10F441}/addelgroove{A9C4E4} - EnlÃ¨ve le statut de Leader Groove Ã  un joueur", dialog);
+	    format(dialog, sizeof(dialog), "%s\n{10F441}/adballas{A9C4E4} - Donne le statut de Ballas Ã  un joueur", dialog);
+	    format(dialog, sizeof(dialog), "%s\n{10F441}/addeballas{A9C4E4} - EnlÃ¨ve le statut de Ballas Ã  un joueur", dialog);
+	    format(dialog, sizeof(dialog), "%s\n{10F441}/adlballas{A9C4E4} - Donne le statut de Leader Ballas Ã  un joueur", dialog);
+	    format(dialog, sizeof(dialog), "%s\n{10F441}/addelballas{A9C4E4} - EnlÃ¨ve le statut de Leader Ballas Ã  un joueur", dialog);
 	}
 	if(pInfo[playerid][admin]>=4) {
-	    format(dialog, sizeof(dialog), "%s\n{10F441}/adban{A9C4E4} - Banni un joueur définitivement", dialog);
+	    format(dialog, sizeof(dialog), "%s\n{10F441}/adban{A9C4E4} - Banni un joueur dÃ©finitivement", dialog);
 	}
 	if(pInfo[playerid][admin]==1337) {
 	    format(dialog, sizeof(dialog), "%s\n{10F441}/adsetlevel{A9C4E4} - Modifier le niveau admin d'un joueur", dialog);
@@ -4562,18 +4562,18 @@ cmd:advie(playerid, params[])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Utilisation: /advie (Pseudo/ID) (Vie)");
 
 	if(!IsPlayerConnected(ID))
-		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connecté au serveur.");
+		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connectÃ© au serveur.");
 
 	if(!pInfo[playerid][spawned])
-	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas spawné, vous ne pouvez pas faire ça !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas spawnÃ©, vous ne pouvez pas faire Ã§a !");
 
 	if(amount<0) amount=0;
 
 	SetPlayerHealth(ID, amount);
 	new msg[128];
-	format(msg, sizeof(msg), "Un Administrateur a modifié votre vie, vous avez maintenant %d points de vie.", amount);
+	format(msg, sizeof(msg), "Un Administrateur a modifiÃ© votre vie, vous avez maintenant %d points de vie.", amount);
 	SendClientMessage(ID, COLOR_GREEN, msg);
-	format(msg, sizeof(msg), "Vous avez changé la vie de %s(%d), il a maintenant %d points de vie.", pInfo[ID][name], ID, amount);
+	format(msg, sizeof(msg), "Vous avez changÃ© la vie de %s(%d), il a maintenant %d points de vie.", pInfo[ID][name], ID, amount);
 	SendClientMessage(playerid, COLOR_GREEN, msg);
 	return 1;
 }
@@ -4586,18 +4586,18 @@ cmd:adarmure(playerid, params[])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Utilisation: /adarmure (Pseudo/ID) (Vie)");
 
 	if(!IsPlayerConnected(ID))
-		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connecté au serveur.");
+		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connectÃ© au serveur.");
 
 	if(!pInfo[playerid][spawned])
-	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas spawné, vous ne pouvez pas faire ça !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas spawnÃ©, vous ne pouvez pas faire Ã§a !");
 
 	if(amount<0) amount=0;
 
 	SetPlayerArmour(ID, amount);
 	new msg[128];
-	format(msg, sizeof(msg), "Un Administrateur a modifié votre armure, vous avez maintenant %d points d'armure.", amount);
+	format(msg, sizeof(msg), "Un Administrateur a modifiÃ© votre armure, vous avez maintenant %d points d'armure.", amount);
 	SendClientMessage(ID, COLOR_GREEN, msg);
-	format(msg, sizeof(msg), "Vous avez changé l'armure de %s(%d), il a maintenant %d points d'armure.", pInfo[ID][name], ID, amount);
+	format(msg, sizeof(msg), "Vous avez changÃ© l'armure de %s(%d), il a maintenant %d points d'armure.", pInfo[ID][name], ID, amount);
 	SendClientMessage(playerid, COLOR_GREEN, msg);
 	return 1;
 }
@@ -4610,15 +4610,15 @@ cmd:advip(playerid, params[])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Utilisation: /advip (Pseudo/ID)");
 
 	if(!IsPlayerConnected(ID))
-		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connecté au serveur.");
+		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connectÃ© au serveur.");
 
 	if(pInfo[ID][VIP])
-	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur est déjà VIP !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur est dÃ©jÃ  VIP !");
 
 	new msg[128];
 	pInfo[ID][VIP]=true;
-	SendClientMessage(ID, COLOR_GREEN, "Un Administrateur vous a donné le statut de VIP !");
-	format(msg, sizeof(msg), "Vous avez donné le statut de VIP à %s(%d)", pInfo[ID][name], ID);
+	SendClientMessage(ID, COLOR_GREEN, "Un Administrateur vous a donnÃ© le statut de VIP !");
+	format(msg, sizeof(msg), "Vous avez donnÃ© le statut de VIP Ã  %s(%d)", pInfo[ID][name], ID);
 	SendClientMessage(playerid, COLOR_GREEN, msg);
 	return 1;
 }
@@ -4631,15 +4631,15 @@ cmd:addevip(playerid, params[])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Utilisation: /addevip (Pseudo/ID)");
 
 	if(!IsPlayerConnected(ID))
-		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connecté au serveur.");
+		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connectÃ© au serveur.");
 
 	if(!pInfo[ID][VIP])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas VIP !");
 
 	new msg[128];
 	pInfo[ID][VIP]=false;
-	SendClientMessage(ID, COLOR_GREEN, "Un Administrateur vous a retiré le statut de VIP !");
-	format(msg, sizeof(msg), "Vous avez retiré le statut de VIP à %s(%d)", pInfo[ID][name], ID);
+	SendClientMessage(ID, COLOR_GREEN, "Un Administrateur vous a retirÃ© le statut de VIP !");
+	format(msg, sizeof(msg), "Vous avez retirÃ© le statut de VIP Ã  %s(%d)", pInfo[ID][name], ID);
 	SendClientMessage(playerid, COLOR_GREEN, msg);
 	return 1;
 }
@@ -4652,15 +4652,15 @@ cmd:admili(playerid, params[])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Utilisation: /admili (Pseudo/ID)");
 
 	if(!IsPlayerConnected(ID))
-		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connecté au serveur.");
+		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connectÃ© au serveur.");
 
 	if(pInfo[ID][military])
-	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur est déjà militaire !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur est dÃ©jÃ  militaire !");
 
 	new msg[128];
 	pInfo[ID][military]=true;
-	SendClientMessage(ID, COLOR_GREEN, "Un Administrateur vous a donné le statut de Militaire !");
-	format(msg, sizeof(msg), "Vous avez donné le statut de Militaire à %s(%d)", pInfo[ID][name], ID);
+	SendClientMessage(ID, COLOR_GREEN, "Un Administrateur vous a donnÃ© le statut de Militaire !");
+	format(msg, sizeof(msg), "Vous avez donnÃ© le statut de Militaire Ã  %s(%d)", pInfo[ID][name], ID);
 	SendClientMessage(playerid, COLOR_GREEN, msg);
 	return 1;
 }
@@ -4673,15 +4673,15 @@ cmd:addemili(playerid, params[])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Utilisation: /addemili (Pseudo/ID)");
 
 	if(!IsPlayerConnected(ID))
-		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connecté au serveur.");
+		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connectÃ© au serveur.");
 
 	if(!pInfo[ID][military])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas militaire !");
 
 	new msg[128];
 	pInfo[ID][military]=false;
-	SendClientMessage(ID, COLOR_GREEN, "Un Administrateur vous a retiré le statut Militaire !");
-	format(msg, sizeof(msg), "Vous avez retiré le statut de Militaire à %s(%d)", pInfo[ID][name], ID);
+	SendClientMessage(ID, COLOR_GREEN, "Un Administrateur vous a retirÃ© le statut Militaire !");
+	format(msg, sizeof(msg), "Vous avez retirÃ© le statut de Militaire Ã  %s(%d)", pInfo[ID][name], ID);
 	SendClientMessage(playerid, COLOR_GREEN, msg);
 	return 1;
 }
@@ -4694,15 +4694,15 @@ cmd:adgroove(playerid, params[])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Utilisation: /adgroove (Pseudo/ID)");
 
 	if(!IsPlayerConnected(ID))
-		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connecté au serveur.");
+		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connectÃ© au serveur.");
 
 	if(pInfo[ID][groove])
-	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur est déjà groove !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur est dÃ©jÃ  groove !");
 
 	new msg[128];
 	pInfo[ID][groove]=true;
-	SendClientMessage(ID, COLOR_GREEN, "Un Administrateur vous a donné le statut de Groove !");
-	format(msg, sizeof(msg), "Vous avez donné le statut de Groove à %s(%d)", pInfo[ID][name], ID);
+	SendClientMessage(ID, COLOR_GREEN, "Un Administrateur vous a donnÃ© le statut de Groove !");
+	format(msg, sizeof(msg), "Vous avez donnÃ© le statut de Groove Ã  %s(%d)", pInfo[ID][name], ID);
 	SendClientMessage(playerid, COLOR_GREEN, msg);
 	return 1;
 }
@@ -4715,15 +4715,15 @@ cmd:addegroove(playerid, params[])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Utilisation: /addegroove (Pseudo/ID)");
 
 	if(!IsPlayerConnected(ID))
-		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connecté au serveur.");
+		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connectÃ© au serveur.");
 
 	if(!pInfo[ID][groove])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas groove !");
 
 	new msg[128];
 	pInfo[ID][groove]=false;
-	SendClientMessage(ID, COLOR_GREEN, "Un Administrateur vous a retiré le statut de Groove !");
-	format(msg, sizeof(msg), "Vous avez retiré le statut de Groove à %s(%d)", pInfo[ID][name], ID);
+	SendClientMessage(ID, COLOR_GREEN, "Un Administrateur vous a retirÃ© le statut de Groove !");
+	format(msg, sizeof(msg), "Vous avez retirÃ© le statut de Groove Ã  %s(%d)", pInfo[ID][name], ID);
 	SendClientMessage(playerid, COLOR_GREEN, msg);
 	return 1;
 }
@@ -4736,15 +4736,15 @@ cmd:adlgroove(playerid, params[])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Utilisation: /adlgroove (Pseudo/ID)");
 
 	if(!IsPlayerConnected(ID))
-		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connecté au serveur.");
+		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connectÃ© au serveur.");
 
 	if(pInfo[ID][leadgroove])
-	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur est déjà Leader Groove !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur est dÃ©jÃ  Leader Groove !");
 
 	new msg[128];
 	pInfo[ID][leadgroove]=true;
-	SendClientMessage(ID, COLOR_GREEN, "Un Administrateur vous a donné le statut de Leader Groove !");
-	format(msg, sizeof(msg), "Vous avez donné le statut de Leader Groove à %s(%d)", pInfo[ID][name], ID);
+	SendClientMessage(ID, COLOR_GREEN, "Un Administrateur vous a donnÃ© le statut de Leader Groove !");
+	format(msg, sizeof(msg), "Vous avez donnÃ© le statut de Leader Groove Ã  %s(%d)", pInfo[ID][name], ID);
 	SendClientMessage(playerid, COLOR_GREEN, msg);
 	return 1;
 }
@@ -4757,15 +4757,15 @@ cmd:addelgroove(playerid, params[])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Utilisation: /addelgroove (Pseudo/ID)");
 
 	if(!IsPlayerConnected(ID))
-		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connecté au serveur.");
+		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connectÃ© au serveur.");
 
 	if(!pInfo[ID][leadgroove])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas Leader Groove !");
 
 	new msg[128];
 	pInfo[ID][leadgroove]=false;
-	SendClientMessage(ID, COLOR_GREEN, "Un Administrateur vous a retiré le statut de Leader Groove !");
-	format(msg, sizeof(msg), "Vous avez retiré le statut de Leader Groove à %s(%d)", pInfo[ID][name], ID);
+	SendClientMessage(ID, COLOR_GREEN, "Un Administrateur vous a retirÃ© le statut de Leader Groove !");
+	format(msg, sizeof(msg), "Vous avez retirÃ© le statut de Leader Groove Ã  %s(%d)", pInfo[ID][name], ID);
 	SendClientMessage(playerid, COLOR_GREEN, msg);
 	return 1;
 }
@@ -4777,15 +4777,15 @@ cmd:adballas(playerid, params[])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Utilisation: /adballas (Pseudo/ID)");
 
 	if(!IsPlayerConnected(ID))
-		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connecté au serveur.");
+		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connectÃ© au serveur.");
 
 	if(pInfo[ID][ballas])
-	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur est déjà Ballas !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur est dÃ©jÃ  Ballas !");
 
 	new msg[128];
 	pInfo[ID][ballas]=true;
-	SendClientMessage(ID, COLOR_GREEN, "Un Administrateur vous a donné le statut de Ballas !");
-	format(msg, sizeof(msg), "Vous avez donné le statut de Ballas à %s(%d)", pInfo[ID][name], ID);
+	SendClientMessage(ID, COLOR_GREEN, "Un Administrateur vous a donnÃ© le statut de Ballas !");
+	format(msg, sizeof(msg), "Vous avez donnÃ© le statut de Ballas Ã  %s(%d)", pInfo[ID][name], ID);
 	SendClientMessage(playerid, COLOR_GREEN, msg);
 	return 1;
 }
@@ -4798,15 +4798,15 @@ cmd:addeballas(playerid, params[])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Utilisation: /addeballas (Pseudo/ID)");
 
 	if(!IsPlayerConnected(ID))
-		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connecté au serveur.");
+		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connectÃ© au serveur.");
 
 	if(!pInfo[ID][ballas])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas ballas !");
 
 	new msg[128];
 	pInfo[ID][ballas]=false;
-	SendClientMessage(ID, COLOR_GREEN, "Un Administrateur vous a retiré le statut de Ballas !");
-	format(msg, sizeof(msg), "Vous avez retiré le statut de Ballas à %s(%d)", pInfo[ID][name], ID);
+	SendClientMessage(ID, COLOR_GREEN, "Un Administrateur vous a retirÃ© le statut de Ballas !");
+	format(msg, sizeof(msg), "Vous avez retirÃ© le statut de Ballas Ã  %s(%d)", pInfo[ID][name], ID);
 	SendClientMessage(playerid, COLOR_GREEN, msg);
 	return 1;
 }
@@ -4819,15 +4819,15 @@ cmd:adlballas(playerid, params[])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Utilisation: /adlballas (Pseudo/ID)");
 
 	if(!IsPlayerConnected(ID))
-		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connecté au serveur.");
+		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connectÃ© au serveur.");
 
 	if(pInfo[ID][leadballas])
-	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur est déjà Leader Ballas !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur est dÃ©jÃ  Leader Ballas !");
 
 	new msg[128];
 	pInfo[ID][leadballas]=true;
-	SendClientMessage(ID, COLOR_GREEN, "Un Administrateur vous a donné le statut de Leader Ballas !");
-	format(msg, sizeof(msg), "Vous avez donné le statut de Leader Ballas à %s(%d)", pInfo[ID][name], ID);
+	SendClientMessage(ID, COLOR_GREEN, "Un Administrateur vous a donnÃ© le statut de Leader Ballas !");
+	format(msg, sizeof(msg), "Vous avez donnÃ© le statut de Leader Ballas Ã  %s(%d)", pInfo[ID][name], ID);
 	SendClientMessage(playerid, COLOR_GREEN, msg);
 	return 1;
 }
@@ -4840,15 +4840,15 @@ cmd:addelballas(playerid, params[])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Utilisation: /addelballas (Pseudo/ID)");
 
 	if(!IsPlayerConnected(ID))
-		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connecté au serveur.");
+		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connectÃ© au serveur.");
 
 	if(!pInfo[ID][leadballas])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas Leader Ballas !");
 
 	new msg[128];
 	pInfo[ID][leadballas]=false;
-	SendClientMessage(ID, COLOR_GREEN, "Un Administrateur vous a retiré le statut de Leader Ballas !");
-	format(msg, sizeof(msg), "Vous avez retiré le statut de Leader Ballas à %s(%d)", pInfo[ID][name], ID);
+	SendClientMessage(ID, COLOR_GREEN, "Un Administrateur vous a retirÃ© le statut de Leader Ballas !");
+	format(msg, sizeof(msg), "Vous avez retirÃ© le statut de Leader Ballas Ã  %s(%d)", pInfo[ID][name], ID);
 	SendClientMessage(playerid, COLOR_GREEN, msg);
 	return 1;
 }
@@ -4861,15 +4861,15 @@ cmd:adbac(playerid, params[])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Utilisation: /adbac (Pseudo/ID)");
 
 	if(!IsPlayerConnected(ID))
-		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connecté au serveur.");
+		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connectÃ© au serveur.");
 
 	if(pInfo[ID][bac])
-	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur est déjà groove !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur est dÃ©jÃ  groove !");
 
 	new msg[128];
 	pInfo[ID][bac]=true;
-	SendClientMessage(ID, COLOR_GREEN, "Un Administrateur vous a donné le statut de membre de la BAC !");
-	format(msg, sizeof(msg), "Vous avez donné le statut de membre de la BAC à %s(%d)", pInfo[ID][name], ID);
+	SendClientMessage(ID, COLOR_GREEN, "Un Administrateur vous a donnÃ© le statut de membre de la BAC !");
+	format(msg, sizeof(msg), "Vous avez donnÃ© le statut de membre de la BAC Ã  %s(%d)", pInfo[ID][name], ID);
 	SendClientMessage(playerid, COLOR_GREEN, msg);
 	return 1;
 }
@@ -4882,15 +4882,15 @@ cmd:addebac(playerid, params[])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Utilisation: /addebac (Pseudo/ID)");
 
 	if(!IsPlayerConnected(ID))
-		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connecté au serveur.");
+		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connectÃ© au serveur.");
 
 	if(!pInfo[ID][bac])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas groove !");
 
 	new msg[128];
 	pInfo[ID][bac]=false;
-	SendClientMessage(ID, COLOR_GREEN, "Un Administrateur vous a retiré le statut de membre de la BAC !");
-	format(msg, sizeof(msg), "Vous avez retiré le statut de membre de la BAC à %s(%d)", pInfo[ID][name], ID);
+	SendClientMessage(ID, COLOR_GREEN, "Un Administrateur vous a retirÃ© le statut de membre de la BAC !");
+	format(msg, sizeof(msg), "Vous avez retirÃ© le statut de membre de la BAC Ã  %s(%d)", pInfo[ID][name], ID);
 	SendClientMessage(playerid, COLOR_GREEN, msg);
 	return 1;
 }
@@ -4903,15 +4903,15 @@ cmd:adlbac(playerid, params[])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Utilisation: /adlbac (Pseudo/ID)");
 
 	if(!IsPlayerConnected(ID))
-		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connecté au serveur.");
+		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connectÃ© au serveur.");
 
 	if(pInfo[ID][leadbac])
-	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur est déjà Leader de la BAC !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur est dÃ©jÃ  Leader de la BAC !");
 
 	new msg[128];
 	pInfo[ID][leadbac]=true;
-	SendClientMessage(ID, COLOR_GREEN, "Un Administrateur vous a donné le statut de Leader de la BAC !");
-	format(msg, sizeof(msg), "Vous avez donné le statut de Leader de la BAC à %s(%d)", pInfo[ID][name], ID);
+	SendClientMessage(ID, COLOR_GREEN, "Un Administrateur vous a donnÃ© le statut de Leader de la BAC !");
+	format(msg, sizeof(msg), "Vous avez donnÃ© le statut de Leader de la BAC Ã  %s(%d)", pInfo[ID][name], ID);
 	SendClientMessage(playerid, COLOR_GREEN, msg);
 	return 1;
 }
@@ -4924,15 +4924,15 @@ cmd:addelbac(playerid, params[])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Utilisation: /addelbac (Pseudo/ID)");
 
 	if(!IsPlayerConnected(ID))
-		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connecté au serveur.");
+		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connectÃ© au serveur.");
 
 	if(!pInfo[ID][leadbac])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas Leader de la BAC !");
 
 	new msg[128];
 	pInfo[ID][leadbac]=false;
-	SendClientMessage(ID, COLOR_GREEN, "Un Administrateur vous a retiré le statut de Leader de la BAC !");
-	format(msg, sizeof(msg), "Vous avez retiré le statut de Leader de la BAC à %s(%d)", pInfo[ID][name], ID);
+	SendClientMessage(ID, COLOR_GREEN, "Un Administrateur vous a retirÃ© le statut de Leader de la BAC !");
+	format(msg, sizeof(msg), "Vous avez retirÃ© le statut de Leader de la BAC Ã  %s(%d)", pInfo[ID][name], ID);
 	SendClientMessage(playerid, COLOR_GREEN, msg);
 	return 1;
 }
@@ -4948,14 +4948,14 @@ cmd:adjail(playerid, params[])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire taire un joueur plus de 15 minutes ou moins de 5 secondes !");
 
 	if(!IsPlayerConnected(ID))
-		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connecté au serveur.");
+		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connectÃ© au serveur.");
 
 	if(!pInfo[ID][spawned])
-	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'a pas encore spawné, vous ne pouvez pas faire ça !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'a pas encore spawnÃ©, vous ne pouvez pas faire Ã§a !");
 
 	new msg[128];
 	if(pInfo[ID][jailtime]==0) format(msg, sizeof(msg), "Un Administrateur a mit %s(%d) en jail pour %d secondes.", pInfo[ID][name], ID, time);
-	else format(msg, sizeof(msg), "Un Administrateur a prolongé le temps de jail de %s(%d) de %d secondes.", pInfo[ID][name], ID, time);
+	else format(msg, sizeof(msg), "Un Administrateur a prolongÃ© le temps de jail de %s(%d) de %d secondes.", pInfo[ID][name], ID, time);
 	SendClientMessageToAll(COLOR_BLUE, msg);
 	pInfo[ID][jailtime]+=time;
     ResetPlayerWeapons(ID);
@@ -4978,7 +4978,7 @@ cmd:addejail(playerid, params[])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Utilisation: /addejail (Pseudo/ID)");
 
 	if(!IsPlayerConnected(ID))
-		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connecté au serveur.");
+		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connectÃ© au serveur.");
 
 	if(pInfo[ID][jailtime]==0)
 	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas en prison  !");
@@ -5008,13 +5008,13 @@ cmd:admute(playerid, params[])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire taire un joueur plus de 30 minutes !");
 
 	if(!IsPlayerConnected(ID))
-		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connecté au serveur.");
+		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connectÃ© au serveur.");
 
 	if(pInfo[ID][mutedtime]>gettime())
-	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur est déjà muté !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur est dÃ©jÃ  mutÃ© !");
 
 	new msg[128];
-	format(msg, sizeof(msg), "Un Administrateur a muté %s(%d) pour %d secondes. %s %s", pInfo[ID][name], ID, time, (strlen(reason)!=0) ? ("Raison:") : (""), reason);
+	format(msg, sizeof(msg), "Un Administrateur a mutÃ© %s(%d) pour %d secondes. %s %s", pInfo[ID][name], ID, time, (strlen(reason)!=0) ? ("Raison:") : (""), reason);
 	SendClientMessageToAll(COLOR_BLUE, msg);
 	pInfo[ID][mutedtime]=gettime()+time;
 	return 1;
@@ -5028,13 +5028,13 @@ cmd:addemute(playerid, params[])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Utilisation: /addemute (Pseudo/ID)");
 
 	if(!IsPlayerConnected(ID))
-		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connecté au serveur.");
+		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connectÃ© au serveur.");
 
 	if(pInfo[ID][mutedtime]<gettime())
-	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas muté !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas mutÃ© !");
 
 	new msg[128];
-	format(msg, sizeof(msg), "Un Administrateur a dé-muté %s(%d), il peut de nouveau parler !", pInfo[ID][name], ID);
+	format(msg, sizeof(msg), "Un Administrateur a dÃ©-mutÃ© %s(%d), il peut de nouveau parler !", pInfo[ID][name], ID);
 	SendClientMessageToAll(COLOR_BLUE, msg);
 	pInfo[ID][mutedtime]=0;
 	return 1;
@@ -5048,14 +5048,14 @@ cmd:adfreeze(playerid, params[])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Utilisation: /adfreeze (Pseudo/ID)");
 
 	if(!IsPlayerConnected(ID))
-		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connecté au serveur.");
+		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connectÃ© au serveur.");
 
 	if(pInfo[ID][freeze])
-	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur est déjà freeze !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur est dÃ©jÃ  freeze !");
 
 	new msg[128];
 	format(msg, sizeof(msg), "Vous avez freeze %s(%d) !", pInfo[ID][name], ID);
-	SendClientMessage(ID, COLOR_YELLOW, "Un Administrateur vous a freeze (immobilisé) !");
+	SendClientMessage(ID, COLOR_YELLOW, "Un Administrateur vous a freeze (immobilisÃ©) !");
 	SendClientMessage(playerid, COLOR_GREEN, msg);
 	pInfo[ID][freeze]=true;
 	TogglePlayerControllable(ID, 0);
@@ -5070,14 +5070,14 @@ cmd:addefreeze(playerid, params[])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Utilisation: /addefreeze (Pseudo/ID)");
 
 	if(!IsPlayerConnected(ID))
-		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connecté au serveur.");
+		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connectÃ© au serveur.");
 
 	if(!pInfo[ID][freeze])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas freeze !");
 
 	new msg[128];
-	format(msg, sizeof(msg), "Vous avez dé-freeze %s(%d) !", pInfo[ID][name], ID);
-	SendClientMessage(ID, COLOR_YELLOW, "Un Administrateur vous a dé-freeze !");
+	format(msg, sizeof(msg), "Vous avez dÃ©-freeze %s(%d) !", pInfo[ID][name], ID);
+	SendClientMessage(ID, COLOR_YELLOW, "Un Administrateur vous a dÃ©-freeze !");
 	SendClientMessage(playerid, COLOR_GREEN, msg);
 	pInfo[ID][freeze]=false;
 	TogglePlayerControllable(ID, 1);
@@ -5092,7 +5092,7 @@ cmd:adavert(playerid, params[])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Utilisation: /adavert (Pseudo/ID) (Raison)");
 
 	if(!IsPlayerConnected(ID))
-		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connecté au serveur.");
+		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connectÃ© au serveur.");
 
     pavert(ID, reason);
 	return 1;
@@ -5106,10 +5106,10 @@ cmd:adkick(playerid, params[])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Utilisation: /adkick (Pseudo/ID) (Raison = optionnel)");
 
 	if(!IsPlayerConnected(ID))
-		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connecté au serveur.");
+		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connectÃ© au serveur.");
 
 	new msg[128];
-	format(msg, sizeof(msg), "Un Administrateur a kické %s(%d) du serveur. %s %s", (strlen(reason)!=0) ? ("Raison:") : (""), pInfo[ID][name], ID, reason);
+	format(msg, sizeof(msg), "Un Administrateur a kickÃ© %s(%d) du serveur. %s %s", (strlen(reason)!=0) ? ("Raison:") : (""), pInfo[ID][name], ID, reason);
 	SendClientMessageToAll(COLOR_GREEN, msg);
 	KickP(ID);
 	return 1;
@@ -5123,7 +5123,7 @@ cmd:adgmx(playerid, params[])
 	if(duration<5) return SendClientMessage(playerid, COLOR_ERROR, "Il faut avoir un temps de minimum 5 secondes !");
     SaveStatsTimer();
 	SetTimer("RebootTimer", duration*1000, false);
-	format(msg, sizeof(msg), "Le serveur va redémarrer dans %d secondes, ne vous déconnectez pas !", duration);
+	format(msg, sizeof(msg), "Le serveur va redÃ©marrer dans %d secondes, ne vous dÃ©connectez pas !", duration);
 	SendClientMessageToAll(COLOR_YELLOW, msg);
 	return 1;
 }
@@ -5136,7 +5136,7 @@ cmd:adban(playerid,params[])
 		return SendClientMessage(playerid,COLOR_ERROR,"USAGE: /adban (Pseudo/ID) (Raison = optionnel)");
 
 	if(!IsPlayerConnected(ID))
-		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connecté sur le serveur.");
+		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connectÃ© sur le serveur.");
 
 	format(string,sizeof(string),"Un Administrateur a banni %s(%d) du serveur. %s {FF0000}%s.",pInfo[ID],ID,(strlen(reason)!=0) ? ("Raison:") : (""), reason);
 	SendClientMessageToAll(COLOR_BLUE, string);
@@ -5153,10 +5153,10 @@ cmd:adtempban(playerid,params[])
 		return SendClientMessage(playerid,COLOR_ERROR,"USAGE: /adban (Pseudo/ID) (Temps en minutes) (Raison = optionnel)");
 
 	if(!IsPlayerConnected(ID))
-		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connecté sur le serveur.");
+		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connectÃ© sur le serveur.");
 
 	if(time<=0||time>=36000)
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez bannir un joueur que dans un temps situé entre 1 minutes et 10h !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez bannir un joueur que dans un temps situÃ© entre 1 minutes et 10h !");
 
 	format(string,sizeof(string),"Un Administrateur a banni %s(%d) du serveur pendant %d minutes. %s {FF0000}%s.",pInfo[ID],ID, time,(strlen(reason)!=0) ? ("Raison:") : (""), reason);
 	SendClientMessageToAll(COLOR_BLUE, string);
@@ -5170,16 +5170,16 @@ cmd:adwanted(playerid,params[])
 	if(pInfo[playerid][admin] < 2) return 0;
 	new ID, lvl;
     if(sscanf(params,"ui",ID,lvl))
-		return SendClientMessage(playerid,COLOR_ERROR,"Utilisation: /adwanted (Pseudo/ID) (nombre d'étoile(s))");
+		return SendClientMessage(playerid,COLOR_ERROR,"Utilisation: /adwanted (Pseudo/ID) (nombre d'Ã©toile(s))");
 
 	if(!IsPlayerConnected(ID))
-		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connecté au serveur.");
+		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connectÃ© au serveur.");
 
 	AddWanted(ID, lvl);
 	new msg[128];
-	format(msg, sizeof(msg), "Vous avez ajouté %d étoiles au niveau de recherche de %s(%d). Nouveau niveau de recherche: %d", lvl, pInfo[ID][name], ID, pInfo[ID][wanted]);
+	format(msg, sizeof(msg), "Vous avez ajoutÃ© %d Ã©toiles au niveau de recherche de %s(%d). Nouveau niveau de recherche: %d", lvl, pInfo[ID][name], ID, pInfo[ID][wanted]);
 	SendClientMessage(playerid, COLOR_GREEN, msg);
-	format(msg, sizeof(msg), "Un Administrateur vous a ajouté %d étoiles à votre niveau de recherche. Nouveau niveau de recherche: %d", lvl, pInfo[ID][wanted]);
+	format(msg, sizeof(msg), "Un Administrateur vous a ajoutÃ© %d Ã©toiles Ã  votre niveau de recherche. Nouveau niveau de recherche: %d", lvl, pInfo[ID][wanted]);
     SendClientMessage(ID, COLOR_GREEN, msg);
 	return 1;
 }
@@ -5192,13 +5192,13 @@ cmd:adscore(playerid,params[])
 		return SendClientMessage(playerid,COLOR_ERROR,"Utilisation: /adscore (Pseudo/ID) (Score)");
 
 	if(!IsPlayerConnected(ID))
-		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connecté au serveur.");
+		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connectÃ© au serveur.");
 
 	new msg[128];
 	AddScore(ID, lvl);
-	format(msg, sizeof(msg), "Vous avez ajouté %d au score de %s(%d). Nouveau score: %d", lvl, pInfo[ID][name], ID, GetPlayerScore(ID));
+	format(msg, sizeof(msg), "Vous avez ajoutÃ© %d au score de %s(%d). Nouveau score: %d", lvl, pInfo[ID][name], ID, GetPlayerScore(ID));
 	SendClientMessage(playerid, COLOR_GREEN, msg);
-	format(msg, sizeof(msg), "Un Administrateur a ajouté %d à votre score. Votre nouveau score: %d", lvl, GetPlayerScore(ID));
+	format(msg, sizeof(msg), "Un Administrateur a ajoutÃ© %d Ã  votre score. Votre nouveau score: %d", lvl, GetPlayerScore(ID));
     SendClientMessage(ID, COLOR_GREEN, msg);
 	return 1;
 }
@@ -5211,16 +5211,16 @@ cmd:gc(playerid,params[])
 		return SendClientMessage(playerid,COLOR_ERROR,"Utilisation: /g(ive)c(ash) (Pseudo/ID) (Argent)");
 
 	if(!IsPlayerConnected(ID))
-		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connecté au serveur.");
+		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connectÃ© au serveur.");
 
 	if(GetPlayerMoney(playerid)<amount)
-	    return SendClientMessage(playerid, COLOR_ERROR, "Vous n'avez pas autant d'argent à donner !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Vous n'avez pas autant d'argent Ã  donner !");
 
 	if(playerid==ID)
-		return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas vous envoyer un message privé à vous-même !");
+		return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas vous envoyer un message privÃ© Ã  vous-mÃªme !");
 
 	if(amount<=0)
-	    return SendClientMessage(playerid, COLOR_ERROR, "Le montant d'argent doit être plus grand que 0 !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Le montant d'argent doit Ãªtre plus grand que 0 !");
 
 	if(GetDistanceBetweenPlayers(playerid, ID) > 4)
 	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur est trop loin !");
@@ -5228,9 +5228,9 @@ cmd:gc(playerid,params[])
 	GivePlayerMoney(ID, amount);
 	GivePlayerMoney(playerid, -amount);
 	new msg[128];
-	format(msg, sizeof(msg), "Vous avez donné %s à %s(%d). ", FormatMoney(amount), pInfo[ID][name], ID);
+	format(msg, sizeof(msg), "Vous avez donnÃ© %s Ã  %s(%d). ", FormatMoney(amount), pInfo[ID][name], ID);
 	SendClientMessage(playerid, COLOR_DARKYELLOW, msg);
-	format(msg, sizeof(msg), "%s(%d) vous a donné %s.", pInfo[playerid][name], ID, FormatMoney(amount));
+	format(msg, sizeof(msg), "%s(%d) vous a donnÃ© %s.", pInfo[playerid][name], ID, FormatMoney(amount));
     SendClientMessage(ID, COLOR_DARKYELLOW, msg);
 	return 1;
 }
@@ -5244,13 +5244,13 @@ cmd:adgc(playerid,params[])
 		return SendClientMessage(playerid,COLOR_ERROR,"Utilisation: /adgc (Pseudo/ID) (Argent)");
 
 	if(!IsPlayerConnected(ID))
-		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connecté au serveur.");
+		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connectÃ© au serveur.");
 
 	GivePlayerMoney(ID, amount);
 	new msg[128];
-	format(msg, sizeof(msg), "Vous avez donné %s à %s(%d). Son argent total: %s", FormatMoney(amount), pInfo[ID][name], ID, FormatMoney(GetPlayerMoney(ID)));
+	format(msg, sizeof(msg), "Vous avez donnÃ© %s Ã  %s(%d). Son argent total: %s", FormatMoney(amount), pInfo[ID][name], ID, FormatMoney(GetPlayerMoney(ID)));
 	SendClientMessage(playerid, COLOR_GREEN, msg);
-	format(msg, sizeof(msg), "Un Administrateur vous a donné %s. Total d'argent: %s", FormatMoney(amount), FormatMoney(GetPlayerMoney(ID)));
+	format(msg, sizeof(msg), "Un Administrateur vous a donnÃ© %s. Total d'argent: %s", FormatMoney(amount), FormatMoney(GetPlayerMoney(ID)));
     SendClientMessage(ID, COLOR_GREEN, msg);
 	return 1;
 }
@@ -5265,10 +5265,10 @@ cmd:goto(playerid, params[])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Usage: /(ad)goto (Pseudo/ID)");
 
 	if(!IsPlayerConnected(ID))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas connecté !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas connectÃ© !");
 
 	if(!pInfo[ID][spawned])
-	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas spawné !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas spawnÃ© !");
 
 	new Float:pos[4];
 	if(!IsPlayerInAnyVehicle(ID)) {
@@ -5287,7 +5287,7 @@ cmd:goto(playerid, params[])
 		SetVehiclePos(GetPlayerVehicleID(playerid), pos[0], pos[1], pos[2]);
 		SetVehicleZAngle(GetPlayerVehicleID(playerid), pos[3]);
 	}
-	SendClientMessage(playerid, COLOR_GREEN, "Vous vous êtes téléporté à un joueur !");
+	SendClientMessage(playerid, COLOR_GREEN, "Vous vous Ãªtes tÃ©lÃ©portÃ© Ã  un joueur !");
 	return 1;
 }
 
@@ -5301,10 +5301,10 @@ cmd:bring(playerid, params[])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Usage: /(ad)bring (Pseudo/ID)");
 
 	if(!IsPlayerConnected(ID))
-	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas connecté !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas connectÃ© !");
 
 	if(!pInfo[ID][spawned])
-	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas spawné !");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Ce joueur n'est pas spawnÃ© !");
 
 	new Float:pos[4];
 	if(!IsPlayerInAnyVehicle(playerid)) {
@@ -5323,8 +5323,8 @@ cmd:bring(playerid, params[])
 		SetVehiclePos(GetPlayerVehicleID(ID), pos[0], pos[1], pos[2]);
 		SetVehicleZAngle(GetPlayerVehicleID(ID), pos[3]);
 	}
-	SendClientMessage(playerid, COLOR_GREEN, "Vous avez téléporté un joueur à vous !");
-	SendClientMessage(ID, COLOR_GREEN, "Un Admin vous a téléporté à lui !");
+	SendClientMessage(playerid, COLOR_GREEN, "Vous avez tÃ©lÃ©portÃ© un joueur Ã  vous !");
+	SendClientMessage(ID, COLOR_GREEN, "Un Admin vous a tÃ©lÃ©portÃ© Ã  lui !");
 	return 1;
 }
 
@@ -5336,15 +5336,15 @@ cmd:adsetlevel(playerid, params[])
 	    return SendClientMessage(playerid, COLOR_ERROR, "Usage: /adsetlevel (Pseudo/ID) (Level admin)");
 
 	if(lvl<0||lvl>1337)
-	    return SendClientMessage(playerid, COLOR_ERROR, "Le niveau d'admin doit être entre 0 et 1337!");
+	    return SendClientMessage(playerid, COLOR_ERROR, "Le niveau d'admin doit Ãªtre entre 0 et 1337!");
 
  	if(!IsPlayerConnected(ID))
-		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connecté au serveur.");
+		return SendClientMessage(playerid,COLOR_ERROR,"Ce joueur n'est pas connectÃ© au serveur.");
 
 	new msg[128];
-	format(msg, sizeof(msg), "%s(%d) a changé le niveau admin de %s(%d) en %d!", pInfo[playerid][name], playerid, pInfo[ID][name], ID, lvl);
+	format(msg, sizeof(msg), "%s(%d) a changÃ© le niveau admin de %s(%d) en %d!", pInfo[playerid][name], playerid, pInfo[ID][name], ID, lvl);
 	SendClientMessageToAllAdmins(COLOR_GREEN, msg);
-	format(msg, sizeof(msg), "Un Administrateur a changé votre niveau admin! Nouveau niveau admin: %d", lvl);
+	format(msg, sizeof(msg), "Un Administrateur a changÃ© votre niveau admin! Nouveau niveau admin: %d", lvl);
 	SendClientMessage(ID, COLOR_GREEN, msg);
 	pInfo[ID][admin]=lvl;
 	return 1;
@@ -5359,7 +5359,7 @@ cmd:v(playerid, params[])
             model = GetVehicleModelByName(vehame);
 
     if(!(model >= 400 && model <= 611))
-    	return SendClientMessage(playerid, COLOR_ERROR, "/v (Nom/ID du véhicule)");
+    	return SendClientMessage(playerid, COLOR_ERROR, "/v (Nom/ID du vÃ©hicule)");
 
 	new Float:X, Float:Y, Float:Z, Float:angle;
     GetPlayerPos(playerid, X, Y, Z);
@@ -5379,7 +5379,7 @@ cmd:vsave(playerid, params[])
 {
     if(pInfo[playerid][admin] < 5) return 0;
     if(!IsPlayerInAnyVehicle(playerid))
-        return SendClientMessage(playerid, COLOR_ERROR, "Vous devez être dans un véhicule pour pouvoir faire cela !");
+        return SendClientMessage(playerid, COLOR_ERROR, "Vous devez Ãªtre dans un vÃ©hicule pour pouvoir faire cela !");
 
 	new File:file=fopen("vehicles.ini", io_append), Float:pos[4], str[128];
 	if(file){
@@ -5389,9 +5389,9 @@ cmd:vsave(playerid, params[])
 		fwrite(file, str);
 		fclose(file);
         CreateVehicle(GetVehicleModel(GetPlayerVehicleID(playerid)), pos[0], pos[1], pos[2], pos[3], 0, 1, -1);
-		SendClientMessage(playerid, COLOR_GREEN, "Véhicule sauvegardé !");
+		SendClientMessage(playerid, COLOR_GREEN, "VÃ©hicule sauvegardÃ© !");
 	}
-	else SendClientMessage(playerid, COLOR_ERROR, "Erreur dans l'ouverture du fichier: véhicule non sauvegardé !");
+	else SendClientMessage(playerid, COLOR_ERROR, "Erreur dans l'ouverture du fichier: vÃ©hicule non sauvegardÃ© !");
 	return 1;
 }
 
@@ -5417,7 +5417,7 @@ cmd:psave(playerid, params[])
 		case 3:GetPlayerPos(playerid, Pppos[3], Pppos[4], Pppos[5]);
 		case 4:
 		{
-			SendClientMessage(playerid, COLOR_GREEN, "Lieu sauvegardé !");
+			SendClientMessage(playerid, COLOR_GREEN, "Lieu sauvegardÃ© !");
    			new query[1024];
 		    format(query, sizeof(query),
 			"INSERT INTO lieux (pickup_entx, pickup_enty, pickup_entz, pickup_extx, pickup_exty, pickup_extz, ent_x, ent_y, ent_z, ent_a, ext_x, ext_y, ext_z, ext_a, interior) VALUES(%f, %f, %f, %f, %f, %f, %f, %f, %f, %f, %f, %f, %f, %f, %d)",
@@ -5433,7 +5433,7 @@ cmd:pload(playerid, params[])
     if(pInfo[playerid][admin] < 5) return 0;
 
     LoadPickupsSQL();
-	SendClientMessage(playerid, COLOR_GREEN, "Pickups chargés!");
+	SendClientMessage(playerid, COLOR_GREEN, "Pickups chargÃ©s!");
 	return 1;
 }
 
@@ -5505,7 +5505,7 @@ public OnGameModeInit()
 	TextDrawSetOutline(CLASS_MILITARY, 1);
 	TextDrawSetProportional(CLASS_MILITARY, 1);
 
-	new str[]="Brigade Anti-Criminalité";
+	new str[]="Brigade Anti-CriminalitÃ©";
 	fix_Caracter(str);
 	CLASS_BAC=TextDrawCreate(74.000000, 230.000000, str);
 	TextDrawBackgroundColor(CLASS_BAC, 255);
@@ -5843,52 +5843,52 @@ public OnPlayerRequestClass(playerid, classid)
 public OnPlayerRequestSpawn(playerid)
 {
 	if(!pInfo[playerid][logged]) {
-	    SendClientMessage(playerid, COLOR_ERROR, "Connectez-vous avant de faire ça !");
+	    SendClientMessage(playerid, COLOR_ERROR, "Connectez-vous avant de faire Ã§a !");
 		return 0;
 	}
 	switch(pInfo[playerid][CLASS])
 	{
 	    case 2, 3, 4:{
 			if(pInfo[playerid][wanted]>0){
-	     		SendClientMessage(playerid, COLOR_ERROR, "Vous étiez recherché à votre dernière déconnexion du serveur, vous ne pouvez pas devenir policier !");
+	     		SendClientMessage(playerid, COLOR_ERROR, "Vous Ã©tiez recherchÃ© Ã  votre derniÃ¨re dÃ©connexion du serveur, vous ne pouvez pas devenir policier !");
 			    return 0;
 	    	}
 			if(GetPlayerScore(playerid)<50) {
-	     		SendClientMessage(playerid, COLOR_ERROR, "Vous devez avoir 50 de score au minimum pour être policier !");
+	     		SendClientMessage(playerid, COLOR_ERROR, "Vous devez avoir 50 de score au minimum pour Ãªtre policier !");
 			    return 0;
 			}
 			if(pInfo[playerid][CLASS]==4&&pInfo[playerid][policelvl]<20) {
-	     		SendClientMessage(playerid, COLOR_ERROR, "Vous devez être policier de niveau 20 minmum pour choisir cette classe !");
+	     		SendClientMessage(playerid, COLOR_ERROR, "Vous devez Ãªtre policier de niveau 20 minmum pour choisir cette classe !");
 			    return 0;
 			}
 			if(pInfo[playerid][CLASS]==5&&!pInfo[playerid][military]) {
-	     		SendClientMessage(playerid, COLOR_ERROR, "Vous devez être militaire pour choisir cette classe !");
+	     		SendClientMessage(playerid, COLOR_ERROR, "Vous devez Ãªtre militaire pour choisir cette classe !");
 			    return 0;
 			}
 			pInfo[playerid][TEAM]=TEAM_COPS;
 		}
 		case 6: if(!pInfo[playerid][leadbac]) {
-	     	SendClientMessage(playerid, COLOR_ERROR, "Vous devez être le Leader de la BAC pour choisir cette classe !");
+	     	SendClientMessage(playerid, COLOR_ERROR, "Vous devez Ãªtre le Leader de la BAC pour choisir cette classe !");
 			return 0;
 		}
 		case 7, 8: if(!pInfo[playerid][bac]) {
-	     	SendClientMessage(playerid, COLOR_ERROR, "Vous devez être de la BAC pour choisir cette classe !");
+	     	SendClientMessage(playerid, COLOR_ERROR, "Vous devez Ãªtre de la BAC pour choisir cette classe !");
 			return 0;
 		}
 		case 9: if(!pInfo[playerid][leadgroove]) {
-	     	SendClientMessage(playerid, COLOR_ERROR, "Vous devez être Leader des Grooves pour choisir cette classe !");
+	     	SendClientMessage(playerid, COLOR_ERROR, "Vous devez Ãªtre Leader des Grooves pour choisir cette classe !");
 			return 0;
 		}
 		case 10,11,12: if(!pInfo[playerid][groove]) {
-	     	SendClientMessage(playerid, COLOR_ERROR, "Vous devez être un Groove pour choisir cette classe !");
+	     	SendClientMessage(playerid, COLOR_ERROR, "Vous devez Ãªtre un Groove pour choisir cette classe !");
 			return 0;
 		}
 		case 13: if(!pInfo[playerid][leadballas]) {
-	     	SendClientMessage(playerid, COLOR_ERROR, "Vous devez être Leader des Ballas pour choisir cette classe !");
+	     	SendClientMessage(playerid, COLOR_ERROR, "Vous devez Ãªtre Leader des Ballas pour choisir cette classe !");
 			return 0;
 		}
 		case 14,15,16: if(!pInfo[playerid][ballas]) {
-	     	SendClientMessage(playerid, COLOR_ERROR, "Vous devez être un Ballas pour choisir cette classe !");
+	     	SendClientMessage(playerid, COLOR_ERROR, "Vous devez Ãªtre un Ballas pour choisir cette classe !");
 			return 0;
 		}
 	}
@@ -5925,18 +5925,18 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 		}
 		if(pInfo[playerid][admin]>=3)
 		{
-	 	    format(dialog, sizeof(dialog), "%s\n{10F441}/adballas{A9C4E4} - Donne le statut de Ballas à un joueur", dialog);
-		    format(dialog, sizeof(dialog), "%s\n{10F441}/addeballas{A9C4E4} - Enlève le statut de Ballas à un joueur", dialog);
-		    format(dialog, sizeof(dialog), "%s\n{10F441}/adlballas{A9C4E4} - Donne le statut de Leader Ballas à un joueur", dialog);
-		    format(dialog, sizeof(dialog), "%s\n{10F441}/addelballas{A9C4E4} - Enlève le statut de Leader Ballas à un joueur", dialog);
-	 	    format(dialog, sizeof(dialog), "%s\n{10F441}/adbac{A9C4E4} - Donne le statut de membre de la BAC à un joueur", dialog);
-		    format(dialog, sizeof(dialog), "%s\n{10F441}/addebac{A9C4E4} - Enlève le statut de membre de la BAC à un joueur", dialog);
-		    format(dialog, sizeof(dialog), "%s\n{10F441}/adlbac{A9C4E4} - Donne le statut de Leader de la BAC à un joueur", dialog);
-		    format(dialog, sizeof(dialog), "%s\n{10F441}/addelbac{A9C4E4} - Enlève le statut de Leader de la BAC à un joueur", dialog);
+	 	    format(dialog, sizeof(dialog), "%s\n{10F441}/adballas{A9C4E4} - Donne le statut de Ballas Ã  un joueur", dialog);
+		    format(dialog, sizeof(dialog), "%s\n{10F441}/addeballas{A9C4E4} - EnlÃ¨ve le statut de Ballas Ã  un joueur", dialog);
+		    format(dialog, sizeof(dialog), "%s\n{10F441}/adlballas{A9C4E4} - Donne le statut de Leader Ballas Ã  un joueur", dialog);
+		    format(dialog, sizeof(dialog), "%s\n{10F441}/addelballas{A9C4E4} - EnlÃ¨ve le statut de Leader Ballas Ã  un joueur", dialog);
+	 	    format(dialog, sizeof(dialog), "%s\n{10F441}/adbac{A9C4E4} - Donne le statut de membre de la BAC Ã  un joueur", dialog);
+		    format(dialog, sizeof(dialog), "%s\n{10F441}/addebac{A9C4E4} - EnlÃ¨ve le statut de membre de la BAC Ã  un joueur", dialog);
+		    format(dialog, sizeof(dialog), "%s\n{10F441}/adlbac{A9C4E4} - Donne le statut de Leader de la BAC Ã  un joueur", dialog);
+		    format(dialog, sizeof(dialog), "%s\n{10F441}/addelbac{A9C4E4} - EnlÃ¨ve le statut de Leader de la BAC Ã  un joueur", dialog);
 		}
  		if(pInfo[playerid][admin]>=5)
 		{
-	 	    format(dialog, sizeof(dialog), "%s\n{10F441}/adgmx{A9C4E4} (Temps en secondes = optionnel) - Redémarrer le serveur", dialog);
+	 	    format(dialog, sizeof(dialog), "%s\n{10F441}/adgmx{A9C4E4} (Temps en secondes = optionnel) - RedÃ©marrer le serveur", dialog);
 		}
 		if(strlen(dialog)!=0) ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, title, dialog, "OK", "");
 	    return 1;
@@ -5945,7 +5945,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 	{
 	    if(!response) return 1;
 	    if(!IsCanAction(playerid))
-	        return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire ça maintenant !");
+	        return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire Ã§a maintenant !");
 
 		switch(listitem)
 		{
@@ -5978,27 +5978,27 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			ShowPlayerDialog(playerid, DIALOG_COFFREB, DIALOG_STYLE_LIST, "Coffre Ballas", "Ajouter de l'argent\nRetirer de l'argent\n{FF0000}Contenu du coffre", "OK", "Annuler");
 
 	    if(!IsCanAction(playerid))
-	        return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire ça maintenant !");
+	        return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire Ã§a maintenant !");
 		new amount=0;
 		if(sscanf(inputtext, "i", amount))
 		{
-			ShowPlayerDialog(playerid, DIALOG_COFFREBGET, DIALOG_STYLE_INPUT, "Retirer de l'argent", "Entrez un montant d'argent à déposer dans le coffre\n{FF0000}Vous devez entrer un montant à déposer !", "Déposer", "Annuler");
+			ShowPlayerDialog(playerid, DIALOG_COFFREBGET, DIALOG_STYLE_INPUT, "Retirer de l'argent", "Entrez un montant d'argent Ã  dÃ©poser dans le coffre\n{FF0000}Vous devez entrer un montant Ã  dÃ©poser !", "DÃ©poser", "Annuler");
 		    return 1;
 		}
 		if(amount<=0)
 		{
-			ShowPlayerDialog(playerid, DIALOG_COFFREBGET, DIALOG_STYLE_INPUT, "Retirer de l'argent", "Entrez un montant d'argent à déposer dans le coffre\n{FF0000}Vous devez entrer un montant plus grand que zéro !", "Déposer", "Annuler");
+			ShowPlayerDialog(playerid, DIALOG_COFFREBGET, DIALOG_STYLE_INPUT, "Retirer de l'argent", "Entrez un montant d'argent Ã  dÃ©poser dans le coffre\n{FF0000}Vous devez entrer un montant plus grand que zÃ©ro !", "DÃ©poser", "Annuler");
 		    return 1;
 		}
 		if(amount>Teams[BALLAS][MONEY])
 		{
-			ShowPlayerDialog(playerid, DIALOG_COFFREBGET, DIALOG_STYLE_INPUT, "Retirer de l'argent", "Entrez un montant d'argent à déposer dans le coffre\n{FF0000}Le coffre ne contient pas autant d'argent !", "Déposer", "Annuler");
+			ShowPlayerDialog(playerid, DIALOG_COFFREBGET, DIALOG_STYLE_INPUT, "Retirer de l'argent", "Entrez un montant d'argent Ã  dÃ©poser dans le coffre\n{FF0000}Le coffre ne contient pas autant d'argent !", "DÃ©poser", "Annuler");
 		    return 1;
   		}
 		new msg[144];
 		Teams[BALLAS][MONEY]-=amount;
 		GivePlayerMoney(playerid, amount);
-		format(msg, sizeof(msg), "Vous avez retiré %s dans le coffre de la team ballas. Le coffre contient maintenant %s !", FormatMoney(amount), FormatMoney(Teams[BALLAS][MONEY]));
+		format(msg, sizeof(msg), "Vous avez retirÃ© %s dans le coffre de la team ballas. Le coffre contient maintenant %s !", FormatMoney(amount), FormatMoney(Teams[BALLAS][MONEY]));
 		SendClientMessage(playerid, COLOR_GREEN, msg);
 		return 1;
 	}
@@ -6007,27 +6007,27 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 	    if(!response)
 			ShowPlayerDialog(playerid, DIALOG_COFFREG, DIALOG_STYLE_LIST, "Coffre Groove", "Ajouter de l'argent\nRetirer de l'argent\n{FF0000}Contenu du coffre", "OK", "Annuler");
 	    if(!IsCanAction(playerid))
-	        return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire ça maintenant !");
+	        return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire Ã§a maintenant !");
 		new amount=0;
 		if(sscanf(inputtext, "i", amount))
 		{
-			ShowPlayerDialog(playerid, DIALOG_COFFREGGET, DIALOG_STYLE_INPUT, "Retirer de l'argent", "Entrez un montant d'argent à déposer dans le coffre\n{FF0000}Vous devez entrer un montant à déposer !", "Déposer", "Annuler");
+			ShowPlayerDialog(playerid, DIALOG_COFFREGGET, DIALOG_STYLE_INPUT, "Retirer de l'argent", "Entrez un montant d'argent Ã  dÃ©poser dans le coffre\n{FF0000}Vous devez entrer un montant Ã  dÃ©poser !", "DÃ©poser", "Annuler");
 		    return 1;
 		}
 		if(amount<=0)
 		{
-			ShowPlayerDialog(playerid, DIALOG_COFFREGGET, DIALOG_STYLE_INPUT, "Retirer de l'argent", "Entrez un montant d'argent à déposer dans le coffre\n{FF0000}Vous devez entrer un montant plus grand que zéro !", "Déposer", "Annuler");
+			ShowPlayerDialog(playerid, DIALOG_COFFREGGET, DIALOG_STYLE_INPUT, "Retirer de l'argent", "Entrez un montant d'argent Ã  dÃ©poser dans le coffre\n{FF0000}Vous devez entrer un montant plus grand que zÃ©ro !", "DÃ©poser", "Annuler");
 		    return 1;
 		}
 		if(amount>Teams[GROOVE][MONEY])
 		{
-			ShowPlayerDialog(playerid, DIALOG_COFFREGGET, DIALOG_STYLE_INPUT, "Retirer de l'argent", "Entrez un montant d'argent à déposer dans le coffre\n{FF0000}Le coffre ne contient pas autant d'argent !", "Déposer", "Annuler");
+			ShowPlayerDialog(playerid, DIALOG_COFFREGGET, DIALOG_STYLE_INPUT, "Retirer de l'argent", "Entrez un montant d'argent Ã  dÃ©poser dans le coffre\n{FF0000}Le coffre ne contient pas autant d'argent !", "DÃ©poser", "Annuler");
 		    return 1;
   		}
 		new msg[144];
 		Teams[GROOVE][MONEY]-=amount;
 		GivePlayerMoney(playerid, amount);
-		format(msg, sizeof(msg), "Vous avez retiré %s dans le coffre de la team groove. Le coffre contient maintenant %s !", FormatMoney(amount), FormatMoney(Teams[GROOVE][MONEY]));
+		format(msg, sizeof(msg), "Vous avez retirÃ© %s dans le coffre de la team groove. Le coffre contient maintenant %s !", FormatMoney(amount), FormatMoney(Teams[GROOVE][MONEY]));
 		SendClientMessage(playerid, COLOR_GREEN, msg);
 		return 1;
 	}
@@ -6036,28 +6036,28 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 	    if(!response)
 			ShowPlayerDialog(playerid, DIALOG_COFFREB, DIALOG_STYLE_LIST, "Coffre Ballas", "Ajouter de l'argent\nRetirer de l'argent\n{FF0000}Contenu du coffre", "OK", "Annuler");
 	    if(!IsCanAction(playerid))
-	        return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire ça maintenant !");
+	        return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire Ã§a maintenant !");
 		new amount=0;
 		if(sscanf(inputtext, "i", amount))
 		{
-			ShowPlayerDialog(playerid, DIALOG_COFFREBPUT, DIALOG_STYLE_INPUT, "Déposer de l'argent", "Entrez un montant d'argent à déposer dans le coffre\n{FF0000}Vous devez entrer un montant à déposer !", "Déposer", "Annuler");
+			ShowPlayerDialog(playerid, DIALOG_COFFREBPUT, DIALOG_STYLE_INPUT, "DÃ©poser de l'argent", "Entrez un montant d'argent Ã  dÃ©poser dans le coffre\n{FF0000}Vous devez entrer un montant Ã  dÃ©poser !", "DÃ©poser", "Annuler");
 		    return 1;
 		}
 		if(amount<=0)
 		{
-			ShowPlayerDialog(playerid, DIALOG_COFFREBPUT, DIALOG_STYLE_INPUT, "Déposer de l'argent", "Entrez un montant d'argent à déposer dans le coffre\n{FF0000}Vous devez entrer un montant plus grand que zéro !", "Déposer", "Annuler");
+			ShowPlayerDialog(playerid, DIALOG_COFFREBPUT, DIALOG_STYLE_INPUT, "DÃ©poser de l'argent", "Entrez un montant d'argent Ã  dÃ©poser dans le coffre\n{FF0000}Vous devez entrer un montant plus grand que zÃ©ro !", "DÃ©poser", "Annuler");
 		    return 1;
 		}
 		if(amount>GetPlayerMoney(playerid))
 		{
-			ShowPlayerDialog(playerid, DIALOG_COFFREBPUT, DIALOG_STYLE_INPUT, "Déposer de l'argent", "Entrez un montant d'argent à déposer dans le coffre\n{FF0000}Vous n'avez pas assez d'argent sur vous !", "Déposer", "Annuler");
+			ShowPlayerDialog(playerid, DIALOG_COFFREBPUT, DIALOG_STYLE_INPUT, "DÃ©poser de l'argent", "Entrez un montant d'argent Ã  dÃ©poser dans le coffre\n{FF0000}Vous n'avez pas assez d'argent sur vous !", "DÃ©poser", "Annuler");
 		    return 1;
 		}
 
 		new msg[144];
 		Teams[BALLAS][MONEY]+=amount;
 		GivePlayerMoney(playerid, -amount);
-		format(msg, sizeof(msg), "Vous avez déposé %s dans le coffre de la team ballas. Le coffre contient maintenant %s !", FormatMoney(amount), FormatMoney(Teams[BALLAS][MONEY]));
+		format(msg, sizeof(msg), "Vous avez dÃ©posÃ© %s dans le coffre de la team ballas. Le coffre contient maintenant %s !", FormatMoney(amount), FormatMoney(Teams[BALLAS][MONEY]));
 		SendClientMessage(playerid, COLOR_GREEN, msg);
 		return 1;
 	}
@@ -6066,28 +6066,28 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 	    if(!response)
 			ShowPlayerDialog(playerid, DIALOG_COFFREG, DIALOG_STYLE_LIST, "Coffre Groove", "Ajouter de l'argent\nRetirer de l'argent\n{FF0000}Contenu du coffre", "OK", "Annuler");
 	    if(!IsCanAction(playerid))
-	        return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire ça maintenant !");
+	        return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire Ã§a maintenant !");
 		new amount=0;
 		if(sscanf(inputtext, "i", amount))
 		{
-			ShowPlayerDialog(playerid, DIALOG_COFFREGPUT, DIALOG_STYLE_INPUT, "Déposer de l'argent", "Entrez un montant d'argent à déposer dans le coffre\n{FF0000}Vous devez entrer un montant à déposer !", "Déposer", "Annuler");
+			ShowPlayerDialog(playerid, DIALOG_COFFREGPUT, DIALOG_STYLE_INPUT, "DÃ©poser de l'argent", "Entrez un montant d'argent Ã  dÃ©poser dans le coffre\n{FF0000}Vous devez entrer un montant Ã  dÃ©poser !", "DÃ©poser", "Annuler");
 		    return 1;
 		}
 		if(amount<=0)
 		{
-			ShowPlayerDialog(playerid, DIALOG_COFFREGPUT, DIALOG_STYLE_INPUT, "Déposer de l'argent", "Entrez un montant d'argent à déposer dans le coffre\n{FF0000}Vous devez entrer un montant plus grand que zéro !", "Déposer", "Annuler");
+			ShowPlayerDialog(playerid, DIALOG_COFFREGPUT, DIALOG_STYLE_INPUT, "DÃ©poser de l'argent", "Entrez un montant d'argent Ã  dÃ©poser dans le coffre\n{FF0000}Vous devez entrer un montant plus grand que zÃ©ro !", "DÃ©poser", "Annuler");
 		    return 1;
 		}
 		if(amount>GetPlayerMoney(playerid))
 		{
-			ShowPlayerDialog(playerid, DIALOG_COFFREGPUT, DIALOG_STYLE_INPUT, "Déposer de l'argent", "Entrez un montant d'argent à déposer dans le coffre\n{FF0000}Vous n'avez pas assez d'argent sur vous !", "Déposer", "Annuler");
+			ShowPlayerDialog(playerid, DIALOG_COFFREGPUT, DIALOG_STYLE_INPUT, "DÃ©poser de l'argent", "Entrez un montant d'argent Ã  dÃ©poser dans le coffre\n{FF0000}Vous n'avez pas assez d'argent sur vous !", "DÃ©poser", "Annuler");
 		    return 1;
 		}
 
 		new msg[144];
 		Teams[GROOVE][MONEY]+=amount;
 		GivePlayerMoney(playerid, -amount);
-		format(msg, sizeof(msg), "Vous avez déposé %s dans le coffre de la team groove. Le coffre contient maintenant %s !", FormatMoney(amount), FormatMoney(Teams[GROOVE][MONEY]));
+		format(msg, sizeof(msg), "Vous avez dÃ©posÃ© %s dans le coffre de la team groove. Le coffre contient maintenant %s !", FormatMoney(amount), FormatMoney(Teams[GROOVE][MONEY]));
 		SendClientMessage(playerid, COLOR_GREEN, msg);
 		return 1;
 	}
@@ -6095,13 +6095,13 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 	{
 	    if(!response) return 1;
 	    if(!IsCanAction(playerid))
-	        return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire ça maintenant !");
+	        return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire Ã§a maintenant !");
 		switch(listitem)
 		{
 		    case 0:
-			    ShowPlayerDialog(playerid, DIALOG_COFFREGPUT, DIALOG_STYLE_INPUT, "Déposer de l'argent", "Entrez un montant d'argent à déposer dans le coffre", "Déposer", "Annuler");
+			    ShowPlayerDialog(playerid, DIALOG_COFFREGPUT, DIALOG_STYLE_INPUT, "DÃ©poser de l'argent", "Entrez un montant d'argent Ã  dÃ©poser dans le coffre", "DÃ©poser", "Annuler");
 		    case 1:
-			    ShowPlayerDialog(playerid, DIALOG_COFFREGGET, DIALOG_STYLE_INPUT, "Retirer de l'argent", "Entrez un montant d'argent à retirer du coffre", "Déposer", "Annuler");
+			    ShowPlayerDialog(playerid, DIALOG_COFFREGGET, DIALOG_STYLE_INPUT, "Retirer de l'argent", "Entrez un montant d'argent Ã  retirer du coffre", "DÃ©poser", "Annuler");
 		    case 2:
 			{
 				new dialog[1024];
@@ -6116,13 +6116,13 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 	{
 	    if(!response) return 1;
 	    if(!IsCanAction(playerid))
-	        return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire ça maintenant !");
+	        return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire Ã§a maintenant !");
 		switch(listitem)
 		{
 		    case 0:
-			    ShowPlayerDialog(playerid, DIALOG_COFFREBPUT, DIALOG_STYLE_INPUT, "Déposer de l'argent", "Entrez un montant d'argent à déposer dans le coffre", "Déposer", "Annuler");
+			    ShowPlayerDialog(playerid, DIALOG_COFFREBPUT, DIALOG_STYLE_INPUT, "DÃ©poser de l'argent", "Entrez un montant d'argent Ã  dÃ©poser dans le coffre", "DÃ©poser", "Annuler");
 		    case 1:
-			    ShowPlayerDialog(playerid, DIALOG_COFFREBGET, DIALOG_STYLE_INPUT, "Retirer de l'argent", "Entrez un montant d'argent à retirer du coffre", "Déposer", "Annuler");
+			    ShowPlayerDialog(playerid, DIALOG_COFFREBGET, DIALOG_STYLE_INPUT, "Retirer de l'argent", "Entrez un montant d'argent Ã  retirer du coffre", "DÃ©poser", "Annuler");
 		    case 2:
 			{
 				new dialog[1024];
@@ -6151,10 +6151,10 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			        GetVehiclePos(Veh[i], x, y, z);
 			        SetPlayerRaceCheckpoint(playerid, 2, x, y, z, 0.0,0.0,0.0, 12.5);
 			        pInfo[playerid][ctimer]=SetTimerEx("gpscheckpointtimer", 60000, false, "i", playerid);
-			        SendClientMessage(playerid, COLOR_GREEN, "Un checkpoint rouge est apparu la où est votre véhicule ! Regardez votre mini-carte, il disparaîtra dans une minute.");
+			        SendClientMessage(playerid, COLOR_GREEN, "Un checkpoint rouge est apparu la oÃ¹ est votre vÃ©hicule ! Regardez votre mini-carte, il disparaÃ®tra dans une minute.");
 	                SetPlayerMapIcon(playerid, 99,  x, y, z, 0, 0xFF0000FF, MAPICON_GLOBAL);
 				}
-                else SendClientMessage(playerid, COLOR_ERROR, "Ce véhicule ne possède pas de GPS!");
+                else SendClientMessage(playerid, COLOR_ERROR, "Ce vÃ©hicule ne possÃ¨de pas de GPS!");
 		    }
 		}
 	}
@@ -6162,13 +6162,13 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 	{
 	    if(!response) return cmd_acheter(playerid, "");
 		if(!IsCanAction(playerid)) return 1;
-	    if(PlayerToPoint(3, playerid, 295.4040,-37.5995,1001.5156)) return SendClientMessage(playerid, COLOR_ERROR, "Vous n'êtes pas dans le checkpoint de l'Ammunation !");
+	    if(PlayerToPoint(3, playerid, 295.4040,-37.5995,1001.5156)) return SendClientMessage(playerid, COLOR_ERROR, "Vous n'Ãªtes pas dans le checkpoint de l'Ammunation !");
 	    if(pNextBuy[playerid]==0) {
 		switch(listitem)
 		{
 			case 0: {
 				if(GetPlayerMoney(playerid)<400) {
-					ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Erreur", "{FF0000}Vous n'avez pas assez d'argent pour acheter ça !", "OK", "");
+					ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Erreur", "{FF0000}Vous n'avez pas assez d'argent pour acheter Ã§a !", "OK", "");
 				    return 1;
 				}
 				GivePlayerMoney(playerid, -400);
@@ -6176,7 +6176,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			}
 			case 1: {
  				if(GetPlayerMoney(playerid)<250) {
-					ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Erreur", "{FF0000}Vous n'avez pas assez d'argent pour acheter ça !", "OK", "");
+					ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Erreur", "{FF0000}Vous n'avez pas assez d'argent pour acheter Ã§a !", "OK", "");
 				    return 1;
 				}
 				GivePlayerMoney(playerid, -250);
@@ -6184,7 +6184,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			}
 			case 2: {
  				if(GetPlayerMoney(playerid)<375) {
-					ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Erreur", "{FF0000}Vous n'avez pas assez d'argent pour acheter ça !", "OK", "");
+					ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Erreur", "{FF0000}Vous n'avez pas assez d'argent pour acheter Ã§a !", "OK", "");
 				    return 1;
 				}
 				GivePlayerMoney(playerid, -375);
@@ -6197,7 +6197,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 		{
 			case 0: {
 				if(GetPlayerMoney(playerid)<950) {
-					ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Erreur", "{FF0000}Vous n'avez pas assez d'argent pour acheter ça !", "OK", "");
+					ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Erreur", "{FF0000}Vous n'avez pas assez d'argent pour acheter Ã§a !", "OK", "");
 				    return 1;
 				}
 				GivePlayerMoney(playerid, -950);
@@ -6205,7 +6205,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			}
 			case 1: {
  				if(GetPlayerMoney(playerid)<1275) {
-					ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Erreur", "{FF0000}Vous n'avez pas assez d'argent pour acheter ça !", "OK", "");
+					ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Erreur", "{FF0000}Vous n'avez pas assez d'argent pour acheter Ã§a !", "OK", "");
 				    return 1;
 				}
 				GivePlayerMoney(playerid, -1275);
@@ -6213,7 +6213,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			}
 			case 2: {
  				if(GetPlayerMoney(playerid)<2245) {
-					ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Erreur", "{FF0000}Vous n'avez pas assez d'argent pour acheter ça !", "OK", "");
+					ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Erreur", "{FF0000}Vous n'avez pas assez d'argent pour acheter Ã§a !", "OK", "");
 				    return 1;
 				}
 				GivePlayerMoney(playerid, -2245);
@@ -6226,7 +6226,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 		{
 			case 0: {
 				if(GetPlayerMoney(playerid)<2500) {
-					ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Erreur", "{FF0000}Vous n'avez pas assez d'argent pour acheter ça !", "OK", "");
+					ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Erreur", "{FF0000}Vous n'avez pas assez d'argent pour acheter Ã§a !", "OK", "");
 				    return 1;
 				}
 				GivePlayerMoney(playerid, -2500);
@@ -6234,7 +6234,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			}
  			case 1: {
  				if(GetPlayerMoney(playerid)<2500) {
-					ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Erreur", "{FF0000}Vous n'avez pas assez d'argent pour acheter ça !", "OK", "");
+					ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Erreur", "{FF0000}Vous n'avez pas assez d'argent pour acheter Ã§a !", "OK", "");
 				    return 1;
 				}
 				GivePlayerMoney(playerid, -2500);
@@ -6242,7 +6242,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			}
 			case 2: {
  				if(GetPlayerMoney(playerid)<2500) {
-					ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Erreur", "{FF0000}Vous n'avez pas assez d'argent pour acheter ça !", "OK", "");
+					ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Erreur", "{FF0000}Vous n'avez pas assez d'argent pour acheter Ã§a !", "OK", "");
 				    return 1;
 				}
 				GivePlayerMoney(playerid, -2500);
@@ -6250,7 +6250,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			}
 			case 3: {
  				if(GetPlayerMoney(playerid)<2500) {
-					ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Erreur", "{FF0000}Vous n'avez pas assez d'argent pour acheter ça !", "OK", "");
+					ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Erreur", "{FF0000}Vous n'avez pas assez d'argent pour acheter Ã§a !", "OK", "");
 				    return 1;
 				}
 				GivePlayerMoney(playerid, -2500);
@@ -6258,7 +6258,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			}
 			case 4: {
  				if(GetPlayerMoney(playerid)<2500) {
-					ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Erreur", "{FF0000}Vous n'avez pas assez d'argent pour acheter ça !", "OK", "");
+					ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Erreur", "{FF0000}Vous n'avez pas assez d'argent pour acheter Ã§a !", "OK", "");
 				    return 1;
 				}
 				GivePlayerMoney(playerid, -2500);
@@ -6271,7 +6271,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 		{
 			case 0: {
 				if(GetPlayerMoney(playerid)<2750) {
-					ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Erreur", "{FF0000}Vous n'avez pas assez d'argent pour acheter ça !", "OK", "");
+					ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Erreur", "{FF0000}Vous n'avez pas assez d'argent pour acheter Ã§a !", "OK", "");
 				    return 1;
 				}
 				GivePlayerMoney(playerid, -2750);
@@ -6279,7 +6279,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			}
 			case 1: {
  				if(GetPlayerMoney(playerid)<3250) {
-					ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Erreur", "{FF0000}Vous n'avez pas assez d'argent pour acheter ça !", "OK", "");
+					ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Erreur", "{FF0000}Vous n'avez pas assez d'argent pour acheter Ã§a !", "OK", "");
 				    return 1;
 				}
 				GivePlayerMoney(playerid, -3250);
@@ -6287,7 +6287,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			}
 			case 2: {
  				if(GetPlayerMoney(playerid)<2750) {
-					ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Erreur", "{FF0000}Vous n'avez pas assez d'argent pour acheter ça !", "OK", "");
+					ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Erreur", "{FF0000}Vous n'avez pas assez d'argent pour acheter Ã§a !", "OK", "");
 				    return 1;
 				}
 				GivePlayerMoney(playerid, -2750);
@@ -6295,7 +6295,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			}
 			case 3: {
  				if(GetPlayerMoney(playerid)<2500) {
-					ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Erreur", "{FF0000}Vous n'avez pas assez d'argent pour acheter ça !", "OK", "");
+					ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Erreur", "{FF0000}Vous n'avez pas assez d'argent pour acheter Ã§a !", "OK", "");
 				    return 1;
 				}
 				GivePlayerMoney(playerid, -2500);
@@ -6307,12 +6307,12 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 	if(dialogid==DIALOG_WEPD)
 	{
 	    if(!response||!IsCanAction(playerid)) return 1;
-	    if(PlayerToPoint(3, playerid, 295.4040,-37.5995,1001.5156)) return SendClientMessage(playerid, COLOR_ERROR, "Vous n'êtes pas dans le checkpoint de l'Ammunation !");
+	    if(PlayerToPoint(3, playerid, 295.4040,-37.5995,1001.5156)) return SendClientMessage(playerid, COLOR_ERROR, "Vous n'Ãªtes pas dans le checkpoint de l'Ammunation !");
 	    pNextBuy[playerid]=listitem;
 	    switch(listitem)
 	    {
 	        case 0: {
-	            ShowPlayerDialog(playerid, DIALOG_BUYWEP, DIALOG_STYLE_LIST, "Armes de Mélées", "Katana ($400)\nBatte de Baseball ($250)\nPoing Américain ($375)", "Acheter", "Annuler");
+	            ShowPlayerDialog(playerid, DIALOG_BUYWEP, DIALOG_STYLE_LIST, "Armes de MÃ©lÃ©es", "Katana ($400)\nBatte de Baseball ($250)\nPoing AmÃ©ricain ($375)", "Acheter", "Annuler");
 	        }
  	        case 1: {
 	            ShowPlayerDialog(playerid, DIALOG_BUYWEP, DIALOG_STYLE_LIST, "Pistolets", "9mm ($950) (275 balles)\n9mm Silencieux ($1275) (275 balles)\nDesert Eagle ($2245) (275 balles)", "Acheter", "Annuler");
@@ -6321,7 +6321,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 	            ShowPlayerDialog(playerid, DIALOG_BUYWEP, DIALOG_STYLE_LIST, "Mitraillettes", "Uzi ($2500) (500 balles)\nTec9 ($2500) (500 balles)\nMP5 ($2500) (500 balles)\nM4 ($3000) (750 balles)\nAK47 ($3000) (750 balles)", "Acheter", "Annuler");
 	        }
  	        case 3: {
-	            ShowPlayerDialog(playerid, DIALOG_BUYWEP, DIALOG_STYLE_LIST, "Fusils", "Fusil a Pompe ($2750) (450 balles)\nFusil de Combat ($3250) (500 balles)\nFusil a Canon Scié ($2750) (450 balles)\nFusil de Campagne ($2500) (650 balles)", "Acheter", "Annuler");
+	            ShowPlayerDialog(playerid, DIALOG_BUYWEP, DIALOG_STYLE_LIST, "Fusils", "Fusil a Pompe ($2750) (450 balles)\nFusil de Combat ($3250) (500 balles)\nFusil a Canon SciÃ© ($2750) (450 balles)\nFusil de Campagne ($2500) (650 balles)", "Acheter", "Annuler");
 	        }
 	        case 4: {
 	            if(GetPlayerMoney(playerid)<1000)
@@ -6329,7 +6329,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 				new Float:armour;
 				GetPlayerArmour(playerid, armour);
 				if(armour>=100)
-				    return SendClientMessage(playerid, COLOR_ERROR, "Votre armure est déjà au maximum !");
+				    return SendClientMessage(playerid, COLOR_ERROR, "Votre armure est dÃ©jÃ  au maximum !");
 	            GivePlayerMoney(playerid, -1000);
 	            SetPlayerArmour(playerid, 100);
 	        }
@@ -6340,7 +6340,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 	{
 	    if(!response) return 1;
 	    new dialog[600], title[50];
-	    format(dialog, sizeof(dialog), "Informations sur la compétence %s (%s):\n%s", sCompetences[listitem][0], sCompetences[listitem][1], compInfo[listitem]);
+	    format(dialog, sizeof(dialog), "Informations sur la compÃ©tence %s (%s):\n%s", sCompetences[listitem][0], sCompetences[listitem][1], compInfo[listitem]);
 	    format(title, sizeof(title), "Informations - %s", sCompetences[listitem][0]);
 	    ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, title, dialog, "Ok", "");
 	    return 1;
@@ -6350,37 +6350,37 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 	    if(!response) return 1;
 	    if(listitem==1) {
 		    new dialog[600], title[50];
-		    format(dialog, sizeof(dialog), "Informations sur la compétence %s (%s):\n%s", sCompetences[pNextDComp[playerid]][0], sCompetences[pNextDComp[playerid]][1], compInfo[pNextDComp[playerid]]);
-		    format(title, sizeof(title), "Compétence %s", sCompetences[pNextDComp[playerid]][0]);
+		    format(dialog, sizeof(dialog), "Informations sur la compÃ©tence %s (%s):\n%s", sCompetences[pNextDComp[playerid]][0], sCompetences[pNextDComp[playerid]][1], compInfo[pNextDComp[playerid]]);
+		    format(title, sizeof(title), "CompÃ©tence %s", sCompetences[pNextDComp[playerid]][0]);
 		    ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, title, dialog, "Ok", "");
 	        return 1;
 	    }
 	    if(pComp[playerid][comp_points]<=0)
      	{
-			ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Erreur", "{FF0000}Vous n'avez aucun points, vous ne pouvez pas augmenter de compétences.", "OK", "");
+			ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Erreur", "{FF0000}Vous n'avez aucun points, vous ne pouvez pas augmenter de compÃ©tences.", "OK", "");
 			return 1;
 	    }
 	    if(GetCompetence(playerid, pNextDComp[playerid])>=compMaxLvl[pNextDComp[playerid]])
      	{
-			ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Erreur", "{FF0000}Cette compétence est à son niveau maximal !", "OK", "");
+			ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Erreur", "{FF0000}Cette compÃ©tence est Ã  son niveau maximal !", "OK", "");
 			return 1;
 	    }
 	    switch(pNextDComp[playerid])
 	    {
 	        case 0:if(pComp[playerid][comp_lvl]<3) {
-				ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Erreur", "{FF0000}Cette compétence nécessite d'être au niveau 3 minimum !", "OK", "");
+				ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Erreur", "{FF0000}Cette compÃ©tence nÃ©cessite d'Ãªtre au niveau 3 minimum !", "OK", "");
 				return 1;
 	        }
     	    case 2:if(pComp[playerid][comp_lvl]<4) {
-				ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Erreur", "{FF0000}Cette compétence nécessite d'être au niveau 4 minimum !", "OK", "");
+				ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Erreur", "{FF0000}Cette compÃ©tence nÃ©cessite d'Ãªtre au niveau 4 minimum !", "OK", "");
 				return 1;
 	        }
 	    }
      	SetCompetence(playerid, pNextDComp[playerid], GetCompetence(playerid, pNextDComp[playerid])+1);
      	pComp[playerid][comp_points]--;
 		new msg[128];
-		format(msg, sizeof(msg), "Vous avez augmenté la compétence %s au niveau %d !", sCompetences[pNextDComp[playerid]][0], GetCompetence(playerid, pNextDComp[playerid]));
-		ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Compétence", msg, "Ok", "Annuler");
+		format(msg, sizeof(msg), "Vous avez augmentÃ© la compÃ©tence %s au niveau %d !", sCompetences[pNextDComp[playerid]][0], GetCompetence(playerid, pNextDComp[playerid]));
+		ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "CompÃ©tence", msg, "Ok", "Annuler");
 		return 1;
 	}
 	if(dialogid==DIALOG_COMP)
@@ -6388,7 +6388,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 	    if(!response) return 1;
 		pNextDComp[playerid]=listitem;
 		new dialog[400], title[100];
-		format(dialog, sizeof(dialog), "Augmenter la compétence (Vous avez {FF0000}%d{A9C4E4} points)\nInformations sur la compétence", pComp[playerid][comp_points]);
+		format(dialog, sizeof(dialog), "Augmenter la compÃ©tence (Vous avez {FF0000}%d{A9C4E4} points)\nInformations sur la compÃ©tence", pComp[playerid][comp_points]);
 		format(title, sizeof(title), "%s - Niveau %d", sCompetences[listitem][0], GetCompetence(playerid, listitem));
 		ShowPlayerDialog(playerid, DIALOG_UPCOMP, DIALOG_STYLE_LIST, title, dialog, "OK", "Annuler");
 		return 1;
@@ -6397,9 +6397,9 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 	if(dialogid==DIALOG_BUYBOMB)
 	{
 		if(!IsCanAction(playerid))
-	    	return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire ça maintenant !");
+	    	return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire Ã§a maintenant !");
 		if(GetPlayerCheckpoint(playerid)!=CP_BOMBSHOP)
-		    return SendClientMessage(playerid, COLOR_ERROR, "Vous n'êtes pas dans le checkpoint du BombShop !");
+		    return SendClientMessage(playerid, COLOR_ERROR, "Vous n'Ãªtes pas dans le checkpoint du BombShop !");
 	    switch(pBombNextBuy[playerid])
 	    {
 	        case 0:
@@ -6407,23 +6407,23 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			    new amount=0;
 		   		if(sscanf(inputtext, "i", amount))
 				{
-					ShowPlayerDialog(playerid, DIALOG_BUYBOMB, DIALOG_STYLE_INPUT, "Acheter du C4", "Entrez un nombre de C4 à acheter\n{FF0000}Vous devez entrer un nombre de C4 à acheter !", "Quitter", "Annuler");
+					ShowPlayerDialog(playerid, DIALOG_BUYBOMB, DIALOG_STYLE_INPUT, "Acheter du C4", "Entrez un nombre de C4 Ã  acheter\n{FF0000}Vous devez entrer un nombre de C4 Ã  acheter !", "Quitter", "Annuler");
 					return 1;
 				}
 				if(amount<=0)
 				{
-					ShowPlayerDialog(playerid, DIALOG_BUYBOMB, DIALOG_STYLE_INPUT, "Acheter du C4", "Entrez un nombre de C4 à acheter\n{FF0000}Vous devez entrer un nombre plus grand que 0 !", "Quitter", "Annuler");
+					ShowPlayerDialog(playerid, DIALOG_BUYBOMB, DIALOG_STYLE_INPUT, "Acheter du C4", "Entrez un nombre de C4 Ã  acheter\n{FF0000}Vous devez entrer un nombre plus grand que 0 !", "Quitter", "Annuler");
 					return 1;
 				}
 				if((amount*500)>GetPlayerMoney(playerid))
 				{
-					ShowPlayerDialog(playerid, DIALOG_BUYBOMB, DIALOG_STYLE_INPUT, "Acheter du C4", "Entrez un nombre de C4 à acheter\n{FF0000}Vous n'avez pas assez d'argent pour acheter autant de C4 !", "Quitter", "Annuler");
+					ShowPlayerDialog(playerid, DIALOG_BUYBOMB, DIALOG_STYLE_INPUT, "Acheter du C4", "Entrez un nombre de C4 Ã  acheter\n{FF0000}Vous n'avez pas assez d'argent pour acheter autant de C4 !", "Quitter", "Annuler");
 					return 1;
 				}
 				GivePlayerMoney(playerid, -(amount*500));
 				pInv[playerid][C4]+=amount;
 				new msg[128];
-				format(msg, sizeof(msg), "Vous avez acheté %d C4 au prix de %s !", amount, FormatMoney(amount*500));
+				format(msg, sizeof(msg), "Vous avez achetÃ© %d C4 au prix de %s !", amount, FormatMoney(amount*500));
 				return SendClientMessage(playerid, COLOR_GREEN, msg);
 	        }
 	    }
@@ -6432,13 +6432,13 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 	if(dialogid==DIALOG_BOMBSHOP)
 	{
 		if(!IsCanAction(playerid))
-	    	return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire ça maintenant !");
+	    	return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas faire Ã§a maintenant !");
 		if(GetPlayerCheckpoint(playerid)!=CP_BOMBSHOP)
-		    return SendClientMessage(playerid, COLOR_ERROR, "Vous n'êtes pas dans le checkpoint du BombShop !");
+		    return SendClientMessage(playerid, COLOR_ERROR, "Vous n'Ãªtes pas dans le checkpoint du BombShop !");
 		switch(listitem)
 		{
 		    case 0: {
-				ShowPlayerDialog(playerid, DIALOG_BUYBOMB, DIALOG_STYLE_INPUT, "Acheter du C4", "Entrez un nombre de C4 à acheter", "Quitter", "Annuler");
+				ShowPlayerDialog(playerid, DIALOG_BUYBOMB, DIALOG_STYLE_INPUT, "Acheter du C4", "Entrez un nombre de C4 Ã  acheter", "Quitter", "Annuler");
 				pBombNextBuy[playerid]=0;
 			}
 		}
@@ -6447,30 +6447,30 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 	if(dialogid==DIALOG_CARJACK)
 	{
 		if(!IsCanAction(playerid))
-	    	return SendClientMessage(playerid, COLOR_ERROR,"Vous ne pouvez pas faire ça maintenant !");
+	    	return SendClientMessage(playerid, COLOR_ERROR,"Vous ne pouvez pas faire Ã§a maintenant !");
 		new vehicleid=GetPlayerVehicleID(playerid);
 	    if(!response||vehicleid==INVALID_VEHICLE_ID) {
 			RemovePlayerFromVehicle(playerid);
 			return 1;
 		}
 		if(GetPlayerVehicleSeat(playerid)!=0)
-			return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas voler de véhicule en étant en passager.");
+			return SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas voler de vÃ©hicule en Ã©tant en passager.");
 		if(pInfo[playerid][lastcarjack]>gettime())
-		    return SendClientMessage(playerid, COLOR_ERROR, "Tu ne peux plus voler de véhicules pour le moment!");
+		    return SendClientMessage(playerid, COLOR_ERROR, "Tu ne peux plus voler de vÃ©hicules pour le moment!");
 
 		if(strcmp(inputtext, vInfo[vehicleid][vcode], false, strlen(vInfo[vehicleid][vcode]))==0&&strlen(inputtext)>0)
 		{
 		    new string[128];
-			SendClientMessage(playerid,COLOR_DARKGREY,"[ Véhicule Volé ]");
-			format(string,sizeof(string),"Vous avez volé le véhicule de %s(%d) ",GetPlayerNameWithUID(vInfo[vehicleid][P_UID]),GetPlayerIDWithUID(vInfo[vehicleid][P_UID]));
+			SendClientMessage(playerid,COLOR_DARKGREY,"[ VÃ©hicule VolÃ© ]");
+			format(string,sizeof(string),"Vous avez volÃ© le vÃ©hicule de %s(%d) ",GetPlayerNameWithUID(vInfo[vehicleid][P_UID]),GetPlayerIDWithUID(vInfo[vehicleid][P_UID]));
 			SendClientMessage(playerid,COLOR_ERROR,string);
 			AddWanted(playerid,4);
 			AddScore(playerid,2);
 
-			format(string,sizeof(string),"Le Carjacker %s(%d) a volé votre véhicule!",pInfo[playerid][name],playerid);
+			format(string,sizeof(string),"Le Carjacker %s(%d) a volÃ© votre vÃ©hicule!",pInfo[playerid][name],playerid);
 			if(IsPlayerConnected(GetPlayerIDWithUID(vInfo[vehicleid][P_UID]))) SendClientMessage(GetPlayerIDWithUID(vInfo[vehicleid][P_UID]),COLOR_RED,string);
 
-			format(string,sizeof(string),"Le Carjacker %s(%d) a volé le véhicule de %s(%d) !",pInfo[playerid][name],playerid, GetPlayerNameWithUID(vInfo[vehicleid][P_UID]),GetPlayerIDWithUID(vInfo[vehicleid][P_UID]));
+			format(string,sizeof(string),"Le Carjacker %s(%d) a volÃ© le vÃ©hicule de %s(%d) !",pInfo[playerid][name],playerid, GetPlayerNameWithUID(vInfo[vehicleid][P_UID]),GetPlayerIDWithUID(vInfo[vehicleid][P_UID]));
 			SendClientMessageToAll(COLOR_RED,string);
 
 			vInfo[vehicleid][P_UID] = pInfo[playerid][UID];
@@ -6487,12 +6487,12 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			RemovePlayerFromVehicle(playerid);
 			pInfo[playerid][lastcarjack]=gettime()+140;
 			pInfo[playerid][lasttrob]=0;
-			return SendClientMessage(playerid, COLOR_LIGHTBLUE, "Vous avez échoué toute vos tentatives! Vous pourrez ré-essayer dans deux minutes et 40 secondes!");
+			return SendClientMessage(playerid, COLOR_LIGHTBLUE, "Vous avez Ã©chouÃ© toute vos tentatives! Vous pourrez rÃ©-essayer dans deux minutes et 40 secondes!");
 		}
 
 		new dialog[500], title[97], ins[80];
 		new ch[7];
-		format(dialog, sizeof(dialog), "Vous êtes en train de voler un véhicule!\nVous devez trouver le code à %d chiffre qui dévérouillera le véhicule.", strlen(vInfo[vehicleid][vcode]));
+		format(dialog, sizeof(dialog), "Vous Ãªtes en train de voler un vÃ©hicule!\nVous devez trouver le code Ã  %d chiffre qui dÃ©vÃ©rouillera le vÃ©hicule.", strlen(vInfo[vehicleid][vcode]));
 		if(strlen(inputtext)==strlen(vInfo[vehicleid][vcode])) {
 			for(new i=0;i<strlen(inputtext)&&i<strlen(vInfo[vehicleid][vcode]);i++)
 			{
@@ -6513,19 +6513,19 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 				 	format(ins, sizeof(ins), "%s{E03434}%c", ins, inputtext[i]);
 			 	}
 			}
-			format(dialog, sizeof(dialog), "%s\n{A9C4E4}Code tapé: %s{A9C4E4}. {%s}%d {A9C4E4}essais restants.\n{4FDB37}Vert{A9C4E4} = Chiffre présent et bien placé.\n{DBB818}Jaune{A9C4E4} = Chiffre présent mais mal placé.", dialog, ins, (vInfo[vehicleid][vtry]>3) ? ("4FDB37") : ("E03434"), vInfo[vehicleid][vtry]);
-			format(dialog, sizeof(dialog), "%s\n{E03434}Rouge{A9C4E4} = Chiffre non présent.\n{E03434}", dialog);
-			format(dialog, sizeof(dialog), "%s/!\\ Un code ne contient jamais deux fois le même chiffre ! /!\\ \n /!\\ Un chiffre apparaîtra en jaune si il n'est présent qu'une fois mais que vous l'écrivez deux fois ! /!\\", dialog);
-			format(title, sizeof(title), "Vol de véhicule - %s", ins);
+			format(dialog, sizeof(dialog), "%s\n{A9C4E4}Code tapÃ©: %s{A9C4E4}. {%s}%d {A9C4E4}essais restants.\n{4FDB37}Vert{A9C4E4} = Chiffre prÃ©sent et bien placÃ©.\n{DBB818}Jaune{A9C4E4} = Chiffre prÃ©sent mais mal placÃ©.", dialog, ins, (vInfo[vehicleid][vtry]>3) ? ("4FDB37") : ("E03434"), vInfo[vehicleid][vtry]);
+			format(dialog, sizeof(dialog), "%s\n{E03434}Rouge{A9C4E4} = Chiffre non prÃ©sent.\n{E03434}", dialog);
+			format(dialog, sizeof(dialog), "%s/!\\ Un code ne contient jamais deux fois le mÃªme chiffre ! /!\\ \n /!\\ Un chiffre apparaÃ®tra en jaune si il n'est prÃ©sent qu'une fois mais que vous l'Ã©crivez deux fois ! /!\\", dialog);
+			format(title, sizeof(title), "Vol de vÃ©hicule - %s", ins);
 			vInfo[vehicleid][vtry]--;
 		}
 		else {
-			format(dialog, sizeof(dialog), "%s\n{A9C4E4}Code tapé: {FF0000}ERREUR{A9C4E4}. {%s}%d {A9C4E4}essais restants.\n{4FDB37}Vert{A9C4E4} = Chiffre présent et bien placé.\n{DBB818}Jaune{A9C4E4} = Chiffre présent mais mal placé.", dialog, (vInfo[vehicleid][vtry]>3) ? ("4FDB37") : ("E03434"), vInfo[vehicleid][vtry]);
-			format(dialog, sizeof(dialog), "%s\n{E03434}Rouge{A9C4E4} = Chiffre non présent.\n{E03434}", dialog);
-			format(dialog, sizeof(dialog), "%s/!\\ Un code ne contient jamais deux fois le même chiffre ! /!\\\n/!\\La longueur de ce que vous avez entré n'est pas celle du code ! /!\\", dialog);
-			format(title, sizeof(title), "Vol de véhicule - %s", ins);
+			format(dialog, sizeof(dialog), "%s\n{A9C4E4}Code tapÃ©: {FF0000}ERREUR{A9C4E4}. {%s}%d {A9C4E4}essais restants.\n{4FDB37}Vert{A9C4E4} = Chiffre prÃ©sent et bien placÃ©.\n{DBB818}Jaune{A9C4E4} = Chiffre prÃ©sent mais mal placÃ©.", dialog, (vInfo[vehicleid][vtry]>3) ? ("4FDB37") : ("E03434"), vInfo[vehicleid][vtry]);
+			format(dialog, sizeof(dialog), "%s\n{E03434}Rouge{A9C4E4} = Chiffre non prÃ©sent.\n{E03434}", dialog);
+			format(dialog, sizeof(dialog), "%s/!\\ Un code ne contient jamais deux fois le mÃªme chiffre ! /!\\\n/!\\La longueur de ce que vous avez entrÃ© n'est pas celle du code ! /!\\", dialog);
+			format(title, sizeof(title), "Vol de vÃ©hicule - %s", ins);
 		}
-		ShowPlayerDialog(playerid, DIALOG_CARJACK, DIALOG_STYLE_INPUT, "Vol de véhicule", dialog, "Essayer", "Quitter");
+		ShowPlayerDialog(playerid, DIALOG_CARJACK, DIALOG_STYLE_INPUT, "Vol de vÃ©hicule", dialog, "Essayer", "Quitter");
 		return 1;
 	}
 
@@ -6534,10 +6534,10 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 	{
 	    if(!response) return 1;
 		if(!IsCanAction(playerid))
-	    	return SendClientMessage(playerid, COLOR_ERROR,"Vous ne pouvez pas faire ça maintenant !");
+	    	return SendClientMessage(playerid, COLOR_ERROR,"Vous ne pouvez pas faire Ã§a maintenant !");
 		if(GetPlayerCheckpoint(playerid)!=CP_BUYVEH)
-		    return SendClientMessage(playerid, COLOR_ERROR, "Vous devez être dans un checkpoint d'achat de véhicule !");
-        new price=-1, model=-1, vname[40]="Véhicule";
+		    return SendClientMessage(playerid, COLOR_ERROR, "Vous devez Ãªtre dans un checkpoint d'achat de vÃ©hicule !");
+        new price=-1, model=-1, vname[40]="VÃ©hicule";
 		switch(listitem)
 		{
 			case 0:
@@ -6610,7 +6610,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 		if(GetPlayerMoney(playerid)<price)
 			return SendClientMessage(playerid, COLOR_ERROR, "Vous n'avez pas assez d'argent sur vous !");
 		if(!(model >= 400 && model <= 611))
-		    return SendClientMessage(playerid, COLOR_ERROR, "Le véhicule est invalide !");
+		    return SendClientMessage(playerid, COLOR_ERROR, "Le vÃ©hicule est invalide !");
 		GivePlayerMoney(playerid, -price);
 		new rand=random(sizeof(BuyvehPos));
 		new vid = CreateVehicle(model, BuyvehPos[rand][0], BuyvehPos[rand][1], BuyvehPos[rand][2], BuyvehPos[rand][3], 0, 1, -1);
@@ -6623,83 +6623,83 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 		PutPlayerInVehicle(playerid, vid, 0);
 		SaveVehicleStats(vid);
 		new msg[128];
-		format(msg, sizeof(msg), "Vous avez bien acheté un(e) %s au prix de %s !", vname, FormatMoney(price));
+		format(msg, sizeof(msg), "Vous avez bien achetÃ© un(e) %s au prix de %s !", vname, FormatMoney(price));
 		return SendClientMessage(playerid, COLOR_GREEN, msg);
 	}
 
 	if(dialogid==DIALOG_PUTMONEY)
 	{
 		if(!IsCanAction(playerid))
-	    	return SendClientMessage(playerid, COLOR_ERROR,"Vous ne pouvez pas faire ça maintenant !");
+	    	return SendClientMessage(playerid, COLOR_ERROR,"Vous ne pouvez pas faire Ã§a maintenant !");
 	    if(!response) return 1;
 		if(GetPlayerCheckpoint(playerid)!=CP_BANQUE)
-		    return SendClientMessage(playerid, COLOR_ERROR, "Vous devez être dans un checkpoint de banque !");
+		    return SendClientMessage(playerid, COLOR_ERROR, "Vous devez Ãªtre dans un checkpoint de banque !");
 	    new amount=0;
    		if(sscanf(inputtext, "i", amount))
 		{
-		 	ShowPlayerDialog(playerid, DIALOG_ATM, DIALOG_STYLE_INPUT, "Déposer de l'argent", "Entrez la quantité d'argent à retirer.\n{FF0000}Vous devez entrer un nombre !", "Retirer", "Annuler");
+		 	ShowPlayerDialog(playerid, DIALOG_ATM, DIALOG_STYLE_INPUT, "DÃ©poser de l'argent", "Entrez la quantitÃ© d'argent Ã  retirer.\n{FF0000}Vous devez entrer un nombre !", "Retirer", "Annuler");
 			return 1;
 		}
 		if(amount<=0)
 		{
-		 	ShowPlayerDialog(playerid, DIALOG_ATM, DIALOG_STYLE_INPUT, "Déposer de l'argent", "Entrez la quantité d'argent à retirer.\n{FF0000}Vous devez entrer un nombre plus grand que 0 !", "Retirer", "Annuler");
+		 	ShowPlayerDialog(playerid, DIALOG_ATM, DIALOG_STYLE_INPUT, "DÃ©poser de l'argent", "Entrez la quantitÃ© d'argent Ã  retirer.\n{FF0000}Vous devez entrer un nombre plus grand que 0 !", "Retirer", "Annuler");
 			return 1;
 		}
 		if(amount>GetPlayerMoney(playerid))
 		{
-		 	ShowPlayerDialog(playerid, DIALOG_ATM, DIALOG_STYLE_INPUT, "Déposer de l'argent", "Entrez la quantité d'argent à retirer.\n{FF0000}Vous n'avez pas autant d'argent à déposer !", "Retirer", "Annuler");
+		 	ShowPlayerDialog(playerid, DIALOG_ATM, DIALOG_STYLE_INPUT, "DÃ©poser de l'argent", "Entrez la quantitÃ© d'argent Ã  retirer.\n{FF0000}Vous n'avez pas autant d'argent Ã  dÃ©poser !", "Retirer", "Annuler");
 			return 1;
 		}
 		pInv[playerid][BANK_CASH]+=amount;
 		GivePlayerMoney(playerid, -amount);
 		new msg[128];
-		format(msg, sizeof(msg), "Vous avez correctement déposé {FF0000}%s{A9C4E4} à la banque", FormatMoney(amount));
+		format(msg, sizeof(msg), "Vous avez correctement dÃ©posÃ© {FF0000}%s{A9C4E4} Ã  la banque", FormatMoney(amount));
 		ShowPlayerDialog(playerid, DIALOG_ATM, DIALOG_STYLE_MSGBOX, "Informations", msg, "Retirer", "Annuler");
 	}
 
 	if(dialogid==DIALOG_GETMONEY)
 	{
 		if(!IsCanAction(playerid))
-	    	return SendClientMessage(playerid, COLOR_ERROR,"Vous ne pouvez pas faire ça maintenant !");
+	    	return SendClientMessage(playerid, COLOR_ERROR,"Vous ne pouvez pas faire Ã§a maintenant !");
 	    if(!response) return 1;
 		if(GetPlayerCheckpoint(playerid)!=CP_BANQUE)
-		    return SendClientMessage(playerid, COLOR_ERROR, "Vous devez être dans un checkpoint de banque !");
+		    return SendClientMessage(playerid, COLOR_ERROR, "Vous devez Ãªtre dans un checkpoint de banque !");
 	    new amount=0;
    		if(sscanf(inputtext, "i", amount))
 		{
-		 	ShowPlayerDialog(playerid, DIALOG_ATM, DIALOG_STYLE_INPUT, "Retirer de l'argent", "Entrez la quantité d'argent à retirer.\n{FF0000}Vous devez entrer un nombre !", "Retirer", "Annuler");
+		 	ShowPlayerDialog(playerid, DIALOG_ATM, DIALOG_STYLE_INPUT, "Retirer de l'argent", "Entrez la quantitÃ© d'argent Ã  retirer.\n{FF0000}Vous devez entrer un nombre !", "Retirer", "Annuler");
 			return 1;
 		}
 		if(amount<=0)
 		{
-		 	ShowPlayerDialog(playerid, DIALOG_ATM, DIALOG_STYLE_INPUT, "Retirer de l'argent", "Entrez la quantité d'argent à retirer.\n{FF0000}Vous devez entrer un nombre plus grand que 0 !", "Retirer", "Annuler");
+		 	ShowPlayerDialog(playerid, DIALOG_ATM, DIALOG_STYLE_INPUT, "Retirer de l'argent", "Entrez la quantitÃ© d'argent Ã  retirer.\n{FF0000}Vous devez entrer un nombre plus grand que 0 !", "Retirer", "Annuler");
 			return 1;
 		}
 		if(amount>pInv[playerid][BANK_CASH])
 		{
-		 	ShowPlayerDialog(playerid, DIALOG_ATM, DIALOG_STYLE_INPUT, "Retirer de l'argent", "Entrez la quantité d'argent à retirer.\n{FF0000}Vous n'avez pas autant d'argent à retirer !", "Retirer", "Annuler");
+		 	ShowPlayerDialog(playerid, DIALOG_ATM, DIALOG_STYLE_INPUT, "Retirer de l'argent", "Entrez la quantitÃ© d'argent Ã  retirer.\n{FF0000}Vous n'avez pas autant d'argent Ã  retirer !", "Retirer", "Annuler");
 			return 1;
 		}
 		pInv[playerid][BANK_CASH]-=amount;
 		GivePlayerMoney(playerid, amount);
 		new msg[128];
-		format(msg, sizeof(msg), "Vous avez correctement retiré {FF0000}%s{A9C4E4} à la banque", FormatMoney(amount));
+		format(msg, sizeof(msg), "Vous avez correctement retirÃ© {FF0000}%s{A9C4E4} Ã  la banque", FormatMoney(amount));
 		ShowPlayerDialog(playerid, DIALOG_ATM, DIALOG_STYLE_MSGBOX, "Informations", msg, "Retirer", "Annuler");
 	}
 
 	if(dialogid==DIALOG_BANQUE)
 	{
 		if(!IsCanAction(playerid))
-	    	return SendClientMessage(playerid, COLOR_ERROR,"Vous ne pouvez pas faire ça maintenant !");
+	    	return SendClientMessage(playerid, COLOR_ERROR,"Vous ne pouvez pas faire Ã§a maintenant !");
 	    if(!response) return 1;
 		if(GetPlayerCheckpoint(playerid)!=CP_BANQUE)
-		    return SendClientMessage(playerid, COLOR_ERROR, "Vous devez être dans le checkpoint de la banque !");
+		    return SendClientMessage(playerid, COLOR_ERROR, "Vous devez Ãªtre dans le checkpoint de la banque !");
 		switch(listitem)
 		{
 		    case 0:
-		    	ShowPlayerDialog(playerid, DIALOG_PUTMONEY, DIALOG_STYLE_INPUT, "Déposer de l'argent", "Entrez la quantité d'argent à déposer.", "Déposer", "Annuler");
+		    	ShowPlayerDialog(playerid, DIALOG_PUTMONEY, DIALOG_STYLE_INPUT, "DÃ©poser de l'argent", "Entrez la quantitÃ© d'argent Ã  dÃ©poser.", "DÃ©poser", "Annuler");
 			case 1:
-		    	ShowPlayerDialog(playerid, DIALOG_GETMONEY, DIALOG_STYLE_INPUT, "Retirer de l'argent", "Entrez la quantité d'argent à retirer.", "Retirer", "Annuler");
+		    	ShowPlayerDialog(playerid, DIALOG_GETMONEY, DIALOG_STYLE_INPUT, "Retirer de l'argent", "Entrez la quantitÃ© d'argent Ã  retirer.", "Retirer", "Annuler");
 			case 2:
 			{
 			    new dialog[600];
@@ -6713,35 +6713,35 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 	if(dialogid==DIALOG_ATM)
 	{
 		if(!IsCanAction(playerid))
-	    	return SendClientMessage(playerid, COLOR_ERROR,"Vous ne pouvez pas faire ça maintenant !");
+	    	return SendClientMessage(playerid, COLOR_ERROR,"Vous ne pouvez pas faire Ã§a maintenant !");
 	    if(!response) return 1;
 		new cp=GetPlayerCheckpoint(playerid);
 		if(cp!=CP_ATM1&&cp!=CP_ATM2&&cp!=CP_ATM3&&cp!=CP_ATM4&&cp!=CP_ATM5)
-		    return SendClientMessage(playerid, COLOR_ERROR, "Vous devez être dans un checkpoint d'ATM !");
+		    return SendClientMessage(playerid, COLOR_ERROR, "Vous devez Ãªtre dans un checkpoint d'ATM !");
 
 	    new amount=0, dialog[256];
    		if(sscanf(inputtext, "i", amount))
 		{
-		    format(dialog, sizeof(dialog), "Entrez la quantité d'argent à retirer\nVous avez {FF0000}%s{A9C4E4} en banque.\n{FF0000}Vous devez entrer un nombre !", FormatMoney(pInv[playerid][BANK_CASH]));
+		    format(dialog, sizeof(dialog), "Entrez la quantitÃ© d'argent Ã  retirer\nVous avez {FF0000}%s{A9C4E4} en banque.\n{FF0000}Vous devez entrer un nombre !", FormatMoney(pInv[playerid][BANK_CASH]));
 		 	ShowPlayerDialog(playerid, DIALOG_ATM, DIALOG_STYLE_INPUT, "Retirer de l'argent", dialog, "Retirer", "Annuler");
 			return 1;
 		}
 		if(amount<=0)
 		{
-		    format(dialog, sizeof(dialog), "Entrez la quantité d'argent à retirer\nVous avez {FF0000}%s{A9C4E4} en banque.\n{FF0000}Vous devez entrer un nombre plus grand que 0 !", FormatMoney(pInv[playerid][BANK_CASH]));
+		    format(dialog, sizeof(dialog), "Entrez la quantitÃ© d'argent Ã  retirer\nVous avez {FF0000}%s{A9C4E4} en banque.\n{FF0000}Vous devez entrer un nombre plus grand que 0 !", FormatMoney(pInv[playerid][BANK_CASH]));
 		 	ShowPlayerDialog(playerid, DIALOG_ATM, DIALOG_STYLE_INPUT, "Retirer de l'argent", dialog, "Retirer", "Annuler");
 			return 1;
 		}
 		if(amount>pInv[playerid][BANK_CASH])
 		{
-		    format(dialog, sizeof(dialog), "Entrez la quantité d'argent à retirer\nVous avez {FF0000}%s{A9C4E4} en banque.\n{FF0000}Vous n'avez pas autant d'argent en banque !", FormatMoney(pInv[playerid][BANK_CASH]));
+		    format(dialog, sizeof(dialog), "Entrez la quantitÃ© d'argent Ã  retirer\nVous avez {FF0000}%s{A9C4E4} en banque.\n{FF0000}Vous n'avez pas autant d'argent en banque !", FormatMoney(pInv[playerid][BANK_CASH]));
 		 	ShowPlayerDialog(playerid, DIALOG_ATM, DIALOG_STYLE_INPUT, "Retirer de l'argent", dialog, "Retirer", "Annuler");
 			return 1;
 		}
 		pInv[playerid][BANK_CASH]-=amount;
 		GivePlayerMoney(playerid, amount);
 		new msg[128];
-		format(msg, sizeof(msg), "Vous avez retiré %s dans un ATM.", FormatMoney(amount));
+		format(msg, sizeof(msg), "Vous avez retirÃ© %s dans un ATM.", FormatMoney(amount));
 		SendClientMessage(playerid, COLOR_GREEN, msg);
 		return 1;
 	}
@@ -6749,29 +6749,29 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 	if(dialogid==DIALOG_PUTSAC)
 	{
 		if(!IsCanAction(playerid))
-	    	return SendClientMessage(playerid, COLOR_ERROR,"Vous ne pouvez pas faire ça maintenant !");
+	    	return SendClientMessage(playerid, COLOR_ERROR,"Vous ne pouvez pas faire Ã§a maintenant !");
 	    if(!response) return 1;
 	    new amount=0;
 	    if(pPut[playerid]==0)
 	    {
 	        if(sscanf(inputtext, "i", amount))
 	        {
-		     	ShowPlayerDialog(playerid, DIALOG_PUTSAC, DIALOG_STYLE_INPUT, "Ajouter de l'argent", "Entrez la quantité d'argent à ajouter.\n{FF0000}Vous devez entrer un nombre !", "OK", "Annuler");
+		     	ShowPlayerDialog(playerid, DIALOG_PUTSAC, DIALOG_STYLE_INPUT, "Ajouter de l'argent", "Entrez la quantitÃ© d'argent Ã  ajouter.\n{FF0000}Vous devez entrer un nombre !", "OK", "Annuler");
 				return 1;
 			}
 			if(amount<=0)
 			{
-		     	ShowPlayerDialog(playerid, DIALOG_PUTSAC, DIALOG_STYLE_INPUT, "Ajouter de l'argent", "Entrez la quantité d'argent à ajouter.\n{FF0000}Vous devez entrer un nombre plus grand que 0 !", "OK", "Annuler");
+		     	ShowPlayerDialog(playerid, DIALOG_PUTSAC, DIALOG_STYLE_INPUT, "Ajouter de l'argent", "Entrez la quantitÃ© d'argent Ã  ajouter.\n{FF0000}Vous devez entrer un nombre plus grand que 0 !", "OK", "Annuler");
 				return 1;
 			}
 			if(amount>GetPlayerMoney(playerid))
 			{
-		     	ShowPlayerDialog(playerid, DIALOG_PUTSAC, DIALOG_STYLE_INPUT, "Ajouter de l'argent", "Entrez la quantité d'argent à ajouter.\n{FF0000}Vous n'avez pas assez d'argent à ajouter !", "OK", "Annuler");
+		     	ShowPlayerDialog(playerid, DIALOG_PUTSAC, DIALOG_STYLE_INPUT, "Ajouter de l'argent", "Entrez la quantitÃ© d'argent Ã  ajouter.\n{FF0000}Vous n'avez pas assez d'argent Ã  ajouter !", "OK", "Annuler");
    			 	return 1;
 			}
 			if(amount+pInv[playerid][SAC_CASH]>3000000)
 			{
-		     	ShowPlayerDialog(playerid, DIALOG_PUTSAC, DIALOG_STYLE_INPUT, "Ajouter de l'argent", "Entrez la quantité d'argent à ajouter.\n{FF0000}Votre sac ne peut contenir que $3,000,000 maximum !", "OK", "Annuler");
+		     	ShowPlayerDialog(playerid, DIALOG_PUTSAC, DIALOG_STYLE_INPUT, "Ajouter de l'argent", "Entrez la quantitÃ© d'argent Ã  ajouter.\n{FF0000}Votre sac ne peut contenir que $3,000,000 maximum !", "OK", "Annuler");
    			 	return 1;
 			}
 			pInv[playerid][SAC_CASH]+=amount;
@@ -6784,17 +6784,17 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 	    {
 	        if(sscanf(inputtext, "i", amount))
 	        {
-		     	ShowPlayerDialog(playerid, DIALOG_PUTSAC, DIALOG_STYLE_INPUT, "Prendre de l'argent", "Entrez la quantité d'argent à prendre.\n{FF0000}Vous devez entrer un nombre !", "OK", "Annuler");
+		     	ShowPlayerDialog(playerid, DIALOG_PUTSAC, DIALOG_STYLE_INPUT, "Prendre de l'argent", "Entrez la quantitÃ© d'argent Ã  prendre.\n{FF0000}Vous devez entrer un nombre !", "OK", "Annuler");
 				return 1;
 			}
 			if(amount<=0)
 			{
-		     	ShowPlayerDialog(playerid, DIALOG_PUTSAC, DIALOG_STYLE_INPUT, "Prendre de l'argent", "Entrez la quantité d'argent à prendre.\n{FF0000}Vous devez entrer un nombre plus grand que 0 !", "OK", "Annuler");
+		     	ShowPlayerDialog(playerid, DIALOG_PUTSAC, DIALOG_STYLE_INPUT, "Prendre de l'argent", "Entrez la quantitÃ© d'argent Ã  prendre.\n{FF0000}Vous devez entrer un nombre plus grand que 0 !", "OK", "Annuler");
 				return 1;
 			}
 			if(amount>pInv[playerid][SAC_CASH])
 			{
-		     	ShowPlayerDialog(playerid, DIALOG_PUTSAC, DIALOG_STYLE_INPUT, "Prendre de l'argent", "Entrez la quantité d'argent à prendre.\n{FF0000}Vous n'avez pas assez d'argent à prendre !", "OK", "Annuler");
+		     	ShowPlayerDialog(playerid, DIALOG_PUTSAC, DIALOG_STYLE_INPUT, "Prendre de l'argent", "Entrez la quantitÃ© d'argent Ã  prendre.\n{FF0000}Vous n'avez pas assez d'argent Ã  prendre !", "OK", "Annuler");
    			 	return 1;
 			}
 			pInv[playerid][SAC_CASH]-=amount;
@@ -6807,29 +6807,29 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 	if(dialogid==DIALOG_PICKSAC)
 	{
 		if(!IsCanAction(playerid))
-	    	return SendClientMessage(playerid, COLOR_ERROR,"Vous ne pouvez pas faire ça maintenant !");
+	    	return SendClientMessage(playerid, COLOR_ERROR,"Vous ne pouvez pas faire Ã§a maintenant !");
 	    if(!response) return 1;
 	    new amount=0;
 		if(pPick[playerid]==1)
 		{
 			if(!IsPlayerCrimi(playerid))
 			{
-				ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Action impossible", "{FF0000}Vous ne pouvez pas faire ça si vous n'êtes pas criminel !", "OK", "");
+				ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Action impossible", "{FF0000}Vous ne pouvez pas faire Ã§a si vous n'Ãªtes pas criminel !", "OK", "");
 				return 1;
 			}
 	        if(sscanf(inputtext, "i", amount))
 	        {
-		     	ShowPlayerDialog(playerid, DIALOG_PICKSAC, DIALOG_STYLE_INPUT, "Prendre des C4", "Entrez un nombre de C4 à prendre.\nVous devez entrer un nombre !", "OK", "Annuler");
+		     	ShowPlayerDialog(playerid, DIALOG_PICKSAC, DIALOG_STYLE_INPUT, "Prendre des C4", "Entrez un nombre de C4 Ã  prendre.\nVous devez entrer un nombre !", "OK", "Annuler");
 				return 1;
 			}
 			if(amount<=0)
 			{
-		     	ShowPlayerDialog(playerid, DIALOG_PICKSAC, DIALOG_STYLE_INPUT, "Prendre des C4", "Entrez un nombre de C4 à prendre.\nVous devez entrer un nombre plus grand que 0 !", "OK", "Annuler");
+		     	ShowPlayerDialog(playerid, DIALOG_PICKSAC, DIALOG_STYLE_INPUT, "Prendre des C4", "Entrez un nombre de C4 Ã  prendre.\nVous devez entrer un nombre plus grand que 0 !", "OK", "Annuler");
 				return 1;
 			}
 			if(amount>pInv[playerid][SAC_C4])
 			{
-		     	ShowPlayerDialog(playerid, DIALOG_PICKSAC, DIALOG_STYLE_INPUT, "Prendre des C4", "Entrez un nombre de C4 à prendre.\nVous n'avez pas assez de C4 !", "OK", "Annuler");
+		     	ShowPlayerDialog(playerid, DIALOG_PICKSAC, DIALOG_STYLE_INPUT, "Prendre des C4", "Entrez un nombre de C4 Ã  prendre.\nVous n'avez pas assez de C4 !", "OK", "Annuler");
    			 	return 1;
 			}
 			pInv[playerid][SAC_C4]-=amount;
@@ -6842,22 +6842,22 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 		{
 			if(!IsPlayerCrimi(playerid))
 			{
-				ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Action impossible", "{FF0000}Vous ne pouvez pas faire ça si vous n'êtes pas criminel !", "OK", "");
+				ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Action impossible", "{FF0000}Vous ne pouvez pas faire Ã§a si vous n'Ãªtes pas criminel !", "OK", "");
 				return 1;
 			}
 	        if(sscanf(inputtext, "i", amount))
 	        {
-		     	ShowPlayerDialog(playerid, DIALOG_PICKSAC, DIALOG_STYLE_INPUT, "Prendre des cordes", "Entrez un nombre de cordes à prendre.\nVous devez entrer un nombre !", "OK", "Annuler");
+		     	ShowPlayerDialog(playerid, DIALOG_PICKSAC, DIALOG_STYLE_INPUT, "Prendre des cordes", "Entrez un nombre de cordes Ã  prendre.\nVous devez entrer un nombre !", "OK", "Annuler");
 				return 1;
 			}
 			if(amount<=0)
 			{
-		     	ShowPlayerDialog(playerid, DIALOG_PICKSAC, DIALOG_STYLE_INPUT, "Prendre des cordes", "Entrez un nombre de cordes à prendre.\nVous devez entrer un nombre plus grand que 0 !", "OK", "Annuler");
+		     	ShowPlayerDialog(playerid, DIALOG_PICKSAC, DIALOG_STYLE_INPUT, "Prendre des cordes", "Entrez un nombre de cordes Ã  prendre.\nVous devez entrer un nombre plus grand que 0 !", "OK", "Annuler");
 				return 1;
 			}
 			if(amount>pInv[playerid][SAC_ROPES])
 			{
-		     	ShowPlayerDialog(playerid, DIALOG_PICKSAC, DIALOG_STYLE_INPUT, "Prendre des C4", "Entrez un nombre de C4 à prendre.\nVous n'avez pas assez de C4 !", "OK", "Annuler");
+		     	ShowPlayerDialog(playerid, DIALOG_PICKSAC, DIALOG_STYLE_INPUT, "Prendre des C4", "Entrez un nombre de C4 Ã  prendre.\nVous n'avez pas assez de C4 !", "OK", "Annuler");
 				return 1;
 			}
 			pInv[playerid][SAC_ROPES]-=amount;
@@ -6872,7 +6872,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 	if(dialogid==DIALOG_SAC)
 	{
 		if(!IsCanAction(playerid))
-	    	return SendClientMessage(playerid, COLOR_ERROR,"Vous ne pouvez pas faire ça maintenant !");
+	    	return SendClientMessage(playerid, COLOR_ERROR,"Vous ne pouvez pas faire Ã§a maintenant !");
 	    if(!response) return 1;
 	    switch(listitem)
 	    {
@@ -6880,83 +6880,83 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			{
 				if(!IsPlayerCrimi(playerid))
 				{
-					ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Action impossible", "{FF0000}Vous ne pouvez pas faire ça si vous n'êtes pas criminel !", "OK", "");
+					ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Action impossible", "{FF0000}Vous ne pouvez pas faire Ã§a si vous n'Ãªtes pas criminel !", "OK", "");
 					return 1;
 				}
 			    if(pInv[playerid][ROPES]<=0)
 			    {
-			        ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Action impossible", "{FF0000}Vous n'avez aucune cordes sur vous à ajouter !", "OK", "");
+			        ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Action impossible", "{FF0000}Vous n'avez aucune cordes sur vous Ã  ajouter !", "OK", "");
 			        return 1;
 			    }
 			    pInv[playerid][SAC_ROPES]+=pInv[playerid][ROPES];
 			    pInv[playerid][ROPES]=0;
-				SendClientMessage(playerid, COLOR_GREEN, "Vous avez ajouté toutes vos cordes dans votre sac !");
+				SendClientMessage(playerid, COLOR_GREEN, "Vous avez ajoutÃ© toutes vos cordes dans votre sac !");
 			}
 			case 1:
 			{
 				if(!IsPlayerCrimi(playerid))
 				{
-					ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Action impossible", "{FF0000}Vous ne pouvez pas faire ça si vous n'êtes pas criminel !", "OK", "");
+					ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Action impossible", "{FF0000}Vous ne pouvez pas faire Ã§a si vous n'Ãªtes pas criminel !", "OK", "");
 					return 1;
 				}
 			    if(pInv[playerid][C4]<=0)
 			    {
-			        ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Action impossible", "{FF0000}Vous n'avez aucun C4 sur vous à ajouter !", "OK", "");
+			        ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Action impossible", "{FF0000}Vous n'avez aucun C4 sur vous Ã  ajouter !", "OK", "");
 			        return 1;
 			    }
 			    pInv[playerid][SAC_C4]+=pInv[playerid][C4];
 			    pInv[playerid][C4]=0;
-				SendClientMessage(playerid, COLOR_GREEN, "Vous avez ajouté tout votre C4 dans votre sac !");
+				SendClientMessage(playerid, COLOR_GREEN, "Vous avez ajoutÃ© tout votre C4 dans votre sac !");
 			}
 			case 2:
 			{
 				if(!IsPlayerCrimi(playerid))
 				{
-					ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Action impossible", "{FF0000}Vous ne pouvez pas faire ça si vous n'êtes pas criminel !", "OK", "");
+					ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Action impossible", "{FF0000}Vous ne pouvez pas faire Ã§a si vous n'Ãªtes pas criminel !", "OK", "");
 					return 1;
 				}
 			    if(pInv[playerid][SAC_ROPES]<=0)
 			    {
-			        ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Action impossible", "{FF0000}Vous n'avez aucune cordes dans votre sac à prendre !", "OK", "Annuler");
+			        ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Action impossible", "{FF0000}Vous n'avez aucune cordes dans votre sac Ã  prendre !", "OK", "Annuler");
 			        return 1;
 			    }
 			    pPick[playerid]=0;
-		     	ShowPlayerDialog(playerid, DIALOG_PICKSAC, DIALOG_STYLE_INPUT, "Prendre des cordes", "Entrez un nombre de cordes à prendre.", "OK", "Annuler");
+		     	ShowPlayerDialog(playerid, DIALOG_PICKSAC, DIALOG_STYLE_INPUT, "Prendre des cordes", "Entrez un nombre de cordes Ã  prendre.", "OK", "Annuler");
 			}
 			case 3:
 			{
 				if(!IsPlayerCrimi(playerid))
 				{
-					ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Action impossible", "{FF0000}Vous ne pouvez pas faire ça si vous n'êtes pas criminel !", "OK", "");
+					ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Action impossible", "{FF0000}Vous ne pouvez pas faire Ã§a si vous n'Ãªtes pas criminel !", "OK", "");
 					return 1;
 				}
 			    if(pInv[playerid][SAC_C4]<=0)
 			    {
-			        ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Action impossible", "{FF0000}Vous n'avez aucun C4 dans votre sac à prendre !", "OK", "Annuler");
+			        ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Action impossible", "{FF0000}Vous n'avez aucun C4 dans votre sac Ã  prendre !", "OK", "Annuler");
 			        return 1;
 			    }
 			    pPick[playerid]=1;
-		     	ShowPlayerDialog(playerid, DIALOG_PICKSAC, DIALOG_STYLE_INPUT, "Prendre des C4", "Entrez un nombre de C4 à prendre.", "OK", "Annuler");
+		     	ShowPlayerDialog(playerid, DIALOG_PICKSAC, DIALOG_STYLE_INPUT, "Prendre des C4", "Entrez un nombre de C4 Ã  prendre.", "OK", "Annuler");
 			}
 			case 4:
 			{
 				if(GetPlayerMoney(playerid)<=0)
 				{
-			        ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Action impossible", "{FF0000}Vous n'avez pas d'argent à ajouter !", "OK", "Annuler");
+			        ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Action impossible", "{FF0000}Vous n'avez pas d'argent Ã  ajouter !", "OK", "Annuler");
 			        return 1;
 				}
 				pPut[playerid]=0;
-		     	ShowPlayerDialog(playerid, DIALOG_PUTSAC, DIALOG_STYLE_INPUT, "Ajouter de l'argent", "Entrez la quantité d'argent à ajouter.", "OK", "Annuler");
+		     	ShowPlayerDialog(playerid, DIALOG_PUTSAC, DIALOG_STYLE_INPUT, "Ajouter de l'argent", "Entrez la quantitÃ© d'argent Ã  ajouter.", "OK", "Annuler");
 			}
 			case 5:
 			{
 				if(pInv[playerid][SAC_CASH]<=0)
 				{
-			        ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Action impossible", "{FF0000}Vous n'avez pas d'argent dans le sac à prendre !", "OK", "Annuler");
+			        ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Action impossible", "{FF0000}Vous n'avez pas d'argent dans le sac Ã  prendre !", "OK", "Annuler");
 			        return 1;
 				}
 				pPut[playerid]=1;
-		     	ShowPlayerDialog(playerid, DIALOG_PUTSAC, DIALOG_STYLE_INPUT, "Prendre de l'argent", "Entrez la quantité d'argent à prendre.", "OK", "Annuler");
+		     	ShowPlayerDialog(playerid, DIALOG_PUTSAC, DIALOG_STYLE_INPUT, "Prendre de l'argent", "Entrez la quantitÃ© d'argent Ã  prendre.", "OK", "Annuler");
 
 			}
 			case 6:
@@ -6971,10 +6971,10 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 	if(dialogid==DIALOG_BUY)
 	{
 		if(!IsCanAction(playerid))
-	    	return SendClientMessage(playerid, COLOR_ERROR,"Vous ne pouvez pas faire ça maintenant !");
+	    	return SendClientMessage(playerid, COLOR_ERROR,"Vous ne pouvez pas faire Ã§a maintenant !");
 		if(!response) return 1;
 		if(GetPlayerCheckpoint(playerid)!=CP_24/7&&GetPlayerCheckpoint(playerid)!=CP_ROBOIS)
-		    return SendClientMessage(playerid, COLOR_ERROR, "Vous n'êtes pas dans un checkpoint de 24/7 !");
+		    return SendClientMessage(playerid, COLOR_ERROR, "Vous n'Ãªtes pas dans un checkpoint de 24/7 !");
 	    new amount=0, dialog[380];
 	    switch(pNextBuy[playerid])
 	    {
@@ -6983,36 +6983,36 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 	        {
 	            if(sscanf(inputtext, "i", amount))
 	            {
-					ShowPlayerDialog(playerid, DIALOG_BUY, DIALOG_STYLE_INPUT, "Passage à la caisse", "{A9C4E4}Achat de: {FF0000}Cordes{A9C4E4}\nPrix à l'unité: {FF0000}$750\nVous devez entrer un chiffre !", "Acheter", "Annuler");
+					ShowPlayerDialog(playerid, DIALOG_BUY, DIALOG_STYLE_INPUT, "Passage Ã  la caisse", "{A9C4E4}Achat de: {FF0000}Cordes{A9C4E4}\nPrix Ã  l'unitÃ©: {FF0000}$750\nVous devez entrer un chiffre !", "Acheter", "Annuler");
 					return 1;
 				}
 				if(amount<=0)
 	            {
-					ShowPlayerDialog(playerid, DIALOG_BUY, DIALOG_STYLE_INPUT, "Passage à la caisse", "{A9C4E4}Achat de: {FF0000}Cordes{A9C4E4}\nPrix à l'unité: {FF0000}$750\nVous devez entrer un chiffre plus grand que zéro !", "Acheter", "Annuler");
+					ShowPlayerDialog(playerid, DIALOG_BUY, DIALOG_STYLE_INPUT, "Passage Ã  la caisse", "{A9C4E4}Achat de: {FF0000}Cordes{A9C4E4}\nPrix Ã  l'unitÃ©: {FF0000}$750\nVous devez entrer un chiffre plus grand que zÃ©ro !", "Acheter", "Annuler");
 					return 1;
 				}
 				if(GetPlayerMoney(playerid)<(750*amount))
 	            {
-					ShowPlayerDialog(playerid, DIALOG_BUY, DIALOG_STYLE_INPUT, "Passage à la caisse", "{A9C4E4}Achat de: {FF0000}Cordes{FFFFFF}\nPrix à l'unité: {FF0000}$750\nVous n'avez pas assez d'argent !", "Acheter", "Annuler");
+					ShowPlayerDialog(playerid, DIALOG_BUY, DIALOG_STYLE_INPUT, "Passage Ã  la caisse", "{A9C4E4}Achat de: {FF0000}Cordes{FFFFFF}\nPrix Ã  l'unitÃ©: {FF0000}$750\nVous n'avez pas assez d'argent !", "Acheter", "Annuler");
 					return 1;
 				}
 				pInv[playerid][ROPES]+=amount;
 				GivePlayerMoney(playerid, -(750*amount));
-				format(dialog, sizeof(dialog), "{A9C4E4}Articles achetés: {FF0000}Cordes (%dx)\n{A9C4E4}Coût total: {FF0000}%s", amount, FormatMoney(amount*750));
+				format(dialog, sizeof(dialog), "{A9C4E4}Articles achetÃ©s: {FF0000}Cordes (%dx)\n{A9C4E4}CoÃ»t total: {FF0000}%s", amount, FormatMoney(amount*750));
 				ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Ticket de caisse", dialog, "Continuer", "");
 	        }
 	        case 1:
 	        {
 				if(GetPlayerMoney(playerid)<1200)
 	            {
-					ShowPlayerDialog(playerid, DIALOG_BUY, DIALOG_STYLE_INPUT, "Passage à la caisse", "{A9C4E4}Achat de: {FF0000}paire de Ciseaux{A9C4E4}\nPrix à l'unité: {FF0000}$1,200\nVous n'avez pas assez d'argent !", "Acheter", "Annuler");
+					ShowPlayerDialog(playerid, DIALOG_BUY, DIALOG_STYLE_INPUT, "Passage Ã  la caisse", "{A9C4E4}Achat de: {FF0000}paire de Ciseaux{A9C4E4}\nPrix Ã  l'unitÃ©: {FF0000}$1,200\nVous n'avez pas assez d'argent !", "Acheter", "Annuler");
 					return 1;
 				}
 				if(pInv[playerid][scissors])
-				    return SendClientMessage(playerid, COLOR_ERROR, "Vous avez déjà une paire de ciseaux sur vous!");
+				    return SendClientMessage(playerid, COLOR_ERROR, "Vous avez dÃ©jÃ  une paire de ciseaux sur vous!");
                 pInv[playerid][scissors]=true;
 				GivePlayerMoney(playerid, -1200);
-				format(dialog, sizeof(dialog), "{A9C4E4}Articles acheté: {FF0000}Paire de ciseaux (1x)\n{A9C4E4}Coût total: {FF0000}1200$");
+				format(dialog, sizeof(dialog), "{A9C4E4}Articles achetÃ©: {FF0000}Paire de ciseaux (1x)\n{A9C4E4}CoÃ»t total: {FF0000}1200$");
 				ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Ticket de caisse", dialog, "Continuer", "");
 
 	        }
@@ -7020,40 +7020,40 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 	        {
 	            if(sscanf(inputtext, "i", amount))
 	            {
-					ShowPlayerDialog(playerid, DIALOG_BUY, DIALOG_STYLE_INPUT, "Passage à la caisse", "{A9C4E4}Achat de: {FF0000}Saucisses{A9C4E4}\nPrix à l'unité: {FF0000}$500\nVous devez entrer un chiffre !", "Acheter", "Annuler");
+					ShowPlayerDialog(playerid, DIALOG_BUY, DIALOG_STYLE_INPUT, "Passage Ã  la caisse", "{A9C4E4}Achat de: {FF0000}Saucisses{A9C4E4}\nPrix Ã  l'unitÃ©: {FF0000}$500\nVous devez entrer un chiffre !", "Acheter", "Annuler");
 					return 1;
 				}
 				if(amount<=0)
 	            {
-					ShowPlayerDialog(playerid, DIALOG_BUY, DIALOG_STYLE_INPUT, "Passage à la caisse", "{A9C4E4}Achat de: {FF0000}Saucisses{A9C4E4}\nPrix à l'unité: {FF0000}$500\nVous devez entrer un chiffre plus grand que zéro !", "Acheter", "Annuler");
+					ShowPlayerDialog(playerid, DIALOG_BUY, DIALOG_STYLE_INPUT, "Passage Ã  la caisse", "{A9C4E4}Achat de: {FF0000}Saucisses{A9C4E4}\nPrix Ã  l'unitÃ©: {FF0000}$500\nVous devez entrer un chiffre plus grand que zÃ©ro !", "Acheter", "Annuler");
 					return 1;
 				}
 				if(GetPlayerMoney(playerid)<(500*amount))
 	            {
-					ShowPlayerDialog(playerid, DIALOG_BUY, DIALOG_STYLE_INPUT, "Passage à la caisse", "{A9C4E4}Achat de: {FF0000}Saucisses{A9C4E4}\nPrix à l'unité: {FF0000}$500\nVous n'avez pas assez d'argent !", "Acheter", "Annuler");
+					ShowPlayerDialog(playerid, DIALOG_BUY, DIALOG_STYLE_INPUT, "Passage Ã  la caisse", "{A9C4E4}Achat de: {FF0000}Saucisses{A9C4E4}\nPrix Ã  l'unitÃ©: {FF0000}$500\nVous n'avez pas assez d'argent !", "Acheter", "Annuler");
 					return 1;
 				}
 				GivePlayerMoney(playerid, -(500*amount));
 				pInv[playerid][saucisses]+=amount;
-				format(dialog, sizeof(dialog), "{A9C4E4}Articles achetés: {FF0000}Saucisses (%dx)\n{A9C4E4}Coût total: {FF0000}%s", amount, FormatMoney(amount*500));
+				format(dialog, sizeof(dialog), "{A9C4E4}Articles achetÃ©s: {FF0000}Saucisses (%dx)\n{A9C4E4}CoÃ»t total: {FF0000}%s", amount, FormatMoney(amount*500));
 				ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Ticket de caisse", dialog, "Continuer", "");
 	        }
 	        case 3:
 	        {
 				if(GetPlayerMoney(playerid)<22500)
 	            {
-					ShowPlayerDialog(playerid, DIALOG_BUY, DIALOG_STYLE_INPUT, "Passage à la caisse", "{A9C4E4}Achat de: {FF0000}Amplificateur{A9C4E4}\nPrix à l'unité: {FF0000}$22,500\nVous n'avez pas assez d'argent !", "Acheter", "Annuler");
+					ShowPlayerDialog(playerid, DIALOG_BUY, DIALOG_STYLE_INPUT, "Passage Ã  la caisse", "{A9C4E4}Achat de: {FF0000}Amplificateur{A9C4E4}\nPrix Ã  l'unitÃ©: {FF0000}$22,500\nVous n'avez pas assez d'argent !", "Acheter", "Annuler");
 					return 1;
 				}
 				if(pInv[playerid][amplificator])
-				    return SendClientMessage(playerid, COLOR_ERROR, "Vous avez déjà une paire de ciseaux sur vous!");
+				    return SendClientMessage(playerid, COLOR_ERROR, "Vous avez dÃ©jÃ  une paire de ciseaux sur vous!");
                 pInv[playerid][amplificator]=true;
                 if(pInfo[playerid][seeid]) {
                     Unload3DID(playerid);
 					Load3DID(playerid);
 				}
 				GivePlayerMoney(playerid, -22500);
-				format(dialog, sizeof(dialog), "{A9C4E4}Articles acheté: {FF0000}Amplificateur (1x)\n{A9C4E4}Coût total: {FF0000}22500$");
+				format(dialog, sizeof(dialog), "{A9C4E4}Articles achetÃ©: {FF0000}Amplificateur (1x)\n{A9C4E4}CoÃ»t total: {FF0000}22500$");
 				ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Ticket de caisse", dialog, "Continuer", "");
 	        }
 	    }
@@ -7062,16 +7062,16 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
     if(dialogid==DIALOG_24/7)
     {
 		if(!IsCanAction(playerid))
-	    	return SendClientMessage(playerid, COLOR_ERROR,"Vous ne pouvez pas faire ça maintenant !");
+	    	return SendClientMessage(playerid, COLOR_ERROR,"Vous ne pouvez pas faire Ã§a maintenant !");
 		if(GetPlayerCheckpoint(playerid)!=CP_24/7&&GetPlayerCheckpoint(playerid)!=CP_ROBOIS)
-		    return SendClientMessage(playerid, COLOR_ERROR, "Vous n'êtes pas dans un checkpoint de 24/7 !");
+		    return SendClientMessage(playerid, COLOR_ERROR, "Vous n'Ãªtes pas dans un checkpoint de 24/7 !");
         pNextBuy[playerid]=listitem;
         switch(listitem)
         {
-            case 0:ShowPlayerDialog(playerid, DIALOG_BUY, DIALOG_STYLE_INPUT, "Passage à la caisse", "{A9C4E4}Achat de: {FF0000}Cordes{A9C4E4}\nPrix à l'unité: {FF0000}$750", "Acheter", "Annuler");
-            case 1:ShowPlayerDialog(playerid, DIALOG_BUY, DIALOG_STYLE_MSGBOX, "Passage à la caisse", "{A9C4E4}Achat de: {FF0000}paire de Ciseaux{A9C4E4}\nPrix à l'unité: {FF0000}$1,200", "Acheter", "Annuler");
-            case 2:ShowPlayerDialog(playerid, DIALOG_BUY, DIALOG_STYLE_INPUT, "Passage à la caisse", "{A9C4E4}Achat de: {FF0000}Saucisses{A9C4E4}\nPrix à l'unité: {FF0000}$500", "Acheter", "Annuler");
-       		case 3:ShowPlayerDialog(playerid, DIALOG_BUY, DIALOG_STYLE_MSGBOX, "Passage à la caisse", "{A9C4E4}Achat de: {FF0000}Amplificateur{A9C4E4}\nPrix à l'unité: {FF0000}$22,500", "Acheter", "Annuler");
+            case 0:ShowPlayerDialog(playerid, DIALOG_BUY, DIALOG_STYLE_INPUT, "Passage Ã  la caisse", "{A9C4E4}Achat de: {FF0000}Cordes{A9C4E4}\nPrix Ã  l'unitÃ©: {FF0000}$750", "Acheter", "Annuler");
+            case 1:ShowPlayerDialog(playerid, DIALOG_BUY, DIALOG_STYLE_MSGBOX, "Passage Ã  la caisse", "{A9C4E4}Achat de: {FF0000}paire de Ciseaux{A9C4E4}\nPrix Ã  l'unitÃ©: {FF0000}$1,200", "Acheter", "Annuler");
+            case 2:ShowPlayerDialog(playerid, DIALOG_BUY, DIALOG_STYLE_INPUT, "Passage Ã  la caisse", "{A9C4E4}Achat de: {FF0000}Saucisses{A9C4E4}\nPrix Ã  l'unitÃ©: {FF0000}$500", "Acheter", "Annuler");
+       		case 3:ShowPlayerDialog(playerid, DIALOG_BUY, DIALOG_STYLE_MSGBOX, "Passage Ã  la caisse", "{A9C4E4}Achat de: {FF0000}Amplificateur{A9C4E4}\nPrix Ã  l'unitÃ©: {FF0000}$22,500", "Acheter", "Annuler");
         }
         return 1;
     }
@@ -7085,7 +7085,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			ShowPlayerDialog(playerid, DIALOG_CONNECT, DIALOG_STYLE_PASSWORD, "Inscription", "{A9C4E4}Ce compte {FF0000}n'existe pas.\n{A9C4E4}Merci d'entrer votre mot de passe pour vos futures connexion.\n{FF0000}Veuillez entrer un mot de passe !", "Inscription", "Quitter");
 
 		 	else{
-			    format(string, sizeof(string), "{A9C4E4}Bonjour %s. Votre compte est {FF0000}enregistré.\n{A9C4E4}Veuillez entrer votre mot de passe ci-dessous pour vous connecter.\n{FF0000}Veuillez entrer un mot de passe !",pInfo[playerid][name]);
+			    format(string, sizeof(string), "{A9C4E4}Bonjour %s. Votre compte est {FF0000}enregistrÃ©.\n{A9C4E4}Veuillez entrer votre mot de passe ci-dessous pour vous connecter.\n{FF0000}Veuillez entrer un mot de passe !",pInfo[playerid][name]);
 				ShowPlayerDialog(playerid,15500,DIALOG_STYLE_PASSWORD,"Connexion",string,"Valider","Quitter");
 			}
 			return 1;
@@ -7101,20 +7101,20 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 	        new numrows = mysql_num_rows();
 	        if(numrows == 1) {
 				MySQL_Login(playerid);
-				SendClientMessage(playerid,COLOR_LIGHTBLUE,"Vous vous êtes bien connecté sur CRFR, vos statistiques ont été actualisés");
+				SendClientMessage(playerid,COLOR_LIGHTBLUE,"Vous vous Ãªtes bien connectÃ© sur CRFR, vos statistiques ont Ã©tÃ© actualisÃ©s");
 			    ActualiseWantedTD(playerid);
-			    if(pInfo[playerid][wanted]>0) SendClientMessage(playerid, GetPlayerColor(playerid), "Vous étiez recherché à votre dernière connexion, vous conservez votre niveau de recherche !");
+			    if(pInfo[playerid][wanted]>0) SendClientMessage(playerid, GetPlayerColor(playerid), "Vous Ã©tiez recherchÃ© Ã  votre derniÃ¨re connexion, vous conservez votre niveau de recherche !");
 			}
 			mysql_free_result();
 
    			if(!numrows){
       			if(pLogChance[playerid]<=0) {
-					SendClientMessage(playerid, COLOR_ERROR, "Tentatives de connexion échouées!");
+					SendClientMessage(playerid, COLOR_ERROR, "Tentatives de connexion Ã©chouÃ©es!");
 					KickP(playerid);
 		            return 1;
 				}
 
-	            format(string, sizeof(string), "{A9C4E4}Bonjour %s. Votre compte est {FF0000}enregistré.\n{A9C4E4}Veuillez entrer votre mot de passe ci-dessous pour vous connecter.\n{FF0000}Mot de passe incorrect. Essais restants: {FFFFFF}%d",pInfo[playerid][name], pLogChance[playerid]);
+	            format(string, sizeof(string), "{A9C4E4}Bonjour %s. Votre compte est {FF0000}enregistrÃ©.\n{A9C4E4}Veuillez entrer votre mot de passe ci-dessous pour vous connecter.\n{FF0000}Mot de passe incorrect. Essais restants: {FFFFFF}%d",pInfo[playerid][name], pLogChance[playerid]);
 				ShowPlayerDialog(playerid,DIALOG_CONNECT,DIALOG_STYLE_PASSWORD,"Connexion",string,"Valider","Quitter");
     			pLogChance[playerid]--;
 				return 1;
@@ -7125,7 +7125,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 		{
 	        if(strlen(inputtext)==0 || strlen(inputtext) > 100) {
 				format(string, sizeof(string),
-				"{A9C4E4}Inscription à Cops And Robbers France %s\nVeuillez entrer votre mot de passe ci-dessous pour vous {FF0000}enregistrer.\n{FF0000}Votre mot de passe ne doit pas être trop long ou vide!",pInfo[playerid][name]);
+				"{A9C4E4}Inscription Ã  Cops And Robbers France %s\nVeuillez entrer votre mot de passe ci-dessous pour vous {FF0000}enregistrer.\n{FF0000}Votre mot de passe ne doit pas Ãªtre trop long ou vide!",pInfo[playerid][name]);
 				ShowPlayerDialog(playerid,15000,DIALOG_STYLE_PASSWORD,"Inscription",string,"Valider","Quitter");
 			}
 
@@ -7135,7 +7135,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 	            MySQL_Register(playerid, escpass);
 	            MySQL_Login(playerid);
 			    ActualiseWantedTD(playerid);
-			    if(pInfo[playerid][wanted]>0) SendClientMessage(playerid, GetPlayerColor(playerid), "Vous étiez recherché à votre dernière connexion, vous conservez votre niveau de recherche !");
+			    if(pInfo[playerid][wanted]>0) SendClientMessage(playerid, GetPlayerColor(playerid), "Vous Ã©tiez recherchÃ© Ã  votre derniÃ¨re connexion, vous conservez votre niveau de recherche !");
 			}
     		return 1;
 		}
@@ -7143,18 +7143,18 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 	if(dialogid==DIALOG_METIER)
 	{
 		if(!IsCanAction(playerid))
-	    	return SendClientMessage(playerid, COLOR_ERROR,"Vous ne pouvez pas faire ça maintenant !");
+	    	return SendClientMessage(playerid, COLOR_ERROR,"Vous ne pouvez pas faire Ã§a maintenant !");
 	 	if(!response){
-	        ShowPlayerDialog(playerid, DIALOG_METIER, DIALOG_STYLE_LIST, "Sélection de métier", "Voleur - Carjacker\nKidnappeur\nTerroriste\nVioleur\nMercenaire\nHacker", "Choisir", "");
+	        ShowPlayerDialog(playerid, DIALOG_METIER, DIALOG_STYLE_LIST, "SÃ©lection de mÃ©tier", "Voleur - Carjacker\nKidnappeur\nTerroriste\nVioleur\nMercenaire\nHacker", "Choisir", "");
 	       	return 1;
 		}
 		new dialog[1024];
 		if(listitem==0)
 	 	{
-			format (dialog, sizeof dialog, "%s\n%s", dialog, "{4169FF}Job:{FFFFFF}\nVous êtes un Voleur/CarJacker et devez donc voler les véhicules achetés par les autres joueurs.\nCe Job peut être très rentable lors des Tunning ou courses de Drivers.\n");
+			format (dialog, sizeof dialog, "%s\n%s", dialog, "{4169FF}Job:{FFFFFF}\nVous Ãªtes un Voleur/CarJacker et devez donc voler les vÃ©hicules achetÃ©s par les autres joueurs.\nCe Job peut Ãªtre trÃ¨s rentable lors des Tunning ou courses de Drivers.\n");
 			format (dialog, sizeof dialog, "%s\n%s", dialog, "Vous pouvez aussi voler les joueurs avec la commande /voler !");
-			format (dialog, sizeof dialog, "%s\n%s", dialog, "{4169FF}Commandes:{FFFFFF}Faites /cmds pour connaître la liste de vos commandes.\n");
-			format (dialog, sizeof dialog, "%s\n%s", dialog, "{4169FF}Règles:{FFFFFF}\nVous suivez les mêmes règles que les autres criminels:\n -Deathmatch, carkill, hélikill sont strictement interdit.\n{FF0000}*{FFFFFF} Toute infraction à ces règles entraînera une sanction d' 1 avertissement, ainsi que de 200sec de Jail par DM.\n");
+			format (dialog, sizeof dialog, "%s\n%s", dialog, "{4169FF}Commandes:{FFFFFF}Faites /cmds pour connaÃ®tre la liste de vos commandes.\n");
+			format (dialog, sizeof dialog, "%s\n%s", dialog, "{4169FF}RÃ¨gles:{FFFFFF}\nVous suivez les mÃªmes rÃ¨gles que les autres criminels:\n -Deathmatch, carkill, hÃ©likill sont strictement interdit.\n{FF0000}*{FFFFFF} Toute infraction Ã  ces rÃ¨gles entraÃ®nera une sanction d' 1 avertissement, ainsi que de 200sec de Jail par DM.\n");
 			format (dialog, sizeof dialog, "%s\n%s", dialog, "Plus d'information dans les /regles et /pc du serveur.");
 			pInfo[playerid][TEAM]=TEAM_VOLEUR;
 		 	ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "INFORMATIONS - VOLEUR/CARJACKER", dialog, "OK", "");
@@ -7164,9 +7164,9 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 		}
 		else if(listitem==1)
 	 	{
-	        format (dialog, sizeof dialog, "%s\n%s", dialog, "{4169FF}Job:{FFFFFF}\nVous êtes chargé de kidnapper et d'enlever un maximum de joueurs possibles. \nVous pourrez les transporter dans votre voitures et les lâcher où vous voulez dans la nature.\n");
-			format (dialog, sizeof dialog, "%s\n%s", dialog, "{4169FF}Commandes:{FFFFFF}Faites /cmds pour connaître la liste de vos commandes.\n");
-			format (dialog, sizeof dialog, "%s\n%s", dialog, "{4169FF}Règles:{FFFFFF}\nVous suivez les mêmes règles que les autres criminels:\n -Deathmatch, carkill, hélikill sont strictement interdit.\n{FF0000}*{FFFFFF} Toute infraction à ces règles entraînera une sanction d' 1 avertissement, ainsi que de 200sec de Jail par DM.\n{FF0000}ATTENTION !Si vous kidnappé quelqu'un, il a le droit de risposter ! Mais vous n'avez en aucun cas le droit de vous défendre, fuyez !\n");
+	        format (dialog, sizeof dialog, "%s\n%s", dialog, "{4169FF}Job:{FFFFFF}\nVous Ãªtes chargÃ© de kidnapper et d'enlever un maximum de joueurs possibles. \nVous pourrez les transporter dans votre voitures et les lÃ¢cher oÃ¹ vous voulez dans la nature.\n");
+			format (dialog, sizeof dialog, "%s\n%s", dialog, "{4169FF}Commandes:{FFFFFF}Faites /cmds pour connaÃ®tre la liste de vos commandes.\n");
+			format (dialog, sizeof dialog, "%s\n%s", dialog, "{4169FF}RÃ¨gles:{FFFFFF}\nVous suivez les mÃªmes rÃ¨gles que les autres criminels:\n -Deathmatch, carkill, hÃ©likill sont strictement interdit.\n{FF0000}*{FFFFFF} Toute infraction Ã  ces rÃ¨gles entraÃ®nera une sanction d' 1 avertissement, ainsi que de 200sec de Jail par DM.\n{FF0000}ATTENTION !Si vous kidnappÃ© quelqu'un, il a le droit de risposter ! Mais vous n'avez en aucun cas le droit de vous dÃ©fendre, fuyez !\n");
 			format (dialog, sizeof dialog, "%s\n%s", dialog, "{4169FF}Plus d'information dans les /regles et /pc du serveur.");
 		 	pInfo[playerid][TEAM]=TEAM_KIDNAP;
         	ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "INFORMATIONS - KIDNAPPEUR", dialog, "OK", "");
@@ -7176,9 +7176,9 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 		}
 		else if(listitem==2)
 		{
-			format (dialog, sizeof dialog, "%s\n%s", dialog, "{4169FF}Job:{FFFFFF}\nVous devez exploser les voitures et bâtiment. N'hésitez pas à jouer le kamikaze en piégant des voitures ou explosant des bâtiments entourés de joueurs !\n");
-			format (dialog, sizeof dialog, "%s\n%s", dialog, "{4169FF}Commandes:{FFFFFF}Faites /cmds pour connaître la liste de vos commandes.\n");
-			format (dialog, sizeof dialog, "%s\n%s", dialog, "{4169FF}Règles:{FFFFFF}\nVous suivez les mêmes règles que les autres criminels:\n -Deathmatch, carkill, hélikill sont strictement interdit.\n{FF0000}*{FFFFFF} Toute infraction à ces règles entraînera une sanction d' 1 avertissement, ainsi que de 200sec de Jail par DM.\n");
+			format (dialog, sizeof dialog, "%s\n%s", dialog, "{4169FF}Job:{FFFFFF}\nVous devez exploser les voitures et bÃ¢timent. N'hÃ©sitez pas Ã  jouer le kamikaze en piÃ©gant des voitures ou explosant des bÃ¢timents entourÃ©s de joueurs !\n");
+			format (dialog, sizeof dialog, "%s\n%s", dialog, "{4169FF}Commandes:{FFFFFF}Faites /cmds pour connaÃ®tre la liste de vos commandes.\n");
+			format (dialog, sizeof dialog, "%s\n%s", dialog, "{4169FF}RÃ¨gles:{FFFFFF}\nVous suivez les mÃªmes rÃ¨gles que les autres criminels:\n -Deathmatch, carkill, hÃ©likill sont strictement interdit.\n{FF0000}*{FFFFFF} Toute infraction Ã  ces rÃ¨gles entraÃ®nera une sanction d' 1 avertissement, ainsi que de 200sec de Jail par DM.\n");
 			format (dialog, sizeof dialog, "%s\n%s", dialog, "Plus d'information dans les /regles et /pc du serveur.");
 			pInfo[playerid][TEAM]=TEAM_TERRO;
     		ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "INFORMATIONS - TERRORISTE", dialog, "OK", "");
@@ -7189,9 +7189,9 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 		}
 		else if(listitem==3)
 		{
-			format (dialog, sizeof dialog, "%s\n%s", dialog, "{4169FF}Job:{FFFFFF}\nVous êtes un délinquant sexuel qui saute sur tout ce qui bouge ! Votre rôle est donc de violer un maximum de personne possible.\n");
-			format (dialog, sizeof dialog, "%s\n%s", dialog, "{4169FF}Commandes:{FFFFFF}Faites /cmds pour connaître la liste de vos commandes.\n");
-			format (dialog, sizeof dialog, "%s\n%s", dialog, "{4169FF}Règles:{FFFFFF}\nVous suivez les mêmes règles que les autres criminels:\n -Deathmatch, carkill, hélikill sont strictement interdit.\n{FF0000}*{FFFFFF} Toute infraction à ces règles entraînera une sanction d' 1 avertissement, ainsi que de 200sec de Jail par DM.\n{FF0000}ATTENTION !\nSi vous violez quelqu'un, il a le droit de risposter ! Mais vous n'avez en aucun cas le droit de vous défendre, fuyez !\n");
+			format (dialog, sizeof dialog, "%s\n%s", dialog, "{4169FF}Job:{FFFFFF}\nVous Ãªtes un dÃ©linquant sexuel qui saute sur tout ce qui bouge ! Votre rÃ´le est donc de violer un maximum de personne possible.\n");
+			format (dialog, sizeof dialog, "%s\n%s", dialog, "{4169FF}Commandes:{FFFFFF}Faites /cmds pour connaÃ®tre la liste de vos commandes.\n");
+			format (dialog, sizeof dialog, "%s\n%s", dialog, "{4169FF}RÃ¨gles:{FFFFFF}\nVous suivez les mÃªmes rÃ¨gles que les autres criminels:\n -Deathmatch, carkill, hÃ©likill sont strictement interdit.\n{FF0000}*{FFFFFF} Toute infraction Ã  ces rÃ¨gles entraÃ®nera une sanction d' 1 avertissement, ainsi que de 200sec de Jail par DM.\n{FF0000}ATTENTION !\nSi vous violez quelqu'un, il a le droit de risposter ! Mais vous n'avez en aucun cas le droit de vous dÃ©fendre, fuyez !\n");
 			format (dialog, sizeof dialog, "%s\n%s", dialog, "{4169FF}Plus d'information dans les /regles et /pc du serveur.");
 			pInfo[playerid][TEAM]=TEAM_VIOLEUR;
     		ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "INFORMATIONS - VIOLEUR", dialog, "OK", "");
@@ -7200,9 +7200,9 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 		}
 		else if(listitem==4)
 		{
-       		format (dialog, sizeof dialog, "%s\n%s", dialog, "{4169FF}Job:{FFFFFF}\nLes mercenaires sont très utiles dans les règlements de comptes. Vous êtes chargé de tuer toute personne dont la tête est mise à prix !\n");
-			format (dialog, sizeof dialog, "%s\n%s", dialog, "{4169FF}Commandes:{FFFFFF}Faites /cmds pour connaître la liste de vos commandes.\n");
-			format (dialog, sizeof dialog, "%s\n%s", dialog, "{4169FF}Règles:{FFFFFF}\nVous suivez les mêmes règles que les autres criminels:\n -Deathmatch, carkill, hélikill sont strictement interdit.\n{FF0000}*{FFFFFF} Toute infraction à ces règles entraînera une sanction d' 1 avertissement, ainsi que de 200sec de Jail par DM.\n");
+       		format (dialog, sizeof dialog, "%s\n%s", dialog, "{4169FF}Job:{FFFFFF}\nLes mercenaires sont trÃ¨s utiles dans les rÃ¨glements de comptes. Vous Ãªtes chargÃ© de tuer toute personne dont la tÃªte est mise Ã  prix !\n");
+			format (dialog, sizeof dialog, "%s\n%s", dialog, "{4169FF}Commandes:{FFFFFF}Faites /cmds pour connaÃ®tre la liste de vos commandes.\n");
+			format (dialog, sizeof dialog, "%s\n%s", dialog, "{4169FF}RÃ¨gles:{FFFFFF}\nVous suivez les mÃªmes rÃ¨gles que les autres criminels:\n -Deathmatch, carkill, hÃ©likill sont strictement interdit.\n{FF0000}*{FFFFFF} Toute infraction Ã  ces rÃ¨gles entraÃ®nera une sanction d' 1 avertissement, ainsi que de 200sec de Jail par DM.\n");
 			format (dialog, sizeof dialog, "%s\n%s", dialog, "Plus d'information dans les /regles et /pc du serveur.");
 			pInfo[playerid][TEAM]=TEAM_HITMAN;
     		ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "INFORMATIONS - MERCENAIRE", dialog, "OK", "");
@@ -7214,15 +7214,15 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
  		else if(listitem==5)
 		{
 		    if(GetPlayerScore(playerid) < 50) {
-	        	ShowPlayerDialog(playerid, DIALOG_METIER, DIALOG_STYLE_LIST, "Sélection de métier", "Voleur - Carjacker\nKidnappeur\nTerroriste\nVioleur\nMercenaire\nHacker", "Choisir", "");
-				SendClientMessage(playerid, COLOR_ERROR, "Vous devez avoir au minimum 50 points de score pour être Hacker !");
+	        	ShowPlayerDialog(playerid, DIALOG_METIER, DIALOG_STYLE_LIST, "SÃ©lection de mÃ©tier", "Voleur - Carjacker\nKidnappeur\nTerroriste\nVioleur\nMercenaire\nHacker", "Choisir", "");
+				SendClientMessage(playerid, COLOR_ERROR, "Vous devez avoir au minimum 50 points de score pour Ãªtre Hacker !");
 		        return 1;
 		    }
- 			format (dialog, sizeof dialog, "%s\n%s", dialog, "{4169FF}Job:{FFFFFF}\nVotre but est de voler les ATM et d'exploser les véhicules. Vous pouvez effectuer tout cela a distance.\n");
-			format (dialog, sizeof dialog, "%s\n%s", dialog, "et vous pourrez agrémenter votre fuite d'un joli piratage de véhicule, l'immobilisant pendant 10 secondes\nle rendant donc inapte à se lancer dans votre poursuite.\n");
-			format (dialog, sizeof dialog, "%s\n%s", dialog, "{4169FF}Commandes:{FFFFFF}Faites /cmds pour connaître la liste de vos commandes.\n");
-            format (dialog, sizeof dialog, "%s\n%s", dialog, "{4169FF}Astuce:{FFFFFF}Vous pouvez acheter un amplificateur au 24/7, qui rendra vos vols plus rapide et augmentera la portée maximale pour effectuer vos actions.\n");
-			format (dialog, sizeof dialog, "%s\n%s", dialog, "{4169FF}Règles:{FFFFFF}\nVous suivez les mêmes règles que les autres criminels:\n -Deathmatch, carkill, hélikill sont strictement interdit.\n{FF0000}*{FFFFFF} Toute infraction à ces règles entraînera une sanction d' 1 avertissement, ainsi que de 200sec de Jail par DM.\n");
+ 			format (dialog, sizeof dialog, "%s\n%s", dialog, "{4169FF}Job:{FFFFFF}\nVotre but est de voler les ATM et d'exploser les vÃ©hicules. Vous pouvez effectuer tout cela a distance.\n");
+			format (dialog, sizeof dialog, "%s\n%s", dialog, "et vous pourrez agrÃ©menter votre fuite d'un joli piratage de vÃ©hicule, l'immobilisant pendant 10 secondes\nle rendant donc inapte Ã  se lancer dans votre poursuite.\n");
+			format (dialog, sizeof dialog, "%s\n%s", dialog, "{4169FF}Commandes:{FFFFFF}Faites /cmds pour connaÃ®tre la liste de vos commandes.\n");
+            format (dialog, sizeof dialog, "%s\n%s", dialog, "{4169FF}Astuce:{FFFFFF}Vous pouvez acheter un amplificateur au 24/7, qui rendra vos vols plus rapide et augmentera la portÃ©e maximale pour effectuer vos actions.\n");
+			format (dialog, sizeof dialog, "%s\n%s", dialog, "{4169FF}RÃ¨gles:{FFFFFF}\nVous suivez les mÃªmes rÃ¨gles que les autres criminels:\n -Deathmatch, carkill, hÃ©likill sont strictement interdit.\n{FF0000}*{FFFFFF} Toute infraction Ã  ces rÃ¨gles entraÃ®nera une sanction d' 1 avertissement, ainsi que de 200sec de Jail par DM.\n");
 			format (dialog, sizeof dialog, "%s\n%s", dialog, "Plus d'information dans les /regles et /pc du serveur.");
 			pInfo[playerid][TEAM]=TEAM_HACKER;
     		ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "INFORMATIONS - HACKER", dialog, "OK", "");
@@ -7232,7 +7232,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			Load3DID(playerid);
 			pInfo[playerid][seeid]=true;
 		}
-		else ShowPlayerDialog(playerid, DIALOG_METIER, DIALOG_STYLE_LIST, "Sélection de métier", "Voleur - Carjacker\nKidnappeur\nTerroriste\nVioleur\nMercenaire\nHacker", "Choisir", "");
+		else ShowPlayerDialog(playerid, DIALOG_METIER, DIALOG_STYLE_LIST, "SÃ©lection de mÃ©tier", "Voleur - Carjacker\nKidnappeur\nTerroriste\nVioleur\nMercenaire\nHacker", "Choisir", "");
 		return 1;
 	}
 
@@ -7243,77 +7243,77 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 		{
 	    	case 0:
 	    	{
-		    	format (Global, sizeof Global, "%s\n%s", Global, "{FF0000}Le Deathmatching :\n");
-				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}• Le deathMatching souvent appelé DM consiste à tirer sur une personne ou son véhicule sans aucune raison valable.");
-				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}• Le DM est strictement interdit, quand vous vous faites DM ne criez pas au DM sur le tchat,");
+		    	format (Global, sizeof Global, "%s\n%s", Global, "{FF0000}Le DeathmatchingÂ :\n");
+				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}â€¢ Le deathMatching souvent appelÃ© DM consiste Ã  tirer sur une personne ou son vÃ©hicule sans aucune raison valable.");
+				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}â€¢ Le DM est strictement interdit, quand vous vous faites DM ne criez pas au DM sur le tchat,");
 				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}faites /report [id] (raison) plus d'infos sur /aide.\n");
-				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}• Vous avez le droit de tirer sur une personne et sur son véhicule UNIQUEMENT s'il vous a :");
-				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}Kidnappé - Volé - Violé OU lorsqu'il vous a tiré dessus après que vous l'ayez: Kidnappé - Volé - Violé \n");
-				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}• Si la personne est morte ou que vous êtes mort entre temps, vous n'avez pas le droit de la tuer car");
-				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}ceci est considéré comme un Revenge Kill.\n");
-				format (Global, sizeof Global, "%s\n%s", Global, "{FF0000}Le Kidnapping : \n");
-				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}• Vous n'avez pas le droit de vous déconnecter en étant kidnappé, que ce soit pour n'importe quelle");
-				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}raison ! Vous avez 2 minutes et 15 secondes à attendre ou alors vous pouvez couper vos cordes si vous avez des ciseaux !\n");
-				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}• Sachez que toute personne se faisant crash volontairement quand elle est");
-				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}kidnappée se fera sanctionner si c'est trop répétitif ! Nous sommes au courant que c'est énervant");
-				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}d'être kidnappé, mais ce n'est pas une raison pour vous déconnecter en kidnapping !\n");
-				format (Global, sizeof Global, "%s\n%s", Global, "{FF0000}Les Arrestations : \n");
-				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}• Il est strictement interdit de se déconnecter en étant menotté ou détenu par un ou plusieurs policiers.");
-				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}• Les policiers qui menottent des criminels blancs ou jaunes peuvent les fouiller, mais ils n'ont pas le\n");
-				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}droit de les menotter en boucle, ceci s'appel « l'abus de /men » et il est sanctionnable ! ");
-				format (Global, sizeof Global, "%s\n%s", Global, "{FF0000}Les insultes : \n");
-				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}• Toutes insulte proférée est interdite, que ce soit une insulte visant un joueur ou un administrateur!");
-				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}• Nous sommes sur un jeu pour s'amuser et non pour se faire insulter ! ");
-				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}• Toutes moquerie envers un joueur, une connaissance d'un joueur ou n'importe qui qui peut énerver un joueur est interdites !");
-				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}• Toutes provocation envers un administrateur ou un joueur est interdite ! ");
-				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}• Tout caractères homophobes, xénophobes ou racistes ainsi que tout autre commentaire déplacé sont prohibés !");
-				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}• Il est interdit de manquer de respect aux autres joueurs et aux administrateurs.");
-				format (Global, sizeof Global, "%s\n%s", Global, "{FF0000}La Pub : \n");
-				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}• Toutes personnes étant en train de faire de la pub pour n'importe quel autre serveur se verront");
-				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}sanctionner d'un bannissement temporaire d'une durée d'un mois minimum, pouvant aller jusqu'à un bannissement définitif.");
+				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}â€¢ Vous avez le droit de tirer sur une personne et sur son vÃ©hicule UNIQUEMENT s'il vous aÂ :");
+				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}KidnappÃ© - VolÃ© - ViolÃ© OU lorsqu'il vous a tirÃ© dessus aprÃ¨s que vous l'ayez: KidnappÃ© - VolÃ© - ViolÃ© \n");
+				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}â€¢ Si la personne est morte ou que vous Ãªtes mort entre temps, vous n'avez pas le droit de la tuer car");
+				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}ceci est considÃ©rÃ© comme un Revenge Kill.\n");
+				format (Global, sizeof Global, "%s\n%s", Global, "{FF0000}Le KidnappingÂ : \n");
+				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}â€¢ Vous n'avez pas le droit de vous dÃ©connecter en Ã©tant kidnappÃ©, que ce soit pour n'importe quelle");
+				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}raisonÂ ! Vous avez 2 minutes et 15 secondes Ã  attendre ou alors vous pouvez couper vos cordes si vous avez des ciseaux !\n");
+				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}â€¢ Sachez que toute personne se faisant crash volontairement quand elle est");
+				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}kidnappÃ©e se fera sanctionner si c'est trop rÃ©pÃ©titifÂ ! Nous sommes au courant que c'est Ã©nervant");
+				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}d'Ãªtre kidnappÃ©, mais ce n'est pas une raison pour vous dÃ©connecter en kidnappingÂ !\n");
+				format (Global, sizeof Global, "%s\n%s", Global, "{FF0000}Les ArrestationsÂ : \n");
+				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}â€¢ Il est strictement interdit de se dÃ©connecter en Ã©tant menottÃ© ou dÃ©tenu par un ou plusieurs policiers.");
+				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}â€¢ Les policiers qui menottent des criminels blancs ou jaunes peuvent les fouiller, mais ils n'ont pas le\n");
+				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}droit de les menotter en boucle, ceci s'appel Â«Â l'abus de /menÂ Â» et il est sanctionnableÂ ! ");
+				format (Global, sizeof Global, "%s\n%s", Global, "{FF0000}Les insultesÂ : \n");
+				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}â€¢ Toutes insulte profÃ©rÃ©e est interdite, que ce soit une insulte visant un joueur ou un administrateur!");
+				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}â€¢ Nous sommes sur un jeu pour s'amuser et non pour se faire insulterÂ ! ");
+				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}â€¢ Toutes moquerie envers un joueur, une connaissance d'un joueur ou n'importe qui qui peut Ã©nerver un joueur est interditesÂ !");
+				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}â€¢ Toutes provocation envers un administrateur ou un joueur est interditeÂ ! ");
+				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}â€¢ Tout caractÃ¨res homophobes, xÃ©nophobes ou racistes ainsi que tout autre commentaire dÃ©placÃ© sont prohibÃ©sÂ !");
+				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}â€¢ Il est interdit de manquer de respect aux autres joueurs et aux administrateurs.");
+				format (Global, sizeof Global, "%s\n%s", Global, "{FF0000}La PubÂ : \n");
+				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}â€¢ Toutes personnes Ã©tant en train de faire de la pub pour n'importe quel autre serveur se verront");
+				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}sanctionner d'un bannissement temporaire d'une durÃ©e d'un mois minimum, pouvant aller jusqu'Ã  un bannissement dÃ©finitif.");
 
 				ShowPlayerDialog(playerid,DIALOG_REGLESCLASSES,DIALOG_STYLE_MSGBOX,"{FF0000}REGLES CLASSES",Global,">>","");
 	    	}
 	    	case 1:
 	    	{
-				format (Global, sizeof Global, "%s\n%s", Global, "{FF0000}Les forces de l'ordre :\n");
+				format (Global, sizeof Global, "%s\n%s", Global, "{FF0000}Les forces de l'ordreÂ :\n");
 				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}En tant que policier, vous n'avez pas le droit de tirer sur les civils en blanc et/ou en jaune.");
-				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}• Vous pouvez les menotter pour les fouiller mais vous avez l'OBLIGATION de les démenotter après la fouille.");
-				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}• Vous pouvez tuer et/ou arrêter les criminels recherchés étant de couleur orange ou rouge.\n");
-				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}• Vous n'avez pas le droit de suspecter des civils pour des raisons futiles.");
-				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}• Tout abus concernant le /suspect sera sévèrement sanctionné!\n");
-				format (Global, sizeof Global, "%s\n%s", Global, "{FF0000}Les barrages & herses : \n");
-				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}• Toutes herses et/ou barrages doivent être surveillés par la ou les personne(s) qui les ont posé ! ");
-				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}• Si un barrage et/ou une herse n'est pas surveillé, un Administrateur peut les enlever");
-				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}à tout moment et celui qui les a posé s'expose à des sanctions !");
-				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}• Aucun barrage et/ou herse ne doit bloquer complètement un chemin !");
-				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}• Vous devez laisser un accès au minimum !\n");
-				format (Global, sizeof Global, "%s\n%s", Global, "{FF0000}Les militaires : \n");
-				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}• Les militaires peuvent tuer les criminels rouges et oranges quand ils le veulent.");
-				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}• Vous devez informer les autres joueurs que vous allez tirer si vous voyez un rouge avec la phrase suivante :");
-				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}« Écartez-vous des rouges ou vous serrez tués avec eux. » Attention ce n'est pas une");
+				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}â€¢ Vous pouvez les menotter pour les fouiller mais vous avez l'OBLIGATION de les dÃ©menotter aprÃ¨s la fouille.");
+				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}â€¢ Vous pouvez tuer et/ou arrÃªter les criminels recherchÃ©s Ã©tant de couleur orange ou rouge.\n");
+				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}â€¢ Vous n'avez pas le droit de suspecter des civils pour des raisons futiles.");
+				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}â€¢ Tout abus concernant le /suspect sera sÃ©vÃ¨rement sanctionnÃ©!\n");
+				format (Global, sizeof Global, "%s\n%s", Global, "{FF0000}Les barrages & hersesÂ : \n");
+				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}â€¢ Toutes herses et/ou barrages doivent Ãªtre surveillÃ©s par la ou les personne(s) qui les ont posÃ©Â ! ");
+				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}â€¢ Si un barrage et/ou une herse n'est pas surveillÃ©, un Administrateur peut les enlever");
+				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}Ã  tout moment et celui qui les a posÃ© s'expose Ã  des sanctionsÂ !");
+				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}â€¢ Aucun barrage et/ou herse ne doit bloquer complÃ¨tement un cheminÂ !");
+				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}â€¢ Vous devez laisser un accÃ¨s au minimumÂ !\n");
+				format (Global, sizeof Global, "%s\n%s", Global, "{FF0000}Les militairesÂ : \n");
+				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}â€¢ Les militaires peuvent tuer les criminels rouges et oranges quand ils le veulent.");
+				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}â€¢ Vous devez informer les autres joueurs que vous allez tirer si vous voyez un rouge avec la phrase suivanteÂ :");
+				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}Â«Â Ã‰cartez-vous des rouges ou vous serrez tuÃ©s avec eux.Â Â» Attention ce n'est pas une");
 				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}raison pour tuer les joueurs de couleur blancs, jaunes ou oranges. Vous n'avez pas le droit de bombarder un QG.\n");
 				ShowPlayerDialog(playerid,DIALOG_ALL,DIALOG_STYLE_MSGBOX,"{FF0000}REGLES FORCES DE L'ORDRE",Global,"Fermer","");
 			}
 	        case 2:
 	        {
 	            format (Global, sizeof Global, "%s\n%s", Global, "{FF0000}Vous ne devez pas :\n");
-				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}• DM (Deathmatch) sans raison : Tuer, voler, violer, kidnapper un de vos coéquipier s'il n'est pas d'accord ou si le serveur ne vous le permet pas.");
-				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}• Rentrer dans le QG de votre team sans porter le skin du Gang.");
-				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}• Bloquer l'entrée d'un QG.");
-				format (Global, sizeof Global, "%s\n%s", Global, "{FF0000}Vous devez : \n");
-				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}• Faire sortir les civils de votre QG, vous devez leur laisser 1 minute avant de pouvoir les tuer. ");
-				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}• Écouter vos supérieurs, ne pas désobéir aux ordres.\n");
-				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}• Quand vous êtes Flic, vous jouez votre rôle de flic ! Aucune alliance n'est autorisée.");
+				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}â€¢ DM (Deathmatch) sans raison : Tuer, voler, violer, kidnapper un de vos coÃ©quipier s'il n'est pas d'accord ou si le serveur ne vous le permet pas.");
+				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}â€¢ Rentrer dans le QG de votre team sans porter le skin du Gang.");
+				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}â€¢ Bloquer l'entrÃ©e d'un QG.");
+				format (Global, sizeof Global, "%s\n%s", Global, "{FF0000}Vous devezÂ : \n");
+				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}â€¢ Faire sortir les civils de votre QG, vous devez leur laisser 1 minute avant de pouvoir les tuer. ");
+				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}â€¢ Ã‰couter vos supÃ©rieurs, ne pas dÃ©sobÃ©ir aux ordres.\n");
+				format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}â€¢ Quand vous Ãªtes Flic, vous jouez votre rÃ´le de flic ! Aucune alliance n'est autorisÃ©e.");
 				ShowPlayerDialog(playerid,DIALOG_ALL,DIALOG_STYLE_MSGBOX,"{FF0000}REGLES GANGS",Global,"Fermer","");
 	        }
 	        case 3:
 	        {
-	            format(Global, sizeof Global, "Le système de compétences permet d'avoir des avantages");
-	            format(Global, sizeof Global, "%s\nTous les 30 points que vous gagnez, vous gagnez un niveau et un point de compétence", Global);
-	            format(Global, sizeof Global, "%s\nVous pourrez dépenser ces points de dans des compétences, chaque compétence coûte un point.", Global);
-	            format(Global, sizeof Global, "%s\nNéanmoins, certaines compétences ont plusieurs niveaux, chaque niveau coûte un point, tâchez donc de bien répartir vos points.", Global);
-				ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Informations Compétences", Global, "OK", "");
+	            format(Global, sizeof Global, "Le systÃ¨me de compÃ©tences permet d'avoir des avantages");
+	            format(Global, sizeof Global, "%s\nTous les 30 points que vous gagnez, vous gagnez un niveau et un point de compÃ©tence", Global);
+	            format(Global, sizeof Global, "%s\nVous pourrez dÃ©penser ces points de dans des compÃ©tences, chaque compÃ©tence coÃ»te un point.", Global);
+	            format(Global, sizeof Global, "%s\nNÃ©anmoins, certaines compÃ©tences ont plusieurs niveaux, chaque niveau coÃ»te un point, tÃ¢chez donc de bien rÃ©partir vos points.", Global);
+				ShowPlayerDialog(playerid, DIALOG_ALL, DIALOG_STYLE_MSGBOX, "Informations CompÃ©tences", Global, "OK", "");
 	        }
 		}
 	}
@@ -7324,13 +7324,13 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
         if(!response)return 1;
 	  	format (Global, sizeof Global, "%s\n%s", Global, "{FF0000}La commande AFK : \n");
-		format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}• Toutes personnes qui utilisent le /afk pour se protéger d'une chute, d'un policier qui veut l'arrêter ou");
-		format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}autres se verront retirer leur statut V.I.P comme précisé sur le forum dans la partie adéquate.\n");
-		format (Global, sizeof Global, "%s\n%s", Global, "{FF0000}Les cheats & mods : \n");
-		format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}• Il est interdit de se connecter sur le serveur avec un logiciel qui vous donne un avantage sur les");
+		format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}â€¢ Toutes personnes qui utilisent le /afk pour se protÃ©ger d'une chute, d'un policier qui veut l'arrÃªter ou");
+		format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}autres se verront retirer leur statut V.I.P comme prÃ©cisÃ© sur le forum dans la partie adÃ©quate.\n");
+		format (Global, sizeof Global, "%s\n%s", Global, "{FF0000}Les cheats & modsÂ : \n");
+		format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}â€¢ Il est interdit de se connecter sur le serveur avec un logiciel qui vous donne un avantage sur les");
 		format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}autres joueurs (Cheats, binds, mods...).\n");
-		format (Global, sizeof Global, "%s\n%s", Global, "{FF0000}Alliance Flics & Criminels : \n");
-		format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}• Aucune alliance entre un Flic et un Criminel de couleur orange ou rouge n'est autorisée.\n");
+		format (Global, sizeof Global, "%s\n%s", Global, "{FF0000}Alliance Flics & CriminelsÂ : \n");
+		format (Global, sizeof Global, "%s\n%s", Global, "{FFFFFF}â€¢ Aucune alliance entre un Flic et un Criminel de couleur orange ou rouge n'est autorisÃ©e.\n");
 		ShowPlayerDialog(playerid,DIALOG_ALL,DIALOG_STYLE_MSGBOX,"{FF0000}REGLES CLASSES", Global, "Fermer", "");
   		return 1;
 	 }
@@ -7439,11 +7439,11 @@ public OnPlayerConnect(playerid)
 	format(string,sizeof(string),"Bienvenue sur CRFR - Flics et Criminels %s !", SERVER_VERSION);
 	SendClientMessage(playerid,COLOR_LIGHTBLUE,string);
 	SendClientMessage(playerid,COLOR_WHITE,"- - - - -");
-	SendClientMessage(playerid,COLOR_LIGHTGREYBLUE,"Vous êtes sur un serveur Flics et Criminels, merci de respecter les régles de ce mode de jeu");
-	SendClientMessage(playerid,COLOR_SLIME,"Pour consulter le règlement faites /regles à tout moment.");
-	SendClientMessage(playerid,COLOR_SLIME,"Pour connaître les commandes du serveur nous t'invitons à taper /gcmds");
+	SendClientMessage(playerid,COLOR_LIGHTGREYBLUE,"Vous Ãªtes sur un serveur Flics et Criminels, merci de respecter les rÃ©gles de ce mode de jeu");
+	SendClientMessage(playerid,COLOR_SLIME,"Pour consulter le rÃ¨glement faites /regles Ã  tout moment.");
+	SendClientMessage(playerid,COLOR_SLIME,"Pour connaÃ®tre les commandes du serveur nous t'invitons Ã  taper /gcmds");
 	SendClientMessage(playerid,COLOR_GREEN,"{FFFFFF}Amusez vous bien sur CRFR {1585DF}Flics {FFFFFF}et {FF0000}Criminels.");
-	SendClientMessage(playerid,COLOR_GREEN,"Version bêta, si vous voyez un bug merci de le signaler sur le forum ou a un Administrateur");
+	SendClientMessage(playerid,COLOR_GREEN,"Version bÃªta, si vous voyez un bug merci de le signaler sur le forum ou a un Administrateur");
 	SendClientMessage(playerid,COLOR_WHITE,"- - - - -");
 
 	format(string, sizeof(string), "%s(%d) vient de se connecter sur CRFR - Flics et Criminels !", pInfo[playerid][name], playerid);
@@ -7455,38 +7455,38 @@ public OnPlayerConnect(playerid)
  	mysql_store_result();
 	new rows = mysql_num_rows();
 	if(rows==0){
-  		SendClientMessage(playerid, COLOR_ERROR,"Ce nom de joueur n'est pas enregistré. Merci d'entrer votre mot de passe pour vous enregistrer.");
+  		SendClientMessage(playerid, COLOR_ERROR,"Ce nom de joueur n'est pas enregistrÃ©. Merci d'entrer votre mot de passe pour vous enregistrer.");
 		pRegistered[playerid]=false;
 		new dialog[256];
-		format(dialog, sizeof(dialog), "{FFFFFF}Inscription à Cops And Robbers France %s\nVeuillez entrer votre mot de passe ci-dessous pour vous {FF0000}enregistrer.", pInfo[playerid][name]);
+		format(dialog, sizeof(dialog), "{FFFFFF}Inscription Ã  Cops And Robbers France %s\nVeuillez entrer votre mot de passe ci-dessous pour vous {FF0000}enregistrer.", pInfo[playerid][name]);
 		ShowPlayerDialog(playerid, DIALOG_CONNECT, DIALOG_STYLE_PASSWORD, "Inscription", dialog, "Inscription", "Quitter");
 	}
  	else{
-		SendClientMessage(playerid, COLOR_ERROR,"Ce nom de joueur est déjà enregistré. Merci d'entrer votre mot de passe pour vous connecter");
+		SendClientMessage(playerid, COLOR_ERROR,"Ce nom de joueur est dÃ©jÃ  enregistrÃ©. Merci d'entrer votre mot de passe pour vous connecter");
         pRegistered[playerid]=true;
-        format(string, sizeof(string), "{FFFFFF}Bonjour %s. Votre compte est {FF0000}enregistré.\n{FFFFFF}Veuillez entrer votre mot de passe ci-dessous pour vous connecter.",pInfo[playerid][name]);
+        format(string, sizeof(string), "{FFFFFF}Bonjour %s. Votre compte est {FF0000}enregistrÃ©.\n{FFFFFF}Veuillez entrer votre mot de passe ci-dessous pour vous connecter.",pInfo[playerid][name]);
 		ShowPlayerDialog(playerid,15500,DIALOG_STYLE_PASSWORD,"Connexion:",string,"Valider","Quitter");
         ShowPlayerDialog(playerid, DIALOG_CONNECT, DIALOG_STYLE_PASSWORD, "Connexion", string, "Connexion", "Quitter");
 	}
 	mysql_free_result();
 
-	SetPlayerMapIcon(playerid, 0, 1102.7158, -1067.9561, 31.8899, 8, 0, MAPICON_GLOBAL); //Icône bompshop
-	SetPlayerMapIcon(playerid, 1, 1208.8140, -915.0212, 56.1324, 10, 0, MAPICON_GLOBAL); //Icône burgershot
-	SetPlayerMapIcon(playerid, 2, 1104.7067,-1370.3041,13.9844, 55, 0, MAPICON_GLOBAL); //Icône concessionnaire
-	SetPlayerMapIcon(playerid, 3, 2072.4685,-1793.7029,13.5469, 7, 0, MAPICON_GLOBAL); //Icône coiffeur
-	SetPlayerMapIcon(playerid, 4, 2103.6072,-1806.3965,13.5547, 29, 0, MAPICON_GLOBAL); //Icône well stacked pizza
-	SetPlayerMapIcon(playerid, 5, 925.4721,-1352.7209,13.3766, 14, 0, MAPICON_GLOBAL); //Icône cluckin ball
-	SetPlayerMapIcon(playerid, 6, 1552.6508,-1675.5138,16.1953, 30, 0, MAPICON_GLOBAL); //Icône police
-	SetPlayerMapIcon(playerid, 7, 2070.4128,-1779.8164,13.5587, 39, 0, MAPICON_GLOBAL); //Icône tatoo
-	SetPlayerMapIcon(playerid, 8, 2244.7527,-1663.9713,15.4766, 45, 0, MAPICON_GLOBAL); //Icône binco
-	SetPlayerMapIcon(playerid, 9, 1364.6790,-1279.1178,13.5469, 6, 0, MAPICON_GLOBAL); //Icône ammunation
-	SetPlayerMapIcon(playerid, 10, 1465.0000,-1012.6400,26.8438, 52, 0, MAPICON_GLOBAL); //Icône banque
-	SetPlayerMapIcon(playerid, 11, 1497.00430, -1669.27260, 14.04690, 36, 0, MAPICON_LOCAL); //Icône ATM1
-	SetPlayerMapIcon(playerid, 12, 1472.16138, -1310.49963, 13.25410, 36, 0, MAPICON_LOCAL); //Icône ATM2
-	SetPlayerMapIcon(playerid, 13, 1808.50134, -1396.98694, 13.01920, 36, 0, MAPICON_LOCAL); //Icône ATM3
-	SetPlayerMapIcon(playerid, 14, 2108.97729, -1790.71216, 13.19380, 36, 0, MAPICON_LOCAL); //Icône ATM4
-	SetPlayerMapIcon(playerid, 15, 810.791990, -1876.69238, 13.22270, 36, 0, MAPICON_LOCAL); //Icône ATM5
-	SetPlayerMapIcon(playerid, 16, 2078.7405,-2006.2996,13.1109, 51, 0, MAPICON_GLOBAL); //Icône /vendrev
+	SetPlayerMapIcon(playerid, 0, 1102.7158, -1067.9561, 31.8899, 8, 0, MAPICON_GLOBAL); //IcÃ´ne bompshop
+	SetPlayerMapIcon(playerid, 1, 1208.8140, -915.0212, 56.1324, 10, 0, MAPICON_GLOBAL); //IcÃ´ne burgershot
+	SetPlayerMapIcon(playerid, 2, 1104.7067,-1370.3041,13.9844, 55, 0, MAPICON_GLOBAL); //IcÃ´ne concessionnaire
+	SetPlayerMapIcon(playerid, 3, 2072.4685,-1793.7029,13.5469, 7, 0, MAPICON_GLOBAL); //IcÃ´ne coiffeur
+	SetPlayerMapIcon(playerid, 4, 2103.6072,-1806.3965,13.5547, 29, 0, MAPICON_GLOBAL); //IcÃ´ne well stacked pizza
+	SetPlayerMapIcon(playerid, 5, 925.4721,-1352.7209,13.3766, 14, 0, MAPICON_GLOBAL); //IcÃ´ne cluckin ball
+	SetPlayerMapIcon(playerid, 6, 1552.6508,-1675.5138,16.1953, 30, 0, MAPICON_GLOBAL); //IcÃ´ne police
+	SetPlayerMapIcon(playerid, 7, 2070.4128,-1779.8164,13.5587, 39, 0, MAPICON_GLOBAL); //IcÃ´ne tatoo
+	SetPlayerMapIcon(playerid, 8, 2244.7527,-1663.9713,15.4766, 45, 0, MAPICON_GLOBAL); //IcÃ´ne binco
+	SetPlayerMapIcon(playerid, 9, 1364.6790,-1279.1178,13.5469, 6, 0, MAPICON_GLOBAL); //IcÃ´ne ammunation
+	SetPlayerMapIcon(playerid, 10, 1465.0000,-1012.6400,26.8438, 52, 0, MAPICON_GLOBAL); //IcÃ´ne banque
+	SetPlayerMapIcon(playerid, 11, 1497.00430, -1669.27260, 14.04690, 36, 0, MAPICON_LOCAL); //IcÃ´ne ATM1
+	SetPlayerMapIcon(playerid, 12, 1472.16138, -1310.49963, 13.25410, 36, 0, MAPICON_LOCAL); //IcÃ´ne ATM2
+	SetPlayerMapIcon(playerid, 13, 1808.50134, -1396.98694, 13.01920, 36, 0, MAPICON_LOCAL); //IcÃ´ne ATM3
+	SetPlayerMapIcon(playerid, 14, 2108.97729, -1790.71216, 13.19380, 36, 0, MAPICON_LOCAL); //IcÃ´ne ATM4
+	SetPlayerMapIcon(playerid, 15, 810.791990, -1876.69238, 13.22270, 36, 0, MAPICON_LOCAL); //IcÃ´ne ATM5
+	SetPlayerMapIcon(playerid, 16, 2078.7405,-2006.2996,13.1109, 51, 0, MAPICON_GLOBAL); //IcÃ´ne /vendrev
 	return 1;
 }
 
@@ -7499,10 +7499,10 @@ public OnPlayerDisconnect(playerid, reason)
 	new msg[128];
 	new sreason[][]={
 	    "(Timeout/Crash)",
-	    "(Déconnexion)",
-	    "(Kické)"
+	    "(DÃ©connexion)",
+	    "(KickÃ©)"
 	};
-	format(msg, sizeof(msg), "%s(%d) s'est déconnecté du serveur. %s", pInfo[playerid][name], playerid, sreason[reason]);
+	format(msg, sizeof(msg), "%s(%d) s'est dÃ©connectÃ© du serveur. %s", pInfo[playerid][name], playerid, sreason[reason]);
 	SendClientMessageToAll(COLOR_LIGHTGREY, msg);
     ResetPlayerVariables(playerid);
 	return 1;
@@ -7523,7 +7523,7 @@ public OnPlayerPickUpPickup(playerid, pickupid)
 		SetPlayerInterior(playerid, 0);
 	}
 	if(pickupid==Pickup[PICKUP_ASSUR])
-		SendClientMessage(playerid, COLOR_YELLOW, "Tapez /assurance pour obtenir une assurance pour votre véhicule!");
+		SendClientMessage(playerid, COLOR_YELLOW, "Tapez /assurance pour obtenir une assurance pour votre vÃ©hicule!");
 	if(pickupid==Pickup[PICKUP_BUYWEP])
 		SendClientMessage(playerid, COLOR_BLUE, "Utilisez la commande /acheter pour pouvoir acheter une arme !");
 	return 1;
@@ -7541,12 +7541,12 @@ public OnPlayerEnterCheckpoint(playerid)
  		}
 	    case CP_BOMBSHOP: {
 		    if(IsPlayerCrimi(playerid)) SendClientMessage(playerid, COLOR_BLUE, "Utilisez la commande /acheter pour acheter des trucs ou /volerlieu pour voler le BombShop.");
-		    else SendClientMessage(playerid, COLOR_ERROR, "Il n'y a rien pour toi ici, dégage.");
+		    else SendClientMessage(playerid, COLOR_ERROR, "Il n'y a rien pour toi ici, dÃ©gage.");
 	 		pLastMessage[playerid]=gettime()+20;
 	 		return 1;
  		}
 		case CP_PRISON: if(IsPlayerCops(playerid)) {
-		    SendClientMessage(playerid, COLOR_BLUECOPS, "C'est ici que vous livrez les criminel détenus dans votre véhicule !");
+		    SendClientMessage(playerid, COLOR_BLUECOPS, "C'est ici que vous livrez les criminel dÃ©tenus dans votre vÃ©hicule !");
 	 		pLastMessage[playerid]=gettime()+20;
 	 		return 1;
 		}
@@ -7556,17 +7556,17 @@ public OnPlayerEnterCheckpoint(playerid)
 	 		return 1;
 		}
 		case CP_BANQUE: {
-		    SendClientMessage(playerid, COLOR_BLUE, "Utilisez la commande /banque pour pouvoir gérer votre compte en banque.");
+		    SendClientMessage(playerid, COLOR_BLUE, "Utilisez la commande /banque pour pouvoir gÃ©rer votre compte en banque.");
 	 		pLastMessage[playerid]=gettime()+20;
 	 		return 1;
 		}
 		case CP_BUYVEH:{
-		    SendClientMessage(playerid, COLOR_BLUE, "Utilisez la commande /acheter pour pouvoir acheter un véhicule !");
+		    SendClientMessage(playerid, COLOR_BLUE, "Utilisez la commande /acheter pour pouvoir acheter un vÃ©hicule !");
 	 		pLastMessage[playerid]=gettime()+20;
 	 		return 1;
 		}
 		case CP_HOPITAL: {
-		    SendClientMessage(playerid, COLOR_BLUE, "Utilisez la commande /acheter pour pouvoir vous soigner totalement ! (Coûte $5,000 !)");
+		    SendClientMessage(playerid, COLOR_BLUE, "Utilisez la commande /acheter pour pouvoir vous soigner totalement ! (CoÃ»te $5,000 !)");
 	 		pLastMessage[playerid]=gettime()+20;
 	 		return 1;
 		}
@@ -7610,7 +7610,7 @@ public OnPlayerSpawn(playerid)
 	{
 
 		case 0,1,9,10,11,12,13,14,15,16:{
-			ShowPlayerDialog(playerid, DIALOG_METIER, DIALOG_STYLE_LIST, "Sélection de métier", "Voleur - Carjacker\nKidnappeur\nTerroriste\nVioleur\nMercenaire\nHacker", "Choisir", "");
+			ShowPlayerDialog(playerid, DIALOG_METIER, DIALOG_STYLE_LIST, "SÃ©lection de mÃ©tier", "Voleur - Carjacker\nKidnappeur\nTerroriste\nVioleur\nMercenaire\nHacker", "Choisir", "");
 			rand=random(sizeof(SpawnCrimiPos));
 			pos[0]=SpawnCrimiPos[rand][0];
 			pos[1]=SpawnCrimiPos[rand][1];
@@ -7655,10 +7655,10 @@ public OnPlayerSpawn(playerid)
 		}
 		case 2,3,4,5,6,7,8:{
 	        new Global[1024];
-			format (Global, sizeof Global, "%s\n%s", Global, "{4169FF}Job:{FFFFFF}\nVotre travail consiste à neutraliser les criminels mettant le chaos sur Los Santos. Vous disposez pour cela de nombreux véhicules et armes.\nVous travaillez en coopération avec le Swat, le Fbi, la Cia, la Bac & l'Armée.\n");
-			format (Global, sizeof Global, "%s\n%s", Global, "{4169FF}Commandes:{FFFFFF}\nFaites /cmds pour connaître la liste de vos commandes.\n");
-			format (Global, sizeof Global, "%s\n%s", Global, "{4169FF}Règles:{FFFFFF}\nEn tant que Flic, vous devez montrer l'exemple et respecter des consignes spécifiques:\n -Vous pouvez seulement contrôler les joueurs blanc. Il est strictement interdit de tirer (même 1 seule balle).");
-			format (Global, sizeof Global, "%s\n%s", Global, " -Mettre des PV aux {FFFF00}joueurs jaunes{FFFFFF}. Il est également strictement interdit de tirer (même 1 seule balle).\n -Arrêter ou tuer les {FFA500}joueurs oranges{FFFFFF} ou {FF0000}joueurs rouges{FFFFFF}.\n -Le TeamKill est strictement interdit!\n{FF0000}*{FFFFFF} Toute infraction à ces règles entraînera une sanction d' 1 avertissement, ainsi que de 200sec de Jail par DM.");
+			format (Global, sizeof Global, "%s\n%s", Global, "{4169FF}Job:{FFFFFF}\nVotre travail consiste Ã  neutraliser les criminels mettant le chaos sur Los Santos. Vous disposez pour cela de nombreux vÃ©hicules et armes.\nVous travaillez en coopÃ©ration avec le Swat, le Fbi, la Cia, la Bac & l'ArmÃ©e.\n");
+			format (Global, sizeof Global, "%s\n%s", Global, "{4169FF}Commandes:{FFFFFF}\nFaites /cmds pour connaÃ®tre la liste de vos commandes.\n");
+			format (Global, sizeof Global, "%s\n%s", Global, "{4169FF}RÃ¨gles:{FFFFFF}\nEn tant que Flic, vous devez montrer l'exemple et respecter des consignes spÃ©cifiques:\n -Vous pouvez seulement contrÃ´ler les joueurs blanc. Il est strictement interdit de tirer (mÃªme 1 seule balle).");
+			format (Global, sizeof Global, "%s\n%s", Global, " -Mettre des PV aux {FFFF00}joueurs jaunes{FFFFFF}. Il est Ã©galement strictement interdit de tirer (mÃªme 1 seule balle).\n -ArrÃªter ou tuer les {FFA500}joueurs oranges{FFFFFF} ou {FF0000}joueurs rouges{FFFFFF}.\n -Le TeamKill est strictement interdit!\n{FF0000}*{FFFFFF} Toute infraction Ã  ces rÃ¨gles entraÃ®nera une sanction d' 1 avertissement, ainsi que de 200sec de Jail par DM.");
 			format (Global, sizeof Global, "%s\n%s", Global, "Plus d'information dans les /regles et /pc du serveur.");
 			ShowPlayerDialog(playerid,DIALOG_ALL,DIALOG_STYLE_MSGBOX,"{4169FF}INFORMATION - POLICE", Global,"Ok","");
 			if(pInfo[playerid][CLASS]<4) {
@@ -7705,7 +7705,7 @@ public OnPlayerSpawn(playerid)
 				pos[1]=SpawnBACPos[rand][1];
 				pos[2]=SpawnBACPos[rand][2];
 				pos[3]=SpawnBACPos[rand][3];
-				SetPlayerAttachedObject(playerid, 5, 19142, 1, 0.1, 0.039999, 0.000000, 2.459999, 0.0, -3.100000, 1, 1, 1); // On lui mes l'objet désiré (Gilet)
+				SetPlayerAttachedObject(playerid, 5, 19142, 1, 0.1, 0.039999, 0.000000, 2.459999, 0.0, -3.100000, 1, 1, 1); // On lui mes l'objet dÃ©sirÃ© (Gilet)
 				GivePlayerWeaponEx(playerid,31,500);
 				GivePlayerWeaponEx(playerid,29,300);
 				GivePlayerWeaponEx(playerid,41,800);
@@ -7721,7 +7721,7 @@ public OnPlayerSpawn(playerid)
 				pos[1]=SpawnBACPos[rand][1];
 				pos[2]=SpawnBACPos[rand][2];
 				pos[3]=SpawnBACPos[rand][3];
-				SetPlayerAttachedObject(playerid, 5, 19142, 1, 0.1, 0.039999, 0.000000, 2.459999, 0.0, -3.100000, 1, 1, 1); // On lui mes l'objet désiré (Gilet)
+				SetPlayerAttachedObject(playerid, 5, 19142, 1, 0.1, 0.039999, 0.000000, 2.459999, 0.0, -3.100000, 1, 1, 1); // On lui mes l'objet dÃ©sirÃ© (Gilet)
 				GivePlayerWeaponEx(playerid,31,500);
 				GivePlayerWeaponEx(playerid,29,300);
 				GivePlayerWeaponEx(playerid,41,800);
@@ -7769,7 +7769,7 @@ public OnPlayerSpawn(playerid)
 		SetPlayerInterior(playerid,10);
 		SetPlayerPos(playerid,JailPos[rnd][0],JailPos[rnd][1],JailPos[rnd][2]);
 		SetPlayerFacingAngle(playerid,JailPos[rnd][3]);
-		SendClientMessage(playerid, COLOR_ERROR, "Vous etiez en prison a votre connexion, vous avez été remis en prison !");
+		SendClientMessage(playerid, COLOR_ERROR, "Vous etiez en prison a votre connexion, vous avez Ã©tÃ© remis en prison !");
 	}
 	return 1;
 }
@@ -7787,12 +7787,12 @@ public OnPlayerDeath(playerid, killerid, reason)
 		GivePlayerMoney(killerid, pInfo[playerid][hitamount]);
 		AddScore(killerid, 1);
 		new msg[128];
-		format(msg, sizeof(msg), "Vous avez tué %s(%d), il avait un contrat sur la tête ! Vous venez de gagner le montant de %s et un point de score !", pInfo[playerid][name], playerid, FormatMoney(pInfo[playerid][hitamount]));
+		format(msg, sizeof(msg), "Vous avez tuÃ© %s(%d), il avait un contrat sur la tÃªte ! Vous venez de gagner le montant de %s et un point de score !", pInfo[playerid][name], playerid, FormatMoney(pInfo[playerid][hitamount]));
 		SendClientMessage(killerid, COLOR_GREEN, msg);
-		format(msg, sizeof(msg), "Le mercenaire %s(%d) a tué %s(%d) qui avait un contrat sur la tête, il vient de gagner la somme de %s", pInfo[killerid][name], killerid, pInfo[playerid][name], playerid, FormatMoney(pInfo[playerid][hitamount]));
+		format(msg, sizeof(msg), "Le mercenaire %s(%d) a tuÃ© %s(%d) qui avait un contrat sur la tÃªte, il vient de gagner la somme de %s", pInfo[killerid][name], killerid, pInfo[playerid][name], playerid, FormatMoney(pInfo[playerid][hitamount]));
 		SendClientMessageToAll(COLOR_BLUE, msg);
 	    candm=true;
-	    format(msg, sizeof(msg), "[RADIO] Le criminel %s(%d) a tué %s(%d), interpellez-le !", pInfo[killerid][name], killerid, pInfo[playerid][name], playerid);
+	    format(msg, sizeof(msg), "[RADIO] Le criminel %s(%d) a tuÃ© %s(%d), interpellez-le !", pInfo[killerid][name], killerid, pInfo[playerid][name], playerid);
 	    SendClientMessageToAllCops(COLOR_BLUECOPS, msg);
 	    candm=true;
 	}
@@ -7816,14 +7816,14 @@ public OnPlayerDeath(playerid, killerid, reason)
 		candm=true;
 	}
 	GivePlayerMoney(playerid, -2000);
-	SendClientMessage(playerid, COLOR_PINK, "Vous êtes mort, l'hopital vous a coûté $2,000 !");
+	SendClientMessage(playerid, COLOR_PINK, "Vous Ãªtes mort, l'hopital vous a coÃ»tÃ© $2,000 !");
 
     new msg[128];
     if(IsPlayerConnected(killerid)){
     if(!IsPlayerCops(killerid)) {
-		format(msg, sizeof(msg), "%s(%d) a été tué par %s(%d) à l'aide %s", pInfo[playerid][name], playerid, pInfo[killerid][name], killerid, DeathWeaponName[reason]);
+		format(msg, sizeof(msg), "%s(%d) a Ã©tÃ© tuÃ© par %s(%d) Ã  l'aide %s", pInfo[playerid][name], playerid, pInfo[killerid][name], killerid, DeathWeaponName[reason]);
 		new string[128];
-	    format(string, sizeof(string), "[RADIO] Le suspect %s(%d) a tué %s(%d) à l'aide %s, interpellez-le !", pInfo[killerid][name], killerid, pInfo[playerid][name], playerid, DeathWeaponName[reason]);
+	    format(string, sizeof(string), "[RADIO] Le suspect %s(%d) a tuÃ© %s(%d) Ã  l'aide %s, interpellez-le !", pInfo[killerid][name], killerid, pInfo[playerid][name], playerid, DeathWeaponName[reason]);
 	    SendClientMessageToAllCops(COLOR_BLUECOPS, string);
 	}
 	else if(IsPlayerConnected(killerid)&&!IsPlayerCops(playerid))
@@ -7841,7 +7841,7 @@ public OnPlayerDeath(playerid, killerid, reason)
 			        case 3:money=random(11000);
 			        case 4:money=random(14500);
 				}
-			    format(msg, sizeof(msg), "L'officier de police %s(%d) a tué le criminel recherché %s(%d) et a gagné %s !", pInfo[killerid][name], killerid, pInfo[playerid][name], playerid, FormatMoney(money));
+			    format(msg, sizeof(msg), "L'officier de police %s(%d) a tuÃ© le criminel recherchÃ© %s(%d) et a gagnÃ© %s !", pInfo[killerid][name], killerid, pInfo[playerid][name], playerid, FormatMoney(money));
 				score=1;
 			}
 			case 20..99:
@@ -7854,7 +7854,7 @@ public OnPlayerDeath(playerid, killerid, reason)
 			        case 3:money=random(19000);
 			        case 4:money=random(22300);
 				}
-			    format(msg, sizeof(msg), "L'officier de police %s(%d) a tué le criminel très recherché %s(%d) et a gagné %s !", pInfo[killerid][name], killerid, pInfo[playerid][name], playerid, FormatMoney(money));
+			    format(msg, sizeof(msg), "L'officier de police %s(%d) a tuÃ© le criminel trÃ¨s recherchÃ© %s(%d) et a gagnÃ© %s !", pInfo[killerid][name], killerid, pInfo[playerid][name], playerid, FormatMoney(money));
 				score=2;
 			}
 	    }
@@ -7868,7 +7868,7 @@ public OnPlayerDeath(playerid, killerid, reason)
 			    case 3:money=random(32137);
 			    case 4:money=random(38372);
 			}
-	    	format(msg, sizeof(msg), "L'officier de police %s(%d) a tué le criminel extrêmement recherché %s(%d) et a gagné %s !", pInfo[killerid][name], killerid, pInfo[playerid][name], playerid, FormatMoney(money));
+	    	format(msg, sizeof(msg), "L'officier de police %s(%d) a tuÃ© le criminel extrÃªmement recherchÃ© %s(%d) et a gagnÃ© %s !", pInfo[killerid][name], killerid, pInfo[playerid][name], playerid, FormatMoney(money));
 			score=3;
 	    }
 	    GivePlayerMoney(killerid, money);
@@ -7879,11 +7879,11 @@ public OnPlayerDeath(playerid, killerid, reason)
 			new str[144];
 			pInfo[killerid][policelvl]++;
 			pInfo[killerid][policeprogress]=0;
-			format(str, sizeof(str), "Vous avez monté de niveau policier ! Vous êtes maintenant au niveau %d !", pInfo[killerid][policelvl]);
+			format(str, sizeof(str), "Vous avez montÃ© de niveau policier ! Vous Ãªtes maintenant au niveau %d !", pInfo[killerid][policelvl]);
 			SendClientMessage(killerid, COLOR_GREEN, str);
 		}
 	}}
-    if(killerid==INVALID_PLAYER_ID) format(msg,sizeof(msg),"%s(%d) s'est tué pour une raison inconnue...",pInfo[playerid][name],playerid);
+    if(killerid==INVALID_PLAYER_ID) format(msg,sizeof(msg),"%s(%d) s'est tuÃ© pour une raison inconnue...",pInfo[playerid][name],playerid);
 
     SendClientMessageToAll((IsPlayerCops(killerid)) ? (COLOR_BLUECOPS) : (COLOR_PINK), msg);
     if(killerid>=0&&IsPlayerConnected(killerid)&&killerid!=INVALID_PLAYER_ID)
@@ -7917,7 +7917,7 @@ public OnPlayerDeath(playerid, killerid, reason)
 		pInfo[playerid][adminmode]=false;
 	}
 	new str[128];
-	format(str, sizeof(str), "%s(%d) a tué %s(%d) a l'aide %s", pInfo[killerid][name], killerid, pInfo[playerid][name], playerid, DeathWeaponName[reason]);
+	format(str, sizeof(str), "%s(%d) a tuÃ© %s(%d) a l'aide %s", pInfo[killerid][name], killerid, pInfo[playerid][name], playerid, DeathWeaponName[reason]);
 	log("KILL", str);
 	return 1;
 }
@@ -7932,13 +7932,13 @@ public OnVehicleSpawn(vehicleid)
 		    SetVehiclePos(vehicleid, AssurSpawn[rand][0], AssurSpawn[rand][1], AssurSpawn[rand][2]);
 		    SetVehicleZAngle(vehicleid, AssurSpawn[rand][3]);
 		    new playerid=GetPlayerIDWithUID(vInfo[vehicleid][P_UID]);
-		    SendClientMessage(playerid, COLOR_GREEN, "Un de vos véhicules personnels vient d'être livré dans le centre commercial en face du comissariat !");
+		    SendClientMessage(playerid, COLOR_GREEN, "Un de vos vÃ©hicules personnels vient d'Ãªtre livrÃ© dans le centre commercial en face du comissariat !");
 			if(pInv[playerid][BANK_CASH]<7500) {
-				SendClientMessage(playerid, COLOR_YELLOW, "Vous n'aviez pas assez d'argent en banque pour payer votre mutuelle, elle vient de vous être retirée !");
+				SendClientMessage(playerid, COLOR_YELLOW, "Vous n'aviez pas assez d'argent en banque pour payer votre mutuelle, elle vient de vous Ãªtre retirÃ©e !");
 			    vInfo[vehicleid][assured]=false;
 			}
 			else {
-			    SendClientMessage(playerid, COLOR_GREEN, "Votre mutuelle vous a coûté $7,500 (en banque) pour votre véhicule !");
+			    SendClientMessage(playerid, COLOR_GREEN, "Votre mutuelle vous a coÃ»tÃ© $7,500 (en banque) pour votre vÃ©hicule !");
 				pInv[playerid][BANK_CASH]-=7500;
 			    vInfo[vehicleid][assured]=true;
 			}
@@ -7966,13 +7966,13 @@ public OnVehicleDeath(vehicleid, killerid)
 	if(vInfo[vehicleid][P_UID]!=-1) {
 		new playerid=GetPlayerIDWithUID(vInfo[vehicleid][P_UID]);
 		if(!vInfo[vehicleid][assured]) {
-			SendClientMessage(playerid, COLOR_RED, "Un de vos véhicules personnels a été détruit !");
+			SendClientMessage(playerid, COLOR_RED, "Un de vos vÃ©hicules personnels a Ã©tÃ© dÃ©truit !");
   			vInfo[vehicleid][destroyed]=true;
 			SaveVehicleStats(vehicleid);
 			vInfo[vehicleid][P_UID]=-1;
 		}
 		else
-			SendClientMessage(playerid, COLOR_GREEN, "Un de vos véhicules personnels a été détruit mais vous aviez une mutuelle, il va bientôt être livré pas loin du concessionaire !");
+			SendClientMessage(playerid, COLOR_GREEN, "Un de vos vÃ©hicules personnels a Ã©tÃ© dÃ©truit mais vous aviez une mutuelle, il va bientÃ´t Ãªtre livrÃ© pas loin du concessionaire !");
 	}
 	return 1;
 }
@@ -7981,7 +7981,7 @@ public OnPlayerText(playerid, text[])
 {
 	if(pInfo[playerid][mutedtime]>gettime()) {
 		new msg[128];
-		format(msg, sizeof(msg), "Vous êtes muté pendant encore %d secondes, vous ne pouvez pas parler !", pInfo[playerid][mutedtime]-gettime());
+		format(msg, sizeof(msg), "Vous Ãªtes mutÃ© pendant encore %d secondes, vous ne pouvez pas parler !", pInfo[playerid][mutedtime]-gettime());
 	    SendClientMessage(playerid, COLOR_ERROR, msg);
 	    return 0;
 	}
@@ -8005,12 +8005,12 @@ public OnPlayerEnterVehicleEx(playerid, vehicleid, seat)
 		new engine, lights, alarm, doors, bonnet, boot, objective;
 		GetVehicleParamsEx(vehicleid, engine, lights, alarm, doors, bonnet, boot, objective);
 		SetVehicleParamsEx(vehicleid, 1, lights, alarm, doors, bonnet, boot, objective);
-		SendClientMessage(playerid, COLOR_LIGHTBLUE, "Bienvenue dans votre véhicule personnel acheté chez Otto's Car !");
+		SendClientMessage(playerid, COLOR_LIGHTBLUE, "Bienvenue dans votre vÃ©hicule personnel achetÃ© chez Otto's Car !");
 	}
 	else if(vInfo[vehicleid][P_UID]!=-1&&pInfo[playerid][TEAM]!=TEAM_VOLEUR&&seat==0) {
 		RemovePlayerFromVehicle(playerid);
 		new msg[128];
-		format(msg, sizeof(msg), "Ce véhicule appartient à %s(%d), vous ne pouvez pas le prendre !", GetPlayerNameWithUID(vInfo[vehicleid][P_UID]), GetPlayerIDWithUID(vInfo[vehicleid][P_UID]));
+		format(msg, sizeof(msg), "Ce vÃ©hicule appartient Ã  %s(%d), vous ne pouvez pas le prendre !", GetPlayerNameWithUID(vInfo[vehicleid][P_UID]), GetPlayerIDWithUID(vInfo[vehicleid][P_UID]));
 		SendClientMessage(playerid, COLOR_ERROR, msg);
 	}
 	if(pInfo[playerid][TEAM]==TEAM_VOLEUR&&vInfo[vehicleid][P_UID]!=-1&&vInfo[vehicleid][P_UID]!=pInfo[playerid][UID]&&seat==0)
@@ -8023,48 +8023,48 @@ public OnPlayerEnterVehicleEx(playerid, vehicleid, seat)
 			format(vInfo[vehicleid][vcode], 7, "%s", GenerateVCode());
 			vInfo[vehicleid][vtry]=7;
 			new dialog[400];
-			format(dialog, sizeof(dialog), "Vous êtes en train de voler un véhicule !\nVous devez trouver le code à %d chiffres qui dévérouillera le véhicule. Vous avez %d chances !", strlen(vInfo[vehicleid][vcode]), vInfo[vehicleid][vtry]);
-			ShowPlayerDialog(playerid, DIALOG_CARJACK, DIALOG_STYLE_INPUT, "Vol de véhicule", dialog, "Essayer", "Quitter");
+			format(dialog, sizeof(dialog), "Vous Ãªtes en train de voler un vÃ©hicule !\nVous devez trouver le code Ã  %d chiffres qui dÃ©vÃ©rouillera le vÃ©hicule. Vous avez %d chances !", strlen(vInfo[vehicleid][vcode]), vInfo[vehicleid][vtry]);
+			ShowPlayerDialog(playerid, DIALOG_CARJACK, DIALOG_STYLE_INPUT, "Vol de vÃ©hicule", dialog, "Essayer", "Quitter");
 			if(pInfo[playerid][lasttrob]>gettime()) AddWanted(playerid, 2);
 			else pInfo[playerid][lasttrob]=gettime()+60;
 	    }
 	    else {
 	        RemovePlayerFromVehicle(playerid);
-	        SendClientMessage(playerid, COLOR_ERROR, "Vous avez déjà volé un véhicule récemment, attendez un peu !");
+	        SendClientMessage(playerid, COLOR_ERROR, "Vous avez dÃ©jÃ  volÃ© un vÃ©hicule rÃ©cemment, attendez un peu !");
 	    }
 	}
  	if((model==523||model==596||model==599)&&!IsPlayerCops(playerid)&&seat==0) {
  	    if(!IsPlayerCrimi(playerid)) {
 		 	RemovePlayerFromVehicle(playerid);
-		 	SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas entrer dans un véhicule de police en étant civil !");
+		 	SendClientMessage(playerid, COLOR_ERROR, "Vous ne pouvez pas entrer dans un vÃ©hicule de police en Ã©tant civil !");
 		}
  	    else if(pInfo[playerid][wanted]<4) {
 			AddWanted(playerid, 4);
-		 	SendClientMessage(playerid, COLOR_ERROR, "Vous êtes entré dans un véhicule de police en étant innocent, vous gagnez 4 étoiles de recherche !");
+		 	SendClientMessage(playerid, COLOR_ERROR, "Vous Ãªtes entrÃ© dans un vÃ©hicule de police en Ã©tant innocent, vous gagnez 4 Ã©toiles de recherche !");
 			new msg[128];
-			format(msg, sizeof(msg), "Le suspect %s(%d) vient de voler un véhicule de police, interpellez-le vite !", pInfo[playerid][name], playerid);
+			format(msg, sizeof(msg), "Le suspect %s(%d) vient de voler un vÃ©hicule de police, interpellez-le vite !", pInfo[playerid][name], playerid);
 			SendClientMessageToAllCops(COLOR_BLUECOPS, msg);
      	}
  	}
   	if(vInfo[vehicleid][TEAM]==4&&pInfo[playerid][TEAM]!=TEAM_MILITARY&&seat==0)
 	{
 		RemovePlayerFromVehicle(playerid);
-	 	SendClientMessage(playerid, COLOR_ERROR, "Ce véhicule est réservé aux Militaires !");
+	 	SendClientMessage(playerid, COLOR_ERROR, "Ce vÃ©hicule est rÃ©servÃ© aux Militaires !");
  	}
  	if(vInfo[vehicleid][TEAM]==1&&!IsPlayerGroove(playerid)&&seat==0)
 	{
 		RemovePlayerFromVehicle(playerid);
-	 	SendClientMessage(playerid, COLOR_ERROR, "Ce véhicule est réservé aux membres de la team Groove !");
+	 	SendClientMessage(playerid, COLOR_ERROR, "Ce vÃ©hicule est rÃ©servÃ© aux membres de la team Groove !");
  	}
   	if(vInfo[vehicleid][TEAM]==2&&!IsPlayerBallas(playerid)&&seat==0)
 	{
 		RemovePlayerFromVehicle(playerid);
-	 	SendClientMessage(playerid, COLOR_ERROR, "Ce véhicule est réservé aux membres de la team Ballas !");
+	 	SendClientMessage(playerid, COLOR_ERROR, "Ce vÃ©hicule est rÃ©servÃ© aux membres de la team Ballas !");
  	}
    	if(vInfo[vehicleid][TEAM]==3&&!IsPlayerBac(playerid)&&seat==0)
 	{
 		RemovePlayerFromVehicle(playerid);
-	 	SendClientMessage(playerid, COLOR_ERROR, "Ce véhicule est réservé aux membres de la team BAC !");
+	 	SendClientMessage(playerid, COLOR_ERROR, "Ce vÃ©hicule est rÃ©servÃ© aux membres de la team BAC !");
  	}
 	return 1;
 }
