@@ -1,29 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   max.c                                              :+:      :+:    :+:   */
+/*   ft_atoi_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: exam <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/16 18:48:55 by exam              #+#    #+#             */
-/*   Updated: 2018/02/16 18:50:41 by exam             ###   ########.fr       */
+/*   Created: 2018/02/16 19:39:27 by exam              #+#    #+#             */
+/*   Updated: 2018/02/16 19:39:27 by exam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int max(int *tab, unsigned int len)
+int get_val_from_base(char  val, char *base)
 {
 	int i;
-	int highest;
 
-	if (len == 0)
-		return (0);
 	i = 0;
-	highest = tab[0];
-	while (i < len)
+	while (base[i] != '\0')
 	{
-		if (tab[i] > highest)
-			highest = tab[i];
+		if (val == base[i])
+			return (i);
 		i++;
 	}
-	return (highest);
+	return (-1);
+}
+
+int ft_atoi_base(const char *str, int str_base)
+{
+	char base[17] = "0123456789ABCDEF";
+	base[str_base] = '\0';
+	int i;
+	int reqsult;
+
+	result = 0;
+	i = 0;
+	while (str[i] != 0)
+	{
+		result +
+	}
 }

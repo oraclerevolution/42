@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   max.c                                              :+:      :+:    :+:   */
+/*   paramsum.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: exam <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/16 18:48:55 by exam              #+#    #+#             */
-/*   Updated: 2018/02/16 18:50:41 by exam             ###   ########.fr       */
+/*   Created: 2018/02/16 20:01:25 by exam              #+#    #+#             */
+/*   Updated: 2018/02/16 20:07:03 by exam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int max(int *tab, unsigned int len)
-{
-	int i;
-	int highest;
+#include <unistd.h>
 
-	if (len == 0)
-		return (0);
-	i = 0;
-	highest = tab[0];
-	while (i < len)
+void putnbr(int nbr)
+{
+	char x = '0';
+	if (nbr >= 10)
 	{
-		if (tab[i] > highest)
-			highest = tab[i];
-		i++;
+		putnbr(nbr / 10);
 	}
-	return (highest);
+	x += nbr % 10;
+	write(1, &x, 1);
+}
+
+int main(int argc, char **argv)
+{
+	(void)argv;
+	putnbr(argc - 1);
+	write(1, "\n", 1);
+	return (0);
 }

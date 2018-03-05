@@ -1,29 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   max.c                                              :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: exam <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/16 18:48:55 by exam              #+#    #+#             */
-/*   Updated: 2018/02/16 18:50:41 by exam             ###   ########.fr       */
+/*   Created: 2018/02/16 18:18:30 by exam              #+#    #+#             */
+/*   Updated: 2018/02/16 18:19:10 by exam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int max(int *tab, unsigned int len)
+void ft_swap(int *a, int *b)
 {
-	int i;
-	int highest;
+	int tmp;
 
-	if (len == 0)
-		return (0);
-	i = 0;
-	highest = tab[0];
-	while (i < len)
-	{
-		if (tab[i] > highest)
-			highest = tab[i];
-		i++;
-	}
-	return (highest);
+	tmp = *a;
+	*a = *b;
+	*b = *tmp;
 }

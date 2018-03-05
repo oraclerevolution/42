@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kcausse <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: exam <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/17 10:47:58 by kcausse           #+#    #+#             */
-/*   Updated: 2018/02/17 10:47:58 by kcausse          ###   ########.fr       */
+/*   Created: 2018/02/16 19:34:26 by exam              #+#    #+#             */
+/*   Updated: 2018/02/16 19:38:15 by exam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strrev(char *str)
+char *ft_strrev(char *str)
 {
-	int		len;
-	int		i;
-	char	tmp;
+	int i;
+	int len;
+	char tmp;
 
 	len = 0;
 	while (str[len] != '\0')
@@ -29,3 +29,4 @@ char	*ft_strrev(char *str)
 	}
 	return (str);
 }
+

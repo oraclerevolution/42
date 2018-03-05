@@ -1,29 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   max.c                                              :+:      :+:    :+:   */
+/*   expand_str.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: exam <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/16 18:48:55 by exam              #+#    #+#             */
-/*   Updated: 2018/02/16 18:50:41 by exam             ###   ########.fr       */
+/*   Created: 2018/02/16 19:50:24 by exam              #+#    #+#             */
+/*   Updated: 2018/02/16 19:56:34 by exam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int max(int *tab, unsigned int len)
+#include <unistd.h>
+
+int main(int argc, char **argv)
 {
 	int i;
-	int highest;
+	int start;
+	int end;
 
-	if (len == 0)
-		return (0);
-	i = 0;
-	highest = tab[0];
-	while (i < len)
+	if (argc != 2)
 	{
-		if (tab[i] > highest)
-			highest = tab[i];
-		i++;
+		write(1, "\n", 1);
+		return (0);
 	}
-	return (highest);
+	i = 0;
+	while (argv[1][i] == ' ' || argv[1][i] == '\t')
+		i++;
+	start = i;
+	while (argv[1][i] != '\0')
+		i++;
+	while (argv[1][i] == ' ' || argv[1][i] == '\t')
+		i--;
+	end = i + 1;
+	write(1, argv[1] + start, end - start);
+	write(1, "\n", 1);
+	return (0);
 }
