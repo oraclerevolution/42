@@ -19,9 +19,7 @@ char	*ft_strrev(char *str)
 	i = 0;
 	length = 0;
 	while (str[length] != '\0')
-	{
 		length++;
-	}
 	while (i < (length / 2))
 	{
 		tmp = str[length - i - 1];
