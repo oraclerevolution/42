@@ -38,6 +38,5 @@ int		main(int argc, char **argv)
 	while ((size = read(file, buffer, 4096)))
 		print(buffer, size);
 	close(file);
-	print("\n", -1);
 	return (0);
 }
