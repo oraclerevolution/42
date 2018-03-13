@@ -20,14 +20,14 @@ function getCookieValue(cookieName){
 	var startPos;
 	var endPos;
 	
-	startPos = document.cookie.indexOf(cookieName + "=")
+	startPos = document.cookie.indexOf(cookieName + "=");
 	
 	if(startPos == -1)
 		return "";
 	
-	startPos += cookieName.length + 1
-	endPos = document.cookie.substring(startPos).indexOf(";")
-	return (endPos == -1) ? (document.cookie.substring(startPos)) : (document.cookie.substring(startPos, endPos + startPos))
+	startPos += cookieName.length + 1;
+	endPos = document.cookie.substring(startPos).indexOf(";");
+	return (endPos == -1) ? (document.cookie.substring(startPos)) : (document.cookie.substring(startPos, endPos + startPos));
 }
 
 function Countdown(number) {
@@ -36,7 +36,7 @@ function Countdown(number) {
 		setTimeout(Countdown, 1000, number - 1);
 	}
 	else if (continueCountdown)
-		RefreshPage()
+		RefreshPage();
 }
 
 function Turbo() {
@@ -76,7 +76,7 @@ function Init() {
 	arr 				= [];
 	tenmin 				= new Date();
 	twosec 				= new Date();
-	tenmin.setTime(tenmin.getTime() + (60000 * 15))
+	tenmin.setTime(tenmin.getTime() + (60000 * 15));
 	twosec.setTime(twosec.getTime() + (20000));
 	continueCountdown 	= true;
 	TurboText 			= (getCookieValue("turbo") === "") ? ("Turbo") : ("Slow down");
@@ -88,7 +88,7 @@ function Init() {
 	if (current != document.querySelector("head"))
 	{
 		current.style.outline = "rgb(129, 129, 129) solid 2px";
-		current.querySelectorAll("td").forEach(function(e) {e.style.border = "none";})
+		current.querySelectorAll("td").forEach(function(e) {e.style.border = "none";});
 		currentID = parseInt(arr.indexOf(current.querySelector("td:nth-child(2)")));
 	}
 	else
@@ -106,7 +106,7 @@ function Init() {
 	
 	current.scrollIntoView();
 	display = "";
-	if (currentDate != "")
+	if (currentDate !== "")
 		document.title = currentDate;
 	
 	notice 				= document.querySelector("#false");
@@ -162,7 +162,7 @@ function checkFreeCheckin() {
 		else if (parent != current)
 		{
 			parent.style.opacity = 1 - (0.35 * (i / 3));
-			parent.querySelectorAll("td").forEach(function(e) {e.style.color = "black";});
+			parent.querySelectorAll("td").forEach(SetBlack);
 		}
 	}
 }
