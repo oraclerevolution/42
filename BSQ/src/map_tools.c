@@ -49,12 +49,10 @@ int		is_char_valid(char *str, char c)
 	start = 0;
 	if (c == '\n')
 		return (1);
-	else if (c >= '0' && c <= '9')
-		return (0);
 	while (str[start] >= '0' && str[start] <= '9')
 		start++;
-	i = start;
-	while (i != start + 2)
+	i = start + 1;
+	while (i < start + 3)
 		if (str[i++] == c)
 			return (1);
 	return (0);
