@@ -20,6 +20,10 @@ function SetBlack(element) {
 	element.style.color = "black";
 }
 
+function random(div) {
+	return (Math.random(5, 10) * 10) / div;
+}
+
 function getCookieValue(cookieName){
 	var startPos;
 	var endPos;
@@ -35,11 +39,11 @@ function getCookieValue(cookieName){
 }
 
 function Countdown(number) {
-    if (number > 0 && continueCountdown) {
-		turboButton.innerText = TurboText + " (" + number + "s)";
-		setTimeout(Countdown, 1000, number - 1);
+    if (number > 0.0 && continueCountdown) {
+		turboButton.innerText = TurboText + " (" + parseInt(number) + "s)";
+		setTimeout(Countdown, number > 0 ? 110 : number, number - 0.1);
 	}
-	else if (continueCountdown)
+	else if (continueCountdown) 
 		RefreshPage();
 }
 
@@ -136,7 +140,7 @@ function Init() {
 		document.title				 	= "(1) " + currentDate;
 	}
 	
-	Countdown(getCookieValue("turbo") === "" ? (15) : (5));
+	Countdown(getCookieValue("turbo") === "" ? (10 + random(1.5)) : (3 + random(3)));
 	
 	checkFreeCheckin();
 	updateCheckinStats(0);
