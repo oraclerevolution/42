@@ -69,26 +69,25 @@ int		ft_print(char *str)
 	return (0);
 }
 
-char	*ft_concat_string(char *dest, char *src, int size)
+char	*ft_concat_strings(char **dest, char *src, int size)
 {
 	char	*tmp;
 	int		i;
 	int		dest_len;
 
-	if (size <= 0)
-		return (dest);
+	if (size <= 0 || dest == NULL || *dest == NULL)
+		return (*dest);
 	dest_len = 0;
-	while (dest[dest_len])
+	while ((*dest)[dest_len])
 		dest_len++;
 	tmp = (char*)malloc(sizeof(char) * (dest_len + size + 1));
 	i = -1;
 	while (++i < dest_len)
-		tmp[i] = dest[i];
+		tmp[i] = (*dest)[i];
 	i = -1;
 	while (++i < size)
 		tmp[dest_len + i] = src[i];
 	tmp[dest_len + i] = '\0';
-	free(dest);
-	free(src);
+	free(*dest);
 	return (tmp);
 }
