@@ -51,8 +51,8 @@ int		is_char_valid(char *str, char c)
 		return (1);
 	while (str[start] >= '0' && str[start] <= '9')
 		start++;
-	i = start + 1;
-	while (i < start + 3)
+	i = start;
+	while (i < start + 2)
 		if (str[i++] == c)
 			return (1);
 	return (0);
