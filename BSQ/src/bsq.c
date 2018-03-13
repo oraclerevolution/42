@@ -70,18 +70,14 @@ char	*get_map_from_input(void)
 	char	*output;
 	char	buffer[1024];
 	int		bufsize;
-	int		tab_length;
 
-	tab_length = 0;
 	output = NULL;
 	while ((bufsize = read(0, buffer, 1024)) > 0)
 	{
 		if ((input = ft_strdup2(buffer, bufsize)) == NULL)
 			return (NULL);
 		if (output != NULL)
-		{
-			output = ft_concat_string(output, input, bufsize);
-		}
+			output = ft_concat_strings(&output, input, bufsize);
 		else
 			output = input;
 	}
