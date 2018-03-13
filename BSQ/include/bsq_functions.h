@@ -32,7 +32,7 @@ typedef struct		s_map
 	char		limits[3];
 }					t_map;
 
-char				*ft_concat_string(char *dest, char *src, int size);
+char				*ft_concat_strings(char **dest, char *src, int size);
 char				**get_map_from_file(char *pathname, t_map *bsq);
 char				convert_char(int nb, t_position pos, t_map bsq);
 char				*load_map(char *pathname, t_map bsq);
