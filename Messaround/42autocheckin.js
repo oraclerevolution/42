@@ -16,6 +16,10 @@ function RefreshPage() {
     location.reload();
 }
 
+function SetBlack(element) {
+	element.style.color = "black";
+}
+
 function getCookieValue(cookieName){
 	var startPos;
 	var endPos;
