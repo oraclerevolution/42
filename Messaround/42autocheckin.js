@@ -1,5 +1,4 @@
 var Places;
-var arr;
 var tenmin;
 var twosec;
 var continueCountdown;
@@ -41,7 +40,7 @@ function getCookieValue(cookieName){
 function Countdown(number) {
     if (number > 0.0 && continueCountdown) {
 		turboButton.innerText = TurboText + " (" + parseInt(number) + "s)";
-		setTimeout(Countdown, number > 0 ? 110 : number, number - 0.1);
+		setTimeout(Countdown, number > 0 ? 105 : number, number - 0.1);
 	}
 	else if (continueCountdown) 
 		RefreshPage();
@@ -76,15 +75,40 @@ function getElementIndex(node) {
     return index;
 }
 
+function StopRefresh() {
+	if (getCookieValue("stopRefresh") !== "1") {
+		document.cookie = "stopRefresh=1";
+		document.querySelector("#refresh").innerText = "Start refresh";
+		stopCountdown();
+	}
+	else {
+		document.cookie = "stopRefresh=0;expires=" + RightNow;
+		RefreshPage();
+	}
+}
 
-function Init() {
+function ManualCheckin() {
+	if (getCookieValue("manualCheckin") !== "1") {
+		document.cookie = "manualCheckin=1";
+		document.querySelector("#checkinManual").innerText = "Manual (enabled)";
+	}
+	else {
+		document.cookie = "manualCheckin=0;expires=" + RightNow;
+		document.querySelector("#checkinManual").innerText = "Automatic (enabled)";
+	}
+}
+
+
+function Init() {	
+	var arr;
+	
 	Places 				= document.querySelectorAll(".span12 table.table-hover tr td:nth-child(2)");
 	current 			= document.querySelector("table .btn.btn-primary").parentElement.parentElement;
 	currentDate 		= current.querySelector("td:nth-child(1)").innerText;
 	arr 				= [];
 	tenmin 				= new Date();
 	twosec 				= new Date();
-	tenmin.setTime(tenmin.getTime() + (60000 * 15));
+	tenmin.setTime(tenmin.getTime() + (60000 * 30));
 	twosec.setTime(twosec.getTime() + (20000));
 	continueCountdown 	= true;
 	TurboText 			= (getCookieValue("turbo") === "") ? ("Turbo") : ("Slow down");
@@ -110,10 +134,18 @@ function Init() {
 	
 	var notice;
 	var customTitle;
+	var refreshText;
+	var checkinText;
 	var display;
 	
 	current.scrollIntoView();
 	display = "";
+	refreshText = "Stop refresh";
+	checkinText = "Automatic (enabled)";
+	if (getCookieValue("stopRefresh") == "1")
+		refreshText = "Start refresh";
+	if (getCookieValue("manualCheckin") == "1")
+		checkinText = "Manual (enabled)";
 	if (currentDate !== "")
 		document.title = currentDate;
 	
@@ -123,7 +155,7 @@ function Init() {
 	if (currentID == Places.length - 1)
 		display = 'style="display: none;"';
 	customTitle 			= document.querySelector("#custom-title");
-	customTitle.outerHTML 	= customTitle.outerHTML + '<button class="btn" ' + display + ' onclick="Turbo()" id="turbo">'+ TurboText + '</button>';
+	customTitle.outerHTML 	= customTitle.outerHTML + '<button class="btn" ' + display + ' onclick="Turbo()" id="turbo">'+ TurboText + '</button> <button class="btn" onclick="StopRefresh()" id="refresh">' + refreshText + '</button> <button class="btn" onclick="ManualCheckin()" id="checkinManual">' + checkinText + '</button>';;
 	
 	turboButton = document.querySelector("#turbo");
 	if (getCookieValue("alert") !== "" || getCookieValue("playsound") !== "") 
@@ -139,9 +171,11 @@ function Init() {
 		customTitle.style.lineHeight	= "60px";
 		document.title				 	= "(1) " + currentDate;
 	}
+
+	if (getCookieValue("stopRefresh") != "1")
+	    Countdown(getCookieValue("turbo") === "" ? (10 + random(1.5)) : (3 + random(3)));
 	
-	Countdown(getCookieValue("turbo") === "" ? (10 + random(1.5)) : (3 + random(3)));
-	
+
 	checkFreeCheckin();
 	updateCheckinStats(0);
 }
@@ -158,10 +192,13 @@ function checkFreeCheckin() {
 		parent 		= Places[i].parentElement;
 		if (parent != current && nbrPlaces <= 10)
 		{
-			if (parent.querySelector(":nth-child(5)").innerText === "")
-				document.querySelector("table .btn.btn-primary").click();
+			if (parent.querySelector(":nth-child(5)").innerText === "") {
+				if (getCookieValue("manualCheckin") === "")
+					document.querySelector("table .btn.btn-primary").click();
+			}
 			else {
-				parent.querySelector(":nth-child(5) a").click();
+				if (getCookieValue("manualCheckin") === "")
+					parent.querySelector(":nth-child(5) a").click();
 				document.cookie = "playsound=1;expires=" + twosec.toUTCString();
 				document.cookie = "alert=1;expires=" + tenmin.toUTCString();
 			}
