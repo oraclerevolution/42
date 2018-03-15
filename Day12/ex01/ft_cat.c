@@ -13,12 +13,12 @@
 #include <unistd.h>
 #include <fcntl.h>
 
-void	print(char *str, int max)
+void	print(char *str, int size)
 {
 	int i;
 
 	i = 0;
-	while (str[i] && i != max)
+	while (str[i] && i != size)
 		i++;
 	write(1, str, i);
 }
