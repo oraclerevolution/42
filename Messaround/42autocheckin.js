@@ -9,10 +9,10 @@ var currentDate;
 var TurboText;
 var turboButton;
 var RightNow;
-
+var LastAudioExec;
 
 function RefreshPage() {
-    location.reload();
+    location.reload(true);
 }
 
 function SetBlack(element) {
@@ -75,6 +75,18 @@ function getElementIndex(node) {
     return index;
 }
 
+function PlayAudio(URL, volume = 1.0) {
+	if (new Date() - LastAudioExec < 1500) {
+		setTimeout(PlayAudio, 1500, URL, volume);
+		return ;
+	}
+	LastAudioExec = new Date();
+	var audio;
+	audio = new Audio(URL);
+	audio.volume = volume;
+	audio.play();
+}
+
 function StopRefresh() {
 	if (getCookieValue("stopRefresh") !== "1") {
 		document.cookie = "stopRefresh=1";
@@ -107,9 +119,11 @@ function Init() {
 	currentDate 		= current.querySelector("td:nth-child(1)").innerText;
 	arr 				= [];
 	tenmin 				= new Date();
+	LastAudioExec		= new Date();
 	twosec 				= new Date();
 	tenmin.setTime(tenmin.getTime() + (60000 * 30));
-	twosec.setTime(twosec.getTime() + (20000));
+	twosec.setTime(twosec.getTime() + (2000));
+	LastAudioExec.setTime(LastAudioExec.getTime() - (2000));
 	continueCountdown 	= true;
 	TurboText 			= (getCookieValue("turbo") === "") ? ("Turbo") : ("Slow down");
 	RightNow 			= (new Date()).toUTCString();
@@ -155,7 +169,7 @@ function Init() {
 	if (currentID == Places.length - 1)
 		display = 'style="display: none;"';
 	customTitle 			= document.querySelector("#custom-title");
-	customTitle.outerHTML 	= customTitle.outerHTML + '<button class="btn" ' + display + ' onclick="Turbo()" id="turbo">'+ TurboText + '</button> <button class="btn" onclick="StopRefresh()" id="refresh">' + refreshText + '</button> <button class="btn" onclick="ManualCheckin()" id="checkinManual">' + checkinText + '</button>';;
+	customTitle.outerHTML 	= customTitle.outerHTML + '<button class="btn" ' + display + ' onclick="Turbo()" id="turbo">'+ TurboText + '</button> <button class="btn" onclick="StopRefresh()" id="refresh">' + refreshText + '</button> <button class="btn" onclick="ManualCheckin()" id="checkinManual">' + checkinText + '</button>';
 	
 	turboButton = document.querySelector("#turbo");
 	if (getCookieValue("alert") !== "" || getCookieValue("playsound") !== "") 
@@ -163,7 +177,10 @@ function Init() {
 	turboButton = document.querySelector("#turbo");
 	
 	if (getCookieValue("playsound") !== "")
-		new Audio('http://noproblo.dayjo.org/ZeldaSounds/WW_New/WW_Get_Item.wav').play();
+	{
+		PlayAudio('http://noproblo.dayjo.org/ZeldaSounds/WW_New/WW_Fanfare_HeartContainer.wav', 0.7);
+		window.open("https://youtu.be/SB1VqLCTFpA?t=20m18s");
+	}
 	
 	if (getCookieValue("alert") !== "") {
 		customTitle 					= document.querySelector("#custom-title");
@@ -213,7 +230,7 @@ function checkFreeCheckin() {
 }
 
 function updateCheckinStats(x = -1) {
-	if (x != -1)
+	if (x > -1)
 		i = x;
 	while (i < Places.length)
 	{
@@ -229,22 +246,26 @@ function updateCheckinStats(x = -1) {
 		newText 					= "";
 		newColor 					= "grey";
 		
-		if (oldNbr > newNbr || (isNaN(newNbr) && oldNbr > 0) || getCookieValue("c" + i) == "1")
+		if (oldNbr > newNbr || (isNaN(newNbr) && oldNbr > 0) || getCookieValue("c" + i) < 0)
 		{
 			if (oldNbr > newNbr || (isNaN(newNbr) && oldNbr > 0))
-				document.cookie = "c" + i + "=1;expires=" + tenmin.toUTCString();
-			newText  = "▼ ";
+			{
+				document.cookie = "c" + i + "=-1;expires=" + tenmin.toUTCString();
+				PlayAudio('http://noproblo.dayjo.org/ZeldaSounds/WW_New/WW_PictoBox_Erase.wav', 0.2);
+			}
+			newText  = '▼ ';
 			newColor = "red";
 		}
-		else if (oldNbr < newNbr || (newNbr > 0 && isNaN(oldNbr)) || getCookieValue("c" + i) == "2")
+		else if (oldNbr < newNbr || (newNbr > 0 && isNaN(oldNbr)) || getCookieValue("c" + i) > 0)
 		{
 			if (oldNbr < newNbr || (newNbr > 0 && isNaN(oldNbr)))
-				document.cookie = "c" + i + "=2;expires=" + tenmin.toUTCString();
-			newText  = "▲ ";
+			{
+				document.cookie = "c" + i + "=1;expires=" + tenmin.toUTCString();
+				PlayAudio('http://noproblo.dayjo.org/ZeldaSounds/WW_New/WW_PictoBox_Save.wav', 0.2);
+			}
+			newText  = '▲ ';
 			newColor = "green";
 		}
-		else
-			newColor = "grey";
 		
 		Places[i].innerText		= newText + Places[i].innerText;
 		Places[i].style.color 	= newColor;
