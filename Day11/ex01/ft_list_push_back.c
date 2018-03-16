@@ -17,9 +17,13 @@ void	ft_list_push_back(t_list **begin_list, void *data)
 	t_list *list;
 	t_list *tmp;
 
-	list = ft_create_elem(data);
 	tmp = *begin_list;
+	if (tmp == NULL)
+	{
+		tmp = ft_create_elem(data);
+		return ;
+	}
 	while (tmp->next != (void*)0)
 		tmp = tmp->next;
-	tmp->next = list;
+	tmp->next = ft_create_elem(data);
 }
