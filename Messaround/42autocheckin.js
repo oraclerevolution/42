@@ -7,7 +7,7 @@ var current;
 var currentID;
 var currentDate;
 var TurboText;
-var turboButton;f
+var turboButton;
 var RightNow;
 var LastAudioExec;
 
