@@ -139,7 +139,7 @@ function Init() {
 	}
 	else
 		currentID = -1;
-	if (currentID <= 0) {
+	if (currentID < 0) {
 		currentDate = "";
 		currentID = Places.length - 1;
 	}
@@ -211,12 +211,16 @@ function checkFreeCheckin() {
 		{
 			if (parent.querySelector(":nth-child(5)").innerText === "") {
 				if (getCookieValue("manualCheckin") === "")
+				{
 					document.querySelector("table .btn.btn-primary").click();
+				}
 			}
 			else {
 				if (getCookieValue("manualCheckin") === "")
+				{
 					parent.querySelector(":nth-child(5) a").click();
-				document.cookie = "playsound=1;expires=" + twosec.toUTCString();
+					document.cookie = "playsound=1;expires=" + twosec.toUTCString();
+				}
 				document.cookie = "alert=1;expires=" + tenmin.toUTCString();
 			}
 			break;
