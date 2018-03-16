@@ -7,7 +7,7 @@ var current;
 var currentID;
 var currentDate;
 var TurboText;
-var turboButton;
+var turboButton;f
 var RightNow;
 var LastAudioExec;
 
@@ -209,7 +209,7 @@ function checkFreeCheckin() {
 		
 		nbrPlaces 	= parseInt(Places[i].innerText);
 		parent 		= Places[i].parentElement;
-		if (parent != current && nbrPlaces <= 10)
+		if (parent != current && nbrPlaces > 0)
 		{
 			if (parent.querySelector(":nth-child(5)").innerText === "") {
 				if (getCookieValue("manualCheckin") === "")
