@@ -230,6 +230,8 @@ function checkFreeCheckin() {
 			parent.style.opacity = 1 - (0.35 * (i / 3));
 			parent.querySelectorAll("td").forEach(SetBlack);
 		}
+		else
+			break;
 	}
 }
 
