@@ -12,7 +12,7 @@ var RightNow;
 var LastAudioExec;
 
 function RefreshPage() {
-    location.reload(true);
+    	location.reload(true);
 }
 
 function SetBlack(element) {
@@ -121,12 +121,14 @@ function Init() {
 	tenmin 				= new Date();
 	LastAudioExec		= new Date();
 	twosec 				= new Date();
-	tenmin.setTime(tenmin.getTime() + (60000 * 30));
+	RightNow 			= new Date();
 	twosec.setTime(twosec.getTime() + (2000));
+	RightNow.setTime(RightNow.getTime() - (2000));
+	tenmin.setTime(tenmin.getTime() + (60000 * 30));
 	LastAudioExec.setTime(LastAudioExec.getTime() - (2000));
 	continueCountdown 	= true;
 	TurboText 			= (getCookieValue("turbo") === "") ? ("Turbo") : ("Slow down");
-	RightNow 			= (new Date()).toUTCString();
+	RightNow			= RightNow.toUTCString();
 	
 	if (document.querySelectorAll("table .btn.btn-primary").length > 1)
 		current = document.querySelector("head");
