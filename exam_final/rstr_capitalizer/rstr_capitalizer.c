@@ -36,7 +36,7 @@ char is_separator(char c)
 	return (c == ' ' || c == '\t');
 }
 
-char *rstr_capitalizer(char *str, int *len)
+int rstr_capitalizer(char *str)
 {
 	int i;
 
@@ -53,8 +53,7 @@ char *rstr_capitalizer(char *str, int *len)
 		if (str[i] != '\0')
 			i++;
 	}
-	*len = i;
-	return (str);
+	return (i);
 }
 
 int main(int argc, char **argv)
@@ -70,7 +69,7 @@ int main(int argc, char **argv)
 	i = 1;
 	while (i < argc)
 	{
-		argv[i] = rstr_capitalizer(argv[i], &str_len);
+		str_len = rstr_capitalizer(argv[i]);
 		write(1, argv[i], str_len);
 		write(1, "\n", 1);
 		i++;
