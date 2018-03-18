@@ -19,3 +19,10 @@ int		ft_strlen(char *str)
 		s++;
 	return (s - str);
 }
+
+int 		ft_strlen2(char *str)
+{
+	if (*str == '\0')
+		return (0);
+	return (ft_strlen2(str + 1) + 1);
+}
