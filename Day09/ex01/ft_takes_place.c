@@ -21,13 +21,10 @@ char	get_pm_am(int hour)
 
 void	ft_takes_place(int hour)
 {
-	int		minutes;
 	int		hour2;
 	char	letter[2];
 	char	*format;
 
-	minutes = hour % 100;
-	hour /= 100;
 	hour2 = hour + 1;
 	letter[0] = get_pm_am(hour);
 	letter[1] = get_pm_am(hour2);
@@ -39,7 +36,9 @@ void	ft_takes_place(int hour)
 		hour2 -= 12;
 	else if (hour2 == 0)
 		hour2 = 12;
-	format = "%.2d.%.2d %c.M. AND %.2d.%.2d %c.M.\n";
+	if (hour2 > 12)
+		hour2 -= 12;
+	format = "%.2d.00 %c.M. AND %.2d.00 %c.M.\n";
 	printf("THE FOLLOWING TAKES PLACE BETWEEN ");
-	printf(format, hour, minutes, letter[0], hour2, minutes, letter[1]);
+	printf(format, hour, letter[0], hour2, letter[1]);
 }
