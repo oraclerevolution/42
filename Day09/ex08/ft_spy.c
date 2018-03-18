@@ -24,8 +24,7 @@ int	k_strfind(char *str, char *to_find)
 	if (str[i] != '\0')
 	{
 		n = 0;
-		while ((str[i + n] == to_find[n] || \
-			str[i + n] == to_find[n] - 32) && to_find[n] != '\0')
+		while ((str[i + n] == to_find[n]) && to_find[n] != '\0')
 			n++;
 		if (to_find[n] == '\0')
 			return (1);
@@ -36,21 +35,19 @@ int	k_strfind(char *str, char *to_find)
 int	main(int argc, char **argv)
 {
 	int i;
-	int found;
 
-	found = 0;
 	i = 1;
-	while (i < argc && !found)
+	while (i < argc)
 	{
 		if (k_strfind(argv[i], "president"))
-			found = 1;
+			break ;
 		if (k_strfind(argv[i], "attack"))
-			found = 1;
+			break ;
 		if (k_strfind(argv[i], "bauer"))
-			found = 1;
+			break ;
 		i++;
 	}
-	if (found)
+	if (i != argc)
 		write(1, "Alert!!!\n", 9);
 	return (0);
 }
