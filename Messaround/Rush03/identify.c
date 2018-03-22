@@ -90,7 +90,7 @@ int ft_match_colle(char *charset)
 	int i;
 	int x;
 	
-	result = COLLE_ONE | COLLE_TWO | COLLE_THREE | COLLE_FOUR | COLLE_FIVE;
+	result = COLLE_ALL;
 	i = 0;
 	
 	ft_strcpy(str[0], "oooo-| ", 8);
