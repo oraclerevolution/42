@@ -6,7 +6,9 @@
 /*   Store the standard entry (stdin) inside an two dimensionnal array,       */
 /*   the separator being newlines.                                            */
 /*                                                                            */
-/*   Does not handle variable-length lines                                    */
+/*   Handles variable-length lines: every line has the length of the-         */
+/*   -longest, but contains a newline (\n) when the line actually ends.       */
+/*                                                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
