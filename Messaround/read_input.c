@@ -28,11 +28,22 @@ char safechar(char c)
 	return (' ');
 }
 
+int line_length(char *str, int w, int size)
+{
+	int i;
+	
+	i = 0;
+	while (i < w && i <= size && str[i] != '\0')
+		i++;
+	return (i);
+}
+
 int init_string_array(char ***output, int w, int h, char ***cpy, int size, int current_height)
 {
 	char **tmp;
 	int i;
 	int x;
+	int length;
 	
 	x = 0;
 	tmp = (char**)malloc(sizeof(char*) * h);
@@ -40,13 +51,16 @@ int init_string_array(char ***output, int w, int h, char ***cpy, int size, int c
 		return (0);
 	while (x < h)
 	{
-		tmp[x] = (char*)malloc(sizeof(char) * (w + 1));
+		length = w + 1;
+		if (cpy != NULL && x < current_height)
+			length = line_length((*cpy)[x], w, size) + 1;
+		tmp[x] = (char*)malloc(sizeof(char) * length);
 		if (tmp[x] == NULL)
 			return (0);
 		if (cpy != NULL && x < size && x <= current_height) 
 		{
 			i = 0;
-			while (i < w && i <= size  && (*cpy)[x][i] != '\0')
+			while (i < w && i <= size && (*cpy)[x][i] != '\0')
 			{
 				tmp[x][i] = safechar((*cpy)[x][i]);
 				i++;
@@ -54,7 +68,7 @@ int init_string_array(char ***output, int w, int h, char ***cpy, int size, int c
 			if (i < w)
 				tmp[x][i] = '\0';
 		}
-		tmp[x][w] = '\0';
+		tmp[x][length - 1] = '\0';
 		x++;
 	}
 	if (cpy != NULL)
