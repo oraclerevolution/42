@@ -46,7 +46,7 @@ void init_string_array(char ***output, int w, int h, char ***cpy, int size)
 			i = 0;
 			while (i < w && i <= size && (*cpy)[x][i] != '\n')
 			{
-				if ((*cpy)[x][i] >= 32 && (*cpy)[x][i] <= 126)
+				if ((*cpy)[x][i] >= 32 && (*cpy)[x][i] < 128)
 					tmp[x][i] = (*cpy)[x][i];
 				else
 					tmp[x][i] = ' ';
@@ -96,7 +96,7 @@ t_input read_from_input()
 			output.height++;
 			if (output.height >= size)
 			{
-				init_string_array(&tmp, size * 2, size * 2, &tmp, size);
+				init_string_array(&tmp, output.width, size * 2, &tmp, size);
 				size *= 2;
 			}
 		}
@@ -107,7 +107,7 @@ t_input read_from_input()
 			x++;
 			if (x > size)
 			{
-				init_string_array(&tmp, size * 2, size * 2, &tmp, size);
+				init_string_array(&tmp, (output.width == 0 ? size * 2: output.width), size * 2, &tmp, size);
 				size *= 2;
 			}
 		}
