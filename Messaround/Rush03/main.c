@@ -15,11 +15,11 @@
 int main()
 {
 	t_colle colle;
-	char charset[7];
+	char charset[8];
 	
 	colle.colle = 0;
 	init_structure(&colle);
-	init_string(charset, 7);
+	init_string(charset, 8);
 	read_from_input(&colle, charset);
 	colle.colle = ft_match_colle(charset);
 	if(colle.colle <= 0)
