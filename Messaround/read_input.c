@@ -29,7 +29,7 @@ char safechar(char c)
 	return (' ');
 }
 
-void init_string_array(char ***output, int w, int h, char ***cpy, int size)
+int init_string_array(char ***output, int w, int h, char ***cpy, int size)
 {
 	char **tmp;
 	int i;
@@ -38,18 +38,12 @@ void init_string_array(char ***output, int w, int h, char ***cpy, int size)
 	x = 0;
 	tmp = (char**)malloc(sizeof(char*) * h);
 	if (tmp == NULL)
-	{
-		*output = NULL;
-		return ;
-	}
+		return (0);
 	while (x < h)
 	{
 		tmp[x] = (char*)malloc(sizeof(char) * w);
 		if (tmp[x] == NULL)
-		{
-			*output = NULL;
-			return ;
-		}
+			return (0);
 		if (cpy != NULL && x < size) 
 		{
 			i = 0;
@@ -74,15 +68,17 @@ void init_string_array(char ***output, int w, int h, char ***cpy, int size)
 		free(*cpy);
 	}
 	*output = tmp;
+	return (1);
 }
 
-void init_variables(int *size, char ***tmp, t_input *output, int *x)
+int init_variables(int *size, char ***tmp, t_input *output, int *x)
 {
 	*size = BUFFER_SIZE;
-	init_string_array(tmp, BUFFER_SIZE, BUFFER_SIZE, NULL, 0);
+	output->input = NULL;
 	output->width = 0;
 	output->height = 0;
 	*x = 0;
+	return (init_string_array(tmp, BUFFER_SIZE, BUFFER_SIZE, NULL, 0));
 }
 
 void fill_empty(char **tmp, int x, int max_height)
@@ -99,8 +95,9 @@ t_input read_from_input()
 	int x;
 	int size;
 	
-	init_variables(&size, &tmp, &output, &x);
-	while (read(0, buffer, 1) > 0)
+	if (!init_variables(&size, &tmp, &output, &x))
+		return (output = (t_input){.width= -1, .height= -1});
+	while (read(0, buffer, 1) > 0 && output.height != -1)
 	{
 		if (buffer[0] == '\n')
 		{
@@ -112,7 +109,8 @@ t_input read_from_input()
 			output.height++;
 			if (output.height >= size)
 			{
-				init_string_array(&tmp, output.width, size * 2, &tmp, size);
+				if (!init_string_array(&tmp, output.width, size * 2, &tmp, size))
+					return (output = (t_input){.width= -1, .height= -1});
 				size *= 2;
 			}
 		}
@@ -122,7 +120,8 @@ t_input read_from_input()
 				tmp[output.height][x] = safechar(buffer[0]);
 			else if ((output.width != 0 && x >= output.width))
 			{
-				init_string_array(&tmp, size * 2, size * 2, &tmp, size);
+				if (!init_string_array(&tmp, size * 2, size * 2, &tmp, size))
+					return (output = (t_input){.width= -1, .height= -1});
 				output.width++;
 				tmp[output.height][x] = safechar(buffer[0]);
 				fill_empty(tmp, x, output.height);
@@ -131,11 +130,13 @@ t_input read_from_input()
 			x++;
 			if (x > size)
 			{
-				init_string_array(&tmp, (output.width == 0 ? size * 2: output.width), size * 2, &tmp, size);
+				if (!init_string_array(&tmp, (output.width == 0 ? size * 2: output.width), size * 2, &tmp, size))
+					return (output = (t_input){.width= -1, .height= -1});
 				size *= 2;
 			}
 		}
 	}
-	init_string_array(&output.input, output.width, output.height, &tmp, size);
-	return output;
+	if (!init_string_array(&output.input, output.width, output.height, &tmp, size))
+		output = (t_input){.width= -1, .height= -1};
+	return (output);
 }
