@@ -20,6 +20,13 @@ typedef struct s_input {
 	int height;
 }				t_input;
 
+char safechar(char c)
+{
+	if (c >= 32 && c <= 126)
+		return (c);
+	return (' ');
+}
+
 void init_string_array(char ***output, int w, int h, char ***cpy, int size)
 {
 	char **tmp;
@@ -46,12 +53,11 @@ void init_string_array(char ***output, int w, int h, char ***cpy, int size)
 			i = 0;
 			while (i < w && i <= size && (*cpy)[x][i] != '\n')
 			{
-				if ((*cpy)[x][i] >= 32 && (*cpy)[x][i] <= 126)
-					tmp[x][i] = (*cpy)[x][i];
-				else
-					tmp[x][i] = ' ';
+				tmp[x][i] = safechar((*cpy)[x][i]);
 				i++;
 			}
+			if (i < w)
+				tmp[x][i] = '\n';
 		}
 		x++;
 	}
@@ -77,6 +83,12 @@ void init_variables(int *size, char ***tmp, t_input *output, int *x)
 	*x = 0;
 }
 
+void fill_empty(char **tmp, int x, int max_height)
+{
+	while (--max_height != 0)
+		tmp[max_height][x] = '\n';
+}
+
 t_input read_from_input()
 {
 	t_input output;
@@ -92,6 +104,8 @@ t_input read_from_input()
 		{
 			if (output.height == 0)
 				output.width = x;
+			else if (x != output.width)
+				tmp[output.height][x] = '\n';
 			x = 0;
 			output.height++;
 			if (output.height >= size)
@@ -102,8 +116,16 @@ t_input read_from_input()
 		}
 		else
 		{
-			if (output.width == 0 || (output.width != 0 && x < output.width ))
-				tmp[output.height][x] = buffer[0];
+			if (output.width == 0 || (output.width != 0 && x < output.width))
+				tmp[output.height][x] = safechar(buffer[0]);
+			else if ((output.width != 0 && x >= output.width))
+			{
+				init_string_array(&tmp, size * 2, size * 2, &tmp, size);
+				output.width++;
+				tmp[output.height][x] = safechar(buffer[0]);
+				fill_empty(tmp, x, output.height);
+				size *= 2;
+			}
 			x++;
 			if (x > size)
 			{
