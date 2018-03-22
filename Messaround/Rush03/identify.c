@@ -26,7 +26,7 @@ void init_structure(t_colle *colle)
 	colle->colle = 0;
 }
 
-void read_from_input(t_colle *colle, char charset[7])
+void read_from_input(t_colle *colle, char charset[8])
 {
 	int x;
 	char buffer[2];
@@ -70,16 +70,22 @@ void read_from_input(t_colle *colle, char charset[7])
 		charset[3] = '.';
 	}
 	if (colle->width <= 2)
+	{
 		charset[4] = '.';
+		charset[6] = '.';
+	}
 	if (colle->height == 1)
 		charset[3] = '.';
 	if (colle->height <= 2)
+	{
 		charset[5] = '.';
+		charset[6] = '.';
+	}
 }
 
 int ft_match_colle(char *charset)
 {
-	char str[5][7];
+	char str[5][8];
 	int result;
 	int i;
 	int x;
@@ -87,11 +93,11 @@ int ft_match_colle(char *charset)
 	result = COLLE_ONE | COLLE_TWO | COLLE_THREE | COLLE_FOUR | COLLE_FIVE;
 	i = 0;
 	
-	ft_strcpy(str[0], "oooo-|", 7);
-	ft_strcpy(str[1], "/\\\\/**", 7);
-	ft_strcpy(str[2], "AACCBB", 7);
-	ft_strcpy(str[3], "ACACBB", 7);
-	ft_strcpy(str[4], "ACCABB", 7);
+	ft_strcpy(str[0], "oooo-| ", 8);
+	ft_strcpy(str[1], "/\\\\/** ", 8);
+	ft_strcpy(str[2], "AACCBB ", 8);
+	ft_strcpy(str[3], "ACACBB ", 8);
+	ft_strcpy(str[4], "ACCABB ", 8);
 	while (i < 7)
 	{	
 		x = 0;
