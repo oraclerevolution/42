@@ -6,8 +6,7 @@
 /*   Store the standard entry (stdin) inside an two dimensionnal array,       */
 /*   the separator being newlines.                                            */
 /*                                                                            */
-/*   Handles variable-length lines: every line has the length of the-         */
-/*   -longest, but contains a newline (\n) when the line actually ends.       */
+/*   Every line is null terminated properly.                                  */
 /*                                                                            */
 /*                                                                            */
 /* ************************************************************************** */
@@ -29,7 +28,7 @@ char safechar(char c)
 	return (' ');
 }
 
-int init_string_array(char ***output, int w, int h, char ***cpy, int size)
+int init_string_array(char ***output, int w, int h, char ***cpy, int size, int current_height)
 {
 	char **tmp;
 	int i;
@@ -41,20 +40,21 @@ int init_string_array(char ***output, int w, int h, char ***cpy, int size)
 		return (0);
 	while (x < h)
 	{
-		tmp[x] = (char*)malloc(sizeof(char) * w);
+		tmp[x] = (char*)malloc(sizeof(char) * (w + 1));
 		if (tmp[x] == NULL)
 			return (0);
-		if (cpy != NULL && x < size) 
+		if (cpy != NULL && x < size && x <= current_height) 
 		{
 			i = 0;
-			while (i < w && i <= size && (*cpy)[x][i] != '\n')
+			while (i < w && i <= size  && (*cpy)[x][i] != '\0')
 			{
 				tmp[x][i] = safechar((*cpy)[x][i]);
 				i++;
 			}
 			if (i < w)
-				tmp[x][i] = '\n';
+				tmp[x][i] = '\0';
 		}
+		tmp[x][w] = '\0';
 		x++;
 	}
 	if (cpy != NULL)
@@ -78,13 +78,13 @@ int init_variables(int *size, char ***tmp, t_input *output, int *x)
 	output->width = 0;
 	output->height = 0;
 	*x = 0;
-	return (init_string_array(tmp, BUFFER_SIZE, BUFFER_SIZE, NULL, 0));
+	return (init_string_array(tmp, BUFFER_SIZE, BUFFER_SIZE, NULL, 0, BUFFER_SIZE));
 }
 
 void fill_empty(char **tmp, int x, int max_height)
 {
 	while (--max_height != 0)
-		tmp[max_height][x] = '\n';
+		tmp[max_height][x] = '\0';
 }
 
 t_input read_from_input()
@@ -104,12 +104,12 @@ t_input read_from_input()
 			if (output.height == 0)
 				output.width = x;
 			else if (x != output.width)
-				tmp[output.height][x] = '\n';
+				tmp[output.height][x] = '\0';
 			x = 0;
 			output.height++;
 			if (output.height >= size)
 			{
-				if (!init_string_array(&tmp, output.width, size * 2, &tmp, size))
+				if (!init_string_array(&tmp, output.width, size * 2, &tmp, size, output.height))
 					return (output = (t_input){.width= -1, .height= -1});
 				size *= 2;
 			}
@@ -120,7 +120,7 @@ t_input read_from_input()
 				tmp[output.height][x] = safechar(buffer[0]);
 			else if ((output.width != 0 && x >= output.width))
 			{
-				if (!init_string_array(&tmp, size * 2, size * 2, &tmp, size))
+				if (!init_string_array(&tmp, size * 2, size * 2, &tmp, size, output.height))
 					return (output = (t_input){.width= -1, .height= -1});
 				output.width++;
 				tmp[output.height][x] = safechar(buffer[0]);
@@ -130,13 +130,13 @@ t_input read_from_input()
 			x++;
 			if (x > size)
 			{
-				if (!init_string_array(&tmp, (output.width == 0 ? size * 2: output.width), size * 2, &tmp, size))
+				if (!init_string_array(&tmp, (output.width == 0 ? size * 2: output.width), size * 2, &tmp, size, output.height))
 					return (output = (t_input){.width= -1, .height= -1});
 				size *= 2;
 			}
 		}
 	}
-	if (!init_string_array(&output.input, output.width, output.height, &tmp, size))
+	if (!init_string_array(&output.input, output.width, output.height, &tmp, size, size))
 		output = (t_input){.width= -1, .height= -1};
 	return (output);
 }
