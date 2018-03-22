@@ -28,16 +28,6 @@ char safechar(char c)
 	return (' ');
 }
 
-int line_length(char *str, int w, int size)
-{
-	int i;
-	
-	i = 0;
-	while (i < w && i <= size && str[i] != '\0')
-		i++;
-	return (i);
-}
-
 int init_string_array(char ***output, int w, int h, char ***cpy, int size, int current_height)
 {
 	char **tmp;
@@ -134,12 +124,15 @@ t_input read_from_input()
 				tmp[output.height][x] = safechar(buffer[0]);
 			else if ((output.max_width != 0 && x >= output.max_width))
 			{
-				if (!init_string_array(&tmp, size * 2, size * 2, &tmp, size, output.height))
-					return (output = (t_input){.max_width= -1, .height= -1});
+				if (x >= size)
+				{
+					if (!init_string_array(&tmp, size * 2, size * 2, &tmp, size, output.height))
+						return (output = (t_input){.max_width= -1, .height= -1});
+					size *= 2;
+				}
 				output.max_width++;
 				tmp[output.height][x] = safechar(buffer[0]);
 				fill_empty(tmp, x, output.height);
-				size *= 2;
 			}
 			x++;
 			if (x > size)
