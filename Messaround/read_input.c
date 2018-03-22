@@ -46,7 +46,7 @@ void init_string_array(char ***output, int w, int h, char ***cpy, int size)
 			i = 0;
 			while (i < w && i <= size && (*cpy)[x][i] != '\n')
 			{
-				if ((*cpy)[x][i] >= 32 && (*cpy)[x][i] < 128)
+				if ((*cpy)[x][i] >= 32 && (*cpy)[x][i] <= 126)
 					tmp[x][i] = (*cpy)[x][i];
 				else
 					tmp[x][i] = ' ';
