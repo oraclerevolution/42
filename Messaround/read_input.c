@@ -28,6 +28,16 @@ char safechar(char c)
 	return (' ');
 }
 
+int line_length(char *str, int w, int size)
+{
+	int i;
+	
+	i = 0;
+	while (i < w && i <= size && str[i] != '\0')
+		i++;
+	return (i);
+}
+
 int init_string_array(char ***output, int w, int h, char ***cpy, int size, int current_height)
 {
 	char **tmp;
