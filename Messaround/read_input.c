@@ -17,7 +17,7 @@
 
 typedef struct s_input {
 	char **input;
-	int width;
+	int max_width;
 	int height;
 }				t_input;
 
@@ -75,7 +75,7 @@ int init_variables(int *size, char ***tmp, t_input *output, int *x)
 {
 	*size = BUFFER_SIZE;
 	output->input = NULL;
-	output->width = 0;
+	output->max_width = 0;
 	output->height = 0;
 	*x = 0;
 	return (init_string_array(tmp, BUFFER_SIZE, BUFFER_SIZE, NULL, 0, BUFFER_SIZE));
@@ -96,33 +96,33 @@ t_input read_from_input()
 	int size;
 	
 	if (!init_variables(&size, &tmp, &output, &x))
-		return (output = (t_input){.width= -1, .height= -1});
+		return (output = (t_input){.max_width= -1, .height= -1});
 	while (read(0, buffer, 1) > 0 && output.height != -1)
 	{
 		if (buffer[0] == '\n')
 		{
 			if (output.height == 0)
-				output.width = x;
-			else if (x != output.width)
+				output.max_width = x;
+			else if (x != output.max_width)
 				tmp[output.height][x] = '\0';
 			x = 0;
 			output.height++;
 			if (output.height >= size)
 			{
-				if (!init_string_array(&tmp, output.width, size * 2, &tmp, size, output.height))
-					return (output = (t_input){.width= -1, .height= -1});
+				if (!init_string_array(&tmp, output.max_width, size * 2, &tmp, size, output.height))
+					return (output = (t_input){.max_width= -1, .height= -1});
 				size *= 2;
 			}
 		}
 		else
 		{
-			if (output.width == 0 || (output.width != 0 && x < output.width))
+			if (output.max_width == 0 || (output.max_width != 0 && x < output.max_width))
 				tmp[output.height][x] = safechar(buffer[0]);
-			else if ((output.width != 0 && x >= output.width))
+			else if ((output.max_width != 0 && x >= output.max_width))
 			{
 				if (!init_string_array(&tmp, size * 2, size * 2, &tmp, size, output.height))
-					return (output = (t_input){.width= -1, .height= -1});
-				output.width++;
+					return (output = (t_input){.max_width= -1, .height= -1});
+				output.max_width++;
 				tmp[output.height][x] = safechar(buffer[0]);
 				fill_empty(tmp, x, output.height);
 				size *= 2;
@@ -130,13 +130,13 @@ t_input read_from_input()
 			x++;
 			if (x > size)
 			{
-				if (!init_string_array(&tmp, (output.width == 0 ? size * 2: output.width), size * 2, &tmp, size, output.height))
-					return (output = (t_input){.width= -1, .height= -1});
+				if (!init_string_array(&tmp, (output.max_width == 0 ? size * 2: output.max_width), size * 2, &tmp, size, output.height))
+					return (output = (t_input){.max_width= -1, .height= -1});
 				size *= 2;
 			}
 		}
 	}
-	if (!init_string_array(&output.input, output.width, output.height, &tmp, size, size))
-		output = (t_input){.width= -1, .height= -1};
+	if (!init_string_array(&output.input, output.max_width, output.height, &tmp, size, size))
+		output = (t_input){.max_width= -1, .height= -1};
 	return (output);
 }
