@@ -22,6 +22,7 @@
 # define COLLE_THREE (4)
 # define COLLE_FOUR (8)
 # define COLLE_FIVE (16)
+# define COLLE_ALL (31)
 
 typedef struct s_colle {
 	int colle;
