@@ -62,13 +62,13 @@ int init_string_array(char ***output, int w, int h, char ***cpy, int size, int c
 	x = 0;
 	while (x < h)
 	{
-		if (cpy != NULL && x < current_height)
+		if (cpy != NULL && x <= current_height)
 			tmp[x] = (char*)malloc(sizeof(char) * (line_length((*cpy)[x], w, size) + 1));
 		else
 			tmp[x] = (char*)malloc(sizeof(char) * (w + 1));
 		if (tmp[x] == NULL)
 			return (0);
-		if (cpy != NULL && x < size && x < current_height) 
+		if (cpy != NULL && x < size && x <= current_height) 
 		{
 			i = 0;
 			while (i < w && i <= size && (*cpy)[x][i] != '\0')
